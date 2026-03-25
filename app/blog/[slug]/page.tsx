@@ -87,59 +87,66 @@ export default async function BlogPostPage({ params }: PageProps) {
           </header>
 
           <div className="prose prose-invert prose-lg max-w-none">
-            {post.content.split("\n").map((line, index) => {
-              if (line.startsWith("# ")) {
-                return (
-                  <h1 key={index} className="text-3xl font-bold mt-8 mb-4 text-foreground">
-                    {line.replace("# ", "")}
-                  </h1>
-                );
-              }
-              if (line.startsWith("## ")) {
-                return (
-                  <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground">
-                    {line.replace("## ", "")}
-                  </h2>
-                );
-              }
-              if (line.startsWith("### ")) {
-                return (
-                  <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground">
-                    {line.replace("### ", "")}
-                  </h3>
-                );
-              }
-              if (line.startsWith("- ")) {
-                return (
-                  <li key={index} className="text-muted-foreground ml-4 mb-2">
-                    {line.replace("- ", "")}
-                  </li>
-                );
-              }
-              if (line.match(/^\d+\./)) {
-                return (
-                  <li key={index} className="text-muted-foreground ml-4 mb-2 list-decimal">
-                    {line.replace(/^\d+\.\s*/, "")}
-                  </li>
-                );
-              }
-              if (line.startsWith("**") && line.endsWith("**")) {
-                return (
-                  <p key={index} className="font-semibold text-foreground my-4">
-                    {line.replace(/\*\*/g, "")}
-                  </p>
-                );
-              }
-              if (line.trim() === "") {
-                return <br key={index} />;
-              }
-              return (
-                <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                  {line}
-                </p>
-              );
-            })}
-          </div>
+  {post.content.split("\n").map((line, index) => {
+    // Hilfsfunktion für Inline-Formatierung (fett)
+    const formatText = (text: string) => {
+      const parts = text.split(/(\*\*.*?\*\*)/g);
+      return parts.map((part, i) => {
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return <strong key={i} className="font-bold text-foreground">{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      });
+    };
+
+    if (line.startsWith("# ")) {
+      return (
+        <h1 key={index} className="text-3xl font-bold mt-8 mb-4 text-foreground">
+          {formatText(line.replace("# ", ""))}
+        </h1>
+      );
+    }
+    if (line.startsWith("## ")) {
+      return (
+        <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground">
+          {formatText(line.replace("## ", ""))}
+        </h2>
+      );
+    }
+    if (line.startsWith("### ")) {
+      return (
+        <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground">
+          {formatText(line.replace("### ", ""))}
+        </h3>
+      );
+    }
+    if (line.startsWith("- ")) {
+      return (
+        <li key={index} className="text-muted-foreground ml-4 mb-2 list-disc">
+          {formatText(line.replace("- ", ""))}
+        </li>
+      );
+    }
+    if (line.match(/^\d+\./)) {
+      return (
+        <li key={index} className="text-muted-foreground ml-4 mb-2 list-decimal">
+          {formatText(line.replace(/^\d+\.\s*/, ""))}
+        </li>
+      );
+    }
+    if (line.trim() === "") {
+      return <div key={index} className="h-4" />; // Sauberer als <br />
+    }
+    
+    // Normaler Absatz mit Inline-Bold Support
+    return (
+      <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+        {formatText(line)}
+      </p>
+    );
+  })}
+</div>
+
 
           <footer className="mt-16 pt-8 border-t border-border">
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">

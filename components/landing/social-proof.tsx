@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import Image from 'next/image'
 
 export function SocialProof() {
   const handleClick = () => {
@@ -33,22 +34,16 @@ export function SocialProof() {
             whileTap={{ scale: 0.98 }}
           >
             {/* MakeUseOf Logo */}
-            <div className="flex-shrink-0">
-              <svg
-                viewBox="0 0 120 40"
-                className="h-10 w-auto text-foreground"
-                fill="currentColor"
-              >
-                <text
-                  x="0"
-                  y="28"
-                  className="font-bold text-2xl"
-                  style={{ fontFamily: "system-ui, sans-serif", fontWeight: 700 }}
-                >
-                  MakeUseOf
-                </text>
-              </svg>
-            </div>
+<div className="flex-shrink-0 flex items-center">
+  <Image
+    src="/makeuseof.avif" // Stelle sicher, dass die Datei im "public"-Ordner liegt
+    alt="MakeUseOf Logo"
+    width={120}              // Breite anpassen (passend zum alten SVG Viewbox)
+    height={40}              // Höhe passend zu h-10
+    className="h-10 w-auto object-contain"
+    priority                 // Lädt das Logo sofort (wichtig für den Header)
+  />
+</div>
 
             <div className="text-left border-l border-border pl-6">
               <p className="text-foreground text-lg font-medium italic text-balance">
