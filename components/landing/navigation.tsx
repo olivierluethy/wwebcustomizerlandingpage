@@ -146,7 +146,10 @@ export function Navigation() {
                   <Button
                     variant="outline"
                     className="w-full border-border text-foreground hover:bg-secondary"
-                    onClick={() => handleNavClick("discord")}
+                    onClick={() => {
+                      handleNavClick("discord");
+                      window.open("https://discord.gg/cppbDz4qhn", "_blank");
+                    }}
                     asChild
                   >
                     <a href="#" target="_blank" rel="noopener noreferrer">
@@ -156,7 +159,10 @@ export function Navigation() {
                   </Button>
                   <Button
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                    onClick={() => handleNavClick("install")}
+                    onClick={() => {
+                      handleNavClick("install");
+                      window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+                    }}
                     asChild
                   >
                     <a href="#" target="_blank" rel="noopener noreferrer">
