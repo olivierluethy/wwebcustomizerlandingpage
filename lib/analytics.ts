@@ -34,3 +34,15 @@ export const trackArticleClick = (articleSlug: string) => {
 export const trackScrollDepth = (depth: number) => {
   trackEvent("scroll_depth", "engagement", `${depth}%`, depth);
 };
+
+export const trackNavClick = (linkName: string) => {
+  trackEvent("nav_click", "navigation", linkName);
+};
+
+export const trackFooterClick = (linkName: string) => {
+  trackEvent("footer_click", "footer", linkName);
+};
+
+export const trackLegalPageView = (pageName: string) => {
+  trackEvent("legal_page_view", "legal", pageName);
+};

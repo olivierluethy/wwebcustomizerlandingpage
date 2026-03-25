@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
+import { Navigation } from "@/components/landing/navigation";
+import { Footer } from "@/components/landing/footer";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -46,7 +48,9 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-background py-16">
+    <>
+    <Navigation />
+    <main className="min-h-screen bg-background pt-24 pb-16">
       <article className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <Link
@@ -156,5 +160,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </article>
     </main>
+    <Footer />
+    </>
   );
 }

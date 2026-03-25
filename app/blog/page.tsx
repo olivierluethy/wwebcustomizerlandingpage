@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { getAllPosts } from "@/lib/blog";
+import { Navigation } from "@/components/landing/navigation";
+import { Footer } from "@/components/landing/footer";
 
 export const metadata: Metadata = {
   title: "Blog - WWeb Customizer",
@@ -13,7 +15,9 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="min-h-screen bg-background py-16">
+    <>
+    <Navigation />
+    <main className="min-h-screen bg-background pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <Link
@@ -70,5 +74,7 @@ export default function BlogPage() {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/landing/navigation";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
 import { Problems } from "@/components/landing/problems";
@@ -11,6 +12,7 @@ import { ScrollTracker } from "@/components/landing/scroll-tracker";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
+      <Navigation />
       <ScrollTracker />
       <Hero />
       <SocialProof />
