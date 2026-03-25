@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://wweb-customizer.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://wwebcustomizer.com";
 
   const posts = getAllPosts();
   const blogUrls = posts.map((post) => ({
