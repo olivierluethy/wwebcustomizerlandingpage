@@ -3,6 +3,7 @@
 import { Github, MessageCircle, Coffee } from "lucide-react";
 import Link from "next/link";
 import { trackFooterClick } from "@/lib/analytics";
+import Image from 'next/image'
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,17 +14,17 @@ const navLinks = [
 
 const socialLinks = [
   {
-    href: "https://github.com",
+    href: "https://github.com/BaskLash/WhatsApp-Web-Customizer",
     label: "GitHub",
     icon: Github,
   },
   {
-    href: "https://discord.com",
+    href: "https://discord.gg/cppbDz4qhn",
     label: "Discord",
     icon: MessageCircle,
   },
   {
-    href: "https://buymeacoffee.com",
+    href: "https://buymeacoffee.com/olivierluethy",
     label: "Buy Me a Coffee",
     icon: Coffee,
   },
@@ -41,8 +42,14 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">W</span>
+               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/icon128.png" 
+                  alt="Logo" 
+                  width={32} 
+                  height={32} 
+                  className="object-contain" // Sorgt dafür, dass das Bild schön in das Div passt
+                />
               </div>
               <span className="text-xl font-bold text-foreground">
                 WWeb Customizer

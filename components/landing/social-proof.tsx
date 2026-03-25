@@ -24,7 +24,7 @@ export function SocialProof() {
           </p>
 
           <motion.a
-            href="https://www.makeuseof.com"
+            href="https://www.makeuseof.com/whatsapp-web-feels-incomplete-until-you-add-these-extensions/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleClick}

@@ -91,18 +91,25 @@ export function Hero() {
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("install")}
-            >
-              <Chrome className="mr-2 h-5 w-5" />
-              Install Extension
-            </Button>
+  size="lg"
+  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
+  onClick={() => {
+    trackButtonClick("install");
+    window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank"); // _blank öffnet einen neuen Tab
+  }}
+>
+  <Chrome className="mr-2 h-5 w-5" />
+  Install Extension
+</Button>
+
             <Button
               size="lg"
               variant="outline"
               className="border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("discord")}
+              onClick={() => {
+                trackButtonClick("discord");
+                window.open("https://discord.gg/cppbDz4qhn", "_blank");
+              }}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Join Discord
@@ -111,7 +118,10 @@ export function Hero() {
               size="lg"
               variant="ghost"
               className="text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("github")}
+              onClick={() => {
+                trackButtonClick("github");
+                window.open("https://github.com/BaskLash/WhatsApp-Web-Customizer", "_blank");
+              }}
             >
               <Github className="mr-2 h-5 w-5" />
               View on GitHub

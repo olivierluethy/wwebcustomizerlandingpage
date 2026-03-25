@@ -6,6 +6,7 @@ import { Menu, X, Chrome, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackNavClick } from "@/lib/analytics";
+import Image from 'next/image'
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -50,9 +51,15 @@ export function Navigation() {
             className="flex items-center gap-2 text-foreground font-bold text-lg hover:text-accent transition-colors"
             onClick={() => handleNavClick("logo")}
           >
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">W</span>
-            </div>
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center overflow-hidden">
+  <Image 
+    src="/icon128.png" 
+    alt="Logo" 
+    width={32} 
+    height={32} 
+    className="object-contain" // Sorgt dafür, dass das Bild schön in das Div passt
+  />
+</div>
             <span className="hidden sm:inline">WWeb Customizer</span>
           </Link>
 
@@ -77,7 +84,10 @@ export function Navigation() {
               variant="outline"
               size="sm"
               className="border-border text-foreground hover:bg-secondary"
-              onClick={() => handleNavClick("discord")}
+              onClick={() => {
+                handleNavClick("discord");
+                window.open("https://discord.gg/cppbDz4qhn", "_blank");
+              }}
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -88,7 +98,10 @@ export function Navigation() {
             <Button
               size="sm"
               className="bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={() => handleNavClick("install")}
+              onClick={() => {
+                handleNavClick("install");
+                window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+              }}
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
