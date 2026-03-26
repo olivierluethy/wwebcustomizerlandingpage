@@ -74,7 +74,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 text-pretty"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -84,6 +84,16 @@ export function Hero() {
             features.
           </motion.p>
 
+          {/* Social proof */}
+          <motion.p
+            className="text-sm text-accent font-medium mb-10"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            🚀 More than 160 active users already use this tool every week
+          </motion.p>
+
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
@@ -91,21 +101,21 @@ export function Hero() {
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             <Button
-  size="lg"
-  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
-  onClick={() => {
-    trackButtonClick("install");
-    window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank"); // _blank öffnet einen neuen Tab
-  }}
->
-  <Chrome className="mr-2 h-5 w-5" />
-  Install Extension
-</Button>
+              size="lg"
+              className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
+              onClick={() => {
+                trackButtonClick("install");
+                window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+              }}
+            >
+              <Chrome className="mr-2 h-5 w-5" />
+              Install Extension
+            </Button>
 
             <Button
               size="lg"
               variant="outline"
-              className="border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
+              className="cursor-pointer border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
               onClick={() => {
                 trackButtonClick("discord");
                 window.open("https://discord.gg/cppbDz4qhn", "_blank");
@@ -114,10 +124,11 @@ export function Hero() {
               <MessageCircle className="mr-2 h-5 w-5" />
               Join Discord
             </Button>
+
             <Button
               size="lg"
               variant="ghost"
-              className="text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
+              className="cursor-pointer text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
               onClick={() => {
                 trackButtonClick("github");
                 window.open("https://github.com/BaskLash/WhatsApp-Web-Customizer", "_blank");

@@ -82,7 +82,7 @@ export function Community() {
           >
             <Button
               size="lg"
-              className="bg-[#5865F2] hover:bg-[#5865F2]/90 text-white px-8 py-6 text-base font-medium"
+              className="cursor-pointer bg-[#5865F2] hover:bg-[#5865F2]/90 text-white px-8 py-6 text-base font-medium"
               onClick={() => {
                 trackButtonClick("discord");
                 window.open("https://discord.gg/cppbDz4qhn", "_blank");

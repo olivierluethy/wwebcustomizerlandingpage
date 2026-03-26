@@ -27,7 +27,7 @@ export function CTA() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
+              className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
               onClick={() => trackButtonClick("install")}
             >
               <Chrome className="mr-2 h-5 w-5" />
@@ -35,19 +35,19 @@ export function CTA() {
             </Button>
 
             <Button
-              size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("discord")}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Join Discord
-            </Button>
+  size="lg"
+  variant="outline"
+  className="cursor-pointer border-white text-white hover:bg-white hover:text-black px-8 py-6 text-base font-medium"
+  onClick={() => trackButtonClick("discord")}
+>
+  <MessageCircle className="mr-2 h-5 w-5" />
+  Join Discord
+</Button>
 
             <Button
               size="lg"
               variant="outline"
-              className="border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
+              className="cursor-pointer border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
               onClick={() => trackButtonClick("github")}
             >
               <Github className="mr-2 h-5 w-5" />
@@ -57,7 +57,7 @@ export function CTA() {
             <Button
               size="lg"
               variant="ghost"
-              className="text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
+              className="cursor-pointer text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
               onClick={() => trackButtonClick("donation")}
             >
               <Coffee className="mr-2 h-5 w-5" />
