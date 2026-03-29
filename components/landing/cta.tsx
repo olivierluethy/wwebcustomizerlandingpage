@@ -28,7 +28,10 @@ export function CTA() {
             <Button
               size="lg"
               className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("install")}
+              onClick={() => {
+                trackButtonClick("install");
+                window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+              }}
             >
               <Chrome className="mr-2 h-5 w-5" />
               Install Extension
@@ -38,7 +41,10 @@ export function CTA() {
   size="lg"
   variant="outline"
   className="cursor-pointer border-white text-white hover:bg-white hover:text-black px-8 py-6 text-base font-medium"
-  onClick={() => trackButtonClick("discord")}
+  onClick={() => {
+    trackButtonClick("discord");
+    window.open("https://discord.com/invite/cppbDz4qhn", "_blank");
+  }}
 >
   <MessageCircle className="mr-2 h-5 w-5" />
   Join Discord
@@ -48,7 +54,10 @@ export function CTA() {
               size="lg"
               variant="outline"
               className="cursor-pointer border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("github")}
+              onClick={() => {
+                trackButtonClick("github");
+                window.open("https://github.com/BaskLash/WhatsApp-Web-Customizer", "_blank");
+              }}
             >
               <Github className="mr-2 h-5 w-5" />
               GitHub
@@ -58,7 +67,10 @@ export function CTA() {
               size="lg"
               variant="ghost"
               className="cursor-pointer text-muted-foreground hover:text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
-              onClick={() => trackButtonClick("donation")}
+              onClick={() => {
+                trackButtonClick("donation");
+                window.open("https://buymeacoffee.com/olivierluethy", "_blank");
+              }}
             >
               <Coffee className="mr-2 h-5 w-5" />
               Buy Me a Coffee

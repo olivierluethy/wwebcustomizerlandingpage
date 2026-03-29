@@ -9,6 +9,154 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines",
+  slug: "2026-03-29-from-1-star-review-to-makeuseof-feature",
+  description: "Discover how a brand-new WhatsApp Web extension with just 33 users and one 1-star review earned a spot in a major MakeUseOf article. The power of simple, user-friendly design.",
+  date: "2026-03-29",
+  readTime: "5 min read",
+  content: `# From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines
+
+**March 29, 2026** — Two weeks ago, something almost unbelievable happened.
+
+On March 19, 2026, I was casually scrolling through my feed when I stumbled upon a new article on MakeUseOf titled [\"WhatsApp Web feels incomplete until you add these 5 extensions\"](https://www.makeuseof.com/whatsapp-web-feels-incomplete-until-you-add-these-extensions/). The piece highlighted five must-have Chrome extensions that transform the standard WhatsApp Web experience into something far more powerful and complete.
+
+As I read through the recommendations, one question popped into my mind: *Where are we?*
+
+Then I saw it — our extension was listed as the **fourth** tool in the article.
+
+What made this moment truly surreal? At the time, our extension had only **33 users**, a single review, and that review was just **1 star**.
+
+---
+
+## The Unexpected Recognition
+
+If someone had told me a few months earlier that our tool would be featured in a respected tech publication like MakeUseOf with such minimal metrics, I would have bet everything against it. It seemed statistically impossible.
+
+Yet here we were.
+
+The journalist clearly saw beyond the numbers. What stood out wasn't our user count or review score — it was the **simplicity and power** of our user interface combined with genuinely useful features that address real pain points in WhatsApp Web.
+
+Many competing extensions offer similar functionality, but they often come with cluttered interfaces, steep learning curves, or overwhelming options. Our approach was different: we obsessed over making every feature intuitive and accessible from day one.
+
+---
+
+## The Journey Behind the Tool
+
+This extension is my very first product launch. While I'm not sure if my previous projects ever received media mentions, this one felt different from the start.
+
+The real differentiator wasn't just the features themselves — it was the relentless focus on **user-friendliness**. Even though larger competitors already had more visibility and downloads, their tools frequently sacrificed ease of use for complexity.
+
+I spent countless hours asking one simple question during development: *How can we make this as effortless as possible for the user?*
+
+That philosophy paid off in ways I never anticipated. When the MakeUseOf writer tested various extensions, our clean interface and thoughtful design clearly resonated.
+
+---
+
+## What This Means for WhatsApp Web Users
+
+WhatsApp Web is incredibly convenient, but it often feels limited compared to the mobile app. Power users quickly notice missing capabilities like advanced customization, productivity tools, privacy enhancements, and more.
+
+That's exactly where quality extensions shine — and why thoughtful, well-designed ones stand out, even early in their journey.
+
+Seeing our tool recognized alongside established extensions validated every late night and design iteration. Hard work, especially when paired with genuine care for the user experience, can break through the noise.
+
+---
+
+## Looking Ahead
+
+I'm incredibly proud of this milestone, not just because of the feature itself, but because it proves that quality and simplicity still matter in a crowded marketplace.
+
+The journey is just beginning, and I'm excited to see where it leads. More features, more refinements, and hopefully many more users who appreciate a tool that just *works* without getting in the way.
+
+If you're someone who uses WhatsApp Web regularly and wishes it offered a bit more — without the hassle of complicated tools — you're exactly who we built this for.
+
+**Ready to experience the difference a truly user-friendly WhatsApp Web extension can make?**
+
+Try our extension today and see why it caught the attention of tech writers even in its earliest days. Simple setup, powerful features, and an interface designed with you in mind.
+
+[Add to Chrome – It's Free](#)
+
+*What small wins or unexpected moments have you experienced with your own projects or tools? Share in the comments below.*
+`
+},
+
+{
+title: "Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story",
+  slug: "2026-03-26-building-whatsapp-web-extensions-with-users-in-mind",
+  description: "How the very first feature request for our WhatsApp Web extension — written in Portuguese — taught me valuable lessons about user-centric development and thoughtful UI design.",
+  date: "2026-03-26",
+  readTime: "6 min read",
+  content: `# Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story
+
+**March 26, 2026** — Yesterday marked a small but meaningful milestone for our WhatsApp Web extension: we received our very first feature request on GitHub.
+
+The request came in Portuguese and translated roughly to: “Is there a way to customize the Quick Reply bubbles?” followed by “Why can’t these be customized?”
+
+---
+
+## From “Bug Report” to Valuable Insight
+
+Interestingly, the user first mentioned the idea through our “Report a Bug” form (built with Google Forms). They framed it almost like a bug, but it wasn’t one at all.
+
+When I originally implemented Quick Replies, I kept them deliberately simple and minimal. At the time, I wasn’t even sure whether people would use this feature enough to justify deeper customization options. It felt like a nice-to-have rather than a core function, so I avoided adding extra complexity.
+
+But when a real user asked for it — and took the time to submit the request in Portuguese — I knew it was time to act.
+
+---
+
+## Why User Feedback Changes Everything
+
+As developers, we often build features based on our own assumptions about what users want. We speak a different language from the people actually using our tools every day.
+
+This request was a perfect reminder of that gap.
+
+I immediately prioritized adding customizable Quick Reply bubbles. The challenge wasn’t just implementing the functionality itself, but integrating it seamlessly into the extension’s popup interface without making it feel overwhelming.
+
+Too many options visible at once can intimidate new users. If someone opens the popup and can’t quickly understand how to get value from the tool, they might dismiss it as complicated — even if powerful features are hidden just beneath the surface.
+
+That’s the last thing I want. My goal has always been to create an extension that feels **instantly approachable** while still offering depth for power users.
+
+---
+
+## Designing for Immediate Clarity and Delight
+
+When building the customization feature, I focused on four key principles:
+
+- **Immediate visibility** — Users should spot the new option right away
+- **Intuitive controls** — No steep learning curve
+- **Instant feedback** — Every change should produce a visible, satisfying result
+- **Clear cause and effect** — No guessing whether your action actually worked
+
+I wanted to avoid that frustrating moment where a user makes a change and thinks, “Okay… something happened, but I’m not sure what or if it’s working.”
+
+Instead, the interface now provides clear, real-time visual feedback so users feel confident and in control from the very first interaction.
+
+---
+
+## The Developer vs. User Perspective
+
+This experience reinforced an important truth: developers and users live in completely different worlds.
+
+What feels “cool” or “simple enough” to me as the creator might not align with what real users actually need or expect. That’s why direct feedback — even when it arrives in another language or through an unexpected channel — is pure gold.
+
+By listening early and designing with empathy, we can build tools that don’t just add features, but genuinely improve the daily experience for thousands of WhatsApp Web users.
+
+---
+
+## What’s Next?
+
+I’m genuinely excited about where this extension is headed. Every piece of feedback helps shape it into something more useful, more polished, and more delightful to use.
+
+If you’re a regular WhatsApp Web user who values clean design and thoughtful features, I’d love for you to give our extension a try.
+
+It’s completely free to install, quick to set up, and built from the ground up with real user needs in mind — including the ability to customize those Quick Reply bubbles.
+
+[Try the Extension Now – Free on Chrome Web Store](#)
+
+Have you ever requested a feature for a tool you love? Or discovered something missing that surprised you? I’d love to hear your stories in the comments below.
+`
+},
+  {
     slug: "why-whatsapp-web-feels-limited",
     title: "Why WhatsApp Web Feels So Limited (And How to Fix It)",
     description:
@@ -200,6 +348,81 @@ By the end of the month, you'll wonder how you ever worked without these systems
 
 What's your biggest WhatsApp Web productivity challenge? Join our Discord community and let us know.
     `,
+  },
+  {
+title: "Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed",
+  slug: "2025-09-05-why-i-built-my-own-whatsapp-web-extension",
+  description: "Discover the frustrations with existing WhatsApp Web customizers that led me to create a simpler, more user-friendly Chrome extension with built-in presets and effortless customization.",
+  date: "2025-09-05",
+  readTime: "5 min read",
+  content: `# Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed
+
+**September 5, 2025** — If you’ve ever used WhatsApp Web for more than a few days, you’ve probably felt it: the interface feels dated, limited, and surprisingly inflexible for a modern messaging platform.
+
+I noticed the same complaints popping up again and again — especially on Reddit. Thousands of users were frustrated by how “old-school” WhatsApp Web still feels, how few options there are for personalization, and how difficult it is to make the experience truly your own.
+
+After months of seeing these recurring pain points, I decided to explore the existing solutions. I searched for Chrome extensions that could enhance and customize WhatsApp Web.
+
+One of the first I found was “WhatsApp Web Designer.” It offered several appealing features: custom backgrounds, themes, sounds, and font options. You could also toggle elements on and off relatively quickly.
+
+But there was one major issue that kept bothering me.
+
+---
+
+## The Problem with Existing Customizers
+
+The biggest drawback? **No presets.**
+
+If you wanted to quickly test different fonts or themes, you couldn’t just pick one and see how it looked. Instead, you had to:
+
+- Go to Google Fonts (or another source)
+- Download the font files manually
+- Import them into the extension
+- Hope you did everything correctly
+
+For someone who isn’t tech-savvy, this process feels intimidating and time-consuming. Even worse, the import feature sometimes stopped working, leaving users unable to test features properly.
+
+On top of that, not every element could be customized, and when creating custom themes, you often couldn’t preview changes in real time. The whole experience felt clunky and unnecessarily complicated.
+
+These friction points turned what should have been a fun way to personalize WhatsApp Web into a frustrating chore.
+
+---
+
+## Building Something Better
+
+That frustration became the spark for my own extension.
+
+I wanted to create a tool that solved these exact problems — one that was genuinely **user-friendly**, even for people who aren’t comfortable with technical setups.
+
+My goals were clear from the start:
+
+- Include **ready-to-use presets** so users can try fonts, themes, and styles instantly
+- Make customization simple and visual — no manual file imports required
+- Ensure every important element can be customized
+- Design an interface so intuitive that even less tech-savvy users (including older family members) could feel comfortable using it
+
+The focus wasn’t just on adding more features. It was about removing barriers and making personalization feel effortless and enjoyable.
+
+---
+
+## The Result: A Truly Approachable WhatsApp Web Enhancer
+
+By prioritizing simplicity without sacrificing power, the extension delivers a much smoother experience. You can experiment with different looks in seconds, see changes instantly, and confidently create a WhatsApp Web interface that matches your style.
+
+No more hunting for font files. No more guessing if you’re doing it right. Just clean, fast, and satisfying customization.
+
+---
+
+## Ready to Make WhatsApp Web Feel Like Yours?
+
+If you’ve ever wished WhatsApp Web offered more flexibility — cleaner themes, better fonts, custom backgrounds, or easier personalization — this extension was built for you.
+
+It’s completely free, easy to install, and designed with real user feedback and everyday usability in mind.
+
+[Install the WhatsApp Web Extension for Free](#)
+
+Have you run into similar frustrations with WhatsApp Web or other tools? What would you love to customize? Share your thoughts in the comments — I read every one.
+`
   },
 ];
 
