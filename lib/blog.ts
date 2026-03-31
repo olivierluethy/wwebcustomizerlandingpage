@@ -68,7 +68,7 @@ Our Chrome extension was built precisely to solve the frustrations many users sh
 
 It gives you the control and personalization that WhatsApp Web itself hasn’t delivered yet, without adding complexity or bloat.
 
-[Install Our WhatsApp Web Extension for Free](#)
+[Install Our WhatsApp Web Extension for Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
 What do you think — is WhatsApp Web “good enough,” or does it still need major improvements? Have you found creative ways to make it better? Share your thoughts in the comments. I read every one.
 `
@@ -146,7 +146,7 @@ If you’re tired of fighting with WhatsApp Web’s limitations and want a clean
 
 Built with real user needs in mind — and a healthy respect for simplicity over perfectionism.
 
-[Try the Extension for Free Today](#)
+[Try the Extension for Free Today](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
 What’s your take on perfectionism in product development? Have you ever used a tool that felt over-engineered? Share your experiences in the comments — I’d love to hear them.
 `
@@ -217,7 +217,7 @@ If you're someone who uses WhatsApp Web regularly and wishes it offered a bit mo
 
 Try our extension today and see why it caught the attention of tech writers even in its earliest days. Simple setup, powerful features, and an interface designed with you in mind.
 
-[Add to Chrome – It's Free](#)
+[Add to Chrome – It's Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
 *What small wins or unexpected moments have you experienced with your own projects or tools? Share in the comments below.*
 `
@@ -294,7 +294,7 @@ If you’re a regular WhatsApp Web user who values clean design and thoughtful f
 
 It’s completely free to install, quick to set up, and built from the ground up with real user needs in mind — including the ability to customize those Quick Reply bubbles.
 
-[Try the Extension Now – Free on Chrome Web Store](#)
+[Try the Extension Now – Free on Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
 Have you ever requested a feature for a tool you love? Or discovered something missing that surprised you? I’d love to hear your stories in the comments below.
 `
@@ -345,7 +345,7 @@ With just a browser extension, you can:
 
 The best part? It takes less than a minute to install and start customizing. No account needed, no complicated setup—just a better WhatsApp Web experience.
 
-Ready to stop settling for default? [Install the extension](#) and see the difference for yourself.
+Ready to stop settling for default? [Install the extension](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and see the difference for yourself.
     `,
   },
   {
@@ -562,7 +562,7 @@ If you’ve ever wished WhatsApp Web offered more flexibility — cleaner themes
 
 It’s completely free, easy to install, and designed with real user feedback and everyday usability in mind.
 
-[Install the WhatsApp Web Extension for Free](#)
+[Install the WhatsApp Web Extension for Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
 Have you run into similar frustrations with WhatsApp Web or other tools? What would you love to customize? Share your thoughts in the comments — I read every one.
 `
