@@ -9,12 +9,87 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Why WhatsApp Web Still Feels Outdated in 2026 – And Why That’s Understandable",
-  slug: "2026-03-31-why-whatsapp-web-still-feels-outdated",
-  description: "A honest look at why Meta hasn’t transformed WhatsApp Web as much as users want. The real costs, business realities, and what it means for users who complain about the interface.",
-  date: "2026-03-31",
-  readTime: "7 min read",
-  content: `# Why WhatsApp Web Still Feels Outdated in 2026 – And Why That’s Understandable
+    title: "The Unexpected Reason I Built This WhatsApp Web Extension",
+    slug: "2026-04-01-the-unexpected-reason-i-built-this-whatsapp-web-extension",
+    description:
+      "Discover the frustrating navigation habit on WhatsApp Web that sparked the creation of our Chrome extension — and how starting small led to a powerful customization tool.",
+    date: "2026-04-01",
+    readTime: "5 min read",
+    content: `# The Unexpected Reason I Built This WhatsApp Web Extension
+
+**April 1, 2026** — Sometimes the best products are born from pure personal frustration.
+
+When WhatsApp introduced **Channels**, it brought a new way for creators and communities to broadcast messages. On mobile, I found it tolerable. But on WhatsApp Web, it quickly became a major annoyance.
+
+---
+
+## The Annoying Navigation Loop
+
+My daily routine on WhatsApp Web started looking like this:
+
+- Open a chat with someone
+- Accidentally click into the Channels tab (where recommended channels appeared)
+- Go back to a chat
+- Switch to another conversation
+- Click back into Channels again by mistake
+
+I caught myself repeating this pattern far too often. It was breaking my flow and wasting time. The more I noticed it, the more it irritated me.
+
+One day, I decided enough was enough. I opened the browser’s developer tools, inspected WhatsApp Web’s frontend code, and found the Channels element. Removing it turned out to be surprisingly straightforward.
+
+---
+
+## The Search That Changed Everything
+
+Before building anything, I assumed someone must have already solved this problem. I spent about five minutes searching the Chrome Web Store for extensions using terms like “WhatsApp customizer,” “remove elements,” or “WhatsApp Web cleaner.”
+
+To my surprise, **none** of the existing extensions offered a simple, clean way to hide the Channels tab — at least not in an intuitive way I could easily understand and use.
+
+That moment was the spark. I thought: *Am I missing something, or is this actually a gap?*
+
+---
+
+## From Small Fix to Full Extension
+
+I started with one very specific goal: hide the Channels section on WhatsApp Web.
+
+But as often happens when I get into a project, the vision quickly expanded. Once I had the foundation in place, I began looking at what other extensions offered and thought, “Wouldn’t it be great if my tool could do that too — but simpler and more user-friendly?”
+
+I spent just one or two weeks building the first core version. Then I published it.
+
+The philosophy was simple: **start small, ship fast, and let real usage guide growth** — exactly like planting a seed and watching a tree grow over time.
+
+---
+
+## Why This Approach Works
+
+Beginning with a minimal viable solution keeps things focused and manageable. As feedback comes in and my own understanding deepens, the extension naturally evolves into something far more capable and polished.
+
+Today, I treat this project with much more seriousness and long-term vision than when I first started. What began as a personal fix has turned into a tool designed to genuinely improve the WhatsApp Web experience for many users.
+
+---
+
+## Ready to Take Control of Your WhatsApp Web?
+
+If you’re tired of distracting tabs, unnecessary elements, or simply want more control over how WhatsApp Web looks and behaves, our extension gives you exactly that — cleanly, simply, and without clutter.
+
+It started from real user frustration (mine) and grew into a thoughtful customization tool that keeps getting better.
+
+[Install the Extension for Free on Chrome](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de)
+
+What annoying little thing on WhatsApp Web bothers you the most? Feel free to share — your feedback helps shape future updates.
+`,
+  },
+
+  {
+    title:
+      "Why WhatsApp Web Still Feels Outdated in 2026 – And Why That’s Understandable",
+    slug: "2026-03-31-why-whatsapp-web-still-feels-outdated",
+    description:
+      "A honest look at why Meta hasn’t transformed WhatsApp Web as much as users want. The real costs, business realities, and what it means for users who complain about the interface.",
+    date: "2026-03-31",
+    readTime: "7 min read",
+    content: `# Why WhatsApp Web Still Feels Outdated in 2026 – And Why That’s Understandable
 
 **March 31, 2026** — It’s a question I hear constantly: *Why doesn’t WhatsApp care enough to make their Web version truly great?*
 
@@ -70,17 +145,19 @@ It gives you the control and personalization that WhatsApp Web itself hasn’t d
 
 [Install Our WhatsApp Web Extension for Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
-What do you think — is WhatsApp Web “good enough,” or does it still need major improvements? Have you found creative ways to make it better? Share your thoughts in the comments. I read every one.
-`
-},
-  
+What do you think — is WhatsApp Web “good enough,” or does it still need major improvements? Have you found creative ways to make it better? Share your thoughts in our Discord community.
+`,
+  },
+
   {
-title: "Why Chasing Perfection Can Hurt Your Product (And What I Do Instead)",
-  slug: "2026-03-30-why-chasing-perfection-can-hurt-your-product",
-  description: "Perfectionism sounds good in theory, but it can lead to over-engineering. Learn how I balance rapid prototyping with user-focused development when building our WhatsApp Web extension.",
-  date: "2026-03-30",
-  readTime: "6 min read",
-  content: `# Why Chasing Perfection Can Hurt Your Product (And What I Do Instead)
+    title:
+      "Why Chasing Perfection Can Hurt Your Product (And What I Do Instead)",
+    slug: "2026-03-30-why-chasing-perfection-can-hurt-your-product",
+    description:
+      "Perfectionism sounds good in theory, but it can lead to over-engineering. Learn how I balance rapid prototyping with user-focused development when building our WhatsApp Web extension.",
+    date: "2026-03-30",
+    readTime: "6 min read",
+    content: `# Why Chasing Perfection Can Hurt Your Product (And What I Do Instead)
 
 **March 30, 2026** — Perfection isn’t always the right goal.
 
@@ -148,16 +225,18 @@ Built with real user needs in mind — and a healthy respect for simplicity over
 
 [Try the Extension for Free Today](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
-What’s your take on perfectionism in product development? Have you ever used a tool that felt over-engineered? Share your experiences in the comments — I’d love to hear them.
-`
-},
+What’s your take on perfectionism in product development? Have you ever used a tool that felt over-engineered? Share your experiences in our Discord community.
+`,
+  },
   {
-  title: "From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines",
-  slug: "2026-03-29-from-1-star-review-to-makeuseof-feature",
-  description: "Discover how a brand-new WhatsApp Web extension with just 33 users and one 1-star review earned a spot in a major MakeUseOf article. The power of simple, user-friendly design.",
-  date: "2026-03-29",
-  readTime: "5 min read",
-  content: `# From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines
+    title:
+      "From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines",
+    slug: "2026-03-29-from-1-star-review-to-makeuseof-feature",
+    description:
+      "Discover how a brand-new WhatsApp Web extension with just 33 users and one 1-star review earned a spot in a major MakeUseOf article. The power of simple, user-friendly design.",
+    date: "2026-03-29",
+    readTime: "5 min read",
+    content: `# From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines
 
 **March 29, 2026** — Two weeks ago, something almost unbelievable happened.
 
@@ -219,17 +298,19 @@ Try our extension today and see why it caught the attention of tech writers even
 
 [Add to Chrome – It's Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
-*What small wins or unexpected moments have you experienced with your own projects or tools? Share in the comments below.*
-`
-},
+*What small wins or unexpected moments have you experienced with your own projects or tools? Share it with us in our Discord community!*
+`,
+  },
 
-{
-title: "Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story",
-  slug: "2026-03-26-building-whatsapp-web-extensions-with-users-in-mind",
-  description: "How the very first feature request for our WhatsApp Web extension — written in Portuguese — taught me valuable lessons about user-centric development and thoughtful UI design.",
-  date: "2026-03-26",
-  readTime: "6 min read",
-  content: `# Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story
+  {
+    title:
+      "Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story",
+    slug: "2026-03-26-building-whatsapp-web-extensions-with-users-in-mind",
+    description:
+      "How the very first feature request for our WhatsApp Web extension — written in Portuguese — taught me valuable lessons about user-centric development and thoughtful UI design.",
+    date: "2026-03-26",
+    readTime: "6 min read",
+    content: `# Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story
 
 **March 26, 2026** — Yesterday marked a small but meaningful milestone for our WhatsApp Web extension: we received our very first feature request on GitHub.
 
@@ -296,9 +377,9 @@ It’s completely free to install, quick to set up, and built from the ground up
 
 [Try the Extension Now – Free on Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
-Have you ever requested a feature for a tool you love? Or discovered something missing that surprised you? I’d love to hear your stories in the comments below.
-`
-},
+Have you ever requested a feature for a tool you love? Or discovered something missing that surprised you? Share your thoughts inside of our Discord community. We’d love to hear your stories.
+`,
+  },
   {
     slug: "why-whatsapp-web-feels-limited",
     title: "Why WhatsApp Web Feels So Limited (And How to Fix It)",
@@ -410,7 +491,7 @@ After customizing hundreds of setups, here's what the pros do differently:
 
 The best WhatsApp Web setup is the one that works for you. Start with one small change today and build from there.
 
-What will you customize first?
+What will you customize first? Share your ideas in the comments or join our Discord community to see how others are personalizing their WhatsApp Web experience.
     `,
   },
   {
@@ -493,12 +574,144 @@ What's your biggest WhatsApp Web productivity challenge? Join our Discord commun
     `,
   },
   {
-title: "Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed",
-  slug: "2025-09-05-why-i-built-my-own-whatsapp-web-extension",
-  description: "Discover the frustrations with existing WhatsApp Web customizers that led me to create a simpler, more user-friendly Chrome extension with built-in presets and effortless customization.",
-  date: "2025-09-05",
-  readTime: "5 min read",
-  content: `# Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed
+    title: "How We Turned Our First Feature Request into a Same-Day Update",
+    slug: "2026-01-09-how-we-turned-our-first-feature-request-into-a-same-day-update",
+    description:
+      "Discover how our WhatsApp Web extension went from 51 weekly users to implementing a font size adjustment feature the same day it was requested — and why fast response matters.",
+    date: "2026-01-09",
+    readTime: "5 min read",
+    content: `# How We Turned Our First Feature Request into a Same-Day Update
+
+**January 9, 2026** — Building in public has its special moments, and one of the earliest came shortly after we added “Feature Request” and “Report a Bug” buttons to our extension’s popup.
+
+With just **51 weekly active users** at the time, I happened to spot our very first feature request submitted through the Google Form.
+
+The user wanted a simple but practical improvement: the ability to **change the font size** in WhatsApp Web. When resizing the browser window, text could become hard to read — especially on smaller screens. Being able to adjust the font size would solve that frustration instantly.
+
+---
+
+## From Request to Release in One Day
+
+True to our philosophy, I treated the request with high priority. I implemented the font size adjustment feature the **same day** the request came in.
+
+Once the code was ready, I submitted the update to the Chrome Web Store for review so users could benefit from it as quickly as possible.
+
+---
+
+## Going the Extra Mile for Users
+
+The person who submitted the request had kindly included their email address. I sent them a personal message right away to let them know their suggestion had been received and was being worked on.
+
+After the update was submitted for review, I followed up again with a second email:
+
+- Confirming that the feature had been implemented
+- Sharing exactly which version it would appear in
+
+This small gesture — keeping the user in the loop — makes a big difference. When people see that their feedback is valued and acted upon quickly, they feel genuinely appreciated.
+
+---
+
+## Why Fast Feedback Matters
+
+I’ve always believed in responding to user requests as quickly as possible. If I understand what someone needs and have the time, I don’t let it sit for days or weeks. The sooner we deliver, the sooner users can enjoy the improvement.
+
+This approach has become a core part of how we develop the extension: listen closely, build fast, and communicate transparently.
+
+Even with very few users in the beginning, treating every request with care helped lay the foundation for the trust we continue to build today.
+
+---
+
+## Experience Responsive Development Yourself
+
+Our WhatsApp Web extension is designed to evolve based on real user needs — and we move quickly when you tell us what would make your experience better.
+
+Whether it’s font size control, hiding distracting elements, customizing themes, or any other quality-of-life improvement, your voice shapes the tool.
+
+[Install the Free WhatsApp Web Extension](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de)
+
+Join our Discord community to share feature ideas, get early updates, and connect with other users who want a better WhatsApp Web experience.
+`,
+  },
+
+  {
+    title:
+      "The Moment I Realized My WhatsApp Web Extension Might Actually Succeed",
+    slug: "2025-10-03-the-moment-i-realized-my-whatsapp-web-extension-might-succeed",
+    description:
+      "A personal story about self-doubt, family moments, and discovering the massive search volume for WhatsApp Web that convinced me to keep building our Chrome extension.",
+    date: "2025-10-03",
+    readTime: "5 min read",
+    content: `# The Moment I Realized My WhatsApp Web Extension Might Actually Succeed
+
+**October 3, 2025** — Every creator experiences that moment of doubt. For me, it came while deep in development.
+
+I was completely absorbed in one of the trickiest parts of the project: building a smooth, high-quality background image customization feature for WhatsApp Web. I wanted it to feel seamless and professional.
+
+Suddenly, my brother walked into my room. He glanced at my screen and casually asked how things were going with “my stuff.” In a split second, I instinctively dragged the WhatsApp Web window and my code editor out of view, embarrassed that he might think I was working on something weird.
+
+He looked at me the way older brothers often do — like I was the family geek. After he left, I sat there wondering: *Is this even worth it?*
+
+At that point, success felt far from guaranteed. I had no idea whether anyone else would care about the extension.
+
+---
+
+## Battling Self-Doubt During Development
+
+The questions kept looping in my head:
+
+- What if this is just useless fluff that nobody needs?
+- What if it only solves problems I personally have?
+- Am I wasting my time on something that will never gain traction?
+
+Despite the uncertainty, I kept going. Deep down, I knew the tool would at least be incredibly useful *for me*. It was designed to be fast, simple, and genuinely helpful — the kind of extension I wished already existed.
+
+---
+
+## The Data That Changed My Perspective
+
+Later that same day, curiosity got the better of me. I searched for global search volume data on “web.whatsapp.com”.
+
+The results were eye-opening.
+
+WhatsApp Web ranked among the top searched terms worldwide — somewhere between 4th and 6th place globally. That level of interest was massive.
+
+Suddenly, the doubt felt irrational. If millions of people were actively using WhatsApp Web every day, and my extension could make that experience noticeably better, cleaner, and more personalized, why *wouldn’t* people want it?
+
+It seemed almost silly to assume otherwise. The potential audience was clearly there.
+
+---
+
+## From Personal Project to Something Bigger
+
+That moment shifted my mindset. What started as a tool built mainly for my own frustration with WhatsApp Web’s limitations slowly transformed into a project I believed could genuinely help many others.
+
+I continued building with renewed conviction: keep it lightweight, make it intuitive, and focus on real pain points that millions of users face daily.
+
+The rest, as they say, is still unfolding.
+
+---
+
+## Ready to Transform Your WhatsApp Web Experience?
+
+If you’re one of the millions who use WhatsApp Web regularly and want more control, better customization, and a smoother interface, this extension was built for you.
+
+It’s free, easy to install, and continues to improve based on real user needs.
+
+[Install Now on the Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de)
+
+Join our community on Discord to share feedback, suggest features, or connect with other users who want a better WhatsApp Web.
+`,
+  },
+
+  {
+    title:
+      "Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed",
+    slug: "2025-09-05-why-i-built-my-own-whatsapp-web-extension",
+    description:
+      "Discover the frustrations with existing WhatsApp Web customizers that led me to create a simpler, more user-friendly Chrome extension with built-in presets and effortless customization.",
+    date: "2025-09-05",
+    readTime: "5 min read",
+    content: `# Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed
 
 **September 5, 2025** — If you’ve ever used WhatsApp Web for more than a few days, you’ve probably felt it: the interface feels dated, limited, and surprisingly inflexible for a modern messaging platform.
 
@@ -564,14 +777,14 @@ It’s completely free, easy to install, and designed with real user feedback an
 
 [Install the WhatsApp Web Extension for Free](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
 
-Have you run into similar frustrations with WhatsApp Web or other tools? What would you love to customize? Share your thoughts in the comments — I read every one.
-`
+Have you run into similar frustrations with WhatsApp Web or other tools? What would you love to customize? Join our Discord community and share your thoughts with us!
+`,
   },
 ];
 
 export function getAllPosts(): BlogPost[] {
   return blogPosts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 

@@ -21,13 +21,6 @@ const ARTICLES = [
     id: "techpp"
   },
   {
-    name: "Huhu for Informatics",
-    logo: "/huhu.ico",
-    quote: '"Top 5 Free WhatsApp Web Add-ons.. The first addition will amaze you"',
-    url: "https://www.igli5.com/2026/01/5_10.html/",
-    id: "huhuforinformatics"
-  },
-  {
     name: "Androidphoria",
     logo: "/androidphoria.jpg",
     quote: '"Top 5 Best Free Extensions for WhatsApp Web"',
@@ -42,18 +35,25 @@ const ARTICLES = [
     id: "techview9"
   },
   {
-    name: "Arab Soft", // Geändert von xenForo zu Arab Soft
+    name: "Arab Soft",
     logo: "/xenforo.svg",
     quote: '"Top 5 Free WhatsApp Web Add-ons.. The first addition will amaze you"',
     url: "https://absbs.org/threads/4789/",
     id: "xenforo"
   },
   {
-    name: "Mau Lozano", // Geändert von xenForo zu Arab Soft
+    name: "Mau Lozano",
     logo: "/tecnologia-con.webp",
     quote: '"Top 5 best extensions for WhatsApp Web"',
     url: "https://tecnologiaconmau.com/aplicaciones/extensiones-para-whatsapp-web/",
     id: "tecnologia-con-mau"
+  },
+  {
+    name: "Huhu for Informatics",
+    logo: "/huhu.ico",
+    quote: '"Top 5 Free WhatsApp Web Add-ons.. The first addition will amaze you"',
+    url: "https://www.igli5.com/2026/01/5_10.html/",
+    id: "huhuforinformatics"
   }
 ];
 
@@ -62,70 +62,70 @@ export function SocialProof() {
     trackEvent("article_click", "social_proof", id);
   };
 
-  return (
-    <section className="py-16 border-t border-b border-border bg-muted/20">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-sm text-muted-foreground uppercase tracking-widest font-semibold">
-            Featured in
-          </p>
-        </motion.div>
+  const duplicatedArticles = [...ARTICLES, ...ARTICLES];
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ARTICLES.map((article, index) => (
-            <motion.a
-              key={article.id}
+  return (
+    <section className="py-12 md:py-20 border-t border-b border-border bg-muted/5 overflow-hidden">
+      <div className="container mx-auto px-4 mb-8 md:mb-12 text-center">
+        <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold opacity-80">
+          Featured in
+        </p>
+      </div>
+
+      {/* Slider Container */}
+      <div className="relative flex overflow-hidden group">
+        <motion.div
+          className="flex gap-4 md:gap-6 whitespace-nowrap"
+          animate={{
+            x: ["0%", "-50%"],
+          }}
+          transition={{
+            ease: "linear",
+            duration: 35, // Etwas schneller für besseren Flow
+            repeat: Infinity,
+          }}
+          style={{ width: "max-content" }}
+          whileHover={{ animationPlayState: "paused" }}
+        >
+          {duplicatedArticles.map((article, index) => (
+            <a
+              key={`${article.id}-${index}`}
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleClick(article.id)}
-              className="flex flex-col justify-between p-7 bg-card rounded-2xl border border-border/60 hover:border-accent/40 transition-all duration-300 group hover:shadow-xl hover:shadow-accent/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ y: -4 }}
+              // Responsive Breite: 280px auf Mobile, 350px auf Desktop
+              className="w-[280px] md:w-[350px] inline-flex flex-col justify-between p-5 md:p-6 bg-card rounded-xl border border-border/50 hover:border-accent/40 transition-all duration-300 group/card hover:shadow-lg hover:shadow-accent/5"
             >
-              <div>
-                <div className="mb-8 flex items-center justify-between">
-                  <div className="h-8 w-32 relative">
-                    <Image
-                      src={article.logo}
-                      alt={`${article.name} Logo`}
-                      fill
-                      className="object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                    />
-                  </div>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground/0 group-hover:text-accent group-hover:opacity-100 transition-all" />
+              <div className="flex items-center justify-between mb-4 md:mb-6">
+                <div className="h-5 md:h-6 w-20 md:w-24 relative">
+                  <Image
+                    src={article.logo}
+                    alt={article.name}
+                    fill
+                    className="object-contain grayscale opacity-60 group-hover/card:grayscale-0 group-hover/card:opacity-100 transition-all duration-500"
+                  />
                 </div>
-
-                <div className="space-y-3">
-                  {/* Der Artikel-Name als stylischer Badge */}
-                  <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent/10 text-accent border border-accent/20">
-                    {article.name}
-                  </span>
-                  
-                  <p className="text-foreground text-[15px] font-medium italic leading-relaxed tracking-tight">
-                    {article.quote}
-                  </p>
-                </div>
+                <ExternalLink className="h-3 w-3 text-muted-foreground opacity-40 group-hover/card:opacity-100 transition-opacity" />
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border/40">
-                <p className="text-muted-foreground group-hover:text-accent transition-colors text-xs font-semibold flex items-center gap-1.5 uppercase tracking-wider">
-                  Read full coverage
-                  <span className="block h-px w-4 bg-accent/30 group-hover:w-8 transition-all duration-300" />
-                </p>
+              <p className="text-foreground text-xs md:text-sm font-medium italic leading-relaxed whitespace-normal line-clamp-2 mb-4">
+                {article.quote}
+              </p>
+
+              <div className="flex items-center gap-2 mt-auto">
+                <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-accent/80 group-hover/card:text-accent transition-colors">
+                  {article.name}
+                </span>
+                <div className="h-px flex-1 bg-border/30 group-hover/card:bg-accent/20 transition-colors" />
               </div>
-            </motion.a>
+            </a>
           ))}
-        </div>
+        </motion.div>
+
+        {/* Responsive Fade-Effekte: Kleiner auf Mobile (w-16), grösser auf Desktop (w-40) */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background via-background/80 to-transparent z-10" />
       </div>
     </section>
   );
