@@ -8,6 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.wwebcustomizer.com'), // DEINE ECHTE DOMAIN HIER
   title: "WWeb Customizer - Transform Your WhatsApp Web Experience",
   description:
     "Customize WhatsApp Web with themes, shortcuts, and smart features. Make messaging yours with this free, open-source browser extension.",
@@ -39,17 +40,18 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: '/', // Das setzt den Canonical-Tag standardmässig auf die aktuelle URL
+  },
   icons: {
     icon: [
-      {
-        url: "/icon128.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon128.png",
-        type: "image/svg+xml",
-      },
-    ],
+    { url: '/logo32x32.png', sizes: '32x32', type: 'image/png' },
+    { url: '/logo128x128.png', sizes: '128x128', type: 'image/png' },
+    { url: '/logo192x192.png', sizes: '192x192', type: 'image/png' },
+    { url: '/logo426x426.png', sizes: '426x426', type: 'image/png' },
+    { url: '/logo512x512.png', sizes: '512x512', type: 'image/png' },
+  ],
+  shortcut: '/favicon.ico', // Optional für alte Browser
     apple: "/apple-icon.png",
   },
 };

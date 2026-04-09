@@ -102,7 +102,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            🚀 More than 200 active users already use this tool every week
+            🚀 More than 220 active users already use this tool every week
           </motion.p>
 
           <motion.div

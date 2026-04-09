@@ -57,7 +57,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
                <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center overflow-hidden">
                 <Image 
-                  src="/icon128.png" 
+                  src="/logo128x128.png" 
                   alt="Logo" 
                   width={32} 
                   height={32} 

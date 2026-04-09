@@ -9,6 +9,67 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "From 220 Weekly Users to Growing Fast: How Your Feature Requests Shape Our WhatsApp Web Extension",
+  slug: "2026-04-09-from-220-weekly-users-to-growing-fast",
+  description: "With just 220 weekly users, we've already received valuable feature requests — and implemented many the same day. Discover how we prioritize user feedback and why our WhatsApp Web extension is growing quickly without ads.",
+  date: "2026-04-09",
+  readTime: "5 min read",
+  content: `# From 220 Weekly Users to Growing Fast: How Your Feature Requests Shape Our WhatsApp Web Extension
+
+**April 9, 2026** — It’s genuinely amazing to see how far this project has come in such a short time.
+
+We’ve already received a surprising number of thoughtful feature requests and suggestions from you — our users. Each one matters deeply to us.
+
+---
+
+## Our Promise: Fast, Serious Responses to Every Request
+
+From day one, our priority has been clear: treat every feature request with full seriousness. We review them quickly, implement the good ideas as fast as possible, and push updates to the Chrome Web Store so you can benefit right away.
+
+We completely understand that not everyone feels comfortable submitting feedback. Many users prefer to stay silent. That’s why we’re especially grateful to the few who do speak up.
+
+Right now, the extension has around **220 weekly active users** — and only **3 people** have submitted feature requests so far. That low number is completely understandable, but it also shows how valuable every single request truly is.
+
+---
+
+## Turning Feedback into Features — Same Day
+
+Every request we’ve received so far has been implemented on the **same day** it arrived. Once built, we immediately submit the update for Chrome review.
+
+If the user provided their email address, we send a personal message right away:
+- Confirming we received their idea
+- Sharing our thoughts on it
+- Letting them know when the feature will be available and in which version
+
+This transparent communication helps users feel heard and valued — because they are.
+
+---
+
+## Growing Quickly Without Ads
+
+We’re proud to be one of the fastest-growing WhatsApp Web extensions worldwide **without spending a single dollar on advertising**.
+
+While we can’t precisely measure the impact of blog mentions (like the one on MakeUseOf), we can clearly see that our own blog posts are driving more visibility and awareness every week.
+
+The combination of genuine user-focused development and consistent storytelling is helping the extension reach more people who want a better WhatsApp Web experience.
+
+---
+
+## Help Us Build the Best Version Together
+
+This extension grows stronger with every piece of feedback we receive. Whether it’s a small tweak or a bold new idea, your input directly shapes the future of the tool.
+
+If you’re using WhatsApp Web and wish it offered more customization, better readability, or smarter features, we’d love to hear from you.
+
+[Install the Free WhatsApp Web Extension Today](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de)
+
+Join our Discord server to share ideas, get early access to new features, and connect with other users who are passionate about improving WhatsApp Web.
+
+We can’t wait to see what we’ll build together next.
+`
+},
+  
+  {
     title: "The Unexpected Reason I Built This WhatsApp Web Extension",
     slug: "2026-04-01-the-unexpected-reason-i-built-this-whatsapp-web-extension",
     description:
