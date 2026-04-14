@@ -9,6 +9,213 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "Why We Didn't Build Persistent Multi-Message Pins for WhatsApp Web",
+  slug: "2026-04-16-why-we-didnt-build-persistent-multi-message-pins-for-whatsapp-web",
+  description: "A user requested persistent pinned messages in WhatsApp Web. After careful analysis, we decided not to implement it. Here's why thoughtful evaluation beats rushing into every feature request.",
+  date: "2026-04-16",
+  readTime: "6 min read",
+  content: `# Why We Didn't Build Persistent Multi-Message Pins for WhatsApp Web
+
+**April 16, 2026** — Yesterday’s post about removing a pinned chats feature sparked an important conversation about how we evaluate user requests.
+
+One recent feature request — written in Portuguese — perfectly illustrates why we sometimes say “no” even to polite, well-intentioned suggestions.
+
+---
+
+## The Original Request (Translated)
+
+> “A function to remove the bold text in the name bar, because the names already appear bold and can’t be changed. I also miss the possibility to set a privacy option, and an option to add multiple message pins in WebWhatsApp.”
+
+After careful reading and discussion, the core request was clear: the user wanted to **pin multiple individual messages** inside a chat conversation — and have those pins persist permanently.
+
+WhatsApp Web already allows pinning messages (you can choose 24 hours, 7 days, or 30 days). The user was likely hoping for a **permanent** pinning solution that doesn’t expire.
+
+---
+
+## Why We Decided Against It
+
+At first glance, implementing persistent pins sounds relatively straightforward. But once you dig into the technical realities, several complex challenges appear:
+
+- Only **one user** has requested this feature so far
+- How do we clearly distinguish and manage multiple pinned messages per chat?
+- How do we handle performance with users who have thousands of messages?
+- How do we reliably scroll to a pinned message that hasn’t been loaded yet?
+- What happens if the extension stores pins locally but the message isn’t visible until many earlier messages are fetched?
+
+These questions aren’t just theoretical — they affect loading speed, memory usage, and overall user experience. Building a robust, reliable solution would require significant engineering effort.
+
+---
+
+## The Importance of Critical Evaluation
+
+It’s tempting to implement every request immediately, especially when a user takes the time to share their idea. However, rushing in can lead to bloated features that only one person wants and that become difficult to maintain.
+
+Before building anything, we now ask ourselves:
+
+- Is this solving a widespread problem or just a niche need?
+- Does WhatsApp Web already offer something similar?
+- Is the technical complexity worth the benefit for most users?
+- Would we still be proud of this feature six months from now?
+
+In this case, the answer was no. After thorough consideration, we chose not to add persistent multi-message pinning.
+
+We’d rather keep the extension lightweight, fast, and focused on features that deliver clear value to many users.
+
+---
+
+## When We Will Reconsider
+
+If more users start requesting the same improvement, we’ll gladly take another look. Popular demand changes the equation. Until then, we’ll continue prioritizing features that solve common frustrations for the majority.
+
+This disciplined approach helps us avoid “nice-to-have” additions that could complicate the tool over time.
+
+---
+
+## A Cleaner, Smarter WhatsApp Web Experience
+
+Our extension focuses on meaningful enhancements — better customization, improved readability, quick replies, and removing distractions — all while staying lightweight and reliable.
+
+If you’re tired of WhatsApp Web’s limitations and want a more comfortable, personalized experience, give it a try.
+
+[Install the Free WhatsApp Web Extension on Chrome](#)
+
+Have feature ideas or feedback? Join our Discord community — we genuinely value thoughtful input and use it to guide future development.
+`
+},
+  
+  {
+    title: "Why We Removed a Pinned Chats Feature from Our WhatsApp Web Extension",
+  slug: "2026-04-15-why-we-removed-a-pinned-chats-feature-from-our-whatsapp-web-extension",
+  description: "Sometimes user requests lead to features that seem useful at first — until you realize WhatsApp Web already has them. Learn why we quickly built and then removed a pinned chats option in our extension.",
+  date: "2026-04-15",
+  readTime: "5 min read",
+  content: `# Why We Removed a Pinned Chats Feature from Our WhatsApp Web Extension
+
+**April 15, 2026** — Building features fast is exciting, but speed without careful thought can lead to unnecessary work.
+
+This week taught me an important lesson about balancing quick responses to user requests with proper validation of whether a feature truly adds value.
+
+---
+
+## The Request That Seemed Useful
+
+A user I’ve been corresponding with via email suggested adding a **pinned chats** option. The idea sounded reasonable — being able to pin important conversations so they stay at the top of your chat list.
+
+I implemented the feature based on what I understood from the conversation. I assumed the user wanted the ability to pin specific people (like a chat with your mom) directly in the sidebar for quicker access.
+
+The implementation looked nice and integrated cleanly with the rest of the extension.
+
+---
+
+## The Realization That Changed Everything
+
+Only later did I notice something important: **WhatsApp Web already lets you pin chats natively.**
+
+Once I saw that, the feature started to feel redundant. Even though our version looked slightly cleaner, it created new challenges:
+
+- It required carefully matching WhatsApp’s exact sorting behavior
+- Maintaining perfect alignment with the official interface added complexity
+- Most importantly, it duplicated functionality that already existed
+
+Why invest time maintaining a feature that doesn’t solve a real gap?
+
+---
+
+## Learning to Say No to Single-User Requests
+
+Not every suggestion — even from a helpful user — needs to become a permanent part of the extension. When a request comes from only one person, it’s essential to ask:
+
+- Does this solve a widespread problem?
+- Is the feature already available in WhatsApp Web?
+- Will it actually improve the experience for most users?
+
+In this case, the answer to all three questions was no. After careful consideration, I decided to remove the pinned chats feature entirely.
+
+Removing code is sometimes harder than adding it, but it keeps the extension lean, focused, and free from unnecessary bloat.
+
+---
+
+## Building with Intention
+
+This experience reinforced a key principle for our development process: speed is important, but thoughtful evaluation is even more critical. We’ll continue to implement user-requested features quickly — but only when they genuinely fill a missing need and improve the experience for many.
+
+The goal remains the same: deliver a clean, powerful, and truly useful WhatsApp Web enhancement without clutter.
+
+---
+
+## Experience a Focused, User-First WhatsApp Web Extension
+
+Our extension is designed to solve real pain points — with thoughtful features that complement rather than duplicate WhatsApp’s built-in tools.
+
+If you’re looking for better customization, improved readability, quick replies, and a cleaner overall experience on WhatsApp Web, this tool was built for you.
+
+[Install the Free WhatsApp Web Extension on Chrome](#)
+
+Join our Discord community to share ideas, suggest features, or give direct feedback. Your input helps us build smarter and avoid unnecessary additions.
+`
+},
+  
+  {
+    title: "Fixing the Awkward Gaps in WhatsApp Web Chat List: How User Feedback Improved Our Extension",
+  slug: "2026-04-14-fixing-awkward-gaps-in-whatsapp-web-chat-list",
+  description: "Users reported awkward spacing between chats in our WhatsApp Web customizer. We investigated, compared it to the default interface, and quickly fixed the real issue — making chat previews much easier to read.",
+  date: "2026-04-14",
+  readTime: "5 min read",
+  content: `# Fixing the Awkward Gaps in WhatsApp Web Chat List: How User Feedback Improved Our Extension
+
+**April 14, 2026** — One of the most valuable parts of developing this WhatsApp Web extension is hearing directly from you about the little things that frustrate your daily experience.
+
+Recently, several users described a similar issue: an awkward gap or excessive spacing between chats in the sidebar. Some mentioned chats feeling “stuck together” or separated by too much empty space, making the list harder to scan and navigate.
+
+---
+
+## Understanding the Real Problem
+
+When the first reports came in, I initially struggled to picture exactly what was wrong. At first glance, it seemed like a minor visual or “beauty” issue rather than a functional one. I even discussed it with ChatGPT to clarify, but still couldn’t fully grasp the impact.
+
+Then I did a side-by-side comparison: our customized chat list versus WhatsApp Web’s default styling.
+
+That’s when it clicked.
+
+The problem wasn’t just the spacing itself. The real issue was that **chat previews and message snippets became much harder to read** after the style changes. The increased gaps reduced scannability and made it tougher to quickly identify which conversation was which.
+
+Once I saw it clearly, the fix became obvious.
+
+---
+
+## How We Handle User Reports
+
+We take every piece of feedback seriously, but we’re especially careful with changes. If only one person reports an issue, I usually test it briefly and leave it as-is if I can’t reproduce the problem myself.
+
+However, when multiple users mention the **same pain point**, it moves to the top of our priority list. That’s exactly what happened here.
+
+The spacing adjustment has now been updated. The chat list feels more balanced, previews are clearer, and the overall sidebar is easier to use — without losing the clean, customized look.
+
+---
+
+## Your Input Makes the Difference
+
+If you were one of the users who reported this issue (or if you’ve noticed the change), we’d love to hear whether the fix matches what you had in mind.
+
+Did it solve the readability problem for you? Is the new spacing exactly how you wanted it, or would you prefer a different adjustment?
+
+Feel free to reach out via our Discord server or the in-extension feedback form. Your honest thoughts help us refine the tool even further.
+
+---
+
+## Make WhatsApp Web Work Better for You
+
+This extension exists to solve exactly these kinds of everyday frustrations — whether it’s spacing, font sizes, backgrounds, quick replies, or hiding unwanted elements.
+
+With thoughtful customizations and fast responses to user feedback, it continues to evolve into a smarter, more enjoyable way to use WhatsApp Web.
+
+[Install the Free WhatsApp Web Extension on Chrome](#)
+
+Join our Discord community for early feature discussions, direct feedback, and to connect with other users who want a better WhatsApp Web experience.
+`
+},
+  
+  {
     title: "From 220 Weekly Users to Growing Fast: How Your Feature Requests Shape Our WhatsApp Web Extension",
   slug: "2026-04-09-from-220-weekly-users-to-growing-fast",
   description: "With just 220 weekly users, we've already received valuable feature requests — and implemented many the same day. Discover how we prioritize user feedback and why our WhatsApp Web extension is growing quickly without ads.",
