@@ -9,6 +9,67 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "Why We Added an Uninstall Feedback Form to Our WhatsApp Web Extension",
+  slug: "2026-04-20-why-we-added-an-uninstall-feedback-form-to-our-whatsapp-web-extension",
+  description: "We added an uninstall feedback form to our WhatsApp Web extension after learning from past projects how valuable user insights can be — even from people who stop using the tool.",
+  date: "2026-04-20",
+  readTime: "4 min read",
+  content: `# Why We Added an Uninstall Feedback Form to Our WhatsApp Web Extension
+
+**April 20, 2026** — One of the smartest decisions we’ve made recently was adding a simple uninstall feedback form to our WhatsApp Web extension.
+
+At first, we assumed almost no one would bother filling it out. After all, when someone decides to remove an extension, they usually just want to move on quickly.
+
+We were wrong — and we’re glad we were.
+
+---
+
+## What We Learned from Past Extensions
+
+From our previous Chrome extensions, we discovered that many users actually take the time to share honest feedback when uninstalling. These responses have proven incredibly valuable.
+
+In one case, our goal with a YouTube-related tool was to help people spend less time on the platform. However, the feedback revealed we had spread the features too broadly and lacked a clear, focused purpose. Users felt the extension tried to do too many things at once without a strong direction.
+
+That insight was eye-opening.
+
+---
+
+## Turning Feedback into a Better Product
+
+One user went the extra mile. She not only explained why she was uninstalling but also described exactly what she had hoped the extension would do.
+
+Her detailed input became the foundation for an entirely new concept — and eventually a brand-new extension. The new version is much more focused, easier to understand, simpler to use, and far better positioned in its market.
+
+What started as a disappointment turned into a major improvement, all thanks to one thoughtful uninstall response.
+
+---
+
+## Why This Matters for Our WhatsApp Web Extension
+
+We want this extension to stay focused, useful, and genuinely helpful for anyone who uses WhatsApp Web daily. The uninstall form helps us understand:
+
+- What’s working well
+- What’s falling short
+- Which features matter most to real users
+- Where we should focus our future development
+
+Even if you decide the tool isn’t quite right for you, your feedback helps us make it better for everyone else.
+
+---
+
+## A Focused Tool Built to Improve WhatsApp Web
+
+Our WhatsApp Web extension is designed with clarity and simplicity in mind — offering clean customization, better readability, quick replies, and thoughtful features without unnecessary complexity.
+
+We’re committed to listening, learning, and improving with every piece of feedback we receive.
+
+[Try the Free WhatsApp Web Extension Today](#)
+
+If you ever decide to uninstall, we’d genuinely appreciate your honest thoughts through the form. And if you’d like to share ideas or discuss features while still using it, feel free to join our Discord community.
+`
+},
+  
+  {
     title: "Why We Didn't Build Persistent Multi-Message Pins for WhatsApp Web",
   slug: "2026-04-16-why-we-didnt-build-persistent-multi-message-pins-for-whatsapp-web",
   description: "A user requested persistent pinned messages in WhatsApp Web. After careful analysis, we decided not to implement it. Here's why thoughtful evaluation beats rushing into every feature request.",
