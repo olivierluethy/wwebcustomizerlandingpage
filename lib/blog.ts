@@ -9,6 +9,221 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+      slug: "2026-04-whatsapp-web-extension-image-management",
+  title: "How to Build a Reliable Image Management System for WhatsApp Web Extensions",
+  description: "Learn how to fix broken image handling, improve performance, and create a seamless image management system for your WhatsApp Web Chrome extension.",
+  date: "2026-04-21",
+  readTime: "10 min read",
+  content: `
+# How to Build a Reliable Image Management System for WhatsApp Web Extensions
+
+Customizing WhatsApp Web with images and themes is one of the most powerful features you can offer in a Chrome extension. But building a system that is stable, fast, and user-friendly is far from trivial.
+
+Many developers run into issues like broken image rendering, slow performance, or confusing user flows. In this guide, you'll learn how to **fix these problems properly—without breaking your existing architecture**.
+
+---
+
+## 🚨 Why Most Image Systems Fail
+
+A common mistake is trying to “patch” problems instead of understanding how the current system works.
+
+Before making any changes, you must analyze:
+
+- How images are stored (typically via \`chrome.storage.local\`)
+- The structure used for themes and images
+- How images are applied inside WhatsApp Web
+
+Skipping this step leads to fragile systems and hard-to-debug issues.
+
+👉 The golden rule: **Extend—don’t rebuild.**
+
+---
+
+## 🧩 Step 1: Move to a Dedicated Image Management Page
+
+Handling uploads inside a popup is unreliable and frustrating.
+
+### The better approach:
+Create a dedicated internal page (e.g., \`manage-images.html\`) that becomes the central hub for:
+
+- Uploading images
+- Adding images via URL
+- Viewing all images
+- Deleting images
+
+### Benefits:
+- No more popup crashes during uploads
+- More space for better UI/UX
+- Easier feature expansion
+
+👉 The popup should simply open this page—not handle uploads itself.
+
+---
+
+## 📁 Step 2: Implement Robust Image Uploads
+
+Users should be able to upload images without friction.
+
+### Best practices:
+- Support formats like JPG, PNG, WEBP, and GIF
+- Validate file size and type
+- Convert images into the **existing internal format** (usually base64)
+
+Consistency is critical. Never introduce a new format unless absolutely necessary.
+
+---
+
+## 🌐 Step 3: Fix URL-Based Images (The Right Way)
+
+One of the biggest issues: images added via URL don’t work in WhatsApp Web.
+
+### Why?
+- CORS restrictions
+- Content Security Policy (CSP)
+- Cross-origin blocking
+
+### The correct fix:
+> Always convert URL images into the same format as uploaded images.
+
+### Implementation flow:
+1. Fetch the image from the URL  
+2. Validate it's a real image  
+3. Convert it into a base64 data URL  
+4. Store it using existing logic  
+
+After that:
+- The external URL is no longer needed
+- The image works exactly like a local upload
+
+👉 No exceptions. No shortcuts.
+
+---
+
+## 🖼️ Step 4: Build a Unified Image Library
+
+All images should live in one place:
+
+- Uploaded images  
+- URL-based images  
+- Predefined images  
+
+Each image should:
+- Be previewable  
+- Be selectable  
+- Be deletable  
+
+This creates a clean and predictable user experience.
+
+---
+
+## 🗑️ Step 5: Enable Deletion Everywhere
+
+Users expect full control over their images.
+
+### Improve UX by allowing deletion:
+- Directly in the popup UI  
+- Inside the chat background selection view  
+
+### Important:
+- Use the same storage logic  
+- Ensure changes persist  
+- Support all image types  
+
+For predefined images:
+- Use **logical deletion** (e.g., \`disabled: true\`)  
+- Do NOT remove files physically  
+
+---
+
+## 🧹 Step 6: Remove Local Image Dependencies
+
+Bundled image folders (like \`/images\`) are unnecessary overhead.
+
+### Why remove them?
+- Increase extension size  
+- Slow down performance  
+- Add complexity  
+
+### Replace them with:
+- Remote predefined image URLs (exactly 5 recommended)
+
+These should:
+- Behave like normal images  
+- Be stored or referenced consistently  
+- Be deletable via logic  
+
+---
+
+## ⚡ Step 7: Optimize Performance
+
+Slow scrolling and laggy UI are often caused by inefficient image handling.
+
+### Fix it by:
+- Caching processed images  
+- Avoiding repeated loading  
+- Minimizing memory usage  
+- Using lazy loading where appropriate  
+
+👉 The result: smooth, responsive performance.
+
+---
+
+## 🔄 Step 8: Enforce a Unified Image Pipeline
+
+To avoid bugs, every image must follow the same lifecycle:
+
+| Source        | Selectable | Deletable | Persistent |
+|--------------|-----------|----------|------------|
+| Upload       | ✅        | ✅       | ✅         |
+| URL          | ✅        | ✅       | ✅         |
+| Predefined   | ✅        | ✅       | ✅ (logical) |
+
+### Rule:
+> Never treat URL images differently at render time.
+
+Everything must go through:
+**Fetch → Convert → Store → Render**
+
+---
+
+## 🧪 Step 9: Validate Everything
+
+Before shipping, test thoroughly:
+
+- Can URL images be added and applied?  
+- Do all images display correctly?  
+- Are there any CORS or console errors?  
+- Is performance smooth?  
+
+If something behaves differently, your pipeline is inconsistent.
+
+---
+
+## 🎯 Final Result: A Scalable, Reliable System
+
+By following these principles, you’ll achieve:
+
+- ✅ Stable image handling  
+- ✅ Smaller extension size  
+- ✅ Faster performance  
+- ✅ Clean architecture  
+- ✅ Better user experience  
+
+Most importantly, your extension becomes **future-proof and maintainable**.
+
+---
+
+## 🚀 Take Your Workflow to the Next Level
+
+Building features like this requires careful planning, consistency, and iteration.
+
+If you're working on complex extensions, prompts, or automation systems, having the right workflow tools can make a huge difference.
+
+👉 Try our tool to organize, optimize, and reuse your development workflows more efficiently—and build better products, faster.
+`
+},
+  
+  {
     title: "Why We Added an Uninstall Feedback Form to Our WhatsApp Web Extension",
   slug: "2026-04-20-why-we-added-an-uninstall-feedback-form-to-our-whatsapp-web-extension",
   description: "We added an uninstall feedback form to our WhatsApp Web extension after learning from past projects how valuable user insights can be — even from people who stop using the tool.",
