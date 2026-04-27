@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Palette, Zap, EyeOff, MonitorSmartphone, Search, Phone, Video, MoreVertical, Smile, Paperclip, Mic } from "lucide-react";
+import { 
+  Palette, Zap, EyeOff, MonitorSmartphone, Search, 
+  Phone, Video, MoreVertical, Smile, Paperclip, Mic, Send 
+} from "lucide-react";
 
 type Mode = "default" | "theme" | "quick" | "privacy";
 
@@ -13,7 +16,7 @@ const modes: { id: Mode; label: string; icon: React.ComponentType<{ className?: 
   { id: "privacy", label: "Privacy Mode", icon: EyeOff },
 ];
 
-const chatList = [
+const initialChatList = [
   { name: "Sarah Mitchell", msg: "Sounds great, see you then!", time: "12:42", unread: 0, color: "bg-pink-500/40" },
   { name: "Design Team", msg: "Alex: shipped the new spec ✨", time: "12:30", unread: 3, color: "bg-violet-500/40" },
   { name: "Marcus", msg: "Did you get the file?", time: "11:58", unread: 1, color: "bg-amber-500/40" },
@@ -21,7 +24,7 @@ const chatList = [
   { name: "Lukas Brandt", msg: "Let's catch up tomorrow", time: "10:09", unread: 0, color: "bg-sky-500/40" },
 ];
 
-const messages = [
+const initialMessages = [
   { from: "them", text: "Hey! Are you free this afternoon?" },
   { from: "me", text: "Probably yes — what's up?" },
   { from: "them", text: "Wanted to grab a coffee and walk through the new mockups." },
@@ -73,17 +76,48 @@ const themeStyles: Record<Mode, { bg: string; accent: string; bubbleMe: string; 
 
 export function VisualDemo() {
   const [mode, setMode] = useState<Mode>("default");
+  const [messages, setMessages] = useState(initialMessages);
+  const [messageText, setMessageText] = useState("");
+  const [chatList] = useState(initialChatList);
+
   const t = themeStyles[mode];
   const isPrivate = mode === "privacy";
   const showQuick = mode === "quick";
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const sendMessage = () => {
+    if (!messageText.trim()) return;
+
+    const newMessage = { from: "me" as const, text: messageText.trim() };
+    setMessages((prev) => [...prev, newMessage]);
+    setMessageText("");
+
+    // Optional: Scroll to bottom (simple version)
+    setTimeout(() => {
+      const chatContainer = document.querySelector(".chat-container");
+      if (chatContainer) chatContainer.scrollTop = chatContainer.scrollHeight;
+    }, 50);
+  };
+
+  const handleQuickReply = (text: string) => {
+    setMessageText(text);
+    
+    // Focus input and place cursor at the end
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+        inputRef.current.selectionStart = inputRef.current.selectionEnd = text.length;
+      }
+    }, 10);
+  };
 
   return (
     <section className="py-24 md:py-28 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
         style={{
-          background:
-            "radial-gradient(ellipse at top, oklch(0.72 0.19 142 / 0.07) 0%, transparent 60%)",
+          background: "radial-gradient(ellipse at top, oklch(0.72 0.19 142 / 0.07) 0%, transparent 60%)",
         }}
       />
 
@@ -102,7 +136,7 @@ export function VisualDemo() {
             One click. A whole new WhatsApp Web.
           </h2>
           <p className="text-muted-foreground text-lg text-pretty">
-            Switch modes below to preview what changes. No install required.
+            Switch modes below to preview what changes. Try the Quick Replies!
           </p>
         </motion.div>
 
@@ -121,9 +155,7 @@ export function VisualDemo() {
                 key={m.id}
                 onClick={() => setMode(m.id)}
                 className={`relative inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
-                  active
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                  active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {active && (
@@ -216,9 +248,7 @@ export function VisualDemo() {
                         {c.unread > 0 && (
                           <span
                             className={`text-[9px] md:text-[10px] font-bold rounded-full px-1.5 py-0.5 flex-shrink-0 ${
-                              mode === "theme"
-                                ? "bg-fuchsia-500 text-white"
-                                : "bg-emerald-500 text-zinc-900"
+                              mode === "theme" ? "bg-fuchsia-500 text-white" : "bg-emerald-500 text-zinc-900"
                             }`}
                           >
                             {c.unread}
@@ -249,14 +279,13 @@ export function VisualDemo() {
                 </div>
               </div>
 
-              {/* Messages */}
-              <div
-                className="flex-1 overflow-hidden p-3 md:p-5 space-y-2 md:space-y-3"
+              {/* Messages Area */}
+              <div 
+                className="flex-1 overflow-y-auto p-3 md:p-5 space-y-2 md:space-y-3 chat-container"
                 style={{
-                  backgroundImage:
-                    mode === "theme"
-                      ? "radial-gradient(circle at 30% 20%, rgba(217, 70, 239, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%)"
-                      : "none",
+                  backgroundImage: mode === "theme"
+                    ? "radial-gradient(circle at 30% 20%, rgba(217, 70, 239, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%)"
+                    : "none",
                 }}
               >
                 <AnimatePresence mode="popLayout">
@@ -265,7 +294,7 @@ export function VisualDemo() {
                       key={`${mode}-${i}`}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.35, delay: i * 0.05 }}
+                      transition={{ duration: 0.35, delay: Math.min(i * 0.03, 0.3) }}
                       className={`flex ${msg.from === "me" ? "justify-end" : "justify-start"}`}
                     >
                       <div
@@ -280,11 +309,11 @@ export function VisualDemo() {
                 </AnimatePresence>
               </div>
 
-              {/* Quick reply overlay */}
+              {/* Quick Replies */}
               <AnimatePresence>
                 {showQuick && (
                   <motion.div
-                    className="px-3 md:px-5 pb-2"
+                    className="px-3 md:px-5 pb-3"
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 12 }}
@@ -296,8 +325,15 @@ export function VisualDemo() {
                           key={q}
                           initial={{ opacity: 0, scale: 0.85 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.1 + i * 0.06 }}
-                          className="px-3 py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/25 transition-colors cursor-pointer"
+                          whileHover={{ scale: 1.06, y: -1 }}
+                          whileTap={{ scale: 0.95 }}
+                          transition={{ delay: 0.08 + i * 0.05 }}
+                          onClick={() => handleQuickReply(q)}
+                          className="px-4 py-2 rounded-3xl text-[10px] md:text-xs font-medium 
+                                     bg-emerald-500/10 hover:bg-emerald-500/25 
+                                     border border-emerald-500/40 hover:border-emerald-400 
+                                     text-emerald-200 hover:text-white 
+                                     transition-all duration-200 shadow-sm active:shadow-md"
                         >
                           {q}
                         </motion.button>
@@ -307,14 +343,42 @@ export function VisualDemo() {
                 )}
               </AnimatePresence>
 
-              {/* Input bar */}
+              {/* Input Bar */}
               <div className={`${t.header} px-3 md:px-4 py-2.5 md:py-3 flex items-center gap-2 md:gap-3 border-t border-white/5`}>
-                <Smile className="h-4 w-4 md:h-5 md:w-5 text-zinc-400" />
-                <Paperclip className="h-4 w-4 md:h-5 md:w-5 text-zinc-400 hidden md:block" />
-                <div className="flex-1 px-3 py-1.5 md:py-2 rounded-full bg-black/30 text-[10px] md:text-xs text-zinc-500">
-                  Type a message
+                <Smile className="h-5 w-5 text-zinc-400 cursor-pointer hover:text-zinc-300 transition-colors" />
+                <Paperclip className="h-5 w-5 text-zinc-400 hidden md:block cursor-pointer hover:text-zinc-300 transition-colors" />
+
+                <div className="flex-1">
+                  <input
+                    ref={inputRef}
+                    id="chat-input"
+                    type="text"
+                    value={messageText}
+                    onChange={(e) => setMessageText(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        sendMessage();
+                      }
+                    }}
+                    placeholder="Type a message"
+                    className="w-full px-4 py-2.5 md:py-3 bg-black/40 text-white text-[11px] md:text-sm 
+                               rounded-full border border-white/10 focus:border-emerald-500/60 
+                               focus:outline-none placeholder:text-zinc-500 transition-all"
+                  />
                 </div>
-                <Mic className="h-4 w-4 md:h-5 md:w-5 text-zinc-400" />
+
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={sendMessage}
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors p-1"
+                >
+                  {messageText.trim() ? (
+                    <Send className="h-5 w-5" />
+                  ) : (
+                    <Mic className="h-5 w-5" />
+                  )}
+                </motion.button>
               </div>
 
               {/* Mode badge */}
@@ -335,7 +399,7 @@ export function VisualDemo() {
         </motion.div>
 
         <p className="text-center text-xs md:text-sm text-muted-foreground mt-6">
-          Live preview — interact with the tabs above to switch modes.
+          Live interactive preview — click the Quick Replies in "Quick" mode!
         </p>
       </div>
     </section>
