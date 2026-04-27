@@ -1,8 +1,11 @@
 import { Navigation } from "@/components/landing/navigation";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
+import { Impact } from "@/components/landing/impact";
 import { Problems } from "@/components/landing/problems";
 import { Solution } from "@/components/landing/solution";
+import { FeatureValue } from "@/components/landing/feature-value";
+import { VisualDemo } from "@/components/landing/visual-demo";
 import { CTA } from "@/components/landing/cta";
 import { Community } from "@/components/landing/community";
 import { BlogPreview } from "@/components/landing/blog-preview";
@@ -16,11 +19,14 @@ export default function Home() {
       <ScrollTracker />
       <Hero />
       <SocialProof />
+      <Impact />
       <Problems />
       <Solution />
+      <FeatureValue />
+      <VisualDemo />
+      <CTA />
       <Community />
       <BlogPreview />
-      <CTA />
       <Footer />
     </main>
   );

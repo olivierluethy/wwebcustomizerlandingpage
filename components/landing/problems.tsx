@@ -1,32 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Palette, Clock, Focus, Sparkles } from "lucide-react";
+import { Palette, Zap, Focus, ShieldOff } from "lucide-react";
 
 const problems = [
   {
     icon: Palette,
     title: "Your chats should feel like yours",
     description:
-      "The same green interface for everyone. No personality, no customization. Your digital space should reflect who you are.",
+      "The same green interface. The same layout. Every day. Your most-used app should reflect who you are — not the other way around.",
   },
   {
-    icon: Clock,
-    title: "Stop wasting time on repetitive messages",
+    icon: Zap,
+    title: "Repetitive replies slow you down",
     description:
-      'How many times have you typed "I\'ll get back to you"? Quick replies and templates save hours every week.',
+      'How many times have you typed "I\'ll get back to you"? Every reply you re-type is time you\'ll never get back.',
   },
   {
     icon: Focus,
-    title: "Too many distractions in your workspace",
+    title: "Too much clutter, not enough focus",
     description:
-      "Every notification demands attention. Every chat fights for focus. Work smarter by controlling what you see and when.",
+      "Notifications, sidebars, distractions. Default WhatsApp Web doesn't help you concentrate — it competes for your attention.",
   },
   {
-    icon: Sparkles,
-    title: "Why settle for default?",
+    icon: ShieldOff,
+    title: "No privacy when you need it most",
     description:
-      "You customize everything else—your phone, your desktop, your browser. Why should your most-used app be any different?",
+      "Coworkers behind you. Screens shared on calls. Default WhatsApp Web shows everything, to everyone, all the time.",
   },
 ];
 
@@ -35,7 +35,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -69,20 +69,20 @@ export function Problems() {
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+          className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {problems.map((problem, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-8 rounded-xl bg-card border border-border hover:border-accent/30 transition-colors group"
+              className="p-8 rounded-2xl bg-card/60 backdrop-blur-sm border border-border hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 transition-all group"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-secondary group-hover:bg-accent/10 transition-colors">
+                <div className="p-3 rounded-xl bg-secondary group-hover:bg-accent/10 transition-colors">
                   <problem.icon className="h-6 w-6 text-accent" />
                 </div>
                 <div>
