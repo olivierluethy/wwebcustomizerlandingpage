@@ -8,6 +8,336 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+
+  title: "We Fixed the Bug That Broke WhatsApp Web (Blank Screen Issue)",
+
+  slug: "2026-05-01-fixed-whatsapp-web-blank-screen-bug",
+
+  description: "A deep dive into the bug that caused WhatsApp Web to display a blank screen—and how we finally identified and fixed it.",
+
+  date: "2026-05-01",
+
+  readTime: "5 min read",
+
+  content: `# We Fixed the Bug That Broke WhatsApp Web (Blank Screen Issue)
+
+**May 1, 2026** — If you ever opened WhatsApp Web and were greeted by a blank screen instead of your chats, you weren’t alone.
+
+And more importantly: you were right.
+
+---
+
+## The Problem Users Reported
+
+Over the past weeks, several users reported a serious issue:
+
+- WhatsApp Web loaded… but showed nothing  
+- No chat list  
+- No conversations  
+- Only the burger menu was visible  
+
+For those affected, the extension made WhatsApp Web completely unusable.
+
+We received this feedback through uninstall forms—but there was a challenge:
+
+> We couldn’t reproduce the issue ourselves.
+
+---
+
+## Why This Bug Was So Difficult to Track Down
+
+Bugs you can’t reproduce are the hardest to fix.
+
+Everything worked fine in our test environments. No errors. No obvious issues.
+
+But users kept reporting the same experience.
+
+So we knew:
+
+👉 The bug was real—we just hadn’t found the exact trigger yet.
+
+---
+
+## The Breakthrough: Finally Reproducing the Issue
+
+This week, we finally managed to recreate the exact scenario users described.
+
+And once we did, the root cause became clear almost immediately.
+
+---
+
+## The Root Cause: A Hidden UI Conflict
+
+The issue lived inside our **content script**, specifically in the logic controlling the burger menu.
+
+Here’s what was happening behind the scenes:
+
+### 1. Forced Display Override
+
+On every page load, our script **forcefully overwrote the display style** of WhatsApp’s chat list.
+
+That alone is risky—but it got worse.
+
+---
+
+### 2. A “Sticky” Hidden State
+
+If a user ever toggled the burger menu while the chat list was visible, the extension saved that state.
+
+That meant:
+
+- The chat list was marked as "hidden"  
+- This state persisted across sessions  
+- Every time WhatsApp Web opened → chat list stayed hidden  
+
+Even when users didn’t intend it.
+
+---
+
+### 3. A Fragile Selector
+
+The second issue made things even more unstable.
+
+We used a **generic selector** to target the chat list element.
+
+When WhatsApp updated their UI:
+
+- The selector started matching the wrong elements  
+- The layout broke—even when the saved state was technically correct  
+
+---
+
+## The Result: A Completely Broken Interface
+
+These issues combined into the exact behavior users described:
+
+- Blank screen  
+- No chats visible  
+- No way to interact with conversations  
+- Only the burger menu remained  
+
+In short: WhatsApp Web became unusable.
+
+---
+
+## The Fix: What We Changed
+
+We didn’t just patch the issue—we fixed it properly.
+
+Here’s what’s improved in the latest version:
+
+### ✅ No More Forced Overrides  
+We no longer modify display styles unless a **clear user preference exists**.
+
+### ✅ Stable Element Targeting  
+We replaced the fragile selector with WhatsApp’s **stable container ID**, ensuring future UI updates won’t break functionality.
+
+### ✅ State Handling Cleaned Up  
+Hidden states are no longer incorrectly persisted across sessions.
+
+### ✅ Performance Improvements  
+We also resolved smaller issues that caused:
+
+- Console errors  
+- Background performance slowdowns  
+
+---
+
+## Thank You for Reporting It
+
+This fix wouldn’t have happened without user feedback.
+
+Every uninstall report, every message pointing out the issue—it all helped us narrow it down.
+
+> If you reported this bug: thank you.
+
+And yes—we know it took longer than it should have to reproduce and fix.
+
+We’re actively improving our debugging and testing process to catch issues like this much faster in the future.
+
+---
+
+## Give It Another Try
+
+If you removed the extension because of this issue, we completely understand.
+
+But the good news is:
+
+👉 **The bug is now fixed.**
+
+The latest version should work smoothly, without breaking WhatsApp Web.
+
+If you’re ready to give it another shot, we’d love to have you back.
+
+[Install the latest version – free on the Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+`
+},
+  {
+
+  title: "Why We Removed the Colors Feature from Our WhatsApp Web Extension",
+
+  slug: "2026-04-29-why-we-removed-colors-feature",
+
+  description: "Learn why we removed the colors section from our WhatsApp Web extension—and how focusing on real user needs leads to a cleaner, better experience.",
+
+  date: "2026-04-29",
+
+  readTime: "4 min read",
+
+  content: `# Why We Removed the Colors Feature from Our WhatsApp Web Extension
+
+**April 29, 2026** — Not every feature deserves to stay.
+
+Sometimes, improving a product means removing things—not adding more. That’s exactly what we decided to do with the **colors section** in our WhatsApp Web extension.
+
+Here’s why.
+
+---
+
+## The Origin: Built for Fun, Not for Need
+
+When we first created the extension, the colors feature came from a place of creativity.
+
+It allowed users to:
+
+- Apply color effects to message bubbles  
+- Add lighting effects to chats  
+- Experiment with visual customization  
+
+At the time, it felt like a fun and unique addition. But there was one problem:
+
+> It wasn’t built based on real user demand.
+
+---
+
+## What Users Actually Told Us
+
+As we collected feedback—especially through uninstall surveys—a clear pattern emerged.
+
+Users consistently mentioned:
+
+- The interface felt too distracting  
+- Color effects weren’t useful  
+- Some wanted these effects completely removed  
+
+Instead of enhancing the experience, the feature was doing the opposite.
+
+It created friction.
+
+---
+
+## The Data Was Clear
+
+We didn’t just rely on opinions—we looked at actual feature requests.
+
+And the result was striking:
+
+> **Not a single user had asked for colored message bubbles or lighting effects.**
+
+That was a turning point.
+
+The feature existed because *we* thought it was cool—not because users needed it.
+
+---
+
+## The Decision: Remove It Completely
+
+So we made a clear and intentional choice:
+
+👉 **We removed the entire colors section.**
+
+No partial fixes. No hidden toggles. No compromises.
+
+This included:
+
+- Colored message bubbles  
+- Chat lighting effects  
+- All related UI elements  
+
+By removing it entirely, we simplified the product and eliminated unnecessary complexity.
+
+---
+
+## What We Focus on Now
+
+With the colors feature gone, we can fully focus on what actually matters to users.
+
+The extension is now centered around:
+
+- Clean display options  
+- Background customization  
+- Better typography  
+- Quick replies  
+- Core productivity features  
+
+Everything we build now follows one principle:
+
+> **It must solve a real user problem.**
+
+---
+
+## A Better Approach: Build on Demand
+
+We’ve changed how we think about features.
+
+Instead of guessing what users might like, we now:
+
+- Listen to real feedback  
+- Analyze actual usage patterns  
+- Build features only when there is clear demand  
+
+This ensures that every addition improves the experience—rather than complicating it.
+
+---
+
+## Want Colors Back? Tell Us.
+
+If colored message bubbles or lighting effects are something you truly want, we’re open to it.
+
+But this time, it will be different.
+
+We’ll only bring features back if:
+
+- Enough users request them  
+- They solve a clear need  
+- They can be implemented cleanly and intuitively  
+
+You can submit your ideas anytime through our feature request form.
+
+---
+
+## Why This Matters
+
+By removing features that don’t serve users, we:
+
+- Reduce friction  
+- Improve usability  
+- Prevent unnecessary complexity  
+- Lower uninstall rates  
+
+Most importantly, we stay focused on delivering real value.
+
+---
+
+## Try the Simpler, Faster Experience
+
+If you’re tired of bloated tools and unnecessary features, this extension was built for you.
+
+It’s designed to be:
+
+- Lightweight  
+- Focused  
+- Easy to use  
+- Driven by real user needs  
+
+Give it a try and experience a cleaner, more intentional way to use WhatsApp Web.
+
+[Install the extension now – free on the Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+`},
+
   {  title: "How User Feedback Helped Us Build a Faster, Cleaner WhatsApp Web Extension",
 
   slug: "2026-04-27-how-user-feedback-improved-whatsapp-web-extension",
