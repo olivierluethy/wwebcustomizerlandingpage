@@ -10,6 +10,121 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
 
+  title: "Quick Replies Fixed: Respecting User Intent in Version 1.0.15",
+
+  slug: "2026-05-04-quick-replies-bugfix-user-intent",
+
+  description: "We fixed a subtle Quick Replies issue in WhatsApp Customizer. Learn how version 1.0.15 improves UX by respecting user intent and eliminating unwanted defaults.",
+
+  date: "2026-05-04",
+
+  readTime: "4 min read",
+
+  content: `# Quick Replies Fixed: Respecting User Intent in Version 1.0.15
+
+**May 4, 2026** — Sometimes, the smallest details make the biggest difference.
+
+Thanks to valuable user feedback, we recently fixed an important usability issue in our **Quick Replies** feature—making it more intuitive and aligned with real user expectations.
+
+---
+
+## 🐞 The Issue: Defaults Reappearing Unexpectedly
+
+Some users noticed a confusing behavior:
+
+When they deleted **all Quick Replies**, predefined default replies would automatically come back.
+
+This led to frustration, especially for users who wanted a **clean interface with zero suggestions**.
+
+From a user’s perspective, the expectation is simple:
+
+> If I delete everything → nothing should remain.
+
+But that’s not what happened.
+
+---
+
+## 🔍 The Root Cause: A Misleading Fallback
+
+Behind the scenes, the issue was caused by a fallback mechanism.
+
+Here’s how it worked:
+
+- If no custom Quick Replies were found → load default replies  
+- This applied in *all cases*  
+
+The problem?
+
+The system couldn’t distinguish between:
+
+- Users who **never created Quick Replies**  
+- Users who **intentionally deleted all Quick Replies**  
+
+So even when users cleared everything on purpose, the system assumed something was “missing” and restored the defaults.
+
+---
+
+## ✅ The Fix in Version 1.0.15
+
+We refined the logic to properly respect user intent.
+
+Here’s how it works now:
+
+- **No Quick Replies ever created** → default replies are shown  
+- **All Quick Replies manually deleted** → no replies are shown  
+
+Simple. Predictable. Correct.
+
+---
+
+## 💡 Why This Matters
+
+This might seem like a small change—but it has a big impact on user experience.
+
+Good UX means:
+
+- Actions behave exactly as expected  
+- Users feel in control  
+- No surprises or hidden logic  
+
+By fixing this, Quick Replies now feel:
+
+- More intuitive  
+- More reliable  
+- More aligned with how users think  
+
+---
+
+## 🙌 Built with Your Feedback
+
+This improvement came directly from a user report.
+
+And that’s exactly how we want to build this extension:
+
+👉 Listen → Understand → Improve
+
+If you’ve ever shared feedback—thank you. It directly shapes the product.
+
+---
+
+## Try the Improved Quick Replies Experience
+
+If you previously ran into this issue, it’s now fully resolved in **version 1.0.15**.
+
+Update the extension and enjoy a cleaner, more predictable Quick Replies system.
+
+And if you haven’t tried it yet:
+
+- Create reusable message templates  
+- Speed up your daily chats  
+- Keep your interface exactly how you want it  
+
+[Install or update the extension – free on the Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+`
+},
+  {
+
   title: "We Fixed the Bug That Broke WhatsApp Web (Blank Screen Issue)",
 
   slug: "2026-05-01-fixed-whatsapp-web-blank-screen-bug",
