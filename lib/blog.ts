@@ -10,6 +10,161 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
 
+  title: "From Uninstalls to Insight: Why We Added Color Themes to WhatsApp Web",
+
+  slug: "2026-05-04-added-color-themes-based-on-user-feedback",
+
+  description: "High uninstall rates revealed a key misunderstanding: users wanted color themes—not just background images. Here’s how we turned that insight into a new feature in version 1.0.16.",
+
+  date: "2026-05-04",
+
+  readTime: "5 min read",
+
+  content: `# From Uninstalls to Insight: Why We Added Color Themes to WhatsApp Web
+
+**May 4, 2026** — Sometimes, the most important product decisions come from uncomfortable data.
+
+Recently, we noticed something surprising:
+
+👉 A high number of installs…  
+👉 But also a high number of uninstalls  
+
+That raised a serious question.
+
+---
+
+## What Was Going Wrong?
+
+At first, we weren’t sure why users were leaving.
+
+We even considered technical limitations:
+
+- Does WhatsApp Web look different depending on location?  
+- Could UI variations be breaking the experience for some users?  
+
+But instead of guessing, we turned to something more reliable:
+
+👉 **User feedback.**
+
+---
+
+## What Users Told Us
+
+We had already set up an uninstall feedback form, allowing users to share why they removed the extension.
+
+And the responses revealed a clear pattern:
+
+> Many users wanted **more themes and background images**.
+
+At first glance, this was confusing.
+
+Because we already offered a large selection of background images.
+
+So why were so many people still asking for more?
+
+---
+
+## The Key Insight: A Misunderstanding
+
+After digging deeper, we realized something important:
+
+Users weren’t just asking for *more images*.
+
+👉 They were actually asking for **themes**.
+
+There’s a big difference:
+
+- **Background images** → Visual wallpapers behind chats  
+- **Color themes** → Full interface styling (colors, accents, UI feel)  
+
+We had assumed both meant the same thing.
+
+They don’t.
+
+---
+
+## Learning from the Market
+
+To validate this insight, we looked at other tools in the space.
+
+And it became obvious:
+
+- Competitors clearly separate **themes** and **backgrounds**  
+- Users expect both as distinct features  
+- Themes play a major role in personalization  
+
+That’s when it clicked.
+
+We weren’t missing more images.
+
+We were missing an entire category of customization.
+
+---
+
+## The Solution: Introducing Color Themes
+
+Once we understood the problem, the decision was clear.
+
+👉 We needed to add proper **color themes** to WhatsApp Web.
+
+And we didn’t wait.
+
+We implemented the feature immediately and shipped it in:
+
+> **Version 1.0.16**
+
+Now, users can:
+
+- Customize the overall look and feel of WhatsApp Web  
+- Go beyond background images  
+- Create a more personalized, cohesive interface  
+
+---
+
+## Why This Matters
+
+This update is about more than just colors.
+
+It represents a shift in how we build:
+
+- We don’t assume—we listen  
+- We don’t guess—we validate  
+- We don’t overbuild—we solve real problems  
+
+Most importantly:
+
+> We align the product with what users actually expect.
+
+---
+
+## Turning Feedback Into Better Features
+
+What started as a concern about high uninstall rates turned into a valuable insight.
+
+Without user feedback, we might have kept adding more background images—completely missing the real need.
+
+Instead, we now have a feature that directly addresses what users were asking for.
+
+---
+
+## Try the New Themes Yourself
+
+If you’ve ever felt that WhatsApp Web lacks personality or flexibility, this update is for you.
+
+With **color themes in version 1.0.16**, you can finally:
+
+- Personalize your interface beyond wallpapers  
+- Match the UI to your style  
+- Create a cleaner, more enjoyable experience  
+
+Give it a try and see the difference yourself.
+
+[Install or update the extension – free on the Chrome Web Store](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+`,
+},
+  {
+
   title: "Quick Replies Fixed: Respecting User Intent in Version 1.0.15",
 
   slug: "2026-05-04-quick-replies-bugfix-user-intent",
