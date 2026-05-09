@@ -108,7 +108,7 @@ export function Hero() {
                   <path d="M 6.4 8.8 C 5.733 8.8 5.167 8.567 4.7 8.1 C 4.233 7.633 4 7.067 4 6.4 C 4 5.733 4.233 5.167 4.7 4.7 C 5.167 4.233 5.733 4 6.4 4 C 7.067 4 7.633 4.233 8.1 4.7 C 8.567 5.167 8.8 5.733 8.8 6.4 C 8.8 7.067 8.567 7.633 8.1 8.1 C 7.633 8.567 7.067 8.8 6.4 8.8 Z M 1.6 16.8 L 1.6 10.62 C 1.093 10.06 0.7 9.42 0.42 8.7 C 0.14 7.98 0 7.213 0 6.4 C 0 4.613 0.62 3.1 1.86 1.86 C 3.1 0.62 4.613 0 6.4 0 C 8.187 0 9.7 0.62 10.94 1.86 C 12.18 3.1 12.8 4.613 12.8 6.4 C 12.8 7.213 12.66 7.98 12.38 8.7 C 12.1 9.42 11.707 10.06 11.2 10.62 L 11.2 16.8 L 6.4 15.2 Z M 6.4 11.2 C 7.733 11.2 8.867 10.733 9.8 9.8 C 10.733 8.867 11.2 7.733 11.2 6.4 C 11.2 5.067 10.733 3.933 9.8 3 C 8.867 2.067 7.733 1.6 6.4 1.6 C 5.067 1.6 3.933 2.067 3 3 C 2.067 3.933 1.6 5.067 1.6 6.4 C 1.6 7.733 2.067 8.867 3 9.8 C 3.933 10.733 5.067 11.2 6.4 11.2 Z M 3.2 14.42 L 6.4 13.6 L 9.6 14.42 L 9.6 11.94 C 9.133 12.207 8.63 12.417 8.09 12.57 C 7.55 12.723 6.987 12.8 6.4 12.8 C 5.813 12.8 5.25 12.723 4.71 12.57 C 4.17 12.417 3.667 12.207 3.2 11.94 Z"></path>
                 </g>
               </svg>
-              Featured on Chrome Web Store
+              🚀 Fastest growing WhatsApp Web extension
             </div>
             <p className="text-accent text-sm font-medium tracking-wider uppercase">
               Browser Extension
@@ -145,7 +145,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            More than 350 active users already use this tool every week
+            More than 2k active users already use this tool every week
           </motion.p>
 
           <motion.div
