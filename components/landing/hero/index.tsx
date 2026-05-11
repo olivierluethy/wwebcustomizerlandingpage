@@ -4,78 +4,49 @@ import { motion } from "framer-motion";
 import { Chrome, Github, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/analytics";
-
-const floatingBubbles = [
-  { left: "8%", top: "18%", delay: 0, duration: 9, size: "w-32 h-10" },
-  { left: "78%", top: "22%", delay: 1.4, duration: 11, size: "w-24 h-8" },
-  { left: "12%", top: "68%", delay: 0.8, duration: 10, size: "w-28 h-9" },
-  { left: "82%", top: "72%", delay: 2.0, duration: 12, size: "w-36 h-10" },
-  { left: "45%", top: "12%", delay: 1.1, duration: 13, size: "w-20 h-7" },
-  { left: "55%", top: "82%", delay: 0.4, duration: 14, size: "w-24 h-8" },
-];
+import { ActivityLayer } from "./activity-layer";
+import { LiveNotifications } from "./live-notifications";
+import { TrendingRail } from "./trending-rail";
+import { GrowthStrip } from "./growth-strip";
+import { CommunityProof } from "./community-proof";
+import { StatusPulse } from "./status-pulse";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient animation */}
+      {/* Ambient background ----------------------------------------------- */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute -top-1/2 -left-1/2 w-full h-full rounded-full opacity-20"
+          className="absolute -top-1/2 -left-1/2 w-full h-full rounded-full opacity-25"
           style={{
             background:
-              "radial-gradient(circle, oklch(0.72 0.19 142 / 0.3) 0%, transparent 70%)",
+              "radial-gradient(circle, oklch(0.72 0.19 142 / 0.35) 0%, transparent 70%)",
           }}
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
+          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute -bottom-1/2 -right-1/2 w-full h-full rounded-full opacity-10"
+          className="absolute -bottom-1/2 -right-1/2 w-full h-full rounded-full opacity-15"
           style={{
             background:
-              "radial-gradient(circle, oklch(0.72 0.19 142 / 0.2) 0%, transparent 70%)",
+              "radial-gradient(circle, oklch(0.72 0.19 142 / 0.25) 0%, transparent 70%)",
           }}
-          animate={{
-            x: [0, -100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
+          animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
 
-        {/* Floating chat bubbles */}
-        {floatingBubbles.map((bubble, i) => (
-          <motion.div
-            key={i}
-            className={`absolute ${bubble.size} rounded-2xl border border-accent/15 bg-accent/5 backdrop-blur-sm hidden md:block`}
-            style={{ left: bubble.left, top: bubble.top }}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: [0, 0.6, 0.4, 0.6, 0],
-              y: [0, -20, -10, -20, 0],
-            }}
-            transition={{
-              duration: bubble.duration,
-              delay: bubble.delay,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="flex items-center h-full px-3 gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-accent/40" />
-              <div className="h-1.5 flex-1 rounded-full bg-accent/20" />
-            </div>
-          </motion.div>
-        ))}
+        {/* Lighting glow behind the heading */}
+        <motion.div
+          className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] rounded-full blur-3xl opacity-[0.12]"
+          style={{
+            background:
+              "radial-gradient(circle, oklch(0.72 0.19 142 / 0.55) 0%, transparent 60%)",
+          }}
+          animate={{ scale: [1, 1.08, 1], opacity: [0.1, 0.16, 0.1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <ActivityLayer />
 
         {/* Subtle grid */}
         <div
@@ -86,8 +57,15 @@ export function Hero() {
             backgroundSize: "48px 48px",
           }}
         />
+
+        {/* Soft top-to-bottom vignette so foreground content stays readable */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,oklch(0.07_0_0/0.55)_100%)]" />
       </div>
 
+      {/* Floating live notifications -------------------------------------- */}
+      <LiveNotifications />
+
+      {/* Foreground content ------------------------------------------------ */}
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="max-w-4xl mx-auto text-center"
@@ -95,31 +73,50 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Featured Badge & Category */}
+          {/* Trending pills row */}
+          <div className="mb-5">
+            <TrendingRail />
+          </div>
+
+          {/* Featured Badge */}
           <motion.div
             className="flex flex-col items-center gap-3 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-xs font-bold uppercase tracking-widest">
-              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
-                <g transform="translate(3.456 1.559)">
-                  <path d="M 6.4 8.8 C 5.733 8.8 5.167 8.567 4.7 8.1 C 4.233 7.633 4 7.067 4 6.4 C 4 5.733 4.233 5.167 4.7 4.7 C 5.167 4.233 5.733 4 6.4 4 C 7.067 4 7.633 4.233 8.1 4.7 C 8.567 5.167 8.8 5.733 8.8 6.4 C 8.8 7.067 8.567 7.633 8.1 8.1 C 7.633 8.567 7.067 8.8 6.4 8.8 Z M 1.6 16.8 L 1.6 10.62 C 1.093 10.06 0.7 9.42 0.42 8.7 C 0.14 7.98 0 7.213 0 6.4 C 0 4.613 0.62 3.1 1.86 1.86 C 3.1 0.62 4.613 0 6.4 0 C 8.187 0 9.7 0.62 10.94 1.86 C 12.18 3.1 12.8 4.613 12.8 6.4 C 12.8 7.213 12.66 7.98 12.38 8.7 C 12.1 9.42 11.707 10.06 11.2 10.62 L 11.2 16.8 L 6.4 15.2 Z M 6.4 11.2 C 7.733 11.2 8.867 10.733 9.8 9.8 C 10.733 8.867 11.2 7.733 11.2 6.4 C 11.2 5.067 10.733 3.933 9.8 3 C 8.867 2.067 7.733 1.6 6.4 1.6 C 5.067 1.6 3.933 2.067 3 3 C 2.067 3.933 1.6 5.067 1.6 6.4 C 1.6 7.733 2.067 8.867 3 9.8 C 3.933 10.733 5.067 11.2 6.4 11.2 Z M 3.2 14.42 L 6.4 13.6 L 9.6 14.42 L 9.6 11.94 C 9.133 12.207 8.63 12.417 8.09 12.57 C 7.55 12.723 6.987 12.8 6.4 12.8 C 5.813 12.8 5.25 12.723 4.71 12.57 C 4.17 12.417 3.667 12.207 3.2 11.94 Z"></path>
-                </g>
-              </svg>
-              🚀 Fastest growing WhatsApp Web extension
+            <div className="relative inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-bold uppercase tracking-widest overflow-hidden">
+              <motion.span
+                className="absolute inset-0 -translate-x-full"
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent, oklch(0.72 0.19 142 / 0.18), transparent)",
+                }}
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{
+                  duration: 3.6,
+                  repeat: Infinity,
+                  repeatDelay: 1.4,
+                  ease: "easeInOut",
+                }}
+              />
+              <span className="relative inline-flex items-center gap-2">
+                <StatusPulse size={6} />
+                <span aria-hidden="true">🚀</span>
+                Fastest growing WhatsApp Web extension
+              </span>
             </div>
             <p className="text-accent text-sm font-medium tracking-wider uppercase">
               Browser Extension
             </p>
           </motion.div>
 
+          {/* Heading */}
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.35, duration: 0.8 }}
           >
             WhatsApp Web feels limited.
             <br />
@@ -129,7 +126,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 text-pretty"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-7 text-pretty"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -138,36 +135,44 @@ export function Hero() {
             your messaging experience.
           </motion.p>
 
-          {/* Social proof */}
-          <motion.p
-            className="text-sm text-accent font-medium mb-10"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            More than 2k active users already use this tool every week
-          </motion.p>
+          {/* Live growth strip */}
+          <div className="mb-7">
+            <GrowthStrip />
+          </div>
 
+          {/* CTAs */}
           <motion.div
             className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <Button
-              size="lg"
-              className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
-              onClick={() => {
-                trackButtonClick("install");
-                window.open(
-                  "https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de",
-                  "_blank"
-                );
-              }}
-            >
-              <Chrome className="mr-2 h-5 w-5" />
-              Install Extension
-            </Button>
+            <div className="relative">
+              <motion.span
+                className="absolute -inset-1 rounded-xl opacity-40 blur-md"
+                style={{
+                  background:
+                    "linear-gradient(120deg, oklch(0.72 0.19 142 / 0.55), transparent 60%)",
+                }}
+                animate={{ opacity: [0.25, 0.5, 0.25] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                aria-hidden="true"
+              />
+              <Button
+                size="lg"
+                className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
+                onClick={() => {
+                  trackButtonClick("install");
+                  window.open(
+                    "https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de",
+                    "_blank"
+                  );
+                }}
+              >
+                <Chrome className="mr-2 h-5 w-5" />
+                Install Extension
+              </Button>
+            </div>
 
             <Button
               size="lg"
@@ -219,15 +224,20 @@ export function Hero() {
               Support the Project
             </Button>
           </motion.div>
+
+          {/* Community proof row */}
+          <div className="mt-10 flex justify-center">
+            <CommunityProof />
+          </div>
         </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+        transition={{ delay: 1.4 }}
       >
         <motion.div
           className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
