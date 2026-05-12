@@ -21,6 +21,7 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms" },
 ];
