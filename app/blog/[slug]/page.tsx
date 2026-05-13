@@ -37,6 +37,9 @@ export async function generateMetadata({
   return {
     title: `${post.title} - WWeb Customizer Blog`,
     description: post.description,
+    robots: post.seoIndex
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: {
       title: post.title,
       description: post.description,

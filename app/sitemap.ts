@@ -2,15 +2,22 @@ import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://wwebcustomizer.com";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://wwebcustomizer.com";
 
   const posts = getAllPosts();
-  const blogUrls = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+
+  // Only include posts explicitly marked as SEO-indexable.
+  // Founder stories and update notes are kept on the site but
+  // excluded from the sitemap and rendered with noindex.
+  const blogUrls = posts
+    .filter((post) => post.seoIndex === true)
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    }));
 
   return [
     {

@@ -5,6 +5,7 @@ export interface BlogPost {
   content: string;
   date: string;
   readTime: string;
+  seoIndex: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -13,6 +14,7 @@ export const blogPosts: BlogPost[] = [
   title: "The WhatsApp Web Customization Boom: How Fast the Market Is Growing",
 
   slug: "2026-05-18-whatsapp-web-customization-growth",
+  seoIndex: false,
 
   description: "The demand for WhatsApp Web customization is exploding. Here’s how the recent growth wave is changing the market—and why we believe this is only the beginning.",
 
@@ -183,6 +185,7 @@ If you want to be part of a tool that’s evolving quickly and pushing WhatsApp 
   title: "Our Vision for WhatsApp Web: Focus Over Feature Overload",
 
   slug: "2026-05-14-our-vision-for-whatsapp-web",
+  seoIndex: false,
 
   description: "We’re not trying to reinvent messaging—we’re building the WhatsApp Web experience we believe should have existed from the beginning.",
 
@@ -343,6 +346,7 @@ If that sounds like something you want to be part of, we’d love for you to try
   title: "Why We’re Bringing Animated Backgrounds to WhatsApp Web",
 
   slug: "2026-05-16-animated-backgrounds-whatsapp-web",
+  seoIndex: false,
 
   description: "Inspired by the popularity of Wallpaper Engine, we’re introducing animated backgrounds and visual effects to WhatsApp Web. Here’s why we believe this could redefine customization.",
 
@@ -514,6 +518,7 @@ Install the extension now and be ready for the animated backgrounds release next
   title: "Why WhatsApp Web Struggles in America While iMessage Dominates",
 
   slug: "2026-05-15-why-whatsapp-web-is-less-popular-in-america",
+  seoIndex: false,
 
   description: "Why does iMessage continue dominating the U.S. while WhatsApp Web grows rapidly elsewhere? Here’s our perspective on trust, ecosystems, and messaging culture.",
 
@@ -709,6 +714,7 @@ With WhatsApp Web Customizer, you can personalize and enhance WhatsApp Web far b
 {
   title: "How to Change Background in WhatsApp Web and Make It Look Better",
   slug: "how-to-change-background-whatsapp-web",
+  seoIndex: true,
   description: "Learn how to change background in WhatsApp Web using official settings, custom CSS, browser extensions, and easy customization tools for a personalized chat experience.",
   date: "2026-05-13",
   readTime: "11 min read",
@@ -1069,6 +1075,7 @@ https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelk
   title: "What Our User Data Revealed About Quick Replies, Privacy Mode, and UI Design",
 
   slug: "2026-05-13-user-data-quick-replies-privacy-mode-ui",
+  seoIndex: false,
 
   description: "Recent user behavior data revealed surprising insights about Quick Replies, Privacy Mode, and how interface placement impacts usability inside our WhatsApp Web extension.",
 
@@ -1243,6 +1250,7 @@ If you want a more customizable and user-focused WhatsApp Web experience, give t
   title: "WhatsApp Web Is Finally Adding Themes — But We Already Went Much Further",
 
   slug: "2026-05-12-whatsapp-web-themes-vs-customizer",
+  seoIndex: true,
 
   description: "WhatsApp Web is finally working on themes, but the customization revolution has already begun. Here’s how WhatsApp Web Customizer goes far beyond Meta’s upcoming feature set.",
 
@@ -1529,6 +1537,7 @@ With WhatsApp Web Customizer, you can transform WhatsApp Web into something that
   title: "Why We’re Moving Beyond Google Analytics to Build a Better Product",
 
   slug: "2026-05-11-moving-beyond-google-analytics-product-decisions",
+  seoIndex: false,
 
   description: "We’re shifting from unreliable analytics to real usage data. Here’s how we plan to build a smarter, more focused WhatsApp Web extension based on facts—not assumptions.",
 
@@ -1709,6 +1718,7 @@ Try it out and experience a smarter, more intentional WhatsApp Web workflow.
   title: "Why We Stopped Relying on Google Stats (And What Our Real Growth Looks Like)",
 
   slug: "2026-05-06-real-growth-whatsapp-extension-users",
+  seoIndex: false,
 
   description: "Google stats were misleading us. Here’s what our real user growth looks like—and why we’re closer than ever to becoming a leading WhatsApp Web extension.",
 
@@ -1850,6 +1860,7 @@ Join us and see how much better WhatsApp Web can feel.
   title: "From Uninstalls to Insight: Why We Added Color Themes to WhatsApp Web",
 
   slug: "2026-05-04-added-color-themes-based-on-user-feedback",
+  seoIndex: false,
 
   description: "High uninstall rates revealed a key misunderstanding: users wanted color themes—not just background images. Here’s how we turned that insight into a new feature in version 1.0.16.",
 
@@ -2005,6 +2016,7 @@ Give it a try and see the difference yourself.
   title: "Quick Replies Fixed: Respecting User Intent in Version 1.0.15",
 
   slug: "2026-05-04-quick-replies-bugfix-user-intent",
+  seoIndex: false,
 
   description: "We fixed a subtle Quick Replies issue in WhatsApp Customizer. Learn how version 1.0.15 improves UX by respecting user intent and eliminating unwanted defaults.",
 
@@ -2120,6 +2132,7 @@ And if you haven’t tried it yet:
   title: "We Fixed the Bug That Broke WhatsApp Web (Blank Screen Issue)",
 
   slug: "2026-05-01-fixed-whatsapp-web-blank-screen-bug",
+  seoIndex: false,
 
   description: "A deep dive into the bug that caused WhatsApp Web to display a blank screen—and how we finally identified and fixed it.",
 
@@ -2286,6 +2299,7 @@ If you’re ready to give it another shot, we’d love to have you back.
   title: "Why We Removed the Colors Feature from Our WhatsApp Web Extension",
 
   slug: "2026-04-29-why-we-removed-colors-feature",
+  seoIndex: false,
 
   description: "Learn why we removed the colors section from our WhatsApp Web extension—and how focusing on real user needs leads to a cleaner, better experience.",
 
@@ -2448,6 +2462,7 @@ Give it a try and experience a cleaner, more intentional way to use WhatsApp Web
   {  title: "How User Feedback Helped Us Build a Faster, Cleaner WhatsApp Web Extension",
 
   slug: "2026-04-27-how-user-feedback-improved-whatsapp-web-extension",
+  seoIndex: false,
 
   description: "Discover how real user feedback led to a complete redesign of our WhatsApp Web extension—resulting in a faster, cleaner, and more intuitive experience.",
 
@@ -2583,6 +2598,7 @@ Give it a try and see how much smoother your daily messaging can feel.
 `,
 },
   { slug: "2026-04-chat-customization-features",
+  seoIndex: false,
   title: "Chat Customization: What Users Really Want in 2026",
   description: "Should chat apps focus on bubble colors or background effects? Discover what users actually want and how data-driven decisions shape better features.",
   date: "2026-04-22",
@@ -2687,6 +2703,7 @@ Start building with clarity — not guesswork.
 },
   {
       slug: "2026-04-whatsapp-web-extension-image-management",
+      seoIndex: false,
   title: "How to Build a Reliable Image Management System for WhatsApp Web Extensions",
   description: "Learn how to fix broken image handling, improve performance, and create a seamless image management system for your WhatsApp Web Chrome extension.",
   date: "2026-04-21",
@@ -2903,6 +2920,7 @@ If you're working on complex extensions, prompts, or automation systems, having 
   {
     title: "Why We Added an Uninstall Feedback Form to Our WhatsApp Web Extension",
   slug: "2026-04-20-why-we-added-an-uninstall-feedback-form-to-our-whatsapp-web-extension",
+  seoIndex: false,
   description: "We added an uninstall feedback form to our WhatsApp Web extension after learning from past projects how valuable user insights can be — even from people who stop using the tool.",
   date: "2026-04-20",
   readTime: "4 min read",
@@ -2964,6 +2982,7 @@ If you ever decide to uninstall, we’d genuinely appreciate your honest thought
   {
     title: "Why We Didn't Build Persistent Multi-Message Pins for WhatsApp Web",
   slug: "2026-04-16-why-we-didnt-build-persistent-multi-message-pins-for-whatsapp-web",
+  seoIndex: false,
   description: "A user requested persistent pinned messages in WhatsApp Web. After careful analysis, we decided not to implement it. Here's why thoughtful evaluation beats rushing into every feature request.",
   date: "2026-04-16",
   readTime: "6 min read",
@@ -3039,6 +3058,7 @@ Have feature ideas or feedback? Join our Discord community — we genuinely valu
   {
     title: "Why We Removed a Pinned Chats Feature from Our WhatsApp Web Extension",
   slug: "2026-04-15-why-we-removed-a-pinned-chats-feature-from-our-whatsapp-web-extension",
+  seoIndex: false,
   description: "Sometimes user requests lead to features that seem useful at first — until you realize WhatsApp Web already has them. Learn why we quickly built and then removed a pinned chats option in our extension.",
   date: "2026-04-15",
   readTime: "5 min read",
@@ -3111,6 +3131,7 @@ Join our Discord community to share ideas, suggest features, or give direct feed
   {
     title: "Fixing the Awkward Gaps in WhatsApp Web Chat List: How User Feedback Improved Our Extension",
   slug: "2026-04-14-fixing-awkward-gaps-in-whatsapp-web-chat-list",
+  seoIndex: false,
   description: "Users reported awkward spacing between chats in our WhatsApp Web customizer. We investigated, compared it to the default interface, and quickly fixed the real issue — making chat previews much easier to read.",
   date: "2026-04-14",
   readTime: "5 min read",
@@ -3171,6 +3192,7 @@ Join our Discord community for early feature discussions, direct feedback, and t
   {
     title: "From 220 Weekly Users to Growing Fast: How Your Feature Requests Shape Our WhatsApp Web Extension",
   slug: "2026-04-09-from-220-weekly-users-to-growing-fast",
+  seoIndex: false,
   description: "With just 220 weekly users, we've already received valuable feature requests — and implemented many the same day. Discover how we prioritize user feedback and why our WhatsApp Web extension is growing quickly without ads.",
   date: "2026-04-09",
   readTime: "5 min read",
@@ -3232,6 +3254,7 @@ We can’t wait to see what we’ll build together next.
   {
     title: "The Unexpected Reason I Built This WhatsApp Web Extension",
     slug: "2026-04-01-the-unexpected-reason-i-built-this-whatsapp-web-extension",
+    seoIndex: false,
     description:
       "Discover the frustrating navigation habit on WhatsApp Web that sparked the creation of our Chrome extension — and how starting small led to a powerful customization tool.",
     date: "2026-04-01",
@@ -3306,6 +3329,7 @@ What annoying little thing on WhatsApp Web bothers you the most? Feel free to sh
     title:
       "Why WhatsApp Web Still Feels Outdated in 2026 – And Why That’s Understandable",
     slug: "2026-03-31-why-whatsapp-web-still-feels-outdated",
+    seoIndex: true,
     description:
       "A honest look at why Meta hasn’t transformed WhatsApp Web as much as users want. The real costs, business realities, and what it means for users who complain about the interface.",
     date: "2026-03-31",
@@ -3374,6 +3398,7 @@ What do you think — is WhatsApp Web “good enough,” or does it still need m
     title:
       "Why Chasing Perfection Can Hurt Your Product (And What I Do Instead)",
     slug: "2026-03-30-why-chasing-perfection-can-hurt-your-product",
+    seoIndex: false,
     description:
       "Perfectionism sounds good in theory, but it can lead to over-engineering. Learn how I balance rapid prototyping with user-focused development when building our WhatsApp Web extension.",
     date: "2026-03-30",
@@ -3453,6 +3478,7 @@ What’s your take on perfectionism in product development? Have you ever used a
     title:
       "From 1-Star Review to MakeUseOf Feature: How Our WhatsApp Web Extension Made Headlines",
     slug: "2026-03-29-from-1-star-review-to-makeuseof-feature",
+    seoIndex: false,
     description:
       "Discover how a brand-new WhatsApp Web extension with just 33 users and one 1-star review earned a spot in a major MakeUseOf article. The power of simple, user-friendly design.",
     date: "2026-03-29",
@@ -3527,6 +3553,7 @@ Try our extension today and see why it caught the attention of tech writers even
     title:
       "Building WhatsApp Web Extensions with Users in Mind: My First GitHub Feature Request Story",
     slug: "2026-03-26-building-whatsapp-web-extensions-with-users-in-mind",
+    seoIndex: false,
     description:
       "How the very first feature request for our WhatsApp Web extension — written in Portuguese — taught me valuable lessons about user-centric development and thoughtful UI design.",
     date: "2026-03-26",
@@ -3603,6 +3630,7 @@ Have you ever requested a feature for a tool you love? Or discovered something m
   },
   {
     slug: "why-whatsapp-web-feels-limited",
+    seoIndex: true,
     title: "Why WhatsApp Web Feels So Limited (And How to Fix It)",
     description:
       "Discover why millions of users feel frustrated with WhatsApp Web's basic interface and learn how to transform your messaging experience.",
@@ -3652,6 +3680,7 @@ Ready to stop settling for default? [Install the extension](https://chromewebsto
   },
   {
     slug: "customize-whatsapp-web-like-a-pro",
+    seoIndex: true,
     title: "How to Customize WhatsApp Web Like a Pro",
     description:
       "A step-by-step guide to transforming your WhatsApp Web interface into a personalized productivity powerhouse.",
@@ -3717,6 +3746,7 @@ What will you customize first? Share your ideas in the comments or join our Disc
   },
   {
     slug: "productivity-hacks-whatsapp-web",
+    seoIndex: true,
     title: "Top Productivity Hacks for WhatsApp Web Users",
     description:
       "Save hours every week with these proven productivity techniques for power users of WhatsApp Web.",
@@ -3797,6 +3827,7 @@ What's your biggest WhatsApp Web productivity challenge? Join our Discord commun
   {
     title: "How We Turned Our First Feature Request into a Same-Day Update",
     slug: "2026-01-09-how-we-turned-our-first-feature-request-into-a-same-day-update",
+    seoIndex: false,
     description:
       "Discover how our WhatsApp Web extension went from 51 weekly users to implementing a font size adjustment feature the same day it was requested — and why fast response matters.",
     date: "2026-01-09",
@@ -3858,6 +3889,7 @@ Join our Discord community to share feature ideas, get early updates, and connec
     title:
       "The Moment I Realized My WhatsApp Web Extension Might Actually Succeed",
     slug: "2025-10-03-the-moment-i-realized-my-whatsapp-web-extension-might-succeed",
+    seoIndex: false,
     description:
       "A personal story about self-doubt, family moments, and discovering the massive search volume for WhatsApp Web that convinced me to keep building our Chrome extension.",
     date: "2025-10-03",
@@ -3928,6 +3960,7 @@ Join our community on Discord to share feedback, suggest features, or connect wi
     title:
       "Why I Built My Own WhatsApp Web Extension: Fixing What Others Missed",
     slug: "2025-09-05-why-i-built-my-own-whatsapp-web-extension",
+    seoIndex: false,
     description:
       "Discover the frustrations with existing WhatsApp Web customizers that led me to create a simpler, more user-friendly Chrome extension with built-in presets and effortless customization.",
     date: "2025-09-05",
