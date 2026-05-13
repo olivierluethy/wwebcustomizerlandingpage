@@ -46,138 +46,444 @@ export async function generateMetadata({
   };
 }
 
-// 🔥 NEUER MARKDOWN RENDERER
+// 🔥 ERSETZE DEINEN GESAMTEN renderMarkdown() BLOCK MIT DIESEM
+
 function renderMarkdown(content: string) {
-  const lines = content.trimStart().split("\n");
+  const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
 
   let listItems: React.ReactNode[] = [];
   let listType: "ul" | "ol" | null = null;
 
+  let inCodeBlock = false;
+  let codeBlockLanguage = "";
+  let codeLines: string[] = [];
+
+  let tableRows: string[][] = [];
+  let inTable = false;
+
+  // ========================================
+  // FLUSH LIST
+  // ========================================
+
   const flushList = () => {
-    if (listItems.length > 0) {
-      if (listType === "ul") {
-        elements.push(
-          <ul key={`ul-${elements.length}`} className="ml-6 mb-4 list-disc text-muted-foreground">
-            {listItems}
-          </ul>
-        );
-      } else if (listType === "ol") {
-        elements.push(
-          <ol key={`ol-${elements.length}`} className="ml-6 mb-4 list-decimal text-muted-foreground">
-            {listItems}
-          </ol>
-        );
-      }
-      listItems = [];
-      listType = null;
+    if (!listItems.length) return;
+
+    if (listType === "ul") {
+      elements.push(
+        <ul
+          key={`ul-${elements.length}`}
+          className="my-6 space-y-3"
+        >
+          {listItems}
+        </ul>
+      );
     }
+
+    if (listType === "ol") {
+      elements.push(
+        <ol
+          key={`ol-${elements.length}`}
+          className="my-6 ml-6 space-y-4 list-decimal"
+        >
+          {listItems}
+        </ol>
+      );
+    }
+
+    listItems = [];
+    listType = null;
   };
 
-  const formatInline = (text: string) =>
-    text
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-bold">$1</strong>')
-      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+  // ========================================
+  // FLUSH CODE BLOCK
+  // ========================================
+
+  const flushCodeBlock = () => {
+    if (!inCodeBlock) return;
+
+    elements.push(
+      <div
+        key={`code-${elements.length}`}
+        className="group relative my-8 overflow-hidden rounded-2xl border border-white/10 bg-[#0d1117] shadow-2xl"
+      >
+        {codeBlockLanguage && (
+          <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-4 py-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
+              {codeBlockLanguage}
+            </span>
+          </div>
+        )}
+
+        <pre className="overflow-x-auto p-5 text-sm leading-7 text-gray-200">
+          <code>{codeLines.join("\n")}</code>
+        </pre>
+      </div>
+    );
+
+    inCodeBlock = false;
+    codeBlockLanguage = "";
+    codeLines = [];
+  };
+
+  // ========================================
+  // FLUSH TABLE
+  // ========================================
+
+  const flushTable = () => {
+    if (!inTable || !tableRows.length) return;
+
+    const headers = tableRows[0];
+    const bodyRows = tableRows.slice(1);
+
+    elements.push(
+      <div
+        key={`table-${elements.length}`}
+        className="my-10 overflow-hidden rounded-2xl border border-border bg-card"
+      >
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead className="bg-muted/40">
+              <tr>
+                {headers.map((header, idx) => (
+                  <th
+                    key={idx}
+                    className="border-b border-border px-5 py-4 text-left text-sm font-bold text-foreground"
+                  >
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: formatInline(header),
+                      }}
+                    />
+                  </th>
+                ))}
+              </tr>
+            </thead>
+
+            <tbody>
+              {bodyRows.map((row, rowIdx) => (
+                <tr
+                  key={rowIdx}
+                  className="border-b border-border/50 last:border-none hover:bg-muted/20 transition-colors"
+                >
+                  {row.map((cell, cellIdx) => (
+                    <td
+                      key={cellIdx}
+                      className="px-5 py-4 align-top text-sm leading-7 text-muted-foreground"
+                    >
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: formatInline(cell),
+                        }}
+                      />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+
+    tableRows = [];
+    inTable = false;
+  };
+
+  // ========================================
+  // INLINE FORMATTING
+  // ========================================
+
+  const formatInline = (text: string) => {
+    return text
+
+      // INLINE CODE
+      .replace(
+        /`([^`]+)`/g,
+        '<code class="rounded-md border border-border bg-muted px-1.5 py-0.5 font-mono text-[0.9em] text-foreground">$1</code>'
+      )
+
+      // BOLD
+      .replace(
+        /\*\*(.*?)\*\*/g,
+        '<strong class="font-bold text-foreground">$1</strong>'
+      )
+
+      // ITALIC
+      .replace(
+        /\*(.*?)\*/g,
+        '<em class="italic">$1</em>'
+      )
+
+      // LINKS
       .replace(
         /\[([^\]]+)\]\(([^)]+)\)/g,
-        '<a href="$2" class="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">$1</a>'
+        '<a href="$2" class="font-medium text-primary underline underline-offset-4 hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">$1</a>'
       );
+  };
+
+  // ========================================
+  // LOOP THROUGH LINES
+  // ========================================
 
   lines.forEach((line, i) => {
     const trimmed = line.trim();
 
-    // Divider
+    // ========================================
+    // CODE BLOCK START / END
+    // ========================================
+
+    if (trimmed.startsWith("```")) {
+      flushList();
+      flushTable();
+
+      if (!inCodeBlock) {
+        inCodeBlock = true;
+        codeBlockLanguage = trimmed.replace(/```/, "").trim();
+      } else {
+        flushCodeBlock();
+      }
+
+      return;
+    }
+
+    if (inCodeBlock) {
+      codeLines.push(line);
+      return;
+    }
+
+    // ========================================
+    // TABLES
+    // ========================================
+
+    if (trimmed.includes("|")) {
+      const cols = trimmed
+        .split("|")
+        .map((c) => c.trim())
+        .filter(Boolean);
+
+      const isSeparator = cols.every((c) => /^-+$/.test(c));
+
+      if (!isSeparator && cols.length > 1) {
+        flushList();
+
+        inTable = true;
+        tableRows.push(cols);
+
+        return;
+      }
+
+      if (isSeparator) {
+        return;
+      }
+    } else {
+      flushTable();
+    }
+
+    // ========================================
+    // DIVIDER
+    // ========================================
+
     if (trimmed === "---") {
       flushList();
-      elements.push(<hr key={i} className="my-6 border-border" />);
+      flushTable();
+
+      elements.push(
+        <div key={i} className="my-12 flex items-center gap-4">
+          <div className="h-px flex-1 bg-border" />
+          <div className="h-1.5 w-1.5 rounded-full bg-accent/60" />
+          <div className="h-px flex-1 bg-border" />
+        </div>
+      );
+
+      return;
     }
 
-    // Headings
-    else if (trimmed.startsWith("# ")) {
-      flushList();
-      elements.push(
-        <h1 key={i} className="text-3xl font-bold mt-8 mb-4 text-foreground">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed.replace("# ", "")) }} />
-        </h1>
-      );
-    } else if (trimmed.startsWith("## ")) {
-      flushList();
-      elements.push(
-        <h2 key={i} className="text-2xl font-bold mt-8 mb-4 text-foreground">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed.replace("## ", "")) }} />
-        </h2>
-      );
-    } else if (trimmed.startsWith("### ")) {
-      flushList();
-      elements.push(
-        <h3 key={i} className="text-xl font-semibold mt-6 mb-3 text-foreground">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed.replace("### ", "")) }} />
-        </h3>
-      );
-    }
+    // ========================================
+    // HEADINGS H1-H6
+    // ========================================
 
-    // 🔥 Blockquote (FIX für dein Problem)
-    else if (trimmed.startsWith("> ")) {
+    const headingMatch = trimmed.match(/^(#{1,6})\s+(.*)$/);
+
+    if (headingMatch) {
+  flushList();
+
+  const level = headingMatch[1].length;
+  const text = headingMatch[2];
+
+  const classes = {
+    1: "mt-10 mb-8 text-4xl md:text-5xl font-black tracking-tight leading-tight",
+    2: "mt-16 mb-6 text-3xl md:text-4xl font-bold tracking-tight",
+    3: "mt-10 mb-4 text-2xl font-bold",
+    4: "mt-8 mb-3 text-xl font-semibold",
+    5: "mt-6 mb-2 text-lg font-semibold",
+    6: "mt-5 mb-2 text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground",
+  };
+
+  const Tag = `h${level}` as React.ElementType;
+
+  elements.push(
+    <Tag
+      key={i}
+      className={`${classes[level as keyof typeof classes]} text-foreground`}
+    >
+      <span
+        dangerouslySetInnerHTML={{
+          __html: formatInline(text),
+        }}
+      />
+    </Tag>
+  );
+
+  return;
+}
+
+    // ========================================
+    // BLOCKQUOTE
+    // ========================================
+
+    if (trimmed.startsWith("> ")) {
       flushList();
+
       elements.push(
         <blockquote
           key={i}
-          className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4"
+          className="relative my-8 overflow-hidden rounded-2xl border border-primary/20 bg-primary/[0.04] px-6 py-5"
         >
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed.replace("> ", "")) }} />
+          <div className="absolute left-0 top-0 h-full w-1 bg-primary" />
+
+          <p className="text-lg italic leading-8 text-foreground/90">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: formatInline(trimmed.replace("> ", "")),
+              }}
+            />
+          </p>
         </blockquote>
       );
+
+      return;
     }
 
-    // Unordered List
-    else if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+    // ========================================
+    // UNORDERED LIST
+    // ========================================
+
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       if (listType !== "ul") {
         flushList();
         listType = "ul";
       }
 
       listItems.push(
-        <li key={i}>
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed.replace(/^[-*] /, "")) }} />
+        <li
+          key={i}
+          className="flex gap-3 leading-7 text-muted-foreground"
+        >
+          <div className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+
+          <span
+            dangerouslySetInnerHTML={{
+              __html: formatInline(
+                trimmed.replace(/^[-*]\s/, "")
+              ),
+            }}
+          />
         </li>
       );
+
+      return;
     }
 
-    // Ordered List
-    else if (/^\d+\./.test(trimmed)) {
+    // ========================================
+    // ORDERED LIST
+    // ========================================
+
+    if (/^\d+\./.test(trimmed)) {
       if (listType !== "ol") {
         flushList();
         listType = "ol";
       }
 
       listItems.push(
-        <li key={i}>
+        <li
+          key={i}
+          className="pl-1 leading-7 text-muted-foreground marker:font-bold marker:text-accent"
+        >
           <span
             dangerouslySetInnerHTML={{
-              __html: formatInline(trimmed.replace(/^\d+\.\s*/, "")),
+              __html: formatInline(
+                trimmed.replace(/^\d+\.\s*/, "")
+              ),
             }}
           />
         </li>
       );
+
+      return;
     }
 
-    // Empty line
-    else if (trimmed === "") {
-      flushList();
-    }
+    // ========================================
+    // SHORTCUTS / COMMANDS
+    // ========================================
 
-    // Paragraph
-    else {
+    if (
+      /^[A-Z0-9+\-\/\s]+$/.test(trimmed) &&
+      trimmed.length <= 40 &&
+      !trimmed.includes(".") &&
+      trimmed !== ""
+    ) {
       flushList();
+
       elements.push(
-        <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed) }} />
-        </p>
+        <div
+          key={i}
+          className="mb-3 mr-2 inline-flex items-center rounded-xl border border-border bg-muted px-3 py-2 font-mono text-sm font-medium text-foreground shadow-sm"
+        >
+          {trimmed}
+        </div>
       );
+
+      return;
     }
+
+    // ========================================
+    // EMPTY LINE
+    // ========================================
+
+    if (trimmed === "") {
+      flushList();
+      return;
+    }
+
+    // ========================================
+    // PARAGRAPH
+    // ========================================
+
+    flushList();
+
+    elements.push(
+      <p
+        key={i}
+        className="mb-6 text-[17px] leading-8 text-muted-foreground"
+      >
+        <span
+          dangerouslySetInnerHTML={{
+            __html: formatInline(trimmed),
+          }}
+        />
+      </p>
+    );
   });
 
+  // ========================================
+  // FINAL FLUSH
+  // ========================================
+
   flushList();
+  flushCodeBlock();
+  flushTable();
+
   return elements;
 }
 
