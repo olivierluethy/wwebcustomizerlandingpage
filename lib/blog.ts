@@ -10,6 +10,130 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Themes: How to Install Custom Themes in 2026",
+  slug: "whatsapp-web-themes-how-to-install-custom-themes-2026",
+  seoIndex: true,
+  description: "A complete 2026 guide to installing custom themes on WhatsApp Web. Step-by-step walkthrough using WhatsApp Web Customizer — the most flexible theme engine on the Chrome Web Store, with JSON import, template downloads, and dozens of editable properties.",
+  date: "2026-05-19",
+  readTime: "6 min",
+  content: `# WhatsApp Web Themes: How to Install Custom Themes in 2026
+
+WhatsApp Web has been the same shade of green for as long as most of us can remember. There's no built-in option to change the color scheme, no way to upload a custom background that actually sticks, and no theme system at all. If you want WhatsApp Web to look different, you need an extension.
+
+This guide walks you through how to install and create custom themes on WhatsApp Web in 2026 using **WhatsApp Web Customizer** — the extension MakeUseOf, TechPP, and several other tech publications have featured this year. By the end of this post you'll know every way to get a theme onto your WhatsApp Web, including how to load your own JSON theme file.
+
+---
+
+## Step 1: Install the Extension
+
+If you haven't already, install **WhatsApp Web Customizer** from the Chrome Web Store:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+It's free, open source, and takes about 30 seconds to set up. No account required.
+
+Once installed, open [web.whatsapp.com](https://web.whatsapp.com) and pin the extension to your toolbar so it's easy to access.
+
+---
+
+## Step 2: Open the Themes Tab
+
+Click the WhatsApp Web Customizer icon in your browser toolbar to open the extension. You'll see the main settings panel.
+
+Click on the **Themes** tab.
+
+From here, you have four different ways to get into theme creation — and that flexibility is one of the things that makes this extension different from the alternatives. Let's go through each one.
+
+---
+
+## Step 3: Pick Your Path to Creating a Theme
+
+### Path A: The "Create" Button
+
+The fastest route. Click the **Create** button on the Themes tab, and you'll be taken straight to the theme manager.
+
+### Path B: The "Manage Items" Button
+
+If you click **Manage Items** instead, you'll also be navigated to the theme manager. From there, click **Create Theme** and the **Add New Theme** modal will open.
+
+### Path C: The "Custom" Tab
+
+The Themes section has two navigation tabs at the top. Click the **Custom** tab, then click the **New Theme** button. Same destination, different entry point — use whichever feels more natural to you.
+
+### Path D: The "Create Theme" Button (Direct)
+
+Clicking the **Create Theme** button anywhere it appears opens the **Add New Theme** modal directly, skipping the manager entirely. This is the path most users end up using once they're familiar with the workflow.
+
+All four paths land you in the same place: a theme editor with full control over how your WhatsApp Web looks.
+
+---
+
+## Step 4: Build Your Theme (Or Import One)
+
+Inside the editor, you have three ways to actually create a theme.
+
+### Option 1: Edit Manually
+
+The editor exposes a wide range of customizable options — and we mean *wide*. You can modify each specific visual detail individually. Colors, gradients, opacity values, backgrounds, sidebars, chat bubbles, hover states, accents — every piece of the interface is editable on its own.
+
+If you've ever opened a "theme editor" on another extension and felt limited by two color pickers and a slider, this isn't that.
+
+### Option 2: Drop Your Own JSON File
+
+If you already have a theme JSON file — exported from another browser, shared by a friend, or built by hand — you can simply drag and drop it into the editor. It loads instantly.
+
+### Option 3: Download the Template
+
+Not sure what a theme JSON file should look like? Click the **Download Template** option. You'll get a ready-to-edit JSON file showing the exact structure the extension expects. Edit it in any text editor (VS Code, Sublime, even Notepad), save it, and either drag it back in or use the **Upload JSON** option.
+
+This is genuinely useful for people who want to version-control their themes, share them with others, or build multiple variations without clicking through the UI for each one.
+
+---
+
+## How This Compares to Other Extensions
+
+Let's be specific, because this is where the difference matters.
+
+The closest competitor in this space is **WhatsApp Web Designer**. It's a decent product for what it does. But what it does, when it comes to theme creation, is limited to:
+
+- A **gradient start** color
+- A **gradient end** color
+- A **start opacity** value
+- An **end opacity** value
+- One **force same color reverse gradient** toggle
+
+That's the entire theme customization surface. If your goal is "make the background blue-ish," it works. If your goal is anything more nuanced — a specific chat bubble color, a custom sidebar tint, a hover state that matches your brand, a JSON-based workflow you can reuse — you'll hit a wall fast.
+
+WhatsApp Web Customizer doesn't have that ceiling. Every visual property is independently editable, and the JSON import/export workflow means you're not locked into the UI for anything.
+
+We're not going to be coy about this: **on theme customization specifically, we are the most flexible extension on the Chrome Web Store in 2026.** If you find one that's more flexible, send it to us — we'll update this post and link to it. We mean that genuinely. But we don't expect that email to arrive, because we've been looking for one ourselves.
+
+---
+
+## Step 5: Save and Apply
+
+Once your theme looks the way you want it, save it. Your custom theme will appear in the **Custom** tab of the Themes section. Click it to apply, click another to switch, click the default to revert.
+
+You can build as many themes as you want and switch between them instantly — daytime theme, nighttime theme, focus mode theme, weekend theme. Whatever you need.
+
+---
+
+## A Few Pro Tips
+
+- **Build a "starter pack" of themes** by downloading the template, duplicating it a few times, and tweaking each copy. You'll move much faster than clicking through the UI every time.
+- **Export themes you like** so you have backups. WhatsApp Web occasionally pushes interface updates that can require minor theme tweaks — having your JSON files saved means you're not starting from zero.
+- **Share themes with your team or friends.** JSON files are tiny and travel well. We've seen Discord servers form around theme-sharing.
+- **Join our [Discord](https://discord.gg/cppbDz4qhn)** if you want to share what you've built or see what other users are making. There's a small but growing community of people doing genuinely impressive things with the theme system.
+
+---
+
+## The Bottom Line
+
+WhatsApp itself isn't going to ship a theme system any time soon. Meta has had over a decade to do it and hasn't. The only way to actually personalize WhatsApp Web in 2026 is with an extension — and on the question of how much control that extension gives you, the gap between WhatsApp Web Customizer and everything else isn't subtle.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try the theme system yourself. If you build something you're proud of, share it with us — we love seeing what people make.`,
+},
+  {
 
   title: "The WhatsApp Web Customization Boom: How Fast the Market Is Growing",
 
