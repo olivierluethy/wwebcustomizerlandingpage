@@ -10,6 +10,104 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Change the Font on WhatsApp Web",
+  slug: "how-to-change-the-font-on-whatsapp-web",
+  seoIndex: true,
+  description: "A simple 2026 guide to changing the font and font size on WhatsApp Web. Walkthrough using WhatsApp Web Customizer — including the story of how the font size feature was shipped the same day a user requested it.",
+  date: "2026-05-20",
+  readTime: "4 min",
+  content: `# How to Change the Font on WhatsApp Web
+
+WhatsApp Web ships with one font. One size. No options. If you've ever squinted at a chat on a 4K monitor, or wished the interface used something other than the default sans-serif, you've already hit the limit of what WhatsApp Web lets you do out of the box.
+
+The fix is a Chrome extension, and the workflow is genuinely simple. Here's how to change both the font family and the font size on WhatsApp Web in 2026.
+
+---
+
+## Step 1: Install the Extension
+
+If you don't already have it, install **WhatsApp Web Customizer** from the Chrome Web Store:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, and roughly 30 seconds to set up. No account.
+
+Once it's installed, pin it to your toolbar so the popup is one click away.
+
+---
+
+## Step 2: Open the Typography Tab
+
+Click the WhatsApp Web Customizer icon in your browser to open the popup. You'll see the main settings panel.
+
+Click the **Typography** tab.
+
+This is where everything related to text — font family and font size — lives.
+
+---
+
+## Step 3: Change the Font Family
+
+Inside the Typography tab, you'll find the font family selector. WhatsApp Web Customizer ships with **over 500 fonts**, plus the option to upload your own font file if you want something the extension doesn't include by default.
+
+Pick one. The change applies in real time — no reload, no save button, no fiddling. Switch fonts as often as you want until you find one you like.
+
+A few suggestions if you don't know where to start:
+
+- **Inter** — clean, modern, works well at small sizes
+- **JetBrains Mono** — monospaced, useful if you exchange a lot of code snippets
+- **Atkinson Hyperlegible** — designed for readability, great for long messaging sessions
+- **Comic Neue** — if you want to lean into a casual chat feel without going full Comic Sans
+
+---
+
+## Step 4: Adjust the Font Size
+
+Right below the font family selector, you'll find the font size adjustment.
+
+Slide it up if WhatsApp Web text feels too small on your monitor. Slide it down if you'd rather fit more conversation on screen at once. The change is instant.
+
+This is the kind of feature that sounds small but matters enormously once you have it. The default WhatsApp Web font size is calibrated for a generic mid-2010s laptop screen. If you're on a 27-inch 4K display, a small ultrabook, or a phone-style narrow window, the default is almost certainly wrong for you.
+
+---
+
+## A Story About How This Feature Got Built
+
+The font size feature wasn't always part of the extension. Here's how it got added — because it's a small thing that says something larger about how WhatsApp Web Customizer is built.
+
+Back when the extension had around **20 to 30 users total**, someone filed a feature request through our form. The request was specific: add font size adjustment to the Typography tab.
+
+We shipped the feature **the same day**. The new version was submitted to the Chrome Web Store, accepted by Google, and went live shortly after.
+
+We mention this because it's the difference between an extension that exists and an extension that's actively listening. With most browser extensions, a feature request from a user with a 20-user product would sit in a backlog forever — if it got read at all. We don't operate that way, and we don't plan to.
+
+If you want a feature that isn't in the extension yet, [join our Discord](https://discord.gg/cppbDz4qhn) or file a request through our website. The track record on actually shipping requested features is pretty good.
+
+---
+
+## Your Changes Stick
+
+One detail worth calling out: your font and font size changes are **saved inside the extension itself**.
+
+That means if you reload WhatsApp Web, close the tab, restart your browser, or restart your computer, your changes don't disappear. The extension remembers your settings and reapplies them automatically the next time WhatsApp Web loads.
+
+You don't need to log in, sync, or back anything up. It just works.
+
+---
+
+## Resetting If You Want to Go Back
+
+Don't like your changes? Inside the Typography tab, there's a **Reset** option. One click puts WhatsApp Web back to its default font and size. You can experiment freely — there's no risk of getting stuck with a setup you don't like.
+
+---
+
+## The Bottom Line
+
+Changing the font on WhatsApp Web isn't something WhatsApp lets you do natively. It probably never will be. But with a Chrome extension installed, it's a 10-second job — pick a font, set the size you want, and never think about it again.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try it yourself. And if you've got a feature you wish the extension had — same way we got the font size slider — let us know.`,
+},
+  {
   title: "WhatsApp Web Themes: How to Install Custom Themes in 2026",
   slug: "whatsapp-web-themes-how-to-install-custom-themes-2026",
   seoIndex: true,
