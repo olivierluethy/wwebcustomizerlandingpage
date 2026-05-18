@@ -10,6 +10,154 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like iMessage",
+  slug: "how-to-make-whatsapp-web-look-like-imessage",
+  seoIndex: true,
+  description: "A 2026 guide to making WhatsApp Web look and feel like iMessage. Step-by-step walkthrough using WhatsApp Web Customizer — including blue chat bubbles, San Francisco-style fonts, light backgrounds, and a downloadable iMessage-inspired theme JSON.",
+  date: "2026-05-22",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like iMessage
+
+If you've ever switched from an iPhone to an Android, or use both devices in parallel, you already know the feeling: iMessage just *looks* better. The blue bubbles. The clean San Francisco typography. The soft, airy background. The way everything feels deliberate.
+
+WhatsApp Web, by contrast, looks like WhatsApp Web — that same flat green chat list everyone's been staring at for over a decade.
+
+The good news: you can make WhatsApp Web look almost exactly like iMessage in about five minutes. No mockups, no Photoshop, no fake screenshots. The actual interface, in your actual browser, transformed. Here's how.
+
+---
+
+## Step 1: Install the Extension
+
+You'll need **WhatsApp Web Customizer** for this. It's the only Chrome extension that gives you enough control to actually pull this off:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, 30 seconds to install. Pin it to your toolbar.
+
+If you're wondering why this specific extension and not another one — the closest competitor lets you change a gradient start and end color and not much else. Recreating iMessage requires editing chat bubble colors, sidebar tint, accent colors, font family, font size, and backgrounds independently. Only WhatsApp Web Customizer exposes all of those properties.
+
+---
+
+## Step 2: Change the Font to Something San Francisco-Like
+
+iMessage uses **San Francisco**, Apple's proprietary system font. You can't legally redistribute San Francisco in a browser extension, but you can get extremely close with a few alternatives that are essentially indistinguishable to most users.
+
+Open the extension popup, click the **Typography** tab, and pick one of these fonts:
+
+- **Inter** — the closest free alternative to San Francisco. Designed for screen UI, looks nearly identical at chat sizes.
+- **SF Pro Display** — if you have it installed locally on a Mac, the extension will pick it up.
+- **Roboto** — a fallback if Inter isn't to your taste; cleaner and more modern than WhatsApp's default.
+
+Bump the **font size** up slightly. iMessage tends to feel a little roomier than WhatsApp Web — a tick or two larger gets you closer to the real thing.
+
+---
+
+## Step 3: Build the iMessage Color Palette
+
+This is the part that does most of the visual lifting. Open the **Themes** tab, click **Create** (or the **Custom** tab → **New Theme**), and you'll land in the theme editor.
+
+Here are the colors you want, lifted from iMessage on iOS:
+
+**Main background**
+- Pure white (\`#FFFFFF\`) for light mode
+- Or near-black (\`#000000\`) for dark mode iMessage
+
+**Sent chat bubbles (your messages)**
+- iMessage blue: \`#0B93F6\` for the bubble background
+- White (\`#FFFFFF\`) for the text
+
+**Received chat bubbles (their messages)**
+- Light gray: \`#E5E5EA\` for the bubble background in light mode
+- Dark gray: \`#26252A\` in dark mode
+- Black text in light mode, white text in dark mode
+
+**Sidebar / chat list**
+- Slightly off-white: \`#F2F2F7\` in light mode
+- True dark gray: \`#1C1C1E\` in dark mode
+
+**Accent color (links, mentions, active states)**
+- iMessage blue: \`#0B93F6\`
+
+Apply these one by one inside the editor. The change happens in real time — you'll see WhatsApp Web morph into something that feels distinctly Apple as you work through the list.
+
+---
+
+## Step 4: Hide What iMessage Doesn't Have
+
+iMessage doesn't have Status. It doesn't have Channels. It doesn't have a Communities tab. WhatsApp Web shows all of these in the sidebar, and they break the illusion immediately.
+
+Inside the extension, turn on **Minimal Mode**. This hides:
+
+- Archive
+- Status
+- Locked chats
+- Channels
+
+What you're left with is a clean chat list, the way iMessage shows it. Now the sidebar actually looks like iMessage's sidebar — just a list of conversations.
+
+---
+
+## Step 5: Pick the Right Background
+
+iMessage backgrounds are subtle. Most users have a plain background or a light gradient. You have three options here:
+
+- **Solid color** — pick the same off-white or dark gray you used for the sidebar. Clean and quiet.
+- **Soft gradient** — a barely-perceptible vertical gradient mimics iMessage's slight depth. Try \`#FFFFFF\` to \`#F2F2F7\` for light mode.
+- **Subtle wallpaper** — if you want something more like the iOS lock screen aesthetic, upload a soft photo. The extension lets you set different backgrounds for the chat window, welcome screen, sidebar, and chat list independently.
+
+---
+
+## Step 6: Save It as a Custom Theme (Or Use JSON)
+
+Once it looks right, save your theme. It'll appear permanently in the **Custom** tab of the Themes section. One click to apply, one click to switch back.
+
+**For advanced users:** you can also build this theme as a JSON file. Click **Download Template**, edit the JSON with the colors above, and drag it back into the extension. This is useful if you want to:
+
+- Version-control your theme as you tweak it
+- Share it with friends who also want the iMessage look
+- Build multiple variations (light iMessage, dark iMessage, OLED iMessage)
+
+We covered the full JSON workflow in [our themes installation guide](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026) — worth reading if you want to push the customization further.
+
+---
+
+## Why This Actually Works (And Why It Doesn't on Other Extensions)
+
+There's a reason this guide is six steps and not one. Recreating an interface like iMessage means editing **every visual property independently** — chat bubble colors separately from sidebar separately from accent separately from background separately from font.
+
+Most WhatsApp Web theme extensions don't let you do this. The biggest competitor on the Chrome Web Store gives you a gradient start color, a gradient end color, two opacity values, and a reverse-gradient toggle. That's it. You can't recreate iMessage with that. You can't recreate anything specific with that — you can only tint WhatsApp Web a different shade of itself.
+
+WhatsApp Web Customizer was built so the user actually gets full control. Hundreds of editable properties, real-time preview, JSON import/export, your own custom fonts if 500+ built-in ones aren't enough. It's the reason MakeUseOf, TechPP, and several other publications featured it in their 2026 best-of lists — and it's the reason recreating iMessage on WhatsApp Web is actually possible in 2026 rather than a thought experiment.
+
+---
+
+## Your iMessage Theme Sticks
+
+One small detail worth flagging: once you've built and saved your iMessage theme, **it stays saved**. Reload WhatsApp Web, close the tab, restart your browser — the theme reapplies automatically.
+
+You don't need to log in, sync, or back anything up. The theme lives inside the extension, locally, and reapplies on every WhatsApp Web load.
+
+---
+
+## Going Further
+
+Once you've got the iMessage look working, a few directions worth exploring:
+
+- **Build a dark iMessage variant** — same recipe, swap the light grays for dark grays. We wrote about [dark mode customization specifically](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default) if you want to push that further.
+- **Mix in iMessage-style quick replies** — set up your most common phrases as quick reply bubbles so tapping out "On my way" or "Got it" takes one click.
+- **Add a font size that matches your screen** — iMessage feels different on a 13-inch MacBook than on a 16-inch one. Tune the font size to your specific setup.
+
+---
+
+## The Bottom Line
+
+You can't get iMessage on Android. You can't get iMessage on Windows. But you can get WhatsApp Web that looks and feels like iMessage in any browser, on any operating system, in about five minutes.
+
+The blue bubbles, the Inter font, the clean sidebar, the soft background — all of it possible with one Chrome extension and a few minutes of color picking.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build your iMessage theme. If you nail the look and want to share the JSON file with the community, [drop it in our Discord](https://discord.gg/cppbDz4qhn) — we've been collecting user-built themes and an iMessage one would be a great addition.`,
+},
+  {
   title: "How to Get Dark Mode on WhatsApp Web (Beyond the Default)",
   slug: "how-to-get-dark-mode-on-whatsapp-web-beyond-the-default",
   seoIndex: true,
