@@ -10,6 +10,113 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Get Dark Mode on WhatsApp Web (Beyond the Default)",
+  slug: "how-to-get-dark-mode-on-whatsapp-web-beyond-the-default",
+  seoIndex: true,
+  description: "WhatsApp Web's built-in dark mode is fine — but it's just one toggle. Here's how to get true dark mode customization in 2026 using WhatsApp Web Customizer, including the surprising fact that a dark theme overrides Light Mode entirely.",
+  date: "2026-05-21",
+  readTime: "5 min",
+  content: `# How to Get Dark Mode on WhatsApp Web (Beyond the Default)
+
+WhatsApp Web has a built-in dark mode. You can find it under Settings → Theme → Dark. It works fine, in the way that anything described as "fine" works fine: it does what it says, looks like everything else, and gives you exactly zero control over the result.
+
+If you've ever wanted a *real* dark mode for WhatsApp Web — something deeper than the default, something you can customize, something that actually fits the rest of your setup — this post is for you.
+
+---
+
+## What WhatsApp Web's Default Dark Mode Actually Does
+
+Before we get into the real solution, let's be honest about the built-in option.
+
+WhatsApp Web's native dark mode is a single binary toggle: light or dark. The dark palette is a fixed set of grays and greens chosen by Meta's design team. You can't change the background color, you can't pick the accent, you can't adjust the chat bubble contrast, you can't tint anything to match your wallpaper or your IDE or your operating system theme.
+
+If "dark-ish gray with WhatsApp green" is exactly the aesthetic you want, the built-in option is enough. If it isn't, you need a Chrome extension.
+
+---
+
+## Step 1: Install the Extension
+
+Install **WhatsApp Web Customizer** from the Chrome Web Store:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, no account. Once it's installed, pin it to your toolbar.
+
+---
+
+## Step 2: Pick a Dark Theme
+
+Open [web.whatsapp.com](https://web.whatsapp.com), click the extension icon, and go to the **Themes** tab.
+
+WhatsApp Web Customizer ships with multiple dark themes out of the box. Pick one. The change applies in real time — no reload required.
+
+This is where the article could end, but there's actually a surprising detail worth covering, because it caught us off guard during testing.
+
+---
+
+## The Light Mode Override (We Tested This)
+
+Here's a question that came up during research for this post: **what happens if a user has Light Mode enabled in WhatsApp Web's native settings, and then applies a dark theme through the extension?**
+
+It's a fair question. According to our uninstall form data, only a small percentage of users have Light Mode explicitly enabled — most leave it on default. But for the users who do, we wanted to know whether our extension would conflict with their setting or quietly fail.
+
+So we tested it.
+
+**Result:** the extension's dark theme overrides WhatsApp Web's Light Mode setting entirely. Light Mode stays toggled on in the underlying settings, but visually it's completely overwritten by the extension's theme. The user sees the dark theme they selected. The Light Mode toggle becomes irrelevant.
+
+This matters because it means **you don't have to fight with WhatsApp's settings to get true dark mode.** You don't need to disable Light Mode first, you don't need to remember which setting won the last conflict, you don't need to troubleshoot why one piece of UI is light and another is dark. The extension takes over and your selected theme wins. Cleanly.
+
+---
+
+## Step 3: Customize the Dark Theme (This Is Where It Gets Good)
+
+If a built-in dark theme isn't quite right, you don't have to live with it. Open the theme editor and you can change essentially every visual property:
+
+- The main background color
+- The sidebar background
+- The chat bubble colors (sent and received, separately)
+- Accent colors for links, mentions, and active states
+- Hover and selection states
+- Text color and contrast
+- Custom backgrounds for the chat window, welcome screen, sidebar, and chat list
+
+You can build the dark mode you actually want. True OLED black for battery savings on dark mode laptops. Warm dark for late-night reading. High-contrast dark for accessibility. A specific shade of dark blue to match your IDE. Whatever.
+
+Save it as a custom theme, and it'll appear in your theme list permanently. You can build multiple dark themes and switch between them — one for daytime in a bright office, one for late-night focus, one that matches your editor.
+
+---
+
+## Step 4: Use Custom JSON Themes for Total Control
+
+If clicking through the editor isn't your thing, every theme is also a JSON file you can edit directly.
+
+- **Download the template** to see exactly what structure the extension expects
+- Edit it in any text editor
+- Drag and drop the JSON file back into the extension to load it
+
+This is genuinely useful if you want to share themes with others, version-control your color palettes, or build several variations from a base template. It's also why we say with a straight face that this extension is **WhatsApp Web customization on steroids** — there's no ceiling, no premium tier locking the good stuff behind a paywall, no "you can only change two colors" limit.
+
+We compared this extension's customization surface to the closest competitor in [our previous post on installing custom themes](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026). The short version: this isn't a fair fight. If you want dark mode customization beyond a fixed palette, WhatsApp Web Customizer is the only option on the Chrome Web Store in 2026 that actually delivers it.
+
+---
+
+## Your Dark Theme Sticks
+
+One small but important detail: whatever dark theme you apply is **saved inside the extension**.
+
+Reload WhatsApp Web, close the tab, restart your browser, restart your computer — your dark theme reapplies automatically. You don't need to re-select it, you don't need to log in to anything, you don't need to back anything up.
+
+It just stays dark.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web's built-in dark mode is a starting point, not a finish line. If you want a dark mode you can actually customize — colors, contrasts, backgrounds, the whole thing — you need an extension, and on this specific task, you need WhatsApp Web Customizer. The Light Mode override behavior alone makes it the cleanest solution we've found.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try a few dark themes. If you build one you love, [share it on our Discord](https://discord.gg/cppbDz4qhn) — we've been collecting community themes and there's a small library forming already.`,
+},
+  {
   title: "How to Change the Font on WhatsApp Web",
   slug: "how-to-change-the-font-on-whatsapp-web",
   seoIndex: true,
