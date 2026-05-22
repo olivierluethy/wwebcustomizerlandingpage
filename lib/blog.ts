@@ -10,6 +10,163 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "15 Hidden WhatsApp Web Features You're Probably Not Using",
+  slug: "15-hidden-whatsapp-web-features-youre-probably-not-using",
+  seoIndex: true,
+  description: "15 hidden WhatsApp Web features most people never discover — from reading messages without blue ticks to drag-and-drop files, multi-device login, message editing, and ways to customize the interface WhatsApp doesn't let you change natively.",
+  date: "2026-05-25",
+  readTime: "8 min",
+  content: `# 15 Hidden WhatsApp Web Features You're Probably Not Using
+
+Most people use WhatsApp Web for exactly one thing: typing messages on a real keyboard instead of a phone screen. Fair enough — but you're leaving a lot on the table.
+
+WhatsApp Web has accumulated a surprising number of features over the years, and most users never find them. Some are genuinely hidden in menus nobody opens. Others are simple tricks that save time once you know they exist. Here are 15 worth knowing in 2026.
+
+---
+
+## 1. Read Messages Without Triggering Blue Ticks
+
+Hover over an unread chat in the sidebar and a preview pops up showing the latest messages — without marking them as read. No blue ticks, no "seen" status.
+
+It has limits: opening the chat itself still triggers read receipts, and the preview only shows the most recent messages, not the full conversation. But for a quick "do I need to deal with this right now?" check, it's perfect.
+
+---
+
+## 2. Drag and Drop Files Straight Into Chats
+
+Skip the attachment button entirely. Drag any file — image, document, video, audio — from your desktop directly into the chat window, and WhatsApp Web attaches it instantly. You can send files up to **2 GB** each this way.
+
+This is dramatically faster than clicking the paperclip, navigating a file picker, and selecting your file, especially when you've already got the file visible on your desktop.
+
+---
+
+## 3. Use WhatsApp on Up to 4 Devices at Once
+
+WhatsApp's multi-device feature lets you stay logged in on **four linked devices simultaneously**, plus your phone. Home computer, work laptop, tablet, and the desktop app — all active at the same time, all syncing in real time.
+
+Even better: as of 2026, your linked devices keep working for **up to 14 days even if your phone is completely offline**. Your phone no longer has to be online for WhatsApp Web to function.
+
+---
+
+## 4. Edit Messages After Sending
+
+Sent a message with a typo? You have **15 minutes** to fix it. Right-click any message you've sent, choose **Edit**, make your change, and send. The message will show an "edited" label, but you've saved yourself the awkward double-text correction.
+
+---
+
+## 5. Lock Specific Chats Behind a Layer of Privacy
+
+WhatsApp's Chat Lock feature lets you move sensitive conversations into a locked, hidden folder. On WhatsApp Web, locked chats are tucked away from your main list. Useful if you share your screen during calls or work in an open office.
+
+---
+
+## 6. Pin Your Most Important Chats
+
+Right-click any chat and select **Pin Chat** to keep it at the top of your list — regardless of when the last message arrived. You can pin up to **3 chats**. Great for keeping your partner, your group project, or your boss permanently within reach.
+
+---
+
+## 7. Star Messages for Later
+
+Right-click any message and star it. Starred messages get collected in their own dedicated section, accessible anytime. Perfect for addresses, Wi-Fi passwords, confirmation numbers, or links you'll need to find again without scrolling through months of history.
+
+---
+
+## 8. Search Inside a Single Conversation
+
+Everyone knows about the main search bar. Fewer people know you can search *within* a specific chat. Open the conversation, then press \`Ctrl + Shift + F\` (Windows) or \`Cmd + Shift + F\` (Mac) to search only that chat. Far faster than endless scrolling.
+
+---
+
+## 9. Format Your Text (Bold, Italic, Strikethrough, Monospace)
+
+WhatsApp supports Markdown-style formatting that most users never use:
+
+- \`*text*\` → **Bold**
+- \`_text_\` → *Italic*
+- \`~text~\` → ~~Strikethrough~~
+- Three backticks around text → \`Monospace\`
+
+Handy for emphasis, for crossing off completed list items, or for sharing code and serial numbers in monospace so they're easy to read.
+
+---
+
+## 10. Use Voice Messages From Your Computer
+
+You don't need your phone to send a voice message. Click the microphone icon in any chat on WhatsApp Web and record using your computer's built-in mic. Useful when typing a long explanation would take forever.
+
+---
+
+## 11. Reply to a Specific Message (and Mention People in Groups)
+
+Hover over any message and click the reply arrow to quote it directly — essential in busy group chats where context gets lost. In groups, type \`@\` followed by a contact's name to mention them specifically, which notifies them even if they've muted the group.
+
+---
+
+## 12. Log Out Remotely If You Forget
+
+Left WhatsApp Web logged in on a friend's computer or a library machine? You don't have to go back. Open WhatsApp on your phone, go to **Linked Devices**, tap the session you want to end, and select **Log Out**. The remote session closes immediately.
+
+This is also your security check — if you ever see a linked device you don't recognize, log it out right away.
+
+---
+
+## 13. Change the Font on WhatsApp Web
+
+Here's one that genuinely surprises people: you can change the font WhatsApp Web uses. Not natively — WhatsApp doesn't offer this — but with a free Chrome extension you can pick from hundreds of fonts and adjust the text size to whatever's comfortable on your screen.
+
+This matters more than it sounds. The default WhatsApp Web font size is calibrated for a generic mid-2010s laptop. On a large 4K monitor or a small ultrabook, it's almost certainly the wrong size for you. We wrote a full walkthrough on [how to change the font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web) if you want to try it.
+
+---
+
+## 14. Get True Dark Mode (Beyond the Default Toggle)
+
+WhatsApp Web has a basic dark mode under Settings → Theme. But it's a single fixed palette — you can't change the background color, the contrast, or the accent.
+
+If you want a *real* dark mode — true OLED black for battery savings, warm dark for late-night reading, or a custom palette that matches your setup — you'll need an extension. We covered the full method, including the surprising fact that a custom dark theme overrides WhatsApp's Light Mode setting entirely, in [our dark mode guide](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default).
+
+---
+
+## 15. Customize the Entire Interface (Themes, Backgrounds, Privacy Blur)
+
+This is the big one, and the feature most people don't realize is even possible. WhatsApp Web's interface hasn't meaningfully changed in years — the same green, the same layout, the same everything. WhatsApp gives you no way to change it.
+
+A Chrome extension does. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — unlocks:
+
+- **Custom themes** — light, dark, OLED, or fully custom ones you build yourself
+- **Custom backgrounds** — for the chat window, sidebar, welcome screen, and chat list independently
+- **Privacy blur** — hide messages and contact names when you're working in a cafe or open office
+- **Quick reply bubbles** — one-click preset responses for the things you type constantly
+- **Minimal Mode** — hide Archive, Status, Channels, and locked chats for a cleaner sidebar
+
+It's free, open source (the full code is on GitHub, so anyone can verify it's safe), and installs in about 30 seconds. If you've read this far, you're clearly the kind of person who likes getting more out of their tools — this is the single biggest upgrade on the list.
+
+---
+
+## A Few Honorable Mentions
+
+Didn't quite make the top 15, but worth knowing:
+
+- **Mute groups for 8 hours, a week, or always** — right-click a group and pick your mute duration
+- **Mark chats as unread** — right-click → Mark as Unread to remind yourself to reply later
+- **Click a contact's name to see shared media** — opens a panel with every photo, video, and link you've exchanged
+- **Disappearing messages** — set messages in a chat to auto-delete after 24 hours, 7 days, or 90 days
+
+---
+
+## The Bottom Line
+
+WhatsApp Web is far more capable than most people realize. The native features above — multi-device, message editing, chat lock, in-chat search — are all sitting there waiting to be used. And the things WhatsApp *doesn't* let you do natively, like changing the font or building a custom dark theme, are a free extension away.
+
+If you want to start with the biggest upgrade, 👉 [install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and spend 30 seconds picking a theme.
+
+For more, check out:
+
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)
+- [WhatsApp Web keyboard shortcuts: the complete 2026 list](/blog/whatsapp-web-keyboard-shortcuts-the-complete-2026-list)
+- [How to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage)`,
+},
+  {
   title: "WhatsApp Web Keyboard Shortcuts: The Complete 2026 List",
   slug: "whatsapp-web-keyboard-shortcuts-the-complete-2026-list",
   seoIndex: true,
