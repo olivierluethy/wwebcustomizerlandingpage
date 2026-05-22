@@ -10,6 +10,173 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Keyboard Shortcuts: The Complete 2026 List",
+  slug: "whatsapp-web-keyboard-shortcuts-the-complete-2026-list",
+  seoIndex: true,
+  description: "The complete 2026 list of WhatsApp Web keyboard shortcuts for Windows, Mac, and Linux. Navigation, chat management, message formatting, emoji shortcuts, plus how to find and customize shortcuts inside WhatsApp itself.",
+  date: "2026-05-24",
+  readTime: "6 min",
+  content: `# WhatsApp Web Keyboard Shortcuts: The Complete 2026 List
+
+If you use WhatsApp Web for more than a few messages a day, keyboard shortcuts will change how fast you work. Switching chats, archiving, muting, marking unread, formatting text — all of it can happen without your hands ever leaving the keyboard.
+
+This is the complete, up-to-date list of WhatsApp Web keyboard shortcuts for 2026, organized by category and split by operating system. Bookmark it, share it with your team, and keep it handy until the shortcuts become muscle memory.
+
+---
+
+## A Quick Note on Accuracy
+
+WhatsApp updates its shortcuts periodically, and the exact key combinations occasionally shift between versions. A few combinations also differ depending on whether you're on WhatsApp Web in a browser versus the WhatsApp Desktop app.
+
+The single most reliable source is the list built into WhatsApp itself — and the good news is it's easy to find:
+
+1. Click the **three-dot menu** at the top of your chat list
+2. Go to **Settings**
+3. Click **Keyboard Shortcuts** (or **Shortcuts**)
+
+This screen updates with every new version of the app, so if any shortcut below ever behaves differently for you, that in-app list is the authority. The shortcuts below reflect the standard 2026 set for WhatsApp Web.
+
+---
+
+## Navigation Shortcuts
+
+These move you around the interface — switching between chats, opening search, and closing things.
+
+**Windows / Linux:**
+
+- \`Ctrl + Alt + /\` — Search
+- \`Ctrl + Alt + Shift + ]\` — Next chat
+- \`Ctrl + Alt + Shift + [\` — Previous chat
+- \`Ctrl + Alt + ,\` — Open Settings
+- \`Esc\` — Close current chat or panel
+
+**Mac:**
+
+- \`Cmd + /\` — Search
+- \`Cmd + Shift + ]\` — Next chat
+- \`Cmd + Shift + [\` — Previous chat
+- \`Cmd + ,\` — Open Settings
+- \`Esc\` — Close current chat or panel
+
+> **Heads up:** some browser and app versions use \`Ctrl + ]\` and \`Ctrl + [\` (without Alt + Shift) for next/previous chat. If one combination doesn't work, try the other — and check your in-app Shortcuts screen for the exact version you're running.
+
+---
+
+## Chat Management Shortcuts
+
+The real time-savers. Once these are muscle memory, you'll clear a backlog of chats in seconds.
+
+**Windows / Linux:**
+
+- \`Ctrl + Alt + N\` — New chat
+- \`Ctrl + Alt + Shift + N\` — New group
+- \`Ctrl + Alt + E\` — Archive chat
+- \`Ctrl + Alt + Shift + M\` — Mute chat
+- \`Ctrl + Alt + Shift + U\` — Mark as unread
+- \`Ctrl + Alt + Shift + P\` — Pin chat
+- \`Ctrl + Alt + Backspace\` — Delete chat
+- \`Ctrl + Alt + Shift + Backspace\` — Clear messages in chat
+
+**Mac:**
+
+- \`Cmd + N\` — New chat
+- \`Cmd + Shift + N\` — New group
+- \`Cmd + E\` — Archive chat
+- \`Cmd + Shift + M\` — Mute chat
+- \`Cmd + Shift + U\` — Mark as unread
+- \`Cmd + Shift + P\` — Pin chat
+- \`Cmd + Backspace\` — Delete chat
+- \`Cmd + Shift + Backspace\` — Clear messages in chat
+
+---
+
+## Message Formatting Shortcuts
+
+WhatsApp uses Markdown-style formatting. You type these symbols around your text, and WhatsApp converts them when you send. They work identically on every operating system.
+
+- \`*your text*\` → **Bold**
+- \`_your text_\` → *Italic*
+- \`~your text~\` → ~~Strikethrough~~
+- Three backticks around text → \`Monospace\`
+
+You can also combine them. For example, wrapping text in both asterisks and underscores gives you **bold italic**.
+
+**Bonus:** select text in the message box and many browsers will let you apply formatting through the right-click context menu too, if you'd rather not memorize the symbols.
+
+---
+
+## Emoji and Special Input Shortcuts
+
+- Type \`:\` followed by the first couple of letters of an emotion or object (e.g. \`:smi\` for smile, \`:fi\` for fire) and WhatsApp Web will suggest matching emojis. Use the arrow keys to highlight one, then \`Tab\` or \`Enter\` to insert it.
+- \`Shift + Enter\` — Add a new line within a message without sending it. Essential for writing multi-paragraph messages.
+- \`Enter\` — Send the message.
+
+That \`Shift + Enter\` trick alone saves a lot of frustration — it's the difference between sending half a thought by accident and writing a proper paragraph.
+
+---
+
+## Search Shortcuts
+
+- \`Ctrl + Alt + /\` (Windows/Linux) or \`Cmd + /\` (Mac) — Search all chats
+- \`Ctrl + Shift + F\` (Windows/Linux) or \`Cmd + Shift + F\` (Mac) — Search within the currently open chat
+
+The in-chat search is underused and genuinely useful — if you remember someone sent you an address three weeks ago, open that chat and search inside it rather than scrolling forever.
+
+---
+
+## Voice Message Shortcut
+
+- Press and hold to record isn't keyboard-based, but you can click the microphone icon to start a voice message. There's currently no universal keyboard shortcut to start recording across all versions — check your in-app Shortcuts list to see if your version includes one.
+
+---
+
+## Did You Know You Can Customize Your Shortcuts?
+
+This is something most WhatsApp Web users never discover: in recent versions, you can **change several keyboard shortcuts** to match your preferences.
+
+Head to **Settings → Keyboard Shortcuts** and look for editable fields. Not every shortcut is customizable, but the ones that are let you remap to combinations that feel more natural to you — useful if a default shortcut clashes with one your browser or OS already uses.
+
+---
+
+## Pro Tips to Get Even Faster
+
+A few habits that compound with the shortcuts above:
+
+**Pin your most important chats.** Use the pin shortcut (or right-click → Pin) to keep up to 3 key conversations at the top of your list, so you never have to search for them.
+
+**Star messages you'll need later.** Right-click a message and star it. Starred messages live in their own section, accessible anytime — perfect for addresses, links, and confirmation numbers.
+
+**Use search as navigation.** Instead of scrolling to find a chat, hit the search shortcut and type the first few letters of a contact's name. It's faster than scrolling once you're in the habit.
+
+**Learn just five shortcuts first.** Don't try to memorize the whole list at once. Start with new chat, next/previous chat, archive, and search. Add more once those are automatic.
+
+---
+
+## Make WhatsApp Web Faster *And* Better-Looking
+
+Keyboard shortcuts make WhatsApp Web faster. But there's one thing they can't do: change how it looks. The default interface — same green, same font, same fixed layout — hasn't changed in years, and there's no built-in option to adjust it.
+
+If you spend enough time in WhatsApp Web to be learning keyboard shortcuts, you're exactly the kind of power user who'd benefit from customizing the interface too. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — adds:
+
+- Custom themes, fonts, and backgrounds
+- A privacy blur for working in public
+- **Quick reply bubbles** — set up your most common responses so sending "On my way" or "Got it" takes a single click (a perfect companion to keyboard-driven workflows)
+
+It's free, open source, and installs in about 30 seconds.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web's keyboard shortcuts turn a phone-mirroring tool into a genuinely fast desktop messaging app. Learn the navigation and chat-management shortcuts first, lean on \`Shift + Enter\` and the formatting symbols daily, and check your in-app Shortcuts screen whenever something behaves unexpectedly.
+
+If you found this list useful, you might also like:
+
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)
+- [WhatsApp Web not working? 10 fixes that actually work](/blog/whatsapp-web-not-working-10-fixes-that-actually-work-2026)
+- [How to change the font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web)`,
+},
+  {
   title: "How to Use WhatsApp Web on Your Computer: Complete 2026 Guide",
   slug: "how-to-use-whatsapp-web-on-your-computer-complete-2026-guide",
   seoIndex: true,
