@@ -10,6 +10,171 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Usernames: Everything You Need to Know (2026)",
+  slug: "whatsapp-usernames-everything-you-need-to-know-2026",
+  seoIndex: true,
+  description: "WhatsApp is rolling out usernames in 2026 — letting you chat without sharing your phone number. Here's how the feature works, the username rules, the optional username key, when it arrives, and what it does (and doesn't) protect.",
+  date: "2026-05-28",
+  readTime: "7 min",
+  content: `# WhatsApp Usernames: Everything You Need to Know (2026)
+
+For most of its existence, WhatsApp has worked one way: your phone number is your identity. To add someone, you needed their number. To be added, you had to hand yours over. That's finally changing.
+
+In 2026, WhatsApp is rolling out **usernames** — unique handles that let you connect with people without sharing your phone number. It's one of the biggest privacy changes in the app's history, and it brings WhatsApp in line with Telegram, Instagram, and Signal, which have offered username-based identity for years.
+
+Here's everything you need to know: how it works, the rules, when it's coming, and the important details most coverage glosses over.
+
+---
+
+## What Are WhatsApp Usernames?
+
+A WhatsApp username is a unique handle — something like \`@alex_smith\` — that acts as your identity on the platform. Once usernames are live, someone can find you and start a conversation by searching your username, without ever needing your phone number.
+
+The key thing to understand: **this is a privacy layer for new connections, not a replacement for your phone number.** Your number still exists, you still need it to register, and people who already have it will still see it. What changes is that you no longer have to give your number to *new* people to talk to them.
+
+---
+
+## Why This Is a Big Deal
+
+For years, sharing your WhatsApp number meant sharing something genuinely personal. Your phone number is tied to your bank, your two-factor authentication, your real identity. Handing it to a stranger from a marketplace listing, a dating app, or a work contact always carried a small risk.
+
+Usernames remove that friction:
+
+- **Buy and sell safely** — give a marketplace buyer your username instead of your number
+- **Date more privately** — connect without exposing your personal line
+- **Reduce spam** — fewer people with your number means fewer scam calls and texts
+- **Cleaner professional contact** — share a handle on a business card or profile instead of a personal mobile
+
+It's the same shift Telegram users have enjoyed for years, finally arriving on the world's most-used messaging app.
+
+---
+
+## How to Set Up a WhatsApp Username
+
+Once the feature reaches your account, setup is simple:
+
+1. Open **WhatsApp** and go to **Settings**
+2. Tap your **Profile**
+3. Look for the **Username** option (it only appears once the feature has rolled out to you)
+4. Enter a unique username that follows the rules (more on those below)
+5. WhatsApp will tell you if it's available — if not, try another
+6. Save
+
+That's it. After setup, you can share your username instead of your number with anyone new.
+
+**Important:** if you don't see the Username option yet, that's completely normal. The rollout is phased (more on timing below) and no app reinstall will make it appear faster.
+
+---
+
+## The Username Rules
+
+WhatsApp usernames have to follow a specific format:
+
+- **Length:** 3 to 35 characters
+- **Allowed characters:** lowercase letters, numbers, periods (\`.\`), and underscores (\`_\`)
+- **Must be unique:** no two users can have the same username
+- **No purely numeric usernames:** to prevent usernames being confused with phone numbers
+
+A few tips for choosing one:
+
+- **Keep it short and memorable** — the best handles are easy to say out loud
+- **Match your real name or brand** where possible
+- **Have backups ready** — good, short usernames will get claimed fast once the feature opens up
+
+If you run a business or personal brand, it's worth thinking about your preferred handle now. Just like on Instagram and X, the clean, obvious names tend to disappear quickly.
+
+---
+
+## The Username Key: An Extra Privacy Layer
+
+This is the part many people miss. Alongside usernames, WhatsApp is introducing an **optional username key** — a 4-digit code that adds a second gate to your account.
+
+Here's how it works: even if someone knows your username, they'll *also* need your 4-digit key before they can start a conversation with you. Messages from people who don't have the key get routed to a **Requests folder** rather than landing in your main inbox.
+
+This is genuinely useful if you plan to share your username somewhere public — on social media, a website, or a business listing — and want to avoid a flood of unsolicited messages. You can share your username widely but only give the key to people you actually want to hear from.
+
+---
+
+## When Is It Rolling Out?
+
+Here's the current timeline:
+
+- **April 2026** — WhatsApp began a **limited beta**, making usernames available to a small number of users on Android and iOS
+- **June 2026** — the expected window for a **broader global rollout**
+- **Phased after that** — even during global rollout, not everyone gets it on the same day. Markets like India and Brazil are expected to be among the first.
+
+The rollout is deliberately slow because nearly three billion people use WhatsApp, and Meta wants to avoid bugs at that scale. If you're on the latest version and don't see usernames yet, just keep auto-updates on and check your profile settings periodically.
+
+---
+
+## What Usernames Do NOT Do (Read This Before You Get Excited)
+
+It's worth being clear-eyed here, because some coverage oversells this feature.
+
+- **Your phone number isn't going away.** You still need it to register and keep your account. Usernames are an additional identity layer, not a replacement.
+- **Existing contacts still see your number.** Anyone who already has your number saved will continue to see it. Usernames only protect you with *new* connections.
+- **It's not full anonymity.** The username system reduces phone-number exposure; it doesn't make you untraceable. For genuinely sensitive communication, a privacy-first app like Signal is still the stronger choice.
+- **You can't be found by number-search if you don't want to be** — but WhatsApp's existing privacy settings already govern a lot of this, so check those too.
+
+Setting expectations correctly matters. This is a meaningful privacy improvement for everyday use, not a cloak of invisibility.
+
+---
+
+## Will Usernames Work on WhatsApp Web?
+
+Yes. The username feature syncs across all your linked devices, including WhatsApp Web and the desktop app. Once you've set a username on your phone, it applies everywhere your account is active. You don't set it up separately on each device.
+
+If you use WhatsApp Web regularly, this is worth knowing — your username identity carries over to the browser automatically.
+
+---
+
+## A Quick Word on Privacy While Using WhatsApp Web
+
+Usernames protect *who can reach you*. But there's a different privacy gap on WhatsApp Web that usernames don't touch: **who can see your screen.**
+
+If you use WhatsApp Web in a cafe, a co-working space, an open-plan office, or anywhere with people around, your messages and contact names are visible to anyone glancing at your monitor. Usernames do nothing for that.
+
+This is where a browser extension helps. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — includes a **privacy blur** that hides your message content and contact names until you hover over them. So between WhatsApp's usernames and an on-screen privacy blur, you can cover both sides of privacy: who can contact you, and who can read over your shoulder.
+
+It's free, open source, and takes about 30 seconds to install if that's a concern for you.
+
+---
+
+## Frequently Asked Questions
+
+**Do I have to use a username?**
+No. The feature is optional. If you prefer to keep using your phone number, nothing changes for you.
+
+**Can I change my username later?**
+Yes, usernames are expected to be changeable, though WhatsApp may limit how often you can switch to prevent abuse.
+
+**Will people be able to find me by username automatically?**
+Only if they know your exact username. And if you enable the username key, they'll also need that 4-digit code to message you.
+
+**Does it cost anything?**
+No, usernames are free for personal accounts.
+
+**What about businesses?**
+Businesses get a related system called a Business-Scoped User ID (BSUID), and companies using the WhatsApp Business API need to update their systems to support it ahead of the rollout. If you run a brand, it's worth reserving your preferred handle early.
+
+**Can I use a username on WhatsApp Web?**
+Yes — it syncs automatically across all your linked devices.
+
+---
+
+## The Bottom Line
+
+WhatsApp usernames are a long-overdue privacy upgrade. They let you connect without handing over your phone number, add an optional key to filter who can reach you, and bring WhatsApp in line with messaging apps that have offered this for years. The rollout is phased through 2026, so patience is required — but the feature is real and arriving.
+
+And if you care about privacy on WhatsApp Web specifically — not just who can reach you, but who can see your screen — it's worth pairing usernames with a privacy blur. 👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) to cover that side of it.
+
+For more WhatsApp Web guides, check out:
+
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [Is WhatsApp Web safe? Privacy and security explained](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)`,
+},
+  {
   title: "WhatsApp Web vs WhatsApp Desktop: Which Should You Use in 2026?",
   slug: "whatsapp-web-vs-whatsapp-desktop-which-should-you-use-2026",
   seoIndex: true,
