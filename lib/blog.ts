@@ -10,6 +10,194 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web QR Code Not Working? Here's How to Fix It (2026)",
+  slug: "whatsapp-web-qr-code-not-working-how-to-fix-it-2026",
+  seoIndex: true,
+  description: "WhatsApp Web QR code won't load, won't scan, or expires too fast? Here are the fixes that actually work in 2026 — ordered from fastest to most involved, including the dark-mode extension trap most guides miss.",
+  date: "2026-05-30",
+  readTime: "6 min",
+  content: `# WhatsApp Web QR Code Not Working? Here's How to Fix It (2026)
+
+You open [web.whatsapp.com](https://web.whatsapp.com), the QR code appears, you grab your phone, open Linked Devices, point your camera… and nothing happens. Or the code disappears before you can scan it. Or it doesn't appear at all.
+
+It's one of the most common WhatsApp Web problems, and the good news is it's almost always fixable in under five minutes. The fix you need depends on what's actually broken, so this guide is ordered from **fastest to most involved**. Start at the top and most people will be back online by Fix 3.
+
+---
+
+## First, What's Actually Wrong?
+
+QR code problems fall into three groups. Identifying which one you have saves time:
+
+- **The QR code won't load or appear** — the page is blank, the QR area is empty, or it's stuck loading
+- **The QR code appears but your phone won't scan it** — camera can see it but can't read it
+- **The QR code keeps expiring** — it disappears before you finish scanning
+
+Each has different fixes. Keep your specific problem in mind as you work through the list.
+
+---
+
+## Fix 1: Refresh the Page (QR Codes Expire Fast)
+
+**Solves:** Expired QR code, the most common cause
+
+WhatsApp Web QR codes expire after about **30 to 60 seconds**. If you stared at the code while finding your phone, opened Linked Devices, and got to scanning, it may already be dead.
+
+Press \`F5\` (Windows/Linux) or \`Cmd + R\` (Mac) to refresh, then scan **immediately** when the new code appears. Have your phone open to the Linked Devices screen *before* you refresh, so you can scan instantly.
+
+This single fix resolves the majority of "QR not working" issues. Try it first, always.
+
+---
+
+## Fix 2: Turn Up Your Screen Brightness
+
+**Solves:** QR code shows but won't scan
+
+This is the most overlooked fix in the entire troubleshooting list. The QR code needs **contrast** for your phone's camera to read it. If your monitor brightness is low — especially on a laptop in battery-saver mode — the camera physically can't pick up the pattern.
+
+- Turn your screen brightness up to **maximum** (or at least above 50%)
+- On a laptop, use the brightness keys (usually \`Fn\` + brightness icon)
+- If you have a blue-light filter or "night mode" enabled, **disable it temporarily** — yellow tints interfere with QR scanning
+
+Try scanning again. This fixes a surprising number of cases.
+
+---
+
+## Fix 3: Clean Your Phone's Camera Lens
+
+**Solves:** QR code shows but won't scan, fuzzy or out-of-focus scan attempts
+
+A smudged camera lens blurs the QR pattern just enough that your phone can't read it. Wipe the lens with a microfiber cloth (or a clean section of your shirt), and check for:
+
+- Fingerprints or smudges
+- A phone case that's partially covering the lens
+- A screen protector or sticker on top of the camera
+
+While you're at it, hold the phone about **15 to 25 cm (6–10 inches)** from the screen. Too close and the camera can't focus; too far and the code is too small to read. Tap the screen to force the camera to refocus if needed.
+
+---
+
+## Fix 4: Disable Dark Mode Browser Extensions (The Hidden Trap)
+
+**Solves:** QR code looks weird, has wrong colors, or your phone refuses to recognize it
+
+This one catches a lot of people, and most troubleshooting guides miss it.
+
+If you use a browser extension that forces dark mode on every site — **Dark Reader** is the most common, but there are others — it can **invert the QR code's colors**, turning the standard black-on-white pattern into something your phone's camera doesn't recognize as a valid QR code.
+
+The fix:
+
+1. Open WhatsApp Web in an **Incognito / Private window** (\`Ctrl + Shift + N\` in Chrome, \`Cmd + Shift + N\` on Mac), which disables most extensions by default
+2. If the QR code now looks normal and scans cleanly, dark-mode extensions are the culprit
+3. Either whitelist \`web.whatsapp.com\` in the extension's settings, or disable the extension on this site
+
+Worth noting: **other browser extensions don't cause this kind of problem.** Customization extensions for WhatsApp Web (themes, fonts, backgrounds) don't touch the QR code page — they only affect the interface *after* you're logged in. So you don't need to remove your customization extensions to troubleshoot the QR; just check for color-inverting extensions like Dark Reader.
+
+---
+
+## Fix 5: Try a Different Browser or Incognito Window
+
+**Solves:** Browser-specific bugs, corrupted cookies, extension conflicts
+
+If you've worked through fixes 1–4 and the QR still won't load or scan:
+
+- Open WhatsApp Web in **another browser** (if you're on Chrome, try Firefox or Edge)
+- Or open it in an **Incognito / Private window** in your current browser
+
+This is a diagnostic step. If WhatsApp Web works fine in a different browser or Incognito mode, the problem is something specific to your usual browser — an extension, a cached file, or a stuck cookie. Move on to the next fix to clean that up.
+
+---
+
+## Fix 6: Clear Cookies for web.whatsapp.com
+
+**Solves:** Stale sessions, QR refresh loops, persistent loading errors
+
+Corrupted browser data is responsible for a meaningful share of WhatsApp Web problems. Clearing it forces a clean start.
+
+**In Chrome:**
+1. Click the three-dot menu → **Settings** → **Privacy and security** → **Cookies and other site data** → **See all site data and permissions**
+2. Search for \`whatsapp\`
+3. Click the trash icon next to \`web.whatsapp.com\`
+4. Reload the page
+
+**In Firefox:**
+- Three-line menu → **Settings** → **Privacy & Security** → **Cookies and Site Data** → **Manage Data** → search \`whatsapp\` → Remove
+
+**In Safari:**
+- **Safari menu** → **Settings** → **Privacy** → **Manage Website Data** → search \`whatsapp\` → Remove
+
+Reload and try scanning the new QR code.
+
+---
+
+## Fix 7: Check Your Internet on Both Devices
+
+**Solves:** QR won't load, "connecting" loops, scan succeeds but nothing happens
+
+WhatsApp Web needs both your computer **and** your phone to have stable internet. If either is offline or on a flaky connection, the QR handshake fails silently.
+
+- Confirm your computer's internet works (try loading another site)
+- Confirm your phone has signal — try sending yourself a message in any chat
+- If you're on a **VPN**, try disabling it temporarily — some VPN servers get flagged by WhatsApp
+- Try switching from Wi-Fi to mobile data (or vice versa) on your phone
+
+If your phone is offline, WhatsApp Web simply can't pair, no matter how many times you scan.
+
+---
+
+## Fix 8: Update WhatsApp on Your Phone
+
+**Solves:** Compatibility issues between your phone app and WhatsApp Web
+
+If your phone's WhatsApp version is too old, it may not pair correctly with the current WhatsApp Web. Open the App Store (iPhone) or Play Store (Android), search for WhatsApp, and update if an update is available.
+
+While you're there, check whether your phone's operating system has updates pending. Outdated camera apps and permissions can also cause scanning failures.
+
+Also: make sure WhatsApp **has camera permission** on your phone. Go to your phone's Settings → Apps → WhatsApp → Permissions, and check that Camera access is allowed.
+
+---
+
+## Fix 9: Restart Both Devices
+
+**Solves:** Stuck processes, temporary glitches that nothing else clears
+
+The cliché works for a reason. Close WhatsApp on your phone (force-quit if needed), close the WhatsApp Web tab on your computer, restart both, and try again. About one in ten persistent issues clears with a simple restart of both ends.
+
+---
+
+## Fix 10: Check If WhatsApp Is Down
+
+**Solves:** "It's not me, it's them"
+
+If you've worked through every fix above and nothing works, the problem may not be on your end. Check:
+
+- [**Downdetector**](https://downdetector.com/status/whatsapp/) — real-time community-reported outages
+- **Twitter / X** — search "WhatsApp down" to see if others are reporting it
+
+WhatsApp outages happen a few times a year and usually resolve within an hour or two. If there's an active outage, all you can do is wait.
+
+---
+
+## Once You're Back In: Make WhatsApp Web Worth the Effort
+
+If you've just spent five minutes fighting a QR code, you might as well make WhatsApp Web nicer to use once you're back inside.
+
+The default interface — same green color, same fixed layout — hasn't changed in years, and there's no built-in option to adjust it. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — lets you change themes, fonts, backgrounds, and add a privacy blur for working in public.
+
+It's free, open source, and takes about 30 seconds. And as noted in Fix 4, it doesn't interfere with the QR login process — only the interface afterwards.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web QR code issues are almost always fixable in under five minutes. The most common causes — in order — are an expired code, low screen brightness, a dirty camera lens, or a dark-mode browser extension messing with the QR colors. Work through fixes 1 through 4 first and most people are back online.
+
+If you found this guide useful, you might also like:
+
+- [WhatsApp Web not working? 10 fixes that actually work in 2026](/blog/whatsapp-web-not-working-10-fixes-that-actually-work-2026)
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)
+- [WhatsApp Web keyboard shortcuts: the complete 2026 list](/blog/whatsapp-web-keyboard-shortcuts-the-complete-2026-list)`,
+},
+  {
   title: "How to Change WhatsApp Web Background / Wallpaper (2026)",
   slug: "how-to-change-whatsapp-web-background-wallpaper-2026",
   seoIndex: true,
