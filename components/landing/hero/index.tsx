@@ -5,11 +5,8 @@ import { Chrome, Github, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/analytics";
 import { ActivityLayer } from "./activity-layer";
-import { LiveNotifications } from "./live-notifications";
-import { TrendingRail } from "./trending-rail";
-import { GrowthStrip } from "./growth-strip";
-import { CommunityProof } from "./community-proof";
-import { StatusPulse } from "./status-pulse";
+import { CwsBadge } from "./cws-badge";
+import { PrivacyNote } from "./privacy-note";
 
 export function Hero() {
   return (
@@ -62,9 +59,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,oklch(0.07_0_0/0.55)_100%)]" />
       </div>
 
-      {/* Floating live notifications -------------------------------------- */}
-      <LiveNotifications />
-
       {/* Foreground content ------------------------------------------------ */}
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -73,11 +67,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Trending pills row */}
-          <div className="mb-5">
-            <TrendingRail />
-          </div>
-
           {/* Featured Badge */}
           <motion.div
             className="flex flex-col items-center gap-3 mb-6"
@@ -101,7 +90,6 @@ export function Hero() {
                 }}
               />
               <span className="relative inline-flex items-center gap-2">
-                <StatusPulse size={6} />
                 <span aria-hidden="true">🚀</span>
                 Fastest growing WhatsApp Web extension
               </span>
@@ -135,9 +123,9 @@ export function Hero() {
             your messaging experience.
           </motion.p>
 
-          {/* Live growth strip */}
-          <div className="mb-7">
-            <GrowthStrip />
+          {/* Privacy-first statement */}
+          <div className="mb-7 flex justify-center">
+            <PrivacyNote />
           </div>
 
           {/* CTAs */}
@@ -225,9 +213,9 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Community proof row */}
-          <div className="mt-10 flex justify-center">
-            <CommunityProof />
+          {/* Chrome Web Store trust block */}
+          <div className="mt-8 flex justify-center">
+            <CwsBadge />
           </div>
         </motion.div>
       </div>
