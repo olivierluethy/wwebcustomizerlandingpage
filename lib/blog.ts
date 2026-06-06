@@ -10,6 +10,255 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Notifications Not Working: Complete Fix Guide 2026",
+  slug: "whatsapp-web-notifications-not-working-complete-fix-guide-2026",
+  seoIndex: true,
+  description: "WhatsApp Web not showing notifications? Here are the fixes that actually work in 2026 — browser permissions, OS Focus modes, the one-active-session trap, and the hidden settings that silently block alerts.",
+  date: "2026-06-08",
+  readTime: "7 min",
+  content: `# WhatsApp Web Notifications Not Working: Complete Fix Guide 2026
+
+You're working on your computer, WhatsApp Web is open, and someone messages you — but no notification ever appears. You only find out when you happen to glance at the tab and see the unread badge. Or worse: you only find out when they message your phone asking why you didn't reply.
+
+WhatsApp Web notifications are one of the messiest, most-broken things about the service. The fix depends on what's actually blocking them, and there are at least eight separate places where the chain can break. This guide walks through each one, ordered from fastest to most involved.
+
+---
+
+## Why WhatsApp Web Notifications Fail
+
+Before the fixes, it helps to understand the chain. For a WhatsApp Web notification to actually reach you, **every one of these has to be working**:
+
+1. WhatsApp Web has permission to send notifications in your browser
+2. Your operating system isn't blocking notifications from your browser
+3. You're not in Focus / Do Not Disturb mode
+4. WhatsApp Web isn't muted (in-app)
+5. The specific chat isn't muted
+6. Your browser is open (closed browser = no notifications)
+7. Your phone is online and reachable
+8. No other WhatsApp Web session is "stealing" the notifications
+
+If any one of these breaks, your notifications die silently. The good news: most fixes take 30 seconds. Start at the top.
+
+---
+
+## Fix 1: Click the Bell on the QR Page (You Probably Missed This)
+
+**Solves:** WhatsApp Web has never shown notifications since you set it up
+
+When you first opened WhatsApp Web, you might have seen a small popup at the top asking "Turn on desktop notifications?" If you closed it without clicking, ignored it, or clicked "No," notifications were never enabled.
+
+To fix it now:
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com)
+2. Click the **three-dot menu** at the top of your chat list
+3. Go to **Settings → Notifications**
+4. Make sure **"Show notifications"** is enabled
+5. If you see "Turn on desktop notifications," click it
+
+If the option is grayed out or says your browser is blocking notifications, move to Fix 2 — the browser itself is denying permission.
+
+---
+
+## Fix 2: Allow Notifications in Your Browser
+
+**Solves:** WhatsApp Web settings show notifications "on" but nothing appears
+
+This is the most common cause and the one most users don't realize is separate from WhatsApp's own settings. Your browser has its own notification permission layer, and it can silently override WhatsApp Web's.
+
+**In Chrome:**
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com)
+2. Click the **padlock icon** to the left of the URL in the address bar
+3. Find **Notifications** in the list
+4. Set it to **Allow**
+5. Refresh the page
+
+If you don't see Notifications in the padlock menu:
+- Chrome menu → **Settings → Privacy and security → Site settings → Notifications**
+- Search for \`web.whatsapp.com\`
+- Set it to **Allow**
+
+**In Firefox:**
+
+1. Firefox menu (three lines) → **Settings → Privacy & Security**
+2. Scroll to **Permissions → Notifications → Settings**
+3. Search for \`web.whatsapp.com\`
+4. Change to **Allow**
+
+**In Safari:**
+
+1. Safari menu → **Settings → Websites → Notifications**
+2. Find \`web.whatsapp.com\`
+3. Set to **Allow**
+
+After changing the browser permission, refresh WhatsApp Web. You may need to log out and back in for it to take effect.
+
+---
+
+## Fix 3: Check Your Operating System's Focus / Do Not Disturb Mode
+
+**Solves:** Notifications work some days but not others, or only after restart
+
+This is the hidden killer. Modern operating systems have aggressive "focus" features that silently suppress browser notifications without telling you they're doing it.
+
+**On Windows 11:**
+
+- Click the **clock in the taskbar** to open the notification center
+- Make sure **Do Not Disturb** is off (or that browser notifications are allowed in your DND priority settings)
+- Settings → **System → Notifications** → make sure your browser (Chrome, Firefox, Edge) is in the list and enabled
+
+**On macOS:**
+
+- Click the **Control Center** in the menu bar (the two-toggle icon)
+- Check **Focus** — if any Focus mode is active, browser notifications might be silenced
+- System Settings → **Notifications** → scroll to your browser → make sure **Allow notifications** is on, and **Notification style** is set to Banners or Alerts (not None)
+
+**On Linux:**
+- Most desktop environments have a "Do Not Disturb" or quiet mode in the notification area. Make sure it's off.
+
+If you have a scheduled Focus mode (e.g. "Work" mode that activates 9-5 weekdays), it might be running silently. Check the schedule.
+
+---
+
+## Fix 4: Check WhatsApp Web Isn't Muted In-App
+
+**Solves:** Some chats notify, others don't
+
+Two layers here. Both matter.
+
+**Overall WhatsApp Web mute:**
+
+1. Click the three-dot menu at the top of your chat list
+2. Settings → **Notifications**
+3. Check: is **"Show notifications"** on?
+4. Is **"Sounds"** on? (Notifications can appear silently if sound is off — easy to miss visually)
+
+**Per-chat mute:**
+
+A specific chat might be muted while others work fine. Right-click the chat in the sidebar — if you see **"Unmute"** in the menu, that chat is muted. Click it to unmute.
+
+Also check: if a chat is **archived**, it won't notify by default unless you have "Keep chats archived" disabled.
+
+---
+
+## Fix 5: The One-Active-Session Trap (Almost Nobody Covers This)
+
+**Solves:** You have multiple browsers / devices open and notifications aren't going where you expect
+
+Here's a detail buried in WhatsApp's behavior that almost no guide mentions: **WhatsApp Web only delivers notifications to one active session at a time.** If you have WhatsApp Web open in:
+
+- Chrome and Firefox simultaneously
+- Two different Chrome profiles
+- WhatsApp Web *and* the WhatsApp Desktop app
+- WhatsApp Web on your laptop and on a second computer
+
+…only one of them will get the notification. The others stay silent. Whichever session WhatsApp considers "active" wins.
+
+**The fix:** decide which session you actually want notifications on, and **close the others** — or at least close their WhatsApp Web tabs. After closing the other sessions, refresh the tab where you *do* want notifications.
+
+This single fix solves a notification mystery that's been annoying users for years.
+
+---
+
+## Fix 6: Make Sure Your Browser Tab Stays Open
+
+**Solves:** No notifications when you close the tab or window
+
+WhatsApp Web notifications require the browser tab to be open. Not necessarily visible, not necessarily focused — but the tab must exist.
+
+If you close the tab, notifications stop until you reopen WhatsApp Web. If you close your entire browser, same thing.
+
+**Options:**
+
+- **Keep the tab open** in a background browser window
+- **Pin the tab** (right-click tab → Pin) so it stays put and you don't accidentally close it
+- **Use the WhatsApp Desktop app instead** — it works even when your browser is closed, with native OS notifications
+
+We compared the two in detail in [WhatsApp Web vs WhatsApp Desktop](/blog/whatsapp-web-vs-whatsapp-desktop-which-should-you-use-2026). For people who care strongly about notification reliability, the desktop app is genuinely better.
+
+---
+
+## Fix 7: Disable Ad Blockers and Aggressive Privacy Extensions
+
+**Solves:** Notifications work briefly, then stop — or only work in Incognito
+
+Some browser extensions interfere with notification delivery:
+
+- **Aggressive ad blockers** can sometimes block the scripts WhatsApp Web uses for notifications
+- **Privacy extensions** that block third-party scripts or service workers can break notification delivery
+- **VPN extensions** that route through suspicious IP ranges can cause WhatsApp's servers to throttle session features
+
+To diagnose: open WhatsApp Web in an **Incognito / Private window** (\`Ctrl + Shift + N\` in Chrome, \`Cmd + Shift + N\` on Mac). Incognito disables most extensions by default. If notifications work in Incognito but not in your normal browser, an extension is the culprit.
+
+To fix: either whitelist \`web.whatsapp.com\` in the offending extension's settings, or disable the extension on that site.
+
+**Note:** customization extensions like WhatsApp Web Customizer don't affect notifications — they only modify the visual layer of the WhatsApp Web page. If you've installed one, you don't need to disable it to troubleshoot notifications.
+
+---
+
+## Fix 8: Check Your Phone Is Online and Sync Is Working
+
+**Solves:** No notifications anywhere — desktop or browser
+
+WhatsApp Web requires your phone to sync at least periodically. If your phone has been offline for several days, WhatsApp Web's session can become unstable and notifications may fail.
+
+- Confirm your phone has internet (try sending yourself a test message in any chat from the phone)
+- Make sure WhatsApp on your phone is updated to the latest version
+- If your phone has been offline for more than 14 days, your WhatsApp Web session may have expired entirely — see [our guide on using WhatsApp Web without your phone](/blog/how-to-use-whatsapp-web-without-your-phone-2026)
+
+---
+
+## Fix 9: Update Your Browser and Operating System
+
+**Solves:** Browser-specific notification bugs
+
+Browser notification systems get updated frequently. An out-of-date browser can have compatibility issues with WhatsApp Web's current notification system.
+
+- Update your browser to the latest version
+- Update your operating system if updates are pending
+- Restart your browser after updating
+
+---
+
+## Fix 10: The Hard Reset
+
+**Solves:** Persistent issues that nothing else fixes
+
+If you've worked through fixes 1–9 and notifications still don't work:
+
+1. On your phone, open WhatsApp → **Linked Devices** → log out of the WhatsApp Web session
+2. Close all WhatsApp Web tabs in your browser
+3. Clear cookies for \`web.whatsapp.com\` (Chrome: Settings → Privacy → Cookies → search "whatsapp" → delete)
+4. Restart your browser
+5. Go to \`web.whatsapp.com\` fresh and scan the QR code
+6. When the "Turn on desktop notifications?" prompt appears, **click it to allow**
+7. Test by having someone message you, or send yourself a message from your phone
+
+This rebuilds the session from scratch and resolves about 95% of issues that the targeted fixes don't catch.
+
+---
+
+## A Quick Note: Notifications and Your WhatsApp Web Setup
+
+If notifications are working but you find WhatsApp Web frustrating to use day-to-day — the default interface is dated, fonts are too small, no privacy controls — there are extensions that genuinely improve the experience.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — adds custom themes, fonts, backgrounds, and a privacy blur. As noted in Fix 7, it doesn't interfere with notifications — it only modifies the visual layer of the page. Free, open source, 30 seconds to install.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web notification issues are almost always one of: browser permissions (Fix 2), an OS-level Focus mode quietly suppressing them (Fix 3), or the one-active-session trap that nobody talks about (Fix 5). Work through fixes 1–5 first and most people will be sorted within minutes.
+
+If notifications still don't work after the targeted fixes, the hard reset (Fix 10) is the reliable nuclear option.
+
+For more troubleshooting:
+
+- [WhatsApp Web not working? 10 fixes that actually work in 2026](/blog/whatsapp-web-not-working-10-fixes-that-actually-work-2026)
+- [WhatsApp Web QR code not working? Here's how to fix it](/blog/whatsapp-web-qr-code-not-working-how-to-fix-it-2026)
+- [WhatsApp Web keeps logging out? Fixes for 2026](/blog/whatsapp-web-keeps-logging-out-fixes-for-2026)`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Slack",
   slug: "how-to-make-whatsapp-web-look-like-slack",
   seoIndex: true,
