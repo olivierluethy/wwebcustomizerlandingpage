@@ -10,6 +10,178 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Slack",
+  slug: "how-to-make-whatsapp-web-look-like-slack",
+  seoIndex: true,
+  description: "A 2026 guide to making WhatsApp Web look and feel like Slack. Step-by-step walkthrough using WhatsApp Web Customizer — Slack's signature aubergine sidebar, clean Lato-style typography, and a focused work-first layout.",
+  date: "2026-06-06",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Slack
+
+If WhatsApp Web is your daily work tool — which it is for millions of professionals, especially in markets where WhatsApp Business is the default channel — there's a good chance you've looked at Slack on a colleague's screen and felt a small pang. Slack just *looks* more like a work tool. The dark aubergine sidebar. The clean, focused chat area. The implicit message that "this is where serious things happen."
+
+You can get most of that visual feel on WhatsApp Web in about five minutes. Not the threaded replies or workspaces — that's a structural difference, not a theming one — but the visual identity that makes Slack feel like work. Here's how.
+
+---
+
+## A Quick Honest Note Before We Start
+
+Slack's design strength isn't its color palette. It's its *information architecture* — channels, threads, status indicators, workspace switching. None of that is achievable through theming, because WhatsApp Web doesn't have those features.
+
+What you *can* recreate is Slack's **visual identity**: the aubergine sidebar, the clean typography, the calm professional palette, the absence of clutter. That's what this post covers. If you went in expecting full Slack replacement, this won't deliver it — and frankly no Chrome extension will. But if you want WhatsApp Web to *feel* like a serious work tool instead of a chat app, that's very achievable.
+
+---
+
+## Step 1: Install the Extension
+
+You'll need **WhatsApp Web Customizer** for this:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, 30 seconds to install. Pin it to your toolbar.
+
+Why this specific extension? Slack's distinctive look comes from its two-tone palette — a dark sidebar contrasted against a light main area — plus its typography. Pulling that off requires editing the sidebar separately from the chat window, separately from the chat list, separately from accent colors. Most WhatsApp Web extensions don't let you change those independently.
+
+---
+
+## Step 2: Switch to a Slack-Style Font
+
+Slack uses Lato as its primary typeface — a clean, professional, friendly sans-serif. It's what gives Slack messages their distinctly "this is workplace communication" feel.
+
+Open the extension popup, click the **Typography** tab, and pick:
+
+- **Lato** — yes, the actual font Slack uses. Free and available in the extension's 500+ font library.
+- **Inter** — slightly more neutral alternative if Lato doesn't suit you.
+- **Source Sans Pro** — another professional sans-serif option in the same visual family.
+
+Set the font size to something comfortable for long sessions — Slack defaults to a slightly larger, more readable body text than WhatsApp's default. Bump WhatsApp Web up by 1–2 size steps to match.
+
+---
+
+## Step 3: Build the Slack Color Palette
+
+This is where the transformation happens. Open the **Themes** tab, click **Create** (or the **Custom** tab → **New Theme**), and you'll land in the editor.
+
+Slack's signature look is built around a **dark sidebar against a light chat area** — the inverse of most chat apps' design. Here's the palette:
+
+**Sidebar (the Slack-signature aubergine)**
+- Classic Slack aubergine: \`#3F0E40\`
+- Or Slack's newer dark mode sidebar: \`#1A1D21\`
+
+**Sidebar text and inactive items**
+- Soft purple-white: \`#BCABBC\` (for the aubergine sidebar)
+- Or off-white: \`#D1D2D3\` (for the dark mode sidebar)
+
+**Active chat in sidebar**
+- Slightly lighter aubergine: \`#350D36\` background with white text
+- Or for dark mode: \`#1164A3\` (Slack's signature blue highlight)
+
+**Main background (chat area)**
+- Clean white: \`#FFFFFF\` for light mode
+- True dark gray: \`#1A1D21\` for dark mode
+
+**Sent chat bubbles (your messages)**
+- For the most Slack-accurate look, Slack doesn't use distinct bubbles — messages are stacked flat with the author name at top. WhatsApp Web requires bubbles, so use \`#F8F8F8\` in light mode (barely-visible separation) or \`#222529\` in dark mode.
+
+**Received chat bubbles (their messages)**
+- Same as sent: \`#F8F8F8\` light / \`#222529\` dark. Slack treats all messages visually equally.
+
+**Text color**
+- Near-black: \`#1D1C1D\` for light mode
+- Off-white: \`#D1D2D3\` for dark mode
+
+**Accent color (links, mentions, active states)**
+- Slack blue: \`#1164A3\`
+- Or the brighter modern Slack blue: \`#1264A3\`
+
+Apply these one by one in the editor. The most visually transformative moment is when you change the sidebar to aubergine — that single change makes WhatsApp Web *immediately* feel like Slack.
+
+---
+
+## Step 4: Strip the Clutter Slack Doesn't Have
+
+Slack's sidebar is purposeful — channels, DMs, threads, mentions. It doesn't have Status, Archive folders, or Channels-in-the-WhatsApp-sense cluttering the view.
+
+Turn on **Minimal Mode** in the extension. This hides:
+
+- Archive
+- Status
+- Locked chats
+- Channels
+
+The result feels much closer to Slack's intentional sidebar — just the conversations you actually engage with.
+
+---
+
+## Step 5: Set the Right Background
+
+Slack's chat area is always clean. No wallpapers, no patterns, no doodles. Just a calm solid background that puts the messages front and center.
+
+- **Light mode:** solid \`#FFFFFF\` for the chat window, with the aubergine sidebar
+- **Dark mode:** solid \`#1A1D21\` for the chat window, with the darker sidebar variant
+
+The extension lets you set the chat window, sidebar, welcome screen, and chat list backgrounds independently — which is exactly what you need to pull off Slack's two-tone palette.
+
+---
+
+## Step 6: Save It (Or Build It as JSON)
+
+Once it looks right, save your theme. It'll appear in the **Custom** tab — one click to apply, one click to switch back.
+
+**For teams that all use WhatsApp Web for work:** the JSON export feature is genuinely useful here. Click **Download Template**, edit the JSON with the Slack palette above, save the file, and share it with your team. Everyone can drop the same JSON into their extension and have a consistent visual setup — a small but real productivity win for remote teams.
+
+We covered the full JSON workflow in [our themes installation guide](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026).
+
+---
+
+## Pair the Theme With Slack-Style Productivity Habits
+
+Visual changes go a long way, but to really make WhatsApp Web feel like a work tool, a few habits help:
+
+- **Set up quick replies** for the messages you send constantly ("On it", "Will follow up", "Thanks, received"). Slack culture is short-and-snappy responses. WhatsApp Web Customizer's quick reply bubbles let you preset those.
+- **Pin your top 3 work chats** — Slack-style "starred channels at top."
+- **Mute everything that isn't time-critical.** Slack users mute aggressively; WhatsApp Web users tend not to. Right-click any chat or group → Mute.
+- **Enable the privacy blur** for sensitive client conversations — useful when you're screen-sharing in a meeting and don't want WhatsApp visible.
+
+We wrote a [full guide on WhatsApp Web tips for remote and professional work](/blog/best-whatsapp-web-tips-for-working-from-home-remote-teams-2026) if you want to go deeper.
+
+---
+
+## Why You Need This Extension (And Why Others Can't Do It)
+
+Slack's two-tone aubergine-and-white palette is a hard test for any WhatsApp Web theming tool. You need to color the sidebar one way, the chat area another, the chat list a third, the accent a fourth. They're four different surfaces that need four different colors.
+
+The closest competitor on the Chrome Web Store only offers a gradient start color, a gradient end color, and two opacity sliders. There's no way to recreate Slack's look with that — you can't have a dark sidebar and a light chat area, because everything is tied to the same gradient.
+
+WhatsApp Web Customizer was built so users get full control over each surface independently. Real-time preview, JSON import/export, your own custom fonts if 500+ built-in ones aren't enough. It's why MakeUseOf, TechPP, and other tech publications have featured it throughout 2025–2026 — and why recreating Slack on WhatsApp Web is actually possible today.
+
+---
+
+## Your Slack Theme Sticks
+
+Once you've built and saved the theme, it stays. Reload WhatsApp Web, close the tab, restart your browser, restart your computer — the theme reapplies automatically. You don't need to log in, sync, or back anything up.
+
+---
+
+## Going Further
+
+A few directions worth exploring:
+
+- **Build matching light and dark Slack variants** — Slack users typically use both, switching by time of day. The extension makes it easy to save both and switch with one click.
+- **Try other looks** — if Slack isn't quite right for you, see [how to make WhatsApp Web look like Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram), [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), or [how to make WhatsApp Web look like Discord](/blog/how-to-make-whatsapp-web-look-like-discord).
+- **Set up the full professional workflow** — combine the Slack theme with everything in our [WhatsApp Web for remote work guide](/blog/best-whatsapp-web-tips-for-working-from-home-remote-teams-2026) for a complete setup.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web isn't going to ship Slack-style theming natively. Meta hasn't built a real customization system in over a decade and isn't likely to start now. The only way to make WhatsApp Web *feel* like a serious work tool — aubergine sidebar, clean typography, calm professional palette — is a Chrome extension and about five minutes of color picking.
+
+It won't give you channels or threads, because those are structural Slack features that can't be recreated with theming. But it will give you Slack's *visual identity*, which is most of what makes Slack feel like Slack in the first place.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build your Slack theme. If your team is on WhatsApp Web for work, share the JSON file so everyone has the same setup — [our Discord](https://discord.gg/cppbDz4qhn) is a good place to share team themes you've built.`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Discord",
   slug: "how-to-make-whatsapp-web-look-like-discord",
   seoIndex: true,
