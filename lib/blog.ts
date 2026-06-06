@@ -10,6 +10,153 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Telegram",
+  slug: "how-to-make-whatsapp-web-look-like-telegram",
+  seoIndex: true,
+  description: "A 2026 guide to making WhatsApp Web look and feel like Telegram Desktop. Step-by-step walkthrough using WhatsApp Web Customizer — including the signature Telegram blue accent, clean typography, generous spacing, and a downloadable JSON theme.",
+  date: "2026-06-04",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Telegram
+
+If you use both WhatsApp and Telegram, you've probably noticed something: Telegram just looks *better*. The clean blue accent, the generous spacing, the readable sans-serif typography, the way every visual decision seems deliberate. Telegram users have been able to customize their interface for years — accent colors, custom backgrounds, full theme editors. WhatsApp Web users get the same flat green chat list everyone else has been staring at since 2015.
+
+The good news: you can get Telegram's look on WhatsApp Web in about five minutes. Real colors, real fonts, real layout — not just a slightly bluer background. Here's how.
+
+---
+
+## Step 1: Install the Extension
+
+You'll need **WhatsApp Web Customizer** for this. It's the only Chrome extension that gives you the granular control needed to actually recreate Telegram's aesthetic:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, 30 seconds to install. Pin it to your toolbar.
+
+Why this specific extension? Telegram's look requires editing chat bubble colors, sidebar tint, accent color, font family, font size, and background — all independently of each other. Most WhatsApp Web extensions only let you change a gradient or pick from a fixed preset list. To actually pull off Telegram, you need full control over every element.
+
+---
+
+## Step 2: Switch to a Sans-Serif Font Like Telegram's
+
+Telegram Desktop uses a clean, neutral sans-serif font with excellent readability at small sizes. WhatsApp Web's default font is fine but feels noticeably more dated next to Telegram.
+
+Open the extension popup, click the **Typography** tab, and pick one of these:
+
+- **Inter** — the closest free match to Telegram's design language. Clean, modern, designed for screen interfaces.
+- **Roboto** — slightly softer, also widely used in modern messaging UIs.
+- **Open Sans** — friendlier and rounder, if you want a warmer feel.
+
+While you're there, **bump the font size up by 1 or 2 steps**. Telegram tends to feel a touch more spacious than WhatsApp Web, and a slightly larger font is part of why.
+
+---
+
+## Step 3: Build the Telegram Color Palette
+
+This is where most of the visual transformation happens. Open the **Themes** tab, click **Create** (or the **Custom** tab → **New Theme**), and you'll land in the theme editor.
+
+Telegram's signature look comes from a small, disciplined color palette built around blue. Here's the recipe:
+
+**Main background (light mode)**
+- Soft white-blue: \`#FFFFFF\` or a barely-tinted off-white like \`#F4F4F5\`
+
+**Main background (dark mode — Telegram's "Night" theme equivalent)**
+- Deep slate: \`#17212B\` (Telegram's actual dark background color)
+
+**Sent chat bubbles (your messages)**
+- Telegram blue: \`#3390EC\` for the bubble background
+- White (\`#FFFFFF\`) for the text
+
+**Received chat bubbles (their messages)**
+- Light gray-blue: \`#FFFFFF\` with a subtle shadow in light mode
+- Dark slate-blue: \`#182533\` in dark mode
+- Black text in light mode, white text in dark mode
+
+**Sidebar and chat list**
+- Slightly off-white: \`#F4F4F5\` in light mode
+- Slightly darker than main background: \`#0F1A24\` in dark mode
+
+**Accent color (links, online status, active chat highlight)**
+- Telegram's signature blue: \`#3390EC\`
+
+Apply these one by one in the editor. The change happens in real time — you'll watch WhatsApp Web morph into something that feels distinctly Telegram as each color clicks into place.
+
+---
+
+## Step 4: Add the Generous Spacing Telegram Is Known For
+
+Telegram's design philosophy makes heavy use of white space. The chat list breathes. Messages don't feel cramped against each other. There's a reason Telegram is regularly cited in UI design analyses for its "generous use of white space."
+
+You can't move pixels around WhatsApp Web like a designer with full control of the DOM, but you can get most of the way there:
+
+- **Turn on Minimal Mode** in the extension to hide Archive, Status, locked chats, and Channels. Telegram doesn't have any of these — removing them makes your sidebar feel like Telegram's clean conversation list.
+- **Use a slightly larger font size** (which you already did in Step 2) — larger text creates implicit spacing.
+- **Use a solid background**, not a doodled or busy one. Telegram's default chats use clean solid colors, not patterns.
+
+The combined effect is that your WhatsApp Web suddenly feels less busy. Less chrome. More room to read.
+
+---
+
+## Step 5: Set the Right Background
+
+Telegram's default chat backgrounds are subtle — either a soft solid color or a barely-perceptible pattern. They're never visually loud.
+
+Three options that get you close:
+
+- **Solid soft blue-gray** — pick something close to \`#E7EBF0\` for light mode, or \`#0E1621\` for dark mode
+- **Subtle gradient** — Telegram sometimes uses gentle gradients. Try \`#FFFFFF\` → \`#F0F4F8\` for light, or \`#17212B\` → \`#0E1621\` for dark
+- **A custom abstract image** — if you want to mimic the optional patterned backgrounds Telegram offers, upload a soft, low-contrast image (geometric patterns work well)
+
+The extension lets you set different backgrounds for the chat window, welcome screen, sidebar, and chat list independently — so you can keep the sidebar a clean solid color while the chat window has the gradient or pattern, just like Telegram does.
+
+---
+
+## Step 6: Save It (Or Build It as JSON)
+
+Once it looks right, save your theme. It'll appear in the **Custom** tab and stay there — one click to apply, one click to switch back.
+
+**For power users:** you can also build this theme as a JSON file. Click **Download Template**, edit the JSON with the colors above, and drag it back into the extension. This is useful if you want to:
+
+- Version-control your theme as you tweak it
+- Build separate "Telegram light" and "Telegram dark" variants you can swap between
+- Share the theme with friends who also use WhatsApp Web
+
+We covered the full JSON workflow in [our themes installation guide](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026).
+
+---
+
+## Why This Works (And Why Most WhatsApp Web Extensions Can't Do It)
+
+There's a reason this guide has six steps and not one. Recreating Telegram's look means editing **every visual property independently** — bubble colors separately from sidebar, separately from accent, separately from background, separately from font.
+
+Most WhatsApp Web theme extensions don't let you do this. The biggest competitor on the Chrome Web Store gives you a gradient start color, a gradient end color, and two opacity sliders. You cannot recreate Telegram with that. You cannot recreate *anything* specific with that — only tint WhatsApp Web a different shade of itself.
+
+WhatsApp Web Customizer was built so users actually get full control. Hundreds of editable properties, real-time preview, JSON import/export, and your own custom fonts if 500+ built-in ones aren't enough. It's why MakeUseOf, TechPP, and other tech publications have featured it throughout 2025–2026 — and it's why recreating Telegram on WhatsApp Web is actually possible in 2026, rather than wishful thinking.
+
+---
+
+## Your Telegram Theme Sticks
+
+Once you've built and saved your Telegram-style theme, it stays saved. Reload WhatsApp Web, close the tab, restart your browser — the theme reapplies automatically. You don't need to log in, sync, or back anything up. It just stays Telegram-blue.
+
+---
+
+## Going Further
+
+Once you've nailed the Telegram look, a few directions worth exploring:
+
+- **Build matching light and dark variants** — Telegram users typically have both, switching based on time of day. The extension makes it easy to keep both saved and switch with one click. See [our dark mode guide](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default) for more depth on dark theme construction specifically.
+- **Set up Telegram-style quick replies** — Telegram has a strong culture of quick, snappy responses. WhatsApp Web Customizer's quick reply bubbles let you pre-load your most common phrases so you can fire them off Telegram-style.
+- **Try other looks** — once you've built one custom theme, the next one takes half as long. See [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage) if you want to try the Apple aesthetic next.
+
+---
+
+## The Bottom Line
+
+You can't get Telegram's customization built into WhatsApp Web — Meta isn't going to ship that. But you can get the same visual result with a single Chrome extension and about five minutes of color picking. Blue accent, clean typography, generous spacing, soft backgrounds — all possible, all today.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build your Telegram theme. If you nail the look and want to share the JSON file with the community, [drop it in our Discord](https://discord.gg/cppbDz4qhn) — we've been collecting user-built themes and a Telegram one would be a great addition alongside the iMessage one users have already shared.`,
+},
+  {
   title: "Best WhatsApp Web Tips for Working From Home and Remote Teams (2026)",
   slug: "best-whatsapp-web-tips-for-working-from-home-remote-teams-2026",
   seoIndex: true,
