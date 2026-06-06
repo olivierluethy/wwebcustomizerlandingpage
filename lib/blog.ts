@@ -10,6 +10,150 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Discord",
+  slug: "how-to-make-whatsapp-web-look-like-discord",
+  seoIndex: true,
+  description: "A 2026 guide to making WhatsApp Web look and feel like Discord. Step-by-step walkthrough using WhatsApp Web Customizer — including Discord's signature dark gray palette, Blurple accent, and clean sans-serif typography.",
+  date: "2026-06-05",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Discord
+
+If you live in Discord — for gaming, for communities, for work, for whatever — switching to WhatsApp Web is a jarring experience. Discord is dark by default, comfortable for long sessions, with that distinctive Blurple accent and a UI that respects the fact you're going to be staring at it for hours. WhatsApp Web is a flat green chat list designed to be opened occasionally.
+
+The good news: you can get most of Discord's visual feel on WhatsApp Web in about five minutes. Real dark gray backgrounds, Blurple accents, clean typography — not just a slightly darker version of WhatsApp's default. Here's how.
+
+---
+
+## Step 1: Install the Extension
+
+You'll need **WhatsApp Web Customizer** for this. It's the only Chrome extension that gives you the granular control needed to actually pull off the Discord look:
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+Free, open source, 30 seconds to install. Pin it to your toolbar.
+
+Why this specific extension? Discord's aesthetic requires editing the main background, the sidebar (which is a distinct, darker shade in Discord), the chat bubble colors, the accent, and the font — all independently. Most WhatsApp Web extensions only give you a gradient picker. That can't get you to Discord.
+
+---
+
+## Step 2: Switch to a Discord-Style Font
+
+Discord uses a clean, slightly geometric sans-serif (gg sans, their custom font). You can't legally redistribute gg sans, but there are excellent free alternatives that get extremely close.
+
+Open the extension popup, click the **Typography** tab, and pick one of these:
+
+- **Inter** — clean, neutral, and the closest free match to Discord's font feel. Works at every size.
+- **Nunito** — slightly rounder than Discord's font but still has a similar friendly-modern character.
+- **Whitney** — if you have it installed locally (Discord's predecessor font), the extension will pick it up.
+
+While you're there, set the font size to something comfortable for long sessions. Discord users tend to keep WhatsApp Web open all day — pick a size that won't strain your eyes by hour six.
+
+---
+
+## Step 3: Build the Discord Color Palette
+
+This is where the transformation actually happens. Open the **Themes** tab, click **Create** (or the **Custom** tab → **New Theme**), and you'll land in the theme editor.
+
+Discord's signature look is built on a small, disciplined palette of dark grays with one strong accent color. Here are the actual colors used by Discord's dark theme:
+
+**Main background (the chat area)**
+- Discord's signature dark gray: \`#36393F\`
+
+**Sidebar (Discord's "channel list" panel — darker than the main area)**
+- Darker gray: \`#2F3136\`
+
+**Secondary sidebar (Discord's server list — even darker)**
+- Near-black: \`#202225\`
+- You can apply this to the WhatsApp Web chat list to mimic Discord's two-tier sidebar look
+
+**Sent chat bubbles (your messages)**
+- For the most Discord-accurate look, use the **main background color** with no distinct bubble at all — Discord doesn't use chat bubbles, just messages laid against the background with the author name and message stacked. WhatsApp Web requires bubbles, so use \`#40444B\` (a slightly lighter shade than the background) for subtle separation.
+
+**Received chat bubbles (their messages)**
+- Same as sent: \`#40444B\` — Discord treats all messages the same visually, regardless of sender.
+
+**Text color**
+- Off-white: \`#DCDDDE\` (Discord uses this instead of pure white — it's slightly easier on the eyes for long reading sessions)
+
+**Accent color (the famous "Blurple")**
+- Discord Blurple: \`#5865F2\`
+- Use this for active states, mentions, links, and the highlighted current chat
+
+Apply these one by one in the editor. The change happens in real time — WhatsApp Web will morph into something distinctly Discord as each color clicks into place.
+
+---
+
+## Step 4: Hide What Discord Doesn't Have
+
+Discord doesn't have Status. It doesn't have Channels (in the WhatsApp sense). It doesn't have a separate Archive tab cluttering the sidebar.
+
+Turn on **Minimal Mode** in the extension. This hides:
+
+- Archive
+- Status
+- Locked chats
+- Channels
+
+What's left is a clean conversation list — the way Discord shows its DMs. The result feels much more Discord-like immediately.
+
+---
+
+## Step 5: Pick a Discord-Style Background
+
+Discord is uniformly dark. No backgrounds, no wallpapers, no doodled patterns — just clean solid dark gray across the entire interface.
+
+Two options:
+
+- **Solid \`#36393F\`** — true Discord look, no pattern, no gradient, no noise. Matches Discord's "make the content the focus" design philosophy.
+- **Solid \`#1E1F22\`** (Discord's newer, slightly darker palette) — if you prefer the look of Discord's most recent UI refresh, this is slightly closer.
+
+The extension lets you set different backgrounds for the chat window, sidebar, welcome screen, and chat list independently — which is exactly what you need to recreate Discord's tiered-gray sidebar setup.
+
+---
+
+## Step 6: Save It (Or Build It as JSON)
+
+Once it looks right, save your theme. It'll appear in the **Custom** tab — one click to apply, one click to switch back to default.
+
+**For advanced users:** every theme is also a JSON file you can edit directly. Click **Download Template**, edit the JSON with the Discord palette above, and drag it back in. Useful if you want to share the theme with a community (Discord users tend to share themes with each other), version-control your tweaks, or build separate "Discord Dark" and "Discord OLED Black" variants.
+
+We covered the full JSON workflow in [our themes installation guide](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026).
+
+---
+
+## Why You Need This Extension (And Why Others Can't Do It)
+
+Discord's look is precisely the kind of recreation that exposes the limits of most WhatsApp Web extensions. You need to edit at least six different elements — main background, sidebar, secondary sidebar, bubbles, text color, and the Blurple accent — independently of each other.
+
+The closest competitor on the Chrome Web Store only offers a gradient start color, a gradient end color, and two opacity sliders. You can't make WhatsApp Web look like Discord with that. You can't make it look like anything specific with that — only tint WhatsApp Web a different shade of itself.
+
+WhatsApp Web Customizer was built so users actually get full control. Hundreds of editable properties, real-time preview, JSON import/export, and your own custom fonts if 500+ built-in ones aren't enough. It's why MakeUseOf, TechPP, and other tech publications have featured it throughout 2025–2026, and why recreating Discord on WhatsApp Web is actually possible today.
+
+---
+
+## Your Discord Theme Sticks
+
+Once you've built and saved the theme, it stays. Reload WhatsApp Web, close the tab, restart your browser — the theme reapplies automatically. You don't need to log in, sync, or back anything up.
+
+---
+
+## Going Further
+
+A few directions worth exploring once you've got the Discord look working:
+
+- **Build a true OLED black variant** — replace \`#36393F\` with \`#000000\` for genuine OLED black, which saves real battery on OLED-display laptops. See [our dark mode guide](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default) for more on this.
+- **Add quick replies for the messages you send constantly** — Discord users tend to fire off short, snappy responses. WhatsApp Web Customizer's quick reply bubbles let you preset those for one-click sending.
+- **Try other looks** — if Discord isn't quite right, see [how to make WhatsApp Web look like Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram) or [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage).
+
+---
+
+## The Bottom Line
+
+WhatsApp Web is never going to ship a Discord-style dark theme natively. Meta has had a decade to add proper customization and hasn't. The only way to get the Discord look — real dark gray backgrounds, Blurple accents, clean typography, minimal sidebar clutter — is a Chrome extension and about five minutes of color picking.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build your Discord theme. If you nail the look and want to share the JSON file with the community, [drop it in our Discord](https://discord.gg/cppbDz4qhn) — we've been collecting user-built themes and a Discord one would fit right in.`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Telegram",
   slug: "how-to-make-whatsapp-web-look-like-telegram",
   seoIndex: true,
