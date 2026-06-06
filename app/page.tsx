@@ -11,10 +11,12 @@ import { Community } from "@/components/landing/community";
 import { BlogPreview } from "@/components/landing/blog-preview";
 import { Footer } from "@/components/landing/footer";
 import { ScrollTracker } from "@/components/landing/scroll-tracker";
+import { StructuredData } from "@/components/StructuredData";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
+      <StructuredData />
       <Navigation />
       <ScrollTracker />
       <Hero />

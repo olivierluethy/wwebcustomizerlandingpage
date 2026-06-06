@@ -9,9 +9,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.wwebcustomizer.com'), // DEINE ECHTE DOMAIN HIER
-  title: "WWeb Customizer - Transform Your WhatsApp Web Experience",
+  title: "WhatsApp Web Customizer – Free & Open Source Extension",
   description:
-    "Customize WhatsApp Web with themes, shortcuts, and smart features. Make messaging yours with this free, open-source browser extension.",
+    "Customize WhatsApp Web with themes, custom fonts, and a privacy blur. Free, open-source extension featured by MakeUseOf and TechPP. Make messaging yours.",
   keywords: [
     "WhatsApp Web",
     "browser extension",
@@ -26,15 +26,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "WWeb Customizer",
-    title: "WWeb Customizer - Transform Your WhatsApp Web Experience",
+    title: "WhatsApp Web Customizer – Free & Open Source Extension",
     description:
-      "Customize WhatsApp Web with themes, shortcuts, and smart features. Make messaging yours with this free, open-source browser extension.",
+      "Customize WhatsApp Web with themes, custom fonts, and a privacy blur. Free, open-source extension featured by MakeUseOf and TechPP. Make messaging yours.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WWeb Customizer - Transform Your WhatsApp Web Experience",
+    title: "WhatsApp Web Customizer – Free & Open Source Extension",
     description:
-      "Customize WhatsApp Web with themes, shortcuts, and smart features. Make messaging yours with this free, open-source browser extension.",
+      "Customize WhatsApp Web with themes, custom fonts, and a privacy blur. Free, open-source extension featured by MakeUseOf and TechPP. Make messaging yours.",
   },
   robots: {
     index: true,
