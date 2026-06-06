@@ -10,6 +10,267 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Calls Not Working? How to Fix Voice and Video Issues (2026)",
+  slug: "whatsapp-web-calls-not-working-how-to-fix-voice-video-issues-2026",
+  seoIndex: true,
+  description: "WhatsApp Web voice or video calls failing? Here's how to fix microphone and camera issues, browser permissions, OS-level privacy blocks, and the call-routing problems specific to WhatsApp Web in 2026.",
+  date: "2026-06-10",
+  readTime: "7 min",
+  content: `# WhatsApp Web Calls Not Working? How to Fix Voice and Video Issues (2026)
+
+WhatsApp Web calls are one of those features that work perfectly until they don't. You hit the call button, the other person picks up, and then — no audio. Or no video. Or the call connects but they can't hear you. Or it never rings on your end at all.
+
+Most guides on this topic focus on the mobile app. WhatsApp Web is a different animal: it runs in a browser, which means it has *two* layers of permissions (the browser's *and* the operating system's), and either one can silently block your microphone or camera. This guide is specifically for WhatsApp Web call failures, ordered from fastest to most involved.
+
+---
+
+## Quick Diagnosis: What's Actually Broken?
+
+WhatsApp Web call problems fall into four buckets. Identifying yours first saves time:
+
+- **The call won't start at all** — you click the call button and nothing happens, or you get an immediate error
+- **Call connects, but no sound from your side** — they can't hear you
+- **Call connects, but no sound from their side** — you can't hear them
+- **Video doesn't work** — audio is fine but the camera doesn't activate
+
+Each has different root causes. Keep yours in mind as you work through the fixes.
+
+---
+
+## Fix 1: Allow Microphone and Camera Permission in Your Browser
+
+**Solves:** Calls won't start, or they can't hear/see you
+
+This is the #1 cause of WhatsApp Web call failures. When you first try to make a call, your browser asks for permission to use your microphone and camera. If you closed the prompt, denied it, or never saw it, calls won't work.
+
+**In Chrome:**
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com)
+2. Click the **padlock icon** to the left of the URL
+3. You should see **Microphone** and **Camera** in the list
+4. Set both to **Allow**
+5. Refresh the page
+
+If they're not visible in the padlock menu:
+- Chrome menu → **Settings → Privacy and security → Site settings**
+- Click **Microphone** → search for \`web.whatsapp.com\` → set to **Allow**
+- Repeat for **Camera**
+
+**In Firefox:**
+
+1. Firefox menu → **Settings → Privacy & Security**
+2. Scroll to **Permissions**
+3. Click **Settings** next to Microphone (then again next to Camera)
+4. Find \`web.whatsapp.com\` and change to **Allow**
+
+**In Safari:**
+
+1. Safari menu → **Settings → Websites**
+2. Click **Microphone** → find \`web.whatsapp.com\` → set to **Allow**
+3. Repeat for **Camera**
+
+After changing permissions, **fully refresh the page** (sometimes you need to close the tab and reopen). Try the call again.
+
+---
+
+## Fix 2: Allow Your Browser to Use Microphone and Camera at the OS Level
+
+**Solves:** Browser permissions look correct, but calls still won't get audio/video
+
+This is the fix almost nobody covers — and it's the silent killer for WhatsApp Web calls in 2026. Even if your **browser** has permission to use the microphone and camera, your **operating system** can still block the browser from accessing them.
+
+This is a relatively new privacy layer added by modern OSes, and it overrides browser settings.
+
+**On Windows 11:**
+
+1. Settings → **Privacy & security → Microphone**
+2. Make sure **"Microphone access"** is on at the top
+3. Make sure **"Let apps access your microphone"** is on
+4. Scroll to **"Let desktop apps access your microphone"** — make sure your browser (Chrome, Firefox, Edge) is in the list and enabled
+5. Repeat all of the above under **Privacy & security → Camera**
+
+**On macOS:**
+
+1. System Settings → **Privacy & Security → Microphone**
+2. Make sure your browser (Chrome, Firefox, Safari) has the toggle turned on
+3. Repeat under **Privacy & Security → Camera**
+
+If you just changed these settings, **fully quit and restart your browser** for the changes to take effect — a simple refresh won't do it.
+
+This single fix solves a lot of call issues that look impossible to debug otherwise.
+
+---
+
+## Fix 3: Check You're Not Already in a Call Elsewhere
+
+**Solves:** Call won't start, or call connects but immediately drops
+
+WhatsApp doesn't let you be in two calls at once. If your phone is on another WhatsApp call, or if you have WhatsApp Desktop open and it's also receiving a call, WhatsApp Web may refuse to start a new call session.
+
+Check:
+- Is anyone in your household holding your phone with WhatsApp open?
+- Is WhatsApp Desktop running in the background on the same machine?
+- Did you forget about a call you left "on hold" earlier?
+
+End any other active WhatsApp sessions before retrying.
+
+---
+
+## Fix 4: Test Your Microphone and Camera in Another App
+
+**Solves:** Confirms whether the problem is WhatsApp Web or your hardware
+
+Before going deeper, isolate the cause. Open another app that uses your mic and camera:
+
+- **Online:** [webcammictest.com](https://webcammictest.com) or any WebRTC test site
+- **Native apps:** Zoom, Google Meet, Microsoft Teams, Discord
+
+If your mic and camera work in those apps but not in WhatsApp Web, the problem is specific to WhatsApp Web (continue with the fixes below). If they don't work *anywhere*, the problem is your hardware or your OS-level permissions (see Fix 2).
+
+---
+
+## Fix 5: Disable Other Apps That Might Be Holding the Microphone or Camera
+
+**Solves:** Calls connect but audio/video doesn't transmit
+
+Only one app can use your microphone or camera at a time. If another app is "holding" them — even one running quietly in the background — WhatsApp Web won't be able to grab them.
+
+Common culprits:
+
+- **Zoom, Teams, Google Meet** open in another tab or window
+- **OBS, Streamlabs**, or other streaming software
+- **Skype** running in the background
+- **Webcam software** that came with your camera
+
+Close them completely (check the system tray / menu bar — they often hide there even after you "X" out). Then refresh WhatsApp Web and try the call again.
+
+---
+
+## Fix 6: Make Sure You're Using the Correct Microphone and Camera
+
+**Solves:** Calls work but use the wrong device (e.g. laptop mic instead of headset)
+
+If you have multiple microphones or cameras connected (laptop built-in + USB headset + webcam), your browser might be picking the wrong one.
+
+**In Chrome:**
+
+1. Click the padlock icon next to the URL
+2. Click **Site settings**
+3. Scroll to Microphone and Camera
+4. Use the dropdowns to select the specific device you want
+
+**Alternative:** Chrome menu → **Settings → Privacy and security → Site settings → Microphone** → the default device dropdown at the top sets it for all sites.
+
+After changing the device, restart the call.
+
+---
+
+## Fix 7: Check Your Headset / Bluetooth Audio
+
+**Solves:** No audio either direction, or audio cutting in and out
+
+Bluetooth audio devices are a common source of WhatsApp Web call problems:
+
+- **Bluetooth headsets** sometimes connect in "media" mode (high-quality audio, no mic) instead of "call" mode (lower-quality audio with working mic). If they can't hear you, this is often why.
+- **Half-charged Bluetooth devices** can drop signal during calls
+- **Multiple paired devices** competing for connection
+
+Try:
+1. Unpair and re-pair your Bluetooth headset
+2. Or temporarily disconnect Bluetooth entirely and use your laptop's built-in mic and speakers to test
+3. If that fixes the issue, the problem is your headset's profile/mode, not WhatsApp
+
+---
+
+## Fix 8: Try a Different Browser (Or the Desktop App)
+
+**Solves:** Persistent issues that nothing else fixes
+
+If you've worked through fixes 1–7 and calls still don't work, try opening WhatsApp Web in a **different browser**. If you're on Chrome, try Firefox. If Firefox, try Edge.
+
+If calls work in the other browser, the problem is something specific to your usual one — likely a corrupted browser cache, a conflicting extension, or a stale permission state.
+
+**The honest recommendation for heavy call users:** consider switching to the **WhatsApp Desktop app** for calls specifically. The desktop app uses native OS audio/video APIs rather than browser WebRTC, and it tends to be **noticeably more stable for long calls**. Many remote workers keep WhatsApp Desktop running for calls while using WhatsApp Web in the browser for everything else.
+
+We covered this trade-off in detail in [WhatsApp Web vs WhatsApp Desktop](/blog/whatsapp-web-vs-whatsapp-desktop-which-should-you-use-2026).
+
+---
+
+## Fix 9: Disable Browser Extensions Temporarily
+
+**Solves:** Calls work in Incognito but not in your normal browser
+
+Some browser extensions interfere with WebRTC (the technology WhatsApp Web uses for calls):
+
+- **Aggressive ad blockers** can block WebRTC components
+- **Privacy extensions** like uBlock Origin with strict settings can block media streams
+- **VPN extensions** can route call traffic through servers WhatsApp's network refuses
+
+Open WhatsApp Web in an **Incognito / Private window** (\`Ctrl + Shift + N\` in Chrome, \`Cmd + Shift + N\` on Mac), which disables most extensions by default. If calls work there, an extension in your normal profile is the culprit. Disable them one by one to find which.
+
+**Note:** customization extensions for WhatsApp Web (themes, fonts, backgrounds) don't touch the call system — they only modify the visual interface. If you have one installed, you don't need to disable it for call troubleshooting.
+
+---
+
+## Fix 10: Check Your Internet Speed and Connection
+
+**Solves:** Calls connect but cut out, lag, or freeze
+
+Voice and video calls are bandwidth-sensitive. WhatsApp's official recommendations are modest, but in practice you want:
+
+- **Voice calls:** at least 100 Kbps stable
+- **Video calls:** at least 300 Kbps stable, ideally 1 Mbps+
+
+Run a quick speed test at [speedtest.net](https://www.speedtest.net) or [fast.com](https://fast.com). If your connection is below those numbers or wildly inconsistent (high jitter), call quality will suffer.
+
+Other connection checks:
+
+- **Switch from Wi-Fi to Ethernet** if you can — Ethernet is more stable
+- **Try a different Wi-Fi network** if you're on a flaky one
+- **Disable any VPN** you might be running, as VPN routing adds latency
+
+---
+
+## Fix 11: The Hard Reset
+
+**Solves:** Everything you've tried hasn't worked
+
+If you've worked through fixes 1–10 and calls still fail:
+
+1. On your phone, open WhatsApp → **Linked Devices** → log out of the WhatsApp Web session
+2. Close all WhatsApp Web tabs in your browser
+3. Clear cookies for \`web.whatsapp.com\` (see [our broader troubleshooting guide](/blog/whatsapp-web-not-working-10-fixes-that-actually-work-2026) for browser-specific steps)
+4. Restart your browser
+5. Restart your computer (yes, really — clears stale audio/video device locks)
+6. Go to \`web.whatsapp.com\` fresh and scan the QR code
+7. When the call permission prompts appear, **click Allow** for both microphone and camera
+
+This rebuilds the session and re-establishes all permission grants from scratch.
+
+---
+
+## A Quick Note on Customizing WhatsApp Web
+
+If your call issues are now resolved and you find yourself using WhatsApp Web heavily for work or personal calls, the default interface starts to wear thin after the hundredth hour of staring at it.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — adds custom themes, fonts, backgrounds, and a privacy blur. It doesn't interfere with calls (it only modifies the visual layer of the interface). Free, open source, ~30 seconds to install.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web call problems are almost always one of: a missing browser permission (Fix 1), a missing OS-level permission that overrides the browser one (Fix 2), or another app silently holding your microphone or camera (Fix 5). Work through fixes 1, 2, and 5 first — those three resolve the vast majority of cases.
+
+For heavy call users, switching to WhatsApp Desktop is a real upgrade in stability worth considering.
+
+For more troubleshooting:
+
+- [WhatsApp Web not working? 10 fixes that actually work in 2026](/blog/whatsapp-web-not-working-10-fixes-that-actually-work-2026)
+- [WhatsApp Web QR code not working? Here's how to fix it](/blog/whatsapp-web-qr-code-not-working-how-to-fix-it-2026)
+- [WhatsApp Web keeps logging out? Fixes for 2026](/blog/whatsapp-web-keeps-logging-out-fixes-for-2026)
+- [WhatsApp Web notifications not working: complete fix guide 2026](/blog/whatsapp-web-notifications-not-working-complete-fix-guide-2026)`,
+},
+  {
   title: "WhatsApp Web Notifications Not Working: Complete Fix Guide 2026",
   slug: "whatsapp-web-notifications-not-working-complete-fix-guide-2026",
   seoIndex: true,
