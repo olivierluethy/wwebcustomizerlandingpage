@@ -10,6 +10,125 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Change WhatsApp Web's Notification Sound (2026)",
+  slug: "how-to-change-whatsapp-web-notification-sound-2026",
+  seoIndex: true,
+  description: "Tired of WhatsApp Web's default notification sound? Here's the honest 2026 guide to what's possible — native settings, the extensions that actually work, and what to watch out for when installing one.",
+  date: "2026-06-12",
+  readTime: "5 min",
+  content: `# How to Change WhatsApp Web's Notification Sound (2026)
+
+WhatsApp Web has exactly one notification sound. It's the same generic "ding" everyone else has. It sounds nearly identical to the alert tones used by half a dozen other apps. And there's no built-in way to change it — no settings menu option, no toggle, no chat-specific override.
+
+If you've Googled this and ended up on guides explaining how to change notification sounds on your **phone**, you've discovered the same gap most users hit: those guides don't actually apply to WhatsApp Web. The web version has its own notification system, separate from your phone's, and it ignores any custom sounds you've set up on your mobile app.
+
+Here's the honest 2026 picture of what's actually possible.
+
+---
+
+## The Honest Answer First
+
+Let's clear up the confusion that fills most articles on this topic:
+
+- **WhatsApp Web does NOT natively support custom notification sounds.** There is no setting in WhatsApp Web's menus to change the sound. None.
+- **Custom sounds set on your phone do NOT carry over.** If you set a special tone for your partner's chat on your iPhone, WhatsApp Web won't use it. The web version uses its own fixed sound.
+- **The WhatsApp Desktop app is different from WhatsApp Web.** The Windows/macOS desktop app *does* support some per-chat notification customization. WhatsApp Web in your browser does not.
+
+So if you want a different notification sound on WhatsApp Web, you have exactly two real options: install a dedicated third-party extension built for this, or switch to the WhatsApp Desktop app. Neither is built into WhatsApp itself.
+
+---
+
+## Option 1: Use a Dedicated Notification Sound Extension
+
+A handful of Chrome extensions exist specifically to solve this problem. They work by intercepting WhatsApp Web's notification sound and replacing it with an audio file you upload.
+
+The two most-installed options on the Chrome Web Store are:
+
+- **WhatsApp Notification Sound Changer** — open source on GitHub, lets you upload any audio file. Stores everything locally, no data leaves your device.
+- **WhatSound** — offers a curated list of preset sounds rather than custom uploads.
+
+**How they typically work:**
+
+1. Install the extension from the Chrome Web Store
+2. Upload an audio file (MP3, WAV, OGG — depends on the extension)
+3. Refresh your WhatsApp Web tab
+4. The new sound plays for incoming notifications
+
+**A few caveats worth knowing:**
+
+- These extensions need **broad permissions on the \`whatsapp.com\` domain** to intercept the notification system. Stick to ones that are open source (so the code is publicly auditable) and have reasonable user counts.
+- Some require a page refresh after every browser restart for the sound to apply correctly — minor annoyance, not a dealbreaker.
+- They can occasionally break when WhatsApp Web updates its interface, and need to be updated by the developer to keep working. Pick an actively maintained one.
+
+We're not going to recommend a specific extension here without testing them ourselves at the depth we'd want to. The Chrome Web Store has reviews, and the open-source ones let you inspect the code — make your own judgment.
+
+---
+
+## Option 2: Switch to the WhatsApp Desktop App
+
+If you use WhatsApp on your computer heavily, **the WhatsApp Desktop app** (downloadable from [whatsapp.com](https://www.whatsapp.com/download)) supports per-chat notification customization in a way WhatsApp Web does not.
+
+To set a custom notification sound for a specific chat or group in the desktop app:
+
+1. Open the chat
+2. Click the contact name or group name at the top
+3. Open **Overview** (it may already be selected)
+4. Find **Notification tone**
+5. Select your preferred sound
+
+It still doesn't let you upload any sound you want — you're picking from WhatsApp's preset list — but at least you can differentiate between chats, which is the most common reason people want this feature in the first place.
+
+We covered the broader Web-vs-Desktop trade-off in [WhatsApp Web vs WhatsApp Desktop: Which Should You Use in 2026?](/blog/whatsapp-web-vs-whatsapp-desktop-which-should-you-use-2026) — worth a read if you're on the fence about switching.
+
+---
+
+## What About WhatsApp Web Customizer?
+
+Since you're reading this on our blog, you might be wondering whether **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** handles notification sounds.
+
+The honest answer: **not currently.** Our extension focuses on **visual customization** — themes, custom fonts, custom backgrounds, a privacy blur for working in public, and quick reply bubbles to speed up your common responses. Notification sounds aren't part of the current feature set.
+
+If notification sounds are a deal-breaker for you, install a dedicated sound extension alongside ours — the two won't conflict. WhatsApp Web Customizer only modifies the visual layer of the page, while sound-changer extensions hook into the audio layer. They live in different parts of the browser and work together cleanly.
+
+(If enough users tell us this is something they'd value, it's the kind of feature we'd consider. Our [Discord](https://discord.gg/cppbDz4qhn) is where feature requests get heard.)
+
+---
+
+## A Quieter Alternative: Mute What You Don't Need
+
+If you're frustrated with WhatsApp Web's default sound mainly because there's *too much* of it — every group chat, every random ping, every "ok" reply triggering the same alert — the real fix might not be customizing the sound, but reducing how often it plays.
+
+Right-click any chat or group in your sidebar → **Mute** for 8 hours, 1 week, or always. Muted chats still appear in your list (so you can check them on your own schedule), but they stop interrupting you with sound.
+
+For most professional users, **aggressive muting** does more for your sanity than any custom notification sound ever will. Reserve sound for the 3-5 chats where you actually need real-time attention, and silence everything else.
+
+---
+
+## What About Per-Chat Sounds Like on Mobile?
+
+This is what most people *actually* want when they search for this feature: a different sound for their partner vs. their work group vs. random chats. Sadly, this is the one thing none of the current Web-side options give you fully:
+
+- WhatsApp Web natively: ❌ No sounds at all customizable
+- Sound-changer extensions: ⚠️ Only one custom sound, applied globally
+- WhatsApp Desktop app: ⚠️ Per-chat, but only from a preset list
+
+There's no current way to upload *different* custom sounds for *different* chats on WhatsApp Web. If that's what you want, your only real option is to use your phone's native mobile customization and accept that WhatsApp Web won't reflect those settings.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web's notification sound is one of the most-complained-about and least-fixable aspects of the platform. The honest options in 2026 are: install a dedicated sound-changer extension (works, with caveats), switch to the WhatsApp Desktop app (limited preset list, but per-chat), or mute aggressively and skip the sound problem entirely.
+
+If you came here looking for a native WhatsApp Web toggle, we're sorry — it doesn't exist. But you now know the real landscape, which is more than most articles on this topic offer.
+
+For more honest guides on getting more out of WhatsApp Web:
+
+- [WhatsApp Web notifications not working: complete fix guide 2026](/blog/whatsapp-web-notifications-not-working-complete-fix-guide-2026)
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [Best WhatsApp Web tips for working from home and remote teams](/blog/best-whatsapp-web-tips-for-working-from-home-remote-teams-2026)`,
+},
+  {
   title: "WhatsApp Web Calls Not Working? How to Fix Voice and Video Issues (2026)",
   slug: "whatsapp-web-calls-not-working-how-to-fix-voice-video-issues-2026",
   seoIndex: true,
