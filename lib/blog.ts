@@ -10,6 +10,159 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Native Themes Are Rolling Out: Mobile vs WhatsApp Web vs a Custom Setup (2026)",
+  slug: "whatsapp-native-themes-rolling-out-mobile-vs-web-vs-custom-setup-2026",
+  seoIndex: true,
+  description: "WhatsApp's native chat themes have launched on mobile — but WhatsApp Web users are still waiting. Here's where the rollout actually stands, how the native feature compares to a full custom setup, and what to do if you don't want to wait.",
+  date: "2026-06-15",
+  readTime: "8 min",
+  content: `# WhatsApp Native Themes Are Rolling Out: Mobile vs WhatsApp Web vs a Custom Setup (2026)
+
+After years of being one of the most under-personalised mainstream apps, WhatsApp has finally added native chat themes. You can change the bubble colour, pick a coordinated background, and even set different themes for different chats. For users who've been quietly envying Telegram, Discord, and iMessage's theming for the better part of a decade, this is genuinely overdue.
+
+There's just one catch — and it's the part most coverage skips over: **the themes are live on mobile, but they haven't shipped to WhatsApp Web yet.** If you've been seeing the news, opening WhatsApp Web, and wondering where your themes are, you're not missing anything. They aren't there.
+
+Here's the honest picture in mid-2026: what the native feature actually does, where the rollout stands, and how it compares to the full custom-extension setup that's already been possible on WhatsApp Web for over a year.
+
+---
+
+## Where the Rollout Actually Stands (As of June 2026)
+
+Let's separate fact from headline noise:
+
+**WhatsApp Mobile (iOS and Android):** Themes have **launched**. iOS users with version 25.23.10.81 or later, and Android users on the equivalent build, can already access chat theme customisation — including bubble colour and coordinated wallpapers. The rollout is region-by-region, but globally most users have it or will have it within weeks.
+
+**WhatsApp Web:** Themes are **still in internal development**. According to WABetaInfo, the most reliable WhatsApp feature tracker, the Web version of chat themes is being built but hasn't reached beta testers yet. There's no official release date. Reports suggest 49 colour presets (possibly reduced to ~39 in development), but the feature is not yet available to anyone — including paid beta participants.
+
+**Estimated WhatsApp Web release window:** Several months. Based on how Meta typically rolls Web features (internal → limited beta → broader beta → phased global rollout, often across 3–6 months), don't expect WhatsApp Web themes to be widely available before late 2026 at the earliest. Possibly later.
+
+So if you're on WhatsApp Web specifically, the "themes are finally here" headlines aren't quite true for you yet. They're true for your phone, not your browser.
+
+---
+
+## What WhatsApp's Native Themes Actually Offer (On Mobile)
+
+For context, here's what the native feature delivers where it has launched:
+
+- **Bubble colours** — change the colour of your sent and received messages
+- **Coordinated wallpapers** — each theme pairs with a matching background
+- **Per-chat themes** — apply different themes to individual conversations (different colour for your work group than your family chat)
+- **Global default theme** — set one theme that applies to all chats unless overridden
+- **22 to ~49 presets** — depending on platform and rollout phase
+- **Themes are private** — only you see your colour choices. The other side of the conversation sees their own default or theme, regardless of yours.
+
+It's a real, nicely-implemented feature. For mobile users who've been waiting for any kind of personalisation, it's a meaningful upgrade.
+
+---
+
+## What It DOESN'T Do (Important)
+
+Equally important — and rarely covered — is what the native theme system doesn't offer, on any platform:
+
+- **No custom colours.** You pick from preset palettes; you can't enter a hex code or use a colour picker.
+- **No custom fonts.** WhatsApp's default typography stays the same regardless of theme.
+- **No font size control.** Same default size everywhere.
+- **No custom images as backgrounds.** You're limited to the wallpaper that comes with each preset.
+- **No interface element hiding.** Archive, Status, Channels — all still there.
+- **No privacy features.** Themes don't include blur, masking, or any privacy controls.
+- **No JSON import/export.** Themes are tied to your account; no sharing custom palettes with friends or teams.
+- **No per-interface customisation.** You can't theme the sidebar separately from the chat area.
+
+These limitations matter, because they're what divides "casual customisation" from "real control over how your app looks."
+
+---
+
+## How the Native Feature Compares to a Custom WhatsApp Web Setup
+
+For WhatsApp Web users specifically, here's where this gets interesting. While Meta is months (or longer) away from shipping native themes for the web client, a browser-extension-based custom setup has been available for over a year — and it does considerably more than the native feature will, even once it ships.
+
+Here's the side-by-side, focusing on WhatsApp Web specifically:
+
+| Capability | WhatsApp Native Themes (when released for Web) | WhatsApp Web Customizer (today) |
+|---|---|---|
+| **Available today** | No, still in development | Yes |
+| **Number of themes** | ~22–49 fixed presets | Unlimited — build your own |
+| **Custom colours** | Preset palettes only | Every element editable independently |
+| **Custom fonts** | No | 500+ fonts plus your own uploads |
+| **Font size control** | No | Yes |
+| **Custom backgrounds** | Theme-matched wallpapers only | Any image, on chat window / sidebar / chat list / welcome screen separately |
+| **Privacy blur** | No | Yes — hide messages and contact names |
+| **Quick reply bubbles** | No | Yes |
+| **Hide interface elements** | No | Yes — Archive, Status, Channels, locked chats |
+| **JSON theme files** | No | Yes — import, export, share |
+| **Per-interface theming** | No | Yes — sidebar separately from chat area |
+| **Cost** | Free | Free |
+
+The fundamental difference isn't quality — Meta's themes will look polished — it's *depth*. The native feature is a fixed menu. The extension is a design tool.
+
+---
+
+## Who Each Is For
+
+This is where the honest comparison comes in. Different audiences, different best choices:
+
+**Native themes are the right fit for you if:**
+- You mostly use WhatsApp on your phone
+- You want a quick visual upgrade without thinking about it
+- You don't have specific brand colours, accessibility needs, or strong aesthetic preferences
+- You're happy to wait for the WhatsApp Web rollout
+
+**A custom extension setup is the right fit if:**
+- WhatsApp Web is your primary surface (e.g. you use it for work all day)
+- You have specific colour preferences (brand colours, accessibility needs, matching your IDE/setup)
+- You want custom fonts or font sizing
+- You want privacy features beyond just colours
+- You don't want to wait several more months for the WhatsApp Web rollout
+
+These aren't mutually exclusive. Many users who care about customisation will end up using native themes on their phone and a custom setup on their computer, getting the best of both worlds.
+
+---
+
+## What Happens When WhatsApp Web Themes Finally Launch?
+
+A fair question: will the native feature make a custom-extension setup obsolete? Short answer — no, for the same reason your phone's built-in camera didn't make professional cameras obsolete. They serve different users.
+
+When WhatsApp Web themes finally arrive (probably late 2026 or later), the practical change for most extension users will be modest:
+
+- **Casual users** who haven't installed an extension will get a nice preset menu. Many will be happy.
+- **Power users** who already have a custom setup will likely keep it — because once you've had custom fonts, true OLED black, and a privacy blur, going back to a 49-preset menu feels limiting.
+- **Some users will use both** — native themes for casual chats, the extension for serious work surfaces.
+
+If anything, WhatsApp officially validating the *idea* of WhatsApp Web customisation is the best thing that could happen to extensions that have been doing it properly all along. The native feature will introduce billions of users to the concept that they can change how WhatsApp looks. Many of them will quickly discover that presets aren't enough and look for more.
+
+---
+
+## What To Do If You Don't Want to Wait
+
+If you're a WhatsApp Web user who's read about the native themes, gone looking for them, and found nothing, here's the honest practical answer: you don't have to wait several more months.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — already delivers what WhatsApp is *planning* to ship for Web, plus considerably more. Free, fully open source (the code is on GitHub, anyone can audit it), takes 30 seconds to install, no account required.
+
+Start with a built-in theme if you want the quickest result. If you want to push further, see our guides on:
+
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [How to get true dark mode on WhatsApp Web](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default)
+- [How to change the font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web)
+
+For specific looks, we have walk-throughs for [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), [Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord), and [Slack](/blog/how-to-make-whatsapp-web-look-like-slack).
+
+---
+
+## The Bottom Line
+
+WhatsApp's native chat themes are genuinely worth being excited about — for mobile users. For WhatsApp Web users, the feature isn't here yet, and based on the typical rollout pace, won't be widely available for months.
+
+The good news is you don't have to wait. The same depth of customisation that WhatsApp is *planning* to deliver — and considerably more, including custom fonts, real backgrounds, and privacy controls — is already available today through a free open-source extension. When WhatsApp's version ships, casual users will be happy with the preset menu. Power users will keep the deeper setup they already have.
+
+Either way, the era of WhatsApp Web looking exactly like every other WhatsApp Web is finally ending. About time.
+
+For more:
+
+- [WhatsApp Web is getting 49 new chat themes in 2026](/blog/whatsapp-web-49-new-chat-themes-2026-what-you-can-do-today)
+- [How to install custom themes on WhatsApp Web (2026)](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [Best WhatsApp Web Chrome extensions in 2026](/blog/best-whatsapp-web-chrome-extensions-2026)`,
+},
+  {
   title: "How to Read WhatsApp Messages Without Showing Online or Blue Ticks (2026)",
   slug: "how-to-read-whatsapp-messages-without-showing-online-blue-ticks-2026",
   seoIndex: true,
