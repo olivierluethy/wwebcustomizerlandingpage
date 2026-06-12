@@ -10,6 +10,171 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Add Custom Fonts to WhatsApp Web (Upload Your Own or Use Google Fonts)",
+  slug: "how-to-add-custom-fonts-to-whatsapp-web-upload-google-fonts",
+  seoIndex: true,
+  description: "Want a specific font on WhatsApp Web — not just the defaults? Here's how to upload your own font files, load Google Fonts by URL, and build a custom font library for WhatsApp Web in 2026.",
+  date: "2026-06-17",
+  readTime: "7 min",
+  content: `# How to Add Custom Fonts to WhatsApp Web (Upload Your Own or Use Google Fonts)
+
+If you've already discovered that you can change the font on WhatsApp Web, you've probably hit the next, more interesting question: can you use *your own* font? The exact one from your design system? The one you stare at in your IDE all day? The licensed font your company uses everywhere else?
+
+The answer is yes — but it's the kind of feature most people don't realise exists, even users who already customise their WhatsApp Web. This guide walks through how to upload your own font files, load Google Fonts directly by URL, and build a personal font library you can pick from any time.
+
+This isn't picking from a dropdown. This is building your own typography system for WhatsApp Web.
+
+---
+
+## Why Custom Fonts Are Worth the Effort
+
+Before the how-to, a quick word on why. WhatsApp Web ships with a default font that's functional but undistinguished. Even a basic font swap improves readability for most people — and we've covered the simple "pick from the built-in list" version in [our font-change guide](/blog/how-to-change-the-font-on-whatsapp-web).
+
+But built-in lists, however large, have ceilings. They might not include:
+
+- **The font from your design system** — Söhne, GT America, ABC Diatype, anything proprietary or licensed
+- **A font you use in your code editor** — JetBrains Mono Italic, the latest Berkeley Mono, your custom Fira variant
+- **A font you genuinely love** that just isn't in the default 500+
+- **An accessibility-focused font** like Atkinson Hyperlegible at a specific weight
+- **The font your team or studio standardises on** for consistency across tools
+
+Custom font support solves all of these. You're no longer choosing from someone else's curated list — you're using the typography you actually want.
+
+---
+
+## Method 1: Upload Your Own Font File
+
+This is the most direct method, and it works for any font file you have on your computer — TTF, OTF, WOFF, or WOFF2.
+
+### Step 1: Get a Font File
+
+You probably already have some. Common places fonts live on your computer:
+
+- **macOS:** \`/System/Library/Fonts/\`, \`/Library/Fonts/\`, or \`~/Library/Fonts/\`
+- **Windows:** \`C:\\Windows\\Fonts\\\`
+- **Adobe Fonts users:** activated fonts are usually accessible through your design tools, though Adobe makes raw file access deliberately tricky
+- **Google Fonts download:** [fonts.google.com](https://fonts.google.com), pick a font, hit "Download family" — you get a folder of TTF or variable font files
+
+A note on licensing: just because you have a font file doesn't always mean you're licensed to use it. For personal use on your own WhatsApp Web, this is rarely an issue. For team or commercial use, check the license — most type foundries are reasonable, but some specifically restrict embedded usage.
+
+### Step 2: Open the Font Manager
+
+Install **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** if you haven't already. Open [web.whatsapp.com](https://web.whatsapp.com), click the extension icon, and head to the **Typography** tab.
+
+Inside, you'll find the **Font Manager**. This is where the magic happens — a dedicated space for adding, organising, and managing your custom font library.
+
+### Step 3: Add a New Font
+
+In the Font Manager:
+
+1. Click **Create new font** (or the equivalent "+ Add" button)
+2. Choose **Upload file**
+3. Select your font file (TTF, OTF, WOFF, or WOFF2)
+4. Give it a name you'll recognise — e.g. "Söhne Buch" or "JetBrains Mono Bold"
+5. Save
+
+Your new font now appears in the font picker alongside the built-in fonts. Select it, and WhatsApp Web restyles instantly.
+
+---
+
+## Method 2: Load Fonts From a URL (Google Fonts and Beyond)
+
+If you don't want to download font files, you can also load fonts directly by URL — which is how Google Fonts and most modern web font services work.
+
+### Step 1: Get a Font URL
+
+The simplest source is **Google Fonts**:
+
+1. Go to [fonts.google.com](https://fonts.google.com)
+2. Pick a font you want — say, **Inter**, **Manrope**, **Public Sans**, or any of the thousand-plus options
+3. Click **Get font**, then **Get embed code**
+4. Copy the \`@import\` URL — it looks something like:
+   \`https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap\`
+
+### Step 2: Add the URL in the Font Manager
+
+Back in WhatsApp Web Customizer's Font Manager:
+
+1. Click **Create new font**
+2. Choose **Load from URL**
+3. Paste the Google Fonts URL
+4. Give it a name
+5. Save
+
+The font is now available in your font picker. No download, no file management — just a URL that gets fetched on demand.
+
+This method also works for fonts hosted on other CDNs — Bunny Fonts (a privacy-friendly Google Fonts mirror), Adobe Fonts CSS URLs (in some configurations), Cloudflare-hosted fonts, your own self-hosted font CSS.
+
+---
+
+## Method 3: Pick From the Built-in Library
+
+If you don't want to upload or fetch your own, the extension's built-in library has **500+ fonts** available immediately. This includes the most-loved free fonts from Google Fonts, Open Source Foundry, and other open type foundries — Inter, JetBrains Mono, Atkinson Hyperlegible, Roboto, Manrope, Source Sans Pro, Fira Code, and hundreds more.
+
+This is the right starting point if you don't have a specific font in mind. Open the **Typography → Font Manager**, browse, and pick.
+
+---
+
+## What This Unlocks (The Fun Part)
+
+Once you can use *any* font on WhatsApp Web, a few directions worth exploring:
+
+### Match Your Design System
+
+If you're a designer or work in a brand-conscious environment, you probably have a primary typeface for your work. Use it here too. WhatsApp Web stops feeling visually disconnected from the rest of your day-to-day tools and starts feeling like part of your considered setup.
+
+### Match Your IDE
+
+For developers: load JetBrains Mono, Fira Code, Berkeley Mono, or Cascadia Code. Code snippets shared in WhatsApp render in the same font as in your editor. Visual consistency across the tools you stare at all day genuinely matters once you have it.
+
+### Build an Accessibility-First Setup
+
+If readability matters to you — eye strain, dyslexia, just preferring high-readability typography — load Atkinson Hyperlegible (designed specifically for legibility), OpenDyslexic, or a similar accessibility-focused face. Pair it with a larger font size and you've meaningfully reduced the effort of reading WhatsApp all day.
+
+### Try Pairings You'd Never Get From a Default Menu
+
+Mix and match. A clean sans-serif for the chat body, paired with the right size, can transform how WhatsApp Web feels for hours-long sessions. Try **Inter at 16px**, **Söhne at 15px**, or **Public Sans at 17px** for a few days and notice the difference.
+
+### Build Multiple Font Profiles
+
+Because the Font Manager lets you store and name your custom fonts, you can build a library: "Work font", "Reading font", "Accessibility font", "Fun font." Swap between them as your context changes.
+
+---
+
+## A Few Practical Tips
+
+A handful of small things worth knowing once you start using custom fonts seriously:
+
+- **Variable fonts work great.** If you're using a modern variable font (Inter, Public Sans, Manrope), you get access to the full weight range. Use the heavier weights for the message area, lighter for less important UI text.
+- **Don't go too small.** Even with a more readable font, smaller-than-default sizes hurt your eyes over a day. Use the font size control to push *up*, not down.
+- **Keep a backup of your font files.** If you upload a font you bought or downloaded from a specific source, keep the file. WhatsApp Web Customizer stores your fonts locally; if you ever clear extension data, you'd need to re-upload.
+- **For team consistency, share the URL or file.** If your team wants to standardise on a single typography setup, share either the Google Fonts URL or a font file plus instructions. Everyone gets the same WhatsApp Web type system.
+
+---
+
+## Why This Matters More Than It Sounds
+
+If WhatsApp Web is your work tool — which it is for a lot of people in 2026 — the time you spend looking at it adds up. Hours per day. Hundreds of hours per year.
+
+The default font is fine. But fine is a low bar for something you spend that much time with. Using a font you've actually chosen, that matches the rest of your considered setup, is the kind of small upgrade that quietly compounds.
+
+It's the same logic that goes into choosing a good monitor, a good chair, a good keyboard. The tools you live in deserve some thought.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web doesn't let you change fonts at all natively — that's the gap. But with a free extension, you don't just get a list of fonts to pick from. You get a font manager: upload your own files, load Google Fonts (or any web-hosted font) by URL, build a personal library, and pick from it any time.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try uploading a font you actually like. The 30-second setup is genuinely worth the daily payoff.
+
+For more on customising WhatsApp Web typography and themes:
+
+- [How to change the font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web) — the simpler "pick a font from the library" version
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [Best WhatsApp Web setup for designers, developers, and visual workers](/blog/best-whatsapp-web-setup-for-designers-developers-visual-workers-2026)`,
+},
+  {
   title: "WhatsApp Native Themes Are Rolling Out: Mobile vs WhatsApp Web vs a Custom Setup (2026)",
   slug: "whatsapp-native-themes-rolling-out-mobile-vs-web-vs-custom-setup-2026",
   seoIndex: true,
