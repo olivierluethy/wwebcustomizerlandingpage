@@ -1,12 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Chrome, Github, Coffee } from "lucide-react";
+import {
+  Chrome,
+  Github,
+  Coffee,
+  Palette,
+  MessageCircle,
+  Type,
+  Image as ImageIcon,
+  ShieldCheck,
+  Laptop,
+  Moon,
+  Brush,
+  Keyboard,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/analytics";
 import { ActivityLayer } from "./activity-layer";
-import { CwsBadge } from "./cws-badge";
-import { PrivacyNote } from "./privacy-note";
+
+/**
+ * Feature benefit row shown above the primary CTA so visitors can answer
+ * "what do I get?" before deciding to install.
+ *
+ * NOTE ON ICONS: the design brief specifies Tabler outline webfont icons
+ * (`<i class="ti ti-…">`), but this codebase is a React/Next.js app that has no
+ * Tabler webfont loaded — it standardises on lucide-react. Each Tabler name has
+ * been mapped 1:1 to its lucide equivalent so the icons actually render and stay
+ * visually consistent with the rest of the hero:
+ *   ti-palette        → Palette          ti-brand-chrome  → Chrome
+ *   ti-message-circle → MessageCircle    ti-shield-check  → ShieldCheck
+ *   ti-typography     → Type             ti-device-laptop → Laptop
+ *   ti-photo          → Image            ti-moon          → Moon
+ *   ti-brush          → Brush            ti-keyboard      → Keyboard
+ */
+const BENEFITS = [
+  { Icon: Palette, label: "Custom themes & dark mode" },
+  { Icon: MessageCircle, label: "Chat bubble styles" },
+  { Icon: Type, label: "Font & size control" },
+  { Icon: ImageIcon, label: "Background images" },
+];
+
+const FEATURE_CARDS = [
+  { Icon: Moon, title: "Dark themes", desc: "OLED-ready, no eye strain" },
+  { Icon: Brush, title: "Bubble styles", desc: "iMessage, Slack, custom" },
+  { Icon: Keyboard, title: "Font control", desc: "Size, family, weight" },
+  { Icon: ImageIcon, title: "Backgrounds", desc: "Upload your own image" },
+];
 
 export function Hero() {
   return (
@@ -67,7 +108,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Featured Badge */}
+          {/* Featured Badge (preserved) */}
           <motion.div
             className="flex flex-col items-center gap-3 mb-6"
             initial={{ opacity: 0, y: 8 }}
@@ -99,34 +140,59 @@ export function Hero() {
             </p>
           </motion.div>
 
-          {/* Heading */}
+          {/* 1. Headline — value-forward, two lines */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 text-balance"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance"
+            style={{ color: "#ffffff" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.8 }}
           >
-            WhatsApp Web feels limited.
+            Make WhatsApp Web
             <br />
-            <span className="text-muted-foreground">
-              {"It doesn't have to be."}
-            </span>
+            actually <span style={{ color: "#4ade80" }}>yours.</span>
           </motion.h1>
 
+          {/* 2. Subtitle */}
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-7 text-pretty"
+            className="mx-auto mb-7 text-pretty"
+            style={{
+              color: "#8b949e",
+              fontSize: "16px",
+              lineHeight: 1.6,
+              maxWidth: "480px",
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Customize your chats, boost your speed, and take full control of
-            your messaging experience.
+            Custom themes, chat bubble styles, font control, and background
+            images — all without sharing your data or needing an account.
           </motion.p>
 
-          {/* Privacy-first statement */}
-          <div className="mb-7 flex justify-center">
-            <PrivacyNote />
-          </div>
+          {/* 3. Feature benefit row */}
+          <motion.div
+            className="flex flex-wrap justify-center mb-7"
+            style={{ gap: "10px" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            {BENEFITS.map(({ Icon, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-1.5"
+                style={{ fontSize: "13px", color: "#c9d1d9" }}
+              >
+                <Icon
+                  className="h-4 w-4 shrink-0"
+                  style={{ color: "#4ade80" }}
+                  aria-hidden="true"
+                />
+                {label}
+              </span>
+            ))}
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
@@ -146,6 +212,7 @@ export function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden="true"
               />
+              {/* 4. Primary CTA copy */}
               <Button
                 size="lg"
                 className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
@@ -158,7 +225,7 @@ export function Hero() {
                 }}
               >
                 <Chrome className="mr-2 h-5 w-5" />
-                Install Extension
+                Add to Chrome — it&apos;s free
               </Button>
             </div>
 
@@ -213,10 +280,118 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Chrome Web Store trust block */}
-          <div className="mt-8 flex justify-center">
-            <CwsBadge />
-          </div>
+          {/* 5. Social proof — directly under the CTA row */}
+          <motion.div
+            className="flex flex-wrap items-center justify-center"
+            style={{
+              marginTop: "12px",
+              gap: "18px",
+              fontSize: "12px",
+              color: "#6e7681",
+            }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.6 }}
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-flex items-center" aria-hidden="true">
+                {[0, 1, 2, 3].map((i) => (
+                  <Star
+                    key={i}
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#f0b429",
+                      fill: "#f0b429",
+                    }}
+                  />
+                ))}
+              </span>
+              4.1 on Chrome Web Store
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck style={{ width: "14px", height: "14px" }} aria-hidden="true" />
+              No data collected
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Laptop style={{ width: "14px", height: "14px" }} aria-hidden="true" />
+              Stays on your device
+            </span>
+          </motion.div>
+
+          {/* 6. Feature card strip at the bottom of the hero */}
+          <motion.div
+            style={{
+              borderTop: "0.5px solid rgba(255,255,255,0.07)",
+              paddingTop: "28px",
+              marginTop: "36px",
+              textAlign: "left",
+            }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+          >
+            <p
+              style={{
+                fontSize: "11px",
+                textTransform: "uppercase",
+                letterSpacing: "1.5px",
+                color: "#6e7681",
+                marginBottom: "14px",
+              }}
+            >
+              What you can do
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+                gap: "10px",
+              }}
+            >
+              {FEATURE_CARDS.map(({ Icon, title, desc }) => (
+                <div
+                  key={title}
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "0.5px solid rgba(255,255,255,0.08)",
+                    borderRadius: "8px",
+                    padding: "12px",
+                  }}
+                >
+                  <Icon
+                    style={{
+                      color: "#4ade80",
+                      width: "20px",
+                      height: "20px",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    style={{
+                      color: "#e6edf3",
+                      fontSize: "13px",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {title}
+                  </div>
+                  <div
+                    style={{
+                      color: "#6e7681",
+                      fontSize: "11px",
+                      marginTop: "2px",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {desc}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 
