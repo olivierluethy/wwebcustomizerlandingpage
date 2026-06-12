@@ -135,9 +135,6 @@ export function Hero() {
                 Fastest growing WhatsApp Web extension
               </span>
             </div>
-            <p className="text-accent text-sm font-medium tracking-wider uppercase">
-              Browser Extension
-            </p>
           </motion.div>
 
           {/* 1. Headline — value-forward, two lines */}

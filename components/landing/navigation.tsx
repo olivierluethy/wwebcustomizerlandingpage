@@ -116,7 +116,7 @@ export function Navigation() {
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <Chrome className="mr-2 h-4 w-4" />
-                Install Extension
+                Add to Chrome
               </a>
             </Button>
           </div>
@@ -177,7 +177,7 @@ export function Navigation() {
                   >
                     <a href="#" target="_blank" rel="noopener noreferrer">
                       <Chrome className="mr-2 h-4 w-4" />
-                      Install Extension
+                      Add to Chrome
                     </a>
                   </Button>
                 </div>
