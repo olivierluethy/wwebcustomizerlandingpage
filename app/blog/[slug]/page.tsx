@@ -139,16 +139,16 @@ function renderMarkdown(content: string) {
     elements.push(
       <div
         key={`table-${elements.length}`}
-        className="my-10 overflow-hidden rounded-2xl border border-border bg-card"
+        className="my-10 overflow-hidden rounded-2xl border border-border bg-card max-md:rounded-lg max-md:border-[0.5px] max-md:border-white/[0.08]"
       >
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+        <div className="overflow-x-auto max-md:[-webkit-overflow-scrolling:touch] max-md:[mask-image:linear-gradient(to_right,black_85%,transparent_100%)]">
+          <table className="w-full border-collapse max-md:min-w-[500px] max-md:text-[13px]">
             <thead className="bg-muted/40">
               <tr>
                 {headers.map((header, idx) => (
                   <th
                     key={idx}
-                    className="border-b border-border px-5 py-4 text-left text-sm font-bold text-foreground"
+                    className={`border-b border-border px-5 py-4 text-left text-sm font-bold text-foreground max-md:px-3 max-md:py-2.5 max-md:text-[12px] max-md:whitespace-nowrap${idx === 0 ? " max-md:min-w-[110px]" : ""}`}
                   >
                     <span
                       dangerouslySetInnerHTML={{
@@ -169,7 +169,7 @@ function renderMarkdown(content: string) {
                   {row.map((cell, cellIdx) => (
                     <td
                       key={cellIdx}
-                      className="px-5 py-4 align-top text-sm leading-7 text-muted-foreground"
+                      className={`px-5 py-4 align-top text-sm leading-7 text-muted-foreground max-md:px-3 max-md:py-2.5 max-md:text-[13px]${cellIdx === 0 ? " max-md:min-w-[110px] max-md:font-medium" : ""}`}
                     >
                       <span
                         dangerouslySetInnerHTML={{
@@ -312,7 +312,7 @@ function renderMarkdown(content: string) {
   const text = headingMatch[2];
 
   const classes = {
-    1: "mt-10 mb-8 text-4xl md:text-5xl font-black tracking-tight leading-tight",
+    1: "mt-10 mb-8 text-4xl md:text-5xl font-black tracking-tight leading-tight max-md:text-[28px] max-md:leading-[1.25] max-md:tracking-[-0.2px] max-[480px]:text-[24px]",
     2: "mt-16 mb-6 text-3xl md:text-4xl font-bold tracking-tight",
     3: "mt-10 mb-4 text-2xl font-bold",
     4: "mt-8 mb-3 text-xl font-semibold",
