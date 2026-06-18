@@ -10,6 +10,182 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Pair Fonts and Themes on WhatsApp Web (2026)",
+  slug: "how-to-pair-fonts-and-themes-on-whatsapp-web-2026",
+  seoIndex: true,
+  description: "How to pair fonts and themes on WhatsApp Web for a cohesive, intentional look. Practical font-and-theme pairings, the principles that make combinations work, and ready-to-use recipes for popular aesthetics.",
+  date: "2026-06-23",
+  readTime: "7 min",
+  content: `# How to Pair Fonts and Themes on WhatsApp Web (2026)
+
+There's a subtle thing that separates a WhatsApp Web setup that *feels right* from one that just *technically works*. It's not the colours alone, and it's not the font alone. It's how the two work together.
+
+A clean modern font with the wrong palette feels mismatched. A beautiful colour scheme with the default WhatsApp font feels half-done. The pairing is what makes the whole thing land.
+
+This guide is about getting that pairing right. Not as a design abstraction — as a practical recipe book for combining specific fonts with specific themes on WhatsApp Web in 2026.
+
+---
+
+## Why Pairing Matters More Than Either Choice Alone
+
+Most "customize your WhatsApp Web" advice focuses on one decision at a time. Pick a font. Pick a theme. Apply both, done.
+
+But fonts and colour palettes interact in ways that change how each one reads:
+
+- A geometric font like **Manrope** feels different against a warm beige background than against a cool slate one
+- A high-contrast palette can make a delicate font look fragile, or it can make a bold font feel powerful
+- A serif-ish or characterful font on a busy background fights for attention — both lose
+- The "right" font for a dark theme is often different from the "right" font for a light theme
+
+This isn't typography theory for designers — it's the practical reason your WhatsApp Web sometimes feels off even when each individual choice seemed fine. The pairing is the actual variable.
+
+---
+
+## Three Principles That Make Pairings Work
+
+A few rules of thumb that apply to almost any combination you might try:
+
+### 1. Match the personality
+
+Fonts and palettes both have personalities. Pair restrained with restrained, friendly with friendly, technical with technical. A neutral utility font (Inter, Public Sans) pairs naturally with a calm palette. A geometric, designed-feeling font (Geist, Manrope) needs a palette with similar deliberateness — clean off-whites, considered accents, no chaos. A warm, approachable font (Open Sans, Lato) wants warmer colours.
+
+Mismatched personalities create visual dissonance. Matched personalities feel cohesive.
+
+### 2. Mind the contrast
+
+If your palette is high-contrast (true black on pure white, strong accent colour), your font can be lighter-weight and more delicate — the contrast does the visual heavy-lifting. If your palette is low-contrast (soft grays, gentle accents), your font should be slightly heavier or have more presence — otherwise the whole thing feels muddy.
+
+A specific rule: **avoid using light-weight font variants on dark backgrounds**. Dark themes need slightly more font weight to maintain readability — even a step or two from Light to Regular makes a real difference.
+
+### 3. Match the era
+
+Some pairings feel anachronistic in ways that are hard to articulate but easy to notice. A 1980s-feeling pixelated monospace (Departure Mono) paired with a modern minimalist palette feels deliberately retro — which can work if intentional. A clean modern UI font (Inter) paired with an early-2000s "Web 2.0" gradient palette feels confused.
+
+Pick a coherent visual era and let both the font and palette live there together.
+
+---
+
+## Ready-to-Use Pairings
+
+The fastest way to get a good pairing is to start from one that already works. Here are eight combinations that consistently land well on WhatsApp Web.
+
+### 1. The Clean Modern Default
+
+**Font:** Inter
+**Palette:** White background (\`#FFFFFF\`), soft gray sidebar (\`#F4F4F5\`), Inter Blue accent (\`#3390EC\`)
+
+The safest, most universally good-looking combination. Inter is the modern UI default for good reason, and a clean light palette with a single blue accent gives WhatsApp Web a Linear/Notion feel. Hard to go wrong, easy to live with daily.
+
+### 2. The OLED-Black Developer Setup
+
+**Font:** JetBrains Mono
+**Palette:** True black background (\`#000000\`), slight gray sidebar (\`#0A0A0A\`), bright accent (\`#7AA2F7\`)
+
+A combination specifically built for OLED displays and long coding sessions. The monospace font signals "this is a developer tool," the true black saves battery on OLED screens, and the brighter blue accent pops against the deep background without straining.
+
+### 3. The iMessage Recreation
+
+**Font:** Inter
+**Palette:** White background, light gray sidebar (\`#F2F2F7\`), iMessage Blue (\`#0B93F6\`) for sent bubbles
+
+The combination we walk through in detail in [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage). Inter is the closest free analogue to San Francisco, and the iMessage palette is well-known. Together, this is the cleanest "Apple aesthetic" pairing.
+
+### 4. The Telegram Recreation
+
+**Font:** Inter or Roboto
+**Palette:** White background, slightly off-white sidebar (\`#F4F4F5\`), Telegram Blue accent (\`#3390EC\`)
+
+See [how to make WhatsApp Web look like Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram) for the full recipe. The pairing works because Telegram's design language is deliberately clean and modern, which both font choices reinforce.
+
+### 5. The Discord Recreation
+
+**Font:** Inter or Nunito
+**Palette:** Dark gray background (\`#36393F\`), darker sidebar (\`#2F3136\`), near-black chat list (\`#202225\`), Blurple accent (\`#5865F2\`)
+
+Detailed in [how to make WhatsApp Web look like Discord](/blog/how-to-make-whatsapp-web-look-like-discord). The dark grays match Discord's signature look, and Inter (or Nunito, slightly softer) feels native to it.
+
+### 6. The Accessibility-First Setup
+
+**Font:** Atkinson Hyperlegible
+**Palette:** Soft off-white background (\`#FAFAFA\`), light gray sidebar (\`#F0F0F0\`), high-contrast accent
+
+The Atkinson Hyperlegible font was designed by the Braille Institute specifically for low-vision readers. Paired with a soft off-white background (not pure white — easier on the eyes) and a clear strong accent for visual hierarchy, it makes WhatsApp Web genuinely easier to read for long sessions. Useful regardless of whether you have a vision concern.
+
+### 7. The Tokyo Night Coder
+
+**Font:** JetBrains Mono
+**Palette:** Tokyo Night background (\`#1A1B26\`), darker sidebar (\`#16161E\`), Tokyo Night Blue (\`#7AA2F7\`)
+
+For developers who use Tokyo Night in their IDE, replicating the same palette on WhatsApp Web creates exceptional visual consistency. The monospace + Tokyo Night combination is one of the most-loved developer aesthetics in 2026, and it works beautifully on WhatsApp Web.
+
+### 8. The Warm Editorial
+
+**Font:** Lato or Open Sans
+**Palette:** Warm off-white background (\`#FAF8F5\`), warm gray sidebar (\`#F0EDE6\`), terracotta or muted-orange accent
+
+A combination for users who find the typical modern UI palette too cold. Warm off-whites and orange-tinted accents paired with humanist sans-serifs (Lato, Open Sans) give WhatsApp Web a more inviting, almost editorial feel. Particularly nice in the evenings or for users who associate "tools" with stress.
+
+---
+
+## Pairings That Tend to Fail
+
+A few combinations worth avoiding, because they reliably feel off:
+
+- **Pixelated/retro fonts with modern minimalist palettes** — feels confused unless deliberately ironic
+- **Ultra-thin font weights with dark backgrounds** — disappears, even at large sizes
+- **Multiple "loud" elements at once** — characterful font + busy background + saturated accent. Pick one to be loud.
+- **Inter on a heavily textured background** — Inter is so neutral that it needs a clean canvas to do its work. On a busy image background it gets visually lost.
+- **Monospace fonts with warm friendly palettes** — the personalities fight each other. If you want monospace, lean into a more technical palette.
+
+The general rule: when in doubt, simplify. A clean font on a clean palette beats a clever font on a clever palette nine times out of ten.
+
+---
+
+## How to Build Your Own Pairing
+
+If none of the ready-made pairings above fit, here's the practical process for building your own:
+
+1. **Start with whichever you care about more.** Some people lead with the font (the typography matters most). Others lead with the palette (the colour scheme drives the feel). Pick the one you have a stronger preference about, and let the other follow.
+
+2. **Decide on light vs. dark.** This sets the rules for everything else. Light palettes can take more delicate fonts; dark palettes need more weight.
+
+3. **Pick a single accent colour.** One. WhatsApp Web doesn't need a multi-colour design language. One accent for active states, mentions, and links is enough — and it's where your palette gets its personality.
+
+4. **Test by using it for a day.** Aesthetic decisions feel different after 30 seconds versus after a workday. Don't commit until you've spent time with it. WhatsApp Web Customizer lets you save multiple themes — build two or three candidates and rotate through them.
+
+5. **Save the winners as JSON.** Once you've found a pairing you like, export the theme as a JSON file. You can version-control it, share it with a team, or come back to it months later.
+
+---
+
+## Setting Up Your Pairing on WhatsApp Web
+
+Quick setup steps:
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) from the Chrome Web Store (free, open source, ~30 seconds)
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. **Set the font** in the Typography tab (pick from 500+ built-in fonts or [upload your own](/blog/how-to-add-custom-fonts-to-whatsapp-web-upload-google-fonts))
+4. **Set the theme** in the Themes tab — apply a built-in theme or build a custom one with the palette you've chosen
+5. **Set the font size** so the font reads comfortably at the palette's contrast level
+6. Save the combination as a custom theme
+
+For a full walkthrough of the theme editor, see [how to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026).
+
+---
+
+## The Bottom Line
+
+A good WhatsApp Web setup isn't just a font choice and a theme choice — it's the pairing. The same font reads differently against different palettes. The same palette feels different with different fonts. Getting the combination right is what turns a customized WhatsApp Web from "tinted" to actually "designed."
+
+Start from one of the ready-made pairings above if you're not sure where to begin. They're all proven to work and take 30 seconds to apply.
+
+For more on customizing WhatsApp Web typography and themes:
+
+- [Best fonts for WhatsApp Web in 2026: 12 picks for readability and style](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style)
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [How to add custom fonts to WhatsApp Web (upload your own or use Google Fonts)](/blog/how-to-add-custom-fonts-to-whatsapp-web-upload-google-fonts)
+- [Best WhatsApp Web setup for designers, developers, and visual workers](/blog/best-whatsapp-web-setup-for-designers-developers-visual-workers-2026)`,
+},
+  {
   title: "Best Monospace Fonts for WhatsApp Web (Developer Setup) 2026",
   slug: "best-monospace-fonts-for-whatsapp-web-developer-setup-2026",
   seoIndex: true,
