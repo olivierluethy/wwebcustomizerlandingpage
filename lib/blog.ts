@@ -10,6 +10,184 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Meta AI on WhatsApp Web: How to Use Writing Help, Imagine, and AI Replies (2026)",
+  slug: "meta-ai-on-whatsapp-web-how-to-use-writing-help-imagine-ai-replies-2026",
+  seoIndex: true,
+  description: "Meta AI is now live on WhatsApp Web. Here's how to actually use Writing Help, /imagine, and AI-generated replies in 2026 — plus the honest privacy picture and how to turn it off if you don't want it.",
+  date: "2026-06-25",
+  readTime: "8 min",
+  content: `# Meta AI on WhatsApp Web: How to Use Writing Help, Imagine, and AI Replies (2026)
+
+If you've opened WhatsApp Web in the last few months and noticed a blue circle in your chat list — or a new pencil icon when you're typing — that's Meta AI. It's now built directly into WhatsApp Web, with three distinct features that Meta has been quietly rolling out throughout 2025 and 2026.
+
+Most coverage of Meta AI focuses on the mobile app. This guide is specifically about how the features actually work on WhatsApp Web, what they do well, where they fall short, and how to turn the whole thing off if you'd rather not have AI involved in your messaging.
+
+---
+
+## What Meta AI on WhatsApp Web Actually Is
+
+Three separate features sit under the "Meta AI" umbrella. Treating them as one thing is a common mistake — they have different access patterns, different use cases, and different privacy implications.
+
+**1. The Meta AI Chat** — the blue-circle icon in your chat list. You can chat with it like any other contact. Ask it questions, request explanations, brainstorm. It's Meta's answer to ChatGPT, embedded in WhatsApp.
+
+**2. /imagine — Image Generation** — start any message with the word "imagine" followed by a description, and Meta AI will generate an image based on your prompt. Works in the Meta AI chat directly, and in some group contexts.
+
+**3. Writing Help** — the most underused feature. Originally launched in August 2025 and significantly expanded on March 26, 2026, Writing Help can rephrase your messages, proofread them, or adjust their tone before you send. The March 2026 update added AI-generated reply *suggestions* based on your conversation context.
+
+Each one accesses Meta AI differently and serves different purposes. Let's go through each.
+
+---
+
+## How to Use the Meta AI Chat
+
+This is the simplest entry point. If Meta AI is rolled out in your region, you'll see a blue circle icon near the top of your WhatsApp Web chat list.
+
+**To use it:**
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com) and look for the blue circle icon
+2. Click it like you would any chat
+3. Type a question or request
+4. Meta AI responds in the chat window, just like a normal conversation
+
+You can ask it for explanations ("explain inflation like I'm 10"), brainstorming ("five ideas for a birthday gift for someone who likes hiking"), quick research ("what's the time difference between London and Sydney"), or general writing assistance.
+
+A few things worth knowing about the Meta AI chat:
+
+- **It doesn't remember past conversations.** Every chat is fresh — it won't recall your previous questions, your name, or context from earlier sessions.
+- **It can browse the web for current information** in some queries — useful for things like recent news or current prices.
+- **It's not a doctor, lawyer, or financial advisor.** For anything genuinely important, treat it as a starting point, not the final word.
+
+---
+
+## How to Use /imagine for Image Generation
+
+This is the most fun feature, and the easiest to demonstrate to someone new.
+
+**To generate an image:**
+
+1. Open the Meta AI chat (the blue circle)
+2. Type a message starting with the word **imagine**, followed by a description
+3. Example: \`imagine a watercolor painting of a Swiss mountain village at sunset\`
+4. Wait a few seconds — Meta AI generates the image and drops it in the chat
+
+You can then download the image directly or share it to another chat.
+
+**Refinement options:**
+
+- Press and hold on the generated image and select **Reimagine** to enter a new prompt and modify the result
+- Some versions support \`animate\` as a follow-up to turn the image into a short animation
+
+**What it's good for:** abstract concepts, illustrations, stylized scenes, mood boards, social content drafts, fun explorations.
+
+**What it's not good for:** photo-realistic human faces (deliberately limited), brand-specific output, anything you need precise control over. For serious image work, you still want a dedicated tool.
+
+---
+
+## How to Use Writing Help (The Underused One)
+
+This is the feature that's most likely to actually save you time, and it's the one fewest users have discovered.
+
+Writing Help lets you take a message you've drafted and have Meta AI rephrase it, fix grammar, adjust the tone, or suggest entirely different versions — *before* you hit send.
+
+**To use it:**
+
+1. Type a draft message in any chat (not in the Meta AI chat — in the actual chat you're sending to)
+2. Look for the **pencil icon with sparkles** near the typing field (the exact icon location varies slightly by WhatsApp Web version)
+3. Click it
+4. Pick a tone option (professional, funny, supportive, etc.) or ask for a rewrite
+5. Choose the suggested version, edit it if needed, send
+
+**The March 2026 expansion** added an additional capability: AI-generated *suggested replies* based on the conversation context. If someone messages you and Writing Help is enabled, you'll sometimes see suggested response drafts you can use as a starting point.
+
+**Genuinely useful use cases:**
+
+- Toning down a message you wrote when frustrated
+- Making a casual draft sound more professional for a client
+- Translating your conversational tone into something more polished for a business contact
+- Rephrasing something that came out clumsier than you intended
+
+**Less useful for:**
+
+- Casual chats with friends and family (the rephrasing makes everything sound a touch sanitized)
+- Messages where your personal voice matters
+- Time-sensitive quick replies (the AI loop adds a few seconds)
+
+---
+
+## The Privacy Question (Worth Reading Carefully)
+
+This is the part most articles skim over. If you're going to use Meta AI on WhatsApp Web, you should understand what's happening with your data.
+
+**What Meta says:** Meta AI uses something called **Private Processing technology**, which Meta claims keeps your messages private even when using Writing Help. According to Meta, neither the company nor WhatsApp can read your messages or the rewrites Meta AI suggests.
+
+**What's actually happening:** for Writing Help and Meta AI features that process your message text, the message *is* being sent to Meta's AI infrastructure for processing — but in an encrypted form that Meta claims even their own staff can't decrypt. The /imagine and Meta AI chat features work similarly.
+
+**The honest take:** Meta has built genuinely impressive privacy architecture for these features, and the Private Processing technology appears legitimate based on the technical descriptions Meta has published. That's better than most AI integrations.
+
+But — and this is the honest part — "Meta can't read it" is a *technical claim* that depends on Meta's infrastructure working as described. For most users, this is fine. For users in genuinely sensitive contexts (journalism, activism, legal work, anything involving real privacy stakes), the conservative choice is to not pipe your messages through any AI system, including this one. End-to-end encryption between you and the recipient is stronger than end-to-end encryption with an AI intermediary, regardless of how good the intermediary's privacy claims are.
+
+---
+
+## How to Turn Off Meta AI on WhatsApp Web
+
+If you'd rather not have Meta AI in your interface at all, you have a few options:
+
+**To stop using it entirely:**
+
+- Simply don't click the blue circle icon and don't use the pencil/sparkles button. Meta AI is opt-in for actual use — it doesn't read your conversations unless you explicitly trigger it.
+
+**To hide the blue circle icon from your chat list:**
+
+- WhatsApp Web → Settings → Privacy → AI controls (or similar — the exact menu name varies by region)
+- Toggle off the Meta AI integration if your version supports it
+- Note: this option isn't available in all regions yet — Meta is rolling it out gradually
+
+**To stop suggested replies from appearing:**
+
+- In Writing Help settings, you can disable AI-generated suggestions specifically while leaving the rest of WhatsApp Web functional
+
+The feature is **optional and off by default for Writing Help** specifically — Meta has been careful about this. You have to opt in.
+
+---
+
+## What's NOT Available on WhatsApp Web (Yet)
+
+A few Meta AI features that exist on mobile but haven't fully landed on WhatsApp Web:
+
+- **AI photo editing inside chats** — the background removal and style transfer features are mobile-first
+- **Voice-based Meta AI interactions** — the AI chat is text-only on WhatsApp Web
+- **Meta AI inside group chats** — partially supported, but the experience is less polished than on mobile
+
+These are likely to arrive on WhatsApp Web over the coming months. We'll update this post when they do.
+
+---
+
+## A Note on Privacy and Customization
+
+If you use WhatsApp Web in shared spaces — cafes, open offices, while screen-sharing — Meta AI adds a small new wrinkle to your screen-visibility privacy. Writing Help suggestions and Meta AI chat content both appear on your screen, just like regular messages. Anyone glancing at your screen can read them.
+
+This is the same problem WhatsApp Web has always had with normal messages, but it's worth flagging because AI-generated content tends to look "important" (it's structured, it's drafted, it's on-screen for longer while you decide whether to send it) and is more likely to be noticed by someone passing by.
+
+A privacy blur extension like **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — hides message content and contact names until you hover over them. Combined with Meta AI's own privacy controls, this gives you control over both who can read what you've drafted *and* who can see your screen. Free, open source, takes about 30 seconds to install.
+
+---
+
+## The Bottom Line
+
+Meta AI on WhatsApp Web is three different features wearing the same name. The chat is a useful general-purpose assistant. /imagine is fun for casual image generation. Writing Help is the genuinely useful one for anyone who drafts professional messages and wants help refining them.
+
+The privacy story is better than typical AI integrations thanks to Private Processing — but if you're in a context where privacy matters at a high level, the conservative choice is to keep AI out of the loop entirely.
+
+Either way, the days of WhatsApp Web being "just a chat window" are over. Meta AI is the most significant addition to WhatsApp Web in years, and it's worth understanding what it does — and what it doesn't.
+
+For more on WhatsApp Web in 2026:
+
+- [WhatsApp Web is getting 49 new chat themes in 2026](/blog/whatsapp-web-49-new-chat-themes-2026-what-you-can-do-today)
+- [Is WhatsApp Web safe? Privacy and security explained](/blog/is-whatsapp-web-safe-privacy-and-security-explained-2026)
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)`,
+},
+  {
   title: "How to Pair Fonts and Themes on WhatsApp Web (2026)",
   slug: "how-to-pair-fonts-and-themes-on-whatsapp-web-2026",
   seoIndex: true,
