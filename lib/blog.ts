@@ -10,6 +10,142 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Font Too Small? How to Increase the Size in 2026",
+  slug: "whatsapp-web-font-too-small-how-to-increase-the-size-2026",
+  seoIndex: true,
+  description: "WhatsApp Web text too small to read comfortably? Here's how to actually increase the font size on WhatsApp Web in 2026 — including the browser zoom limitations, the real fix, and why this is the most-requested missing feature.",
+  date: "2026-06-20",
+  readTime: "5 min",
+  content: `# WhatsApp Web Font Too Small? How to Increase the Size in 2026
+
+If you've sat down at your computer, opened WhatsApp Web, and squinted at the chat list wondering why the text is so small — you're not the only one. The default WhatsApp Web font size is calibrated for a generic mid-2010s laptop. On a 27-inch 4K monitor, a high-DPI ultrawide, or a modern Mac with Retina scaling, the text is genuinely too small for comfortable reading.
+
+The frustrating part: there's no built-in setting in WhatsApp Web to change the font size. None. You can pick light or dark mode, but text size is fixed by default.
+
+Here's the honest 2026 picture of what you can actually do about it.
+
+---
+
+## Why WhatsApp Web's Font Looks Wrong on Modern Screens
+
+A quick explanation of why this happens, because it's not your imagination.
+
+WhatsApp Web's font size was chosen when most users were on 1366×768 laptop displays. On those screens, the default size is fine. But monitors have changed dramatically since then:
+
+- A 27-inch 1440p monitor packs more pixels into the same physical space
+- 4K and 5K displays have even higher pixel density
+- High-DPI laptop screens (MacBooks, Surface Pros, premium Windows ultrabooks) cram pixels denser still
+
+The result: the same number of pixels for each letter now takes up *less physical space* on your screen. WhatsApp Web's text didn't shrink — your screen got sharper, and WhatsApp Web never updated its size to match.
+
+Add normal aging eyes, fatigue at the end of a workday, or any vision concern at all, and the default size becomes a daily friction point.
+
+---
+
+## What WhatsApp Web Lets You Do Natively (Spoiler: Not Much)
+
+The honest answer to "how do I increase the font size on WhatsApp Web?" is that the platform itself doesn't let you. There's no Settings → Display option, no zoom toggle, no accessibility setting. The font size is fixed.
+
+Your only native option is to **zoom the entire browser page** — which has serious limitations we'll cover next.
+
+---
+
+## Option 1: Use Browser Zoom (Quick but Flawed)
+
+The closest native solution is to use your browser's zoom feature to enlarge everything on the WhatsApp Web page.
+
+**On any browser:**
+
+- Press \`Ctrl + +\` (Windows / Linux) or \`Cmd + +\` (Mac) to zoom in
+- Press \`Ctrl + -\` or \`Cmd + -\` to zoom out
+- Press \`Ctrl + 0\` or \`Cmd + 0\` to reset to 100%
+
+Or click the three-dot browser menu and use the zoom controls there.
+
+**This works, but with three real downsides:**
+
+1. **Everything gets bigger, not just the text.** Profile pictures, buttons, chat list items, the input box — the whole interface scales up. Your sidebar gets wider. You see fewer chats at a time. You're trading readable text for a more cramped layout.
+
+2. **The zoom level applies to the entire site permanently** in most modern browsers — so you don't have to set it each visit, but you also can't have WhatsApp Web zoomed while keeping other tabs at 100%.
+
+3. **At high zoom levels, the chat window feels like it's been blown up clumsily.** Lines wrap differently, message bubbles take up most of the screen, and the overall layout starts to feel awkward.
+
+For a quick fix when you just need to read one message clearly, browser zoom is fine. As a daily solution, it's a compromise.
+
+---
+
+## Option 2: Change the Font Size Specifically (The Real Fix)
+
+The proper fix is to change only the font size — not the whole page — without touching everything else.
+
+WhatsApp doesn't offer this. A free browser extension does.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — includes a dedicated font size control in its Typography tab. You drag a slider, and only the message text scales up. Profile pictures stay the same size. The sidebar stays its normal width. Your layout doesn't get cramped or distorted.
+
+**How to use it:**
+
+1. Install the extension from the Chrome Web Store (free, ~30 seconds)
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. Open the **Typography** tab
+4. Adjust the **font size** slider until the text is comfortable
+5. Your setting saves automatically and persists across browser sessions
+
+That's it. Find a size that doesn't make you squint, set it, and forget it.
+
+---
+
+## A Quick Story About Why This Feature Exists
+
+The font size feature wasn't always in WhatsApp Web Customizer. Back when the extension had only 20-30 total users, a user submitted a feature request through the feedback form: "Please add font size control to the Typography tab."
+
+We shipped the feature **the same day** the request came in. The new version was submitted to the Chrome Web Store and accepted by Google shortly after.
+
+We mention this because it explains why this feature exists at all. Most browser extensions wouldn't bother building a "make the text bigger" feature — it sounds too small to matter. But for the people who actually need it, it's not small at all. It's the difference between WhatsApp Web being comfortable to use and being a daily mild headache.
+
+If you have a feature request, [our Discord](https://discord.gg/cppbDz4qhn) and our feedback form are both genuinely read.
+
+---
+
+## Bonus: Pair the Size Change With a Readable Font
+
+Once you've got the size right, the next upgrade is the font itself. WhatsApp Web's default font is functional, but it's not optimized for readability the way some other fonts are. A purpose-built readability font, at the right size, is dramatically more comfortable for long sessions.
+
+A few suggestions if you want to push the upgrade further:
+
+- **Atkinson Hyperlegible** — designed by the Braille Institute for low-vision readers. Genuinely measurable readability gains, even if your vision is fine.
+- **Lexend** — designed for dyslexic readers, proven in studies to improve reading proficiency. The looser spacing reduces eye fatigue for everyone.
+- **Inter** — the standard modern UI font, highly readable at any size.
+
+WhatsApp Web Customizer's Font Manager lets you pick from 500+ built-in fonts, upload your own, or load fonts directly from Google Fonts. We covered the full list of readability and style picks in [our best fonts for WhatsApp Web guide](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style).
+
+---
+
+## A Few Practical Tips
+
+A handful of things to know once you've increased the size:
+
+- **Don't go too far.** Bumping the size up 1-2 steps from default usually does it. Going up 4-5 steps starts to make WhatsApp Web feel cartoonish.
+- **Test in your actual workflow.** Adjust the size, then use WhatsApp Web normally for a few minutes. The right size is the one you stop noticing after 30 seconds.
+- **Bigger isn't always better for sidebar lists.** If you have lots of chats, increasing text size means fewer chats visible at once. Try a moderate bump rather than a dramatic one.
+- **Pair size and font together.** A slightly larger size paired with a more readable font (Atkinson Hyperlegible, Lexend, Inter) often beats either change alone.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web doesn't let you change the font size natively. Browser zoom kind of works but scales everything together and crowds your layout. The cleaner fix is a free Chrome extension that lets you change just the text size, independent of the rest of the interface.
+
+If you're squinting at WhatsApp Web by the end of a workday, this is one of those genuinely small changes that has an outsized daily payoff.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf), adjust the slider, and you're done in under a minute.
+
+For more on WhatsApp Web typography:
+
+- [How to change the font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web)
+- [How to add custom fonts to WhatsApp Web (upload your own or use Google Fonts)](/blog/how-to-add-custom-fonts-to-whatsapp-web-upload-google-fonts)
+- [Best fonts for WhatsApp Web in 2026: 12 picks for readability and style](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style)`,
+},
+  {
   title: "Best Fonts for WhatsApp Web in 2026: 12 Picks for Readability and Style",
   slug: "best-fonts-for-whatsapp-web-2026-12-picks-readability-style",
   seoIndex: true,
