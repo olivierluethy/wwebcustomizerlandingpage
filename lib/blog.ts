@@ -10,6 +10,165 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Use Voice Message Transcripts on WhatsApp Web (2026)",
+  slug: "how-to-use-voice-message-transcripts-on-whatsapp-web-2026",
+  seoIndex: true,
+  description: "How voice message transcripts actually work on WhatsApp Web in 2026 — the mobile setup step most guides miss, supported languages, on-device privacy, and when the feature quietly fails.",
+  date: "2026-06-27",
+  readTime: "6 min",
+  content: `# How to Use Voice Message Transcripts on WhatsApp Web (2026)
+
+Voice messages are the messaging format nobody quite loves. Convenient for the sender, tedious for the recipient. You're in a meeting, on a call, on public transport, or just don't want to hunt for headphones — and there's a two-minute voice message sitting in your chat.
+
+WhatsApp finally solved this in late 2024 with **voice message transcripts**, a feature that turns any incoming voice message into readable text. It works entirely on-device, doesn't send audio to Meta's servers, and — importantly — works on WhatsApp Web too, just with a setup step most guides overlook.
+
+Here's how to actually get it working on WhatsApp Web in 2026.
+
+---
+
+## What Voice Message Transcripts Actually Do
+
+Voice message transcripts convert incoming voice messages you receive into text. Not your outgoing ones — only what people send *to* you.
+
+A few things worth understanding upfront:
+
+- **Only the recipient sees the transcript.** The sender has no idea you transcribed their voice message. There's no notification, no read receipt for transcripts.
+- **Everything is generated on your device.** The audio never uploads anywhere. Meta can't read it, WhatsApp can't read it, no third-party server sees it. This preserves the end-to-end encryption you already have.
+- **It's off by default.** WhatsApp doesn't auto-enable it — you have to turn it on yourself, and you have to pick a language.
+- **It's per-message, not automatic.** You choose which voice messages to transcribe by long-pressing (mobile) or right-clicking (WhatsApp Web) on them.
+
+---
+
+## The Setup Step Most WhatsApp Web Guides Miss
+
+Here's the key thing to know: **you have to enable voice message transcripts on your phone first.** Not on WhatsApp Web itself. The transcript engine runs on your phone, and WhatsApp Web accesses the transcripts through the multi-device sync architecture.
+
+This confuses a lot of people. They open WhatsApp Web, look for a "Voice Message Transcripts" setting, don't find it, and assume the feature isn't available. The setting is there — it's just on your phone.
+
+**To enable it (on your phone):**
+
+**Android or iPhone:**
+
+1. Open **WhatsApp on your phone**
+2. Tap the three-dot menu (Android) or **Settings** (iPhone)
+3. Go to **Settings → Chats**
+4. Find **Voice Message Transcripts**
+5. Toggle it on
+6. Select your preferred language (English, Portuguese, Spanish, Russian, Hindi, plus more added regularly)
+7. Download the language pack (a one-time download of a few hundred MB)
+
+After this one-time setup on your phone, transcripts become available on any of your linked devices — including WhatsApp Web.
+
+---
+
+## How to Use Transcripts on WhatsApp Web
+
+Once you've enabled the feature on your phone, using it on WhatsApp Web is straightforward:
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com) as normal
+2. When you receive a voice message, **right-click** on it (or hover and click the three-dot menu)
+3. Select **Transcribe**
+4. The transcript appears below the voice message within a few seconds
+
+You can also click the small chevron (⌵) icon that appears alongside voice messages to expand and see the transcript once it's generated.
+
+**On slow first-load:** the very first transcript after enabling the feature can take a few seconds longer while your phone's language pack initializes. Subsequent transcripts are near-instant.
+
+---
+
+## Supported Languages (As of 2026)
+
+Transcript support has expanded significantly since the November 2024 launch. Currently supported languages include:
+
+- English (US, UK, and other variants)
+- Spanish
+- Portuguese
+- Russian
+- Hindi
+- French
+- German
+- Italian
+- Arabic
+- Japanese
+
+Meta adds languages periodically. Check your phone's Settings → Chats → Voice Message Transcripts menu for the current list — it's the most up-to-date source.
+
+**Language matters more than you'd expect:** if the voice message is in a language other than the one you've set for transcription, you'll get an error. If someone regularly sends you voice messages in multiple languages, you'll need to change the transcription language depending on who's messaging you.
+
+---
+
+## When Transcripts Fail (And What "Transcript Not Available" Means)
+
+You'll occasionally get a **"Transcript not available"** error. This happens for a few real reasons:
+
+- **Language mismatch.** The voice message is in a language other than your selected transcription language.
+- **Background noise.** Loud environments, wind, poor microphone quality, or multiple simultaneous speakers can defeat the transcription engine.
+- **Very heavy accents or unusual dialects.** The on-device model is good but not perfect — regional variations can throw it off.
+- **The message is too short.** Very brief voice messages (under 1-2 seconds) sometimes fail to transcribe usefully.
+- **The recipient (you) has transcription off.** If you're the one seeing the error, double-check your phone's settings.
+
+For messages that fail to transcribe, your options are: listen to the audio (the traditional approach), ask the sender to type it, or forward the audio to yourself in a "note to self" chat and try transcribing there.
+
+---
+
+## Accuracy: What to Expect
+
+The transcription is genuinely good in clear conditions — perhaps 90%+ accurate for a native speaker in the selected language, speaking clearly, with no background noise.
+
+Where it degrades:
+
+- **Names and specific terms** (unusual business names, technical jargon, place names) — often misheard
+- **Multiple speakers in one message** — transcripts don't distinguish who said what
+- **Code-switching** (switching between languages mid-sentence) — the engine picks one language and misinterprets the other
+- **Voice messages that were recorded near music, TV audio, or in cars**
+
+Rule of thumb: use transcripts as a *fast preview*, not as an authoritative record. For anything that genuinely matters — an address, a phone number, a decision — verify against the original audio.
+
+---
+
+## Why This Is a Bigger Deal Than It Sounds for WhatsApp Web Users
+
+Voice message transcripts are transformative specifically on WhatsApp Web, in a way they aren't on mobile. Here's why:
+
+- **You're at a keyboard, so text is your medium.** Voice messages break your flow more on desktop than on mobile.
+- **You might be in an environment where audio isn't practical.** Open offices, coworking spaces, quiet workspaces. Transcripts remove the "I can't listen right now" problem.
+- **You can copy-paste from the transcript.** Someone sends you their address as a voice message? Transcribe it, copy the text, paste it into Maps. Try doing that from a phone-based voice message.
+- **You can search the transcript later.** Voice messages are search-invisible; transcripts aren't. WhatsApp Web's search will find text from transcribed messages.
+
+For anyone using WhatsApp Web as a work tool, this feature genuinely reduces friction.
+
+---
+
+## A Note on Privacy
+
+One legitimately impressive detail: transcripts are generated **entirely on-device**. Meta has been explicit about this — audio never leaves your phone, the transcription happens locally, and neither Meta nor WhatsApp can access the audio or the resulting text.
+
+This is in contrast to third-party voice transcription extensions and services, which typically upload audio to their own servers. Those tools work, but they break the end-to-end encryption model — your audio is now visible to a third party. Meta's built-in transcripts don't have this tradeoff.
+
+If you care about keeping voice content private, the built-in feature is meaningfully better than third-party alternatives. We covered the broader WhatsApp Web privacy picture in [Is WhatsApp Web Safe? Privacy and Security Explained](/blog/is-whatsapp-web-safe-privacy-and-security-explained-2026).
+
+---
+
+## Beyond Transcripts: Making WhatsApp Web Actually Work for You
+
+Voice message transcripts are one of those small features that quietly change how usable WhatsApp Web feels for daily work. If you're the kind of user who cares about this — likely because you use WhatsApp Web frequently — there are a handful of other under-the-radar improvements worth knowing about.
+
+The default WhatsApp Web interface hasn't meaningfully changed in years. Same default font. Same layout. No privacy blur, no font-size control, no custom themes. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — adds all of that. Free, fully open source, ~30 seconds to install. If voice message transcripts have made WhatsApp Web more useful for you, the visual and privacy upgrades in the extension compound with them.
+
+---
+
+## The Bottom Line
+
+Voice message transcripts on WhatsApp Web require one setup step on your phone that most guides skip. Once enabled, transcripts sync across all your linked devices and work through a simple right-click on any incoming voice message. The transcription is done on-device (so it stays private), it's off by default (so you have to turn it on), and it's genuinely useful — especially for WhatsApp Web users working at a keyboard.
+
+For more on WhatsApp Web in 2026:
+
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [WhatsApp Web keyboard shortcuts: the complete 2026 list](/blog/whatsapp-web-keyboard-shortcuts-the-complete-2026-list)
+- [Meta AI on WhatsApp Web: how to use Writing Help, Imagine, and AI replies](/blog/meta-ai-on-whatsapp-web-how-to-use-writing-help-imagine-ai-replies-2026)
+- [How to use WhatsApp Web on your computer (complete 2026 guide)](/blog/how-to-use-whatsapp-web-on-your-computer-complete-2026-guide)`,
+},
+  {
   title: "How to Turn Off Meta AI on WhatsApp Web (And Why You Might Want To) - 2026",
   slug: "how-to-turn-off-meta-ai-on-whatsapp-web-2026",
   seoIndex: true,
