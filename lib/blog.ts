@@ -10,6 +10,171 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Disappearing Messages on WhatsApp Web: Complete Guide (2026)",
+  slug: "whatsapp-disappearing-messages-on-whatsapp-web-complete-guide-2026",
+  seoIndex: true,
+  description: "The complete 2026 guide to disappearing messages on WhatsApp Web — how to turn them on for individual chats or by default, the Keep feature most guides miss, and the honest limitations of the feature.",
+  date: "2026-06-28",
+  readTime: "6 min",
+  content: `# WhatsApp Disappearing Messages on WhatsApp Web: Complete Guide (2026)
+
+Some conversations don't need to live forever. A phone number you sent to a coworker. A password for a Wi-Fi network. A quick decision that doesn't need to sit in your chat history for years. Or genuinely sensitive information you'd rather not have hanging around.
+
+WhatsApp's disappearing messages feature solves this by automatically deleting messages after a set time — 24 hours, 7 days, or 90 days. It works on WhatsApp Web with full feature parity to mobile, but the settings are tucked in places most people don't think to look.
+
+Here's the honest 2026 guide: how to turn it on, how to use it well, the important "Keep" feature that most guides skip, and the real limitations you should know before assuming a disappearing message is gone forever.
+
+---
+
+## What Disappearing Messages Actually Do
+
+When you turn on disappearing messages for a chat, every message sent from that point forward will automatically vanish from both your device and the recipient's device after your chosen timer runs out. Messages sent *before* you enabled the feature stay put.
+
+A few things worth understanding upfront:
+
+- **It's per-chat, not global.** You have to turn it on individually for each conversation, unless you set a default for all new chats (more on that below).
+- **Both sides see a notification.** When you enable disappearing messages in a chat, WhatsApp displays a small notification telling everyone in that chat that the feature is now on. There's no way to turn it on silently.
+- **The other person can turn it off.** In one-to-one chats, either party can enable or disable disappearing messages. In group chats, this depends on admin settings.
+- **It doesn't erase message history.** Old messages that were sent before you enabled the feature stay in the chat forever. The feature only affects new messages going forward.
+
+---
+
+## The Three Timer Options
+
+WhatsApp gives you three timer durations to choose from. Each has a different use case:
+
+**24 hours** — the shortest option. Best for genuinely sensitive information: Wi-Fi passwords, one-time codes, addresses, personal details you're sharing briefly. Use this when you actively want the message gone quickly.
+
+**7 days** — the middle option, and probably the best default. Long enough to serve as a reference during a normal week, short enough that your chat history stays clean over time. Great for group project chats, event planning, or ongoing but time-limited coordination.
+
+**90 days** — the longest option. Still automatic cleanup, but with enough runway to reference back to earlier conversations if needed. Good if you like the automatic-cleanup idea but hate the anxiety of "wait, when did they say the meeting was?"
+
+The 24 hours and 90 days options were added on top of the original 7-day timer as part of WhatsApp's expansion of the feature. All three are still the standard options in 2026.
+
+---
+
+## How to Enable Disappearing Messages on WhatsApp Web
+
+For a single chat:
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com) and open the chat you want to modify
+2. Click the **contact name** or **group name** at the top of the chat to open chat info
+3. Scroll down and click **Disappearing Messages**
+4. Choose your timer: **24 hours**, **7 days**, or **90 days**
+5. That's it — the change applies immediately, and both sides will see a notification in the chat
+
+To turn it off later, follow the same steps and select **Off**.
+
+---
+
+## Setting a Default Timer for All New Chats
+
+If you want disappearing messages on by default for every new conversation you start, WhatsApp has a global setting.
+
+**On WhatsApp Web:**
+
+1. Click the **three-dot menu** at the top of your chat list
+2. Go to **Settings → Privacy**
+3. Click **Default message timer**
+4. Choose your preferred duration
+
+Note: this only applies to **new chats** you start after enabling the setting. Existing conversations stay as they were, and this doesn't change chats that others start with you.
+
+Setting a default is a nice compromise: your new conversations naturally clean themselves up, but you're not going back to override every existing chat individually.
+
+---
+
+## The "Keep" Feature (Most Guides Miss This)
+
+Here's one detail most disappearing-messages guides skip entirely: even in a chat with disappearing messages on, you can **keep specific messages** so they don't disappear.
+
+This solves a common frustration — you have a chat set to 24 hours, but someone sent you an address you actually want to remember. Instead of turning off disappearing messages for the whole chat, you can just keep that one message.
+
+**How to keep a message on WhatsApp Web:**
+
+1. Right-click the message (or hover and click the small menu icon)
+2. Select **Keep**
+3. That message will stay in the chat even after the timer runs out
+
+**Important nuances:**
+
+- **Everyone in the chat sees when you keep a message.** WhatsApp notifies the other person that you've kept it. This is intentional — it prevents someone from silently saving messages the sender expected would disappear.
+- **The sender can override.** If you keep someone's message and they don't want it kept, they can delete it themselves.
+- **You can un-keep it later.** If you change your mind, you can unmark a kept message, and it goes back to the normal disappearing behavior.
+
+The "Keep" feature makes disappearing messages far more usable in daily life. Without it, you'd have to constantly turn the feature on and off. With it, you can leave 24-hour cleanup on for a chat and selectively save the handful of messages that actually matter.
+
+---
+
+## Group Chats: A Few Extra Rules
+
+Disappearing messages work in group chats too, but with some group-specific behaviors:
+
+- **Admin controls.** Group admins can restrict disappearing message settings so only admins can change them. This prevents random members from turning cleanup off (or on) without permission.
+- **The notification is more visible.** When disappearing messages are enabled in a group, all members see a persistent chat notification, similar to how "You added [member] to the group" appears.
+- **The timer applies to everyone.** You can't have different disappearing message durations for different group members. It's one setting for the whole group.
+
+For group chats you actually want cleaner (project groups, event coordination, temporary logistics), turning on the 7-day timer keeps the chat from becoming an unsearchable wall of old messages over time.
+
+---
+
+## The Honest Limitations (What Disappearing Messages DON'T Do)
+
+This is the section most articles skip, and it's the most important one. Disappearing messages have real limits:
+
+**They can be screenshotted.** WhatsApp doesn't (and can't) prevent someone from taking a screenshot of a disappearing message. If you're sending something you don't want captured, disappearing messages alone aren't enough.
+
+**Messages can be copied and forwarded before they disappear.** During the timer window, the recipient can copy the text, forward it to another chat, or quote it. The disappearance only affects the original message in the original chat.
+
+**Media may be saved to the recipient's device.** If the recipient has media auto-download enabled, photos and videos from disappearing chats are saved to their gallery separately from WhatsApp. Those don't disappear. To reduce this, ask people you send disappearing media to disable auto-download in their WhatsApp Settings → Storage and Data.
+
+**Backups can retain them temporarily.** If either party's phone runs a backup (Google Drive on Android, iCloud on iPhone) while the messages still exist, the backup may include them. When the messages disappear from the live chat, they might still exist in backups for a while.
+
+**View Once is different.** For photos, videos, and voice messages you want someone to see only *once*, use the View Once feature instead — it's more restrictive than disappearing messages and blocks forwarding, saving, and (on most devices) screenshots.
+
+Bottom line: **disappearing messages are a cleanup feature with a privacy benefit, not a security feature.** For actual sensitive information — passwords, personal identifiers, anything with real stakes — treat it as if the message could be captured. For the far more common case of just wanting your chats to clean themselves up, it's excellent.
+
+---
+
+## When to Use Which Feature
+
+A quick decision guide:
+
+- **You want the chat to auto-tidy over time:** disappearing messages, 7 or 90 days
+- **You want a specific message gone quickly:** disappearing messages, 24 hours
+- **You want a specific message viewable only once (photo/video/voice):** View Once
+- **You want a message truly protected from screenshots and forwarding:** WhatsApp doesn't offer this — consider whether the message should be sent at all
+
+Combining features works well: enable disappearing messages by default for privacy hygiene, and use "Keep" on the few messages that actually need to stick around.
+
+---
+
+## Beyond Disappearing Messages: Broader WhatsApp Web Privacy
+
+If disappearing messages appeal to you specifically for privacy reasons, there are two other WhatsApp Web privacy considerations worth thinking about.
+
+**Screen visibility.** WhatsApp Web displays messages and contact names in plain view. Even messages set to disappear in 24 hours are visible to anyone glancing at your screen during those 24 hours. **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — featured by MakeUseOf, TechPP, and other tech publications in 2025–2026 — includes a privacy blur that hides message content and contact names until you hover. Free, fully open source (code auditable on GitHub), 30 seconds to install. If you use disappearing messages because privacy matters to you, the on-screen exposure problem is worth addressing too.
+
+**Multi-device sync.** Disappearing messages apply across all your linked devices — WhatsApp Web, mobile, WhatsApp Desktop. So a message that disappears will disappear everywhere. This is what you'd want, but worth knowing.
+
+For the fuller privacy picture, see [Is WhatsApp Web Safe? Privacy and Security Explained](/blog/is-whatsapp-web-safe-privacy-and-security-explained-2026).
+
+---
+
+## The Bottom Line
+
+Disappearing messages on WhatsApp Web work with full feature parity to mobile: three timer options (24 hours, 7 days, 90 days), a per-chat toggle, an optional default-for-all-new-chats setting, and the surprisingly useful "Keep" feature for saving specific messages you don't want to lose. The feature is genuinely useful for keeping chats clean and adding a light privacy layer, but it isn't a security feature — screenshots, forwarding, and media auto-download all bypass it.
+
+For privacy-hygiene purposes: turn on the 7-day default for all new chats, use "Keep" on messages that matter, and you'll have a much cleaner WhatsApp Web experience with minimal thought required.
+
+For more on WhatsApp Web features and privacy:
+
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [Is WhatsApp Web safe? Privacy and security explained](/blog/is-whatsapp-web-safe-privacy-and-security-explained-2026)
+- [How to read WhatsApp messages without showing online or blue ticks](/blog/how-to-read-whatsapp-messages-without-showing-online-blue-ticks-2026)
+- [How to use WhatsApp Web without your phone (2026)](/blog/how-to-use-whatsapp-web-without-your-phone-2026)`,
+},
+  {
   title: "How to Use Voice Message Transcripts on WhatsApp Web (2026)",
   slug: "how-to-use-voice-message-transcripts-on-whatsapp-web-2026",
   seoIndex: true,
