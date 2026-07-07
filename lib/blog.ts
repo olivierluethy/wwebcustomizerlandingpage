@@ -10,6 +10,191 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Aesthetic WhatsApp Web Setups: 7 Complete Looks (Theme + Font + Background)",
+  slug: "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+  seoIndex: true,
+  description: "7 complete aesthetic WhatsApp Web setups for 2026 — each a full look combining a downloadable theme, a matching font, and the right background. Copy any setup in under two minutes.",
+  date: "2026-07-05",
+  readTime: "9 min",
+  content: `# Aesthetic WhatsApp Web Setups: 7 Complete Looks (Theme + Font + Background)
+
+Changing one thing about WhatsApp Web — just the color, or just the font — makes it look *different*. Changing all three together, in a coordinated way, makes it look *designed*.
+
+This post gives you seven complete aesthetic setups. Each one is a full recipe: a downloadable theme (colors), a matching font, and the right background setting. Follow all three parts and WhatsApp Web transforms from the same green box everyone has into something that looks genuinely, intentionally styled.
+
+Each setup takes about two minutes to apply. Pick the vibe you want and follow its three steps.
+
+---
+
+## What You'll Need
+
+All seven setups use [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, ~30 seconds to install. Once it's installed, each setup below has three parts:
+
+1. **Theme** — download the JSON file and import it (Themes tab → Import)
+2. **Font** — set it in the Typography tab
+3. **Background** — set it in the Backgrounds tab
+
+That's the whole workflow, repeated for whichever look you choose. Let's go.
+
+---
+
+## 1. Minimalist Mono — Clean, Quiet, Considered
+
+The setup for people who like Linear, Things, and Notion. Restrained grayscale, one subtle accent, a clean geometric font, and a plain background that gets out of the way. Nothing shouts. Everything is deliberate.
+
+**Theme:** soft off-white background (\`#FAFAFA\`), light gray sidebar (\`#F0F0F1\`), barely-there bubble contrast, a single slate accent (\`#4A5568\`).
+**[⬇ Download Minimalist-Mono.json]** *(download slot)*
+
+**Font:** Inter, one size up from default. Clean, neutral, modern.
+
+**Background:** solid soft gray (\`#F5F5F6\`) — no image, no pattern. Let the whitespace breathe.
+
+*The overall effect: WhatsApp Web that looks like a well-designed productivity app instead of a chat client.*
+
+---
+
+## 2. Deep Focus — Dark, Warm, Low-Strain
+
+Built for long evening sessions. A warm-tinted dark theme (not cold blue-gray), a highly readable font, and a deep solid background that's restful rather than stark. Easy on the eyes past sunset.
+
+**Theme:** warm charcoal background (\`#1C1B1A\`), slightly lighter sidebar (\`#26241F\`), muted amber accent (\`#D4A574\`), soft cream text (\`#E8E4DD\`).
+**[⬇ Download Deep-Focus.json]** *(download slot)*
+
+**Font:** Atkinson Hyperlegible — designed for maximum readability, which matters most when you're tired.
+
+**Background:** solid warm dark (\`#191817\`). No pattern — reduce visual noise for focus.
+
+*The overall effect: a calm, warm workspace that doesn't fatigue your eyes at night.*
+
+---
+
+## 3. Cyberpunk — Neon on Black
+
+The bold one. Pure black background, electric magenta and cyan accents, a monospace font, and a subtly glowing feel. For people who want their screen to look like a sci-fi terminal.
+
+**Theme:** near-black background (\`#0A0A0F\`), dark violet sidebar (\`#15111F\`), electric magenta accent (\`#FF2E97\`), cyan-white text (\`#E0F7FF\`).
+**[⬇ Download Cyberpunk.json]** *(download slot)*
+
+**Font:** JetBrains Mono or Fira Code — the monospace reinforces the terminal aesthetic.
+
+**Background:** solid deep black-violet (\`#0A0A0F\`), or a subtle dark abstract image if you want more atmosphere.
+
+*The overall effect: WhatsApp Web that looks like it belongs in a hacker movie. Guaranteed screen envy.*
+
+---
+
+## 4. Soft Pastel — Gentle and Friendly
+
+For people who find most interfaces too harsh. Muted pastel tones, rounded-feeling typography, and a soft background. Calm, approachable, a little bit cozy.
+
+**Theme:** soft lavender-white background (\`#F7F5FB\`), pale lilac sidebar (\`#EFEAF6\`), dusty rose accent (\`#D48FB0\`), gentle dark text (\`#4A4458\`).
+**[⬇ Download Soft-Pastel.json]** *(download slot)*
+
+**Font:** Nunito or DM Sans — softer, rounder letterforms that match the gentle palette.
+
+**Background:** solid pale lavender (\`#F5F2FA\`), or a very soft light gradient if you want subtle depth.
+
+*The overall effect: a WhatsApp Web that feels warm and calm rather than corporate.*
+
+---
+
+## 5. Developer Dark — IDE-Matched
+
+For developers who want their chat app to match their editor. Based on a popular dark IDE palette, paired with a coding font. Everything feels consistent with the rest of your setup.
+
+**Theme:** One Dark background (\`#282C34\`), darker sidebar (\`#21252B\`), signature blue accent (\`#61AFEF\`), off-white text (\`#ABB2BF\`).
+**[⬇ Download Developer-Dark.json]** *(download slot)*
+
+**Font:** JetBrains Mono — matches your editor, renders shared code snippets cleanly.
+
+**Background:** solid \`#282C34\` to match the theme background exactly. Clean, no distraction.
+
+*The overall effect: WhatsApp Web that feels like another panel in your IDE. See our [full developer setup guide](/blog/best-whatsapp-web-setup-for-designers-developers-visual-workers-2026) for more.*
+
+---
+
+## 6. Editorial Light — Magazine-Clean
+
+Inspired by modern editorial and publishing design. Warm off-white, generous feel, a refined font, and a clean background. Looks like a beautifully-typeset reading experience.
+
+**Theme:** warm paper-white background (\`#FBF9F5\`), soft sidebar (\`#F2EEE7\`), deep ink accent (\`#2C4A52\`), rich dark text (\`#2A2620\`).
+**[⬇ Download Editorial-Light.json]** *(download slot)*
+
+**Font:** IBM Plex Sans or Lato — refined, readable, with a considered editorial quality.
+
+**Background:** solid warm off-white (\`#FBF9F5\`). Clean like a page.
+
+*The overall effect: WhatsApp Web that feels like reading a well-designed magazine.*
+
+---
+
+## 7. Retro Terminal — Green Phosphor CRT
+
+The pure fun one. Black screen, phosphor-green text, monospace font — the look of a 1980s computer terminal. Completely impractical, completely delightful, guaranteed to make people ask what you're using.
+
+**Theme:** CRT black background (\`#0C0C0C\`), dark green sidebar (\`#0F1A0F\`), phosphor green accent and text (\`#33FF33\`).
+**[⬇ Download Retro-Terminal.json]** *(download slot)*
+
+**Font:** any monospace — JetBrains Mono, Fira Code, or a pixel font if you have one, for maximum retro effect.
+
+**Background:** solid CRT black (\`#0C0C0C\`), or a subtle scanline image if you want to commit fully to the bit.
+
+*The overall effect: WhatsApp Web as an old-school green-screen terminal. See [best monospace fonts](/blog/best-monospace-fonts-for-whatsapp-web-developer-setup-2026) to complete it.*
+
+---
+
+## How to Apply Any Setup (Full Steps)
+
+For each of the three parts of a setup:
+
+**Theme:**
+1. Download the setup's JSON file
+2. Extension icon → **Themes** tab → **Import**
+3. Select the file — applies instantly
+
+**Font:**
+1. Extension icon → **Typography** tab
+2. Pick the specified font (or load it from Google Fonts by URL if it's not built in)
+3. Nudge the size up 1-2 steps if the setup suggests it
+
+**Background:**
+1. Extension icon → **Backgrounds** tab
+2. Set the specified solid color or image
+3. Apply to the chat window (and sidebar separately if you want the full effect)
+
+Full walkthroughs if you need them: [installing themes](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026), [changing fonts](/blog/how-to-change-the-font-on-whatsapp-web), and [changing backgrounds](/blog/how-to-change-whatsapp-web-background-wallpaper-2026).
+
+---
+
+## Mixing and Matching
+
+These seven are complete looks, but nothing stops you from mixing parts. Like the Deep Focus theme but want the Cyberpunk font? Go for it. The whole point of building your setup from independent pieces — theme, font, background — is that you're not locked into anyone's exact combination, including ours.
+
+A few pairing principles if you go custom:
+
+- **Match personality:** clean font with clean theme, bold font with bold theme
+- **Watch contrast on dark themes:** avoid ultra-thin fonts on black backgrounds
+- **Keep backgrounds calm:** busy backgrounds fight with everything else — when in doubt, solid color
+
+More on this in [how to pair fonts and themes on WhatsApp Web](/blog/how-to-pair-fonts-and-themes-on-whatsapp-web-2026).
+
+---
+
+## The Bottom Line
+
+A great-looking WhatsApp Web isn't about any single setting — it's about the theme, font, and background working together. These seven setups are each a coordinated look you can apply in about two minutes, then adjust to taste.
+
+All free. All built from a free, open-source extension. All yours to modify.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build your look. Made something great? [Share it in our Discord](https://discord.gg/cppbDz4qhn) — we feature the best community setups.
+
+For more:
+
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [Best fonts for WhatsApp Web in 2026](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style)
+- [How to pair fonts and themes on WhatsApp Web](/blog/how-to-pair-fonts-and-themes-on-whatsapp-web-2026)`,
+},
+  {
   title: "10 Best WhatsApp Web Themes in 2026 (Free JSON Downloads)",
   slug: "best-whatsapp-web-themes-2026-free-json-downloads",
   seoIndex: true,
