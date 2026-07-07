@@ -10,6 +10,152 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Share WhatsApp Web Themes With Friends (JSON Import/Export)",
+  slug: "how-to-share-whatsapp-web-themes-json-import-export-2026",
+  seoIndex: true,
+  description: "How to share your custom WhatsApp Web theme with friends using JSON export and import. Build a look, save it as a file, send it, and have anyone apply it in seconds — the complete 2026 guide.",
+  date: "2026-07-07",
+  readTime: "6 min",
+  content: `# How to Share WhatsApp Web Themes With Friends (JSON Import/Export)
+
+You spent time getting your WhatsApp Web looking exactly right — the perfect dark theme, the accent color that's just so, the whole vibe dialed in. Then a friend sees your screen and asks: "wait, how did you do that? Can I have it?"
+
+Good news: you can send them your exact theme as a file. They import it, and in ten seconds their WhatsApp Web looks identical to yours. No screenshots of your settings, no walking them through color codes over a call. Just a file.
+
+Here's how theme sharing works on WhatsApp Web in 2026.
+
+---
+
+## The Short Version
+
+WhatsApp Web Customizer themes are **JSON files**. That means a theme is just a small text file you can:
+
+- **Export** — save your current theme as a file
+- **Send** — share that file however you like (WhatsApp, email, Discord, a shared drive)
+- **Import** — anyone with the extension loads the file and gets your exact look
+
+The whole thing works because a theme is data, not a screenshot. Every color, every setting, saved in one portable file. Let's walk through each step.
+
+---
+
+## Step 1: Build (or Pick) a Theme to Share
+
+You can share any theme you have applied — one you built from scratch in the theme editor, one you customized from a preset, or one you downloaded from somewhere and tweaked.
+
+If you want to build one first:
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+2. Go to the **Themes** tab → **Create** (or **Custom** → **New Theme**)
+3. Set your colors — background, sidebar, chat bubbles, accent, text
+4. Save it
+
+Now you've got a theme worth sharing. (If you just want ready-made ones to start from, our [10 best WhatsApp Web themes](/blog/best-whatsapp-web-themes-2026-free-json-downloads) post has downloadable files you can grab and modify.)
+
+---
+
+## Step 2: Export Your Theme as a File
+
+To turn your theme into a shareable file:
+
+1. Open the extension → **Themes** tab
+2. Find the theme you want to share in your Custom themes (or presets)
+3. Click the **Export** / **Download** action on that theme
+4. A \`.json\` file downloads to your computer (named after the theme, e.g. \`my-dark-theme.json\`)
+
+That file *is* your theme. Everything about the look is inside it. It's tiny — usually just a few kilobytes — so it's easy to send anywhere.
+
+**Tip:** if you want to see what's inside, open the file in any text editor. You'll see the theme name and a list of \`--\` values, each controlling one part of the WhatsApp Web interface. You can even edit it directly here if you're comfortable with that — though the visual editor is easier for most people.
+
+---
+
+## Step 3: Send the File to Your Friend
+
+The theme file is just a normal file, so send it however's convenient:
+
+- **Over WhatsApp itself** — attach the \`.json\` file to a chat (send it as a document)
+- **Email** — attach it
+- **Discord** — drop it in a DM or server
+- **Cloud drive** — Google Drive, Dropbox, whatever you both use
+- **Messaging apps** — anywhere that lets you send a file
+
+One small note: some platforms are cautious about \`.json\` files. If a platform won't let you send it directly, zip it first, or rename the extension to \`.txt\` and tell your friend to rename it back to \`.json\` before importing. In practice, sending it as a WhatsApp document or email attachment usually just works.
+
+---
+
+## Step 4: Your Friend Imports It
+
+For your friend to use the theme, they'll need the extension (it's free), then importing takes seconds:
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) if they don't have it (~30 seconds)
+2. Save the file you sent them to their computer
+3. Open [web.whatsapp.com](https://web.whatsapp.com) → extension icon → **Themes** tab → **Import**
+4. Select the file
+5. Your exact theme applies to their WhatsApp Web instantly
+
+That's it. Their WhatsApp Web now looks exactly like yours. They can use it as-is, or open it in the editor and tweak it to make it their own.
+
+---
+
+## Sharing Themes With a Group or Team
+
+The same mechanism works beautifully for teams, studios, or friend groups who want a shared look:
+
+**For a work team:** build one theme with your brand colors, export it, and drop it in your team's shared drive or onboarding doc. Everyone imports the same file, and your whole team has a consistent WhatsApp Web setup. Nice for small businesses that use WhatsApp Web for customer communication and want a professional, uniform look.
+
+**For a friend group or community:** if you're in a Discord or group chat where people share aesthetic setups, theme files are perfect. Post the file, everyone grabs it. We've seen communities build little collections of shared themes this way.
+
+**For content creators:** if you make videos or posts showing your setup, offering the theme file as a download gives your audience the exact look instead of just admiring it.
+
+---
+
+## Building a Theme Collection
+
+Because themes are just files, you can build a personal library:
+
+- Keep a folder of theme files — "work theme," "night theme," "fun theme," "seasonal theme"
+- Swap between them by importing whichever you want
+- Back them up so you never lose a look you spent time perfecting
+- Version them if you like — save "my-theme-v1.json," "my-theme-v2.json" as you refine
+
+Since the files are tiny and portable, your entire theme collection can live in a single folder, a note, or a cloud drive — and move with you between computers.
+
+---
+
+## Troubleshooting Theme Sharing
+
+A few things that occasionally trip people up:
+
+**"The import was rejected."** The file might be corrupted (some platforms alter files in transit) or not actually a theme file. Ask the sender to re-export and re-send. The import dialog will tell you specifically what's wrong — it names the exact problem so you can fix it.
+
+**"The file won't send."** See the note in Step 3 — zip it or rename to \`.txt\` if a platform blocks \`.json\` attachments.
+
+**"It imported but looks slightly different."** If the sender and receiver are on different versions of the extension, a newer theme might reference something an older version doesn't have. Both updating to the latest version fixes this. Themes are forward-compatible — unknown settings are ignored rather than rejected — so this is rare.
+
+**"I want to undo it."** Importing a theme doesn't delete your old ones. Just re-apply your previous theme from your Custom themes, or reset to default.
+
+---
+
+## Why This Matters
+
+Most customization tools lock your settings inside the app. If you like someone's setup, you're stuck recreating it manually. WhatsApp Web Customizer themes being portable files means customization is *social* — a good look can spread. You build something great, share the file, and now other people have it too. No friction, no recreation, no walking someone through settings.
+
+It's a small design decision with a nice consequence: the best community themes travel.
+
+---
+
+## The Bottom Line
+
+Sharing a WhatsApp Web theme is just: export it as a file, send the file, have your friend import it. The whole thing takes under a minute, and because themes are portable JSON files, your exact look transfers perfectly — every color, every setting.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf), build a look you love, and send it to someone. Got a theme worth sharing with everyone? [Drop it in our Discord](https://discord.gg/cppbDz4qhn) — we feature the best community themes.
+
+For more on WhatsApp Web themes:
+
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [Aesthetic WhatsApp Web setups: 7 complete looks](/blog/aesthetic-whatsapp-web-setups-7-complete-looks-2026)`,
+},
+  {
   title: "Dark WhatsApp Web Themes: 5 OLED-Ready Presets to Download (2026)",
   slug: "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
   seoIndex: true,
