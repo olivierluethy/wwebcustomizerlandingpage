@@ -10,6 +10,178 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Dark WhatsApp Web Themes: 5 OLED-Ready Presets to Download (2026)",
+  slug: "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+  seoIndex: true,
+  description: "5 true-black OLED WhatsApp Web themes to download in 2026 — real battery savings, maximum contrast, and the honest difference between OLED black and regular dark mode. Free JSON downloads.",
+  date: "2026-07-06",
+  readTime: "7 min",
+  content: `# Dark WhatsApp Web Themes: 5 OLED-Ready Presets to Download (2026)
+
+Not all dark modes are equal. WhatsApp Web's built-in dark mode is a soft dark gray — fine, but on an OLED screen it's leaving real benefits on the table. True OLED black (\`#000000\`) does something a gray dark mode can't: it turns the pixels *off*.
+
+This post is specifically about that: five true-black, OLED-optimized WhatsApp Web themes you can download and import in seconds. If you have an OLED laptop, an OLED monitor, or an AMOLED display, these give you deeper blacks, better contrast, and genuine battery savings that a gray dark mode doesn't.
+
+---
+
+## Why OLED Black Is Different (And Worth It)
+
+Quick explanation, because it changes which theme you should pick.
+
+**On LCD screens** (most older and budget displays), the backlight is always on. Black pixels are created by blocking light, not turning it off. So "true black" and "dark gray" use roughly the same power — there's no battery benefit to pure black, and some people find gray easier on the eyes.
+
+**On OLED and AMOLED screens** (most premium laptops since ~2021, many recent monitors, high-end tablets), each pixel produces its own light. A black pixel is a pixel that's *switched off*. This means:
+
+- **Real battery savings.** Large black areas literally use less power. On a laptop, a true-black interface can meaningfully extend battery during a long WhatsApp Web session.
+- **Perfect contrast.** True black next to bright text creates contrast that gray can't match — text appears to float.
+- **No backlight bleed.** Black areas are genuinely black, not dark gray with faint glow.
+
+**How to know if you have OLED:** check your laptop or monitor's specs for "OLED" or "AMOLED." Recent premium laptops (many ThinkPads, XPS models, MacBook Pro from 2021+, Galaxy Books) and an increasing number of monitors have it. If you're not sure, a quick web search of your device model plus "OLED" will tell you.
+
+If you have OLED, these themes are for you. If you don't, they still look great — you just won't get the battery benefit, and you might prefer a softer gray (see [our general dark mode guide](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default)).
+
+---
+
+## How to Use These Themes (10 Seconds)
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) (free, open source, ~30 seconds)
+2. Download the theme JSON below
+3. Open [web.whatsapp.com](https://web.whatsapp.com) → extension icon → **Themes** tab → **Import**
+4. Select the file — applies instantly
+
+Each theme uses a true \`#000000\` base, so every one of them delivers the OLED benefit. The difference between them is the accent color and character.
+
+---
+
+## 1. Pure OLED — Maximum Black, Minimal Everything
+
+The essential one. True black everywhere, one restrained green accent, off-white text. No compromise on the black, no visual noise. This is the battery-saving baseline.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#050505\`
+- **Sent bubbles:** \`#0D3B2E\`
+- **Received bubbles:** \`#0A0A0A\`
+- **Accent:** \`#25D366\`
+- **Text:** \`#E6E6E6\`
+
+*The purest OLED experience. If you just want maximum black and battery savings, start here.*
+
+**[⬇ Download Pure-OLED.json]** *(download slot)*
+
+---
+
+## 2. Midnight Blue OLED — Black With a Cool Accent
+
+True black base, but with a cool blue accent instead of green. For people who want the OLED benefit with a calmer, less WhatsApp-branded feel.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#060810\`
+- **Sent bubbles:** \`#0F2340\`
+- **Received bubbles:** \`#0A0A0C\`
+- **Accent:** \`#4A9EFF\`
+- **Text:** \`#E4E8EE\`
+
+*OLED black with a cool, modern blue personality.*
+
+**[⬇ Download Midnight-Blue-OLED.json]** *(download slot)*
+
+---
+
+## 3. Amber OLED — Warm Accent, Night-Friendly
+
+True black with a warm amber accent. Warmer tones are easier on the eyes at night (the same principle behind blue-light filters), so this is the OLED theme for late-night use.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#0A0705\`
+- **Sent bubbles:** \`#3D2A12\`
+- **Received bubbles:** \`#0A0A0A\`
+- **Accent:** \`#E0A458\`
+- **Text:** \`#EDE6DC\`
+
+*Battery-saving black with a warm glow for evening sessions.*
+
+**[⬇ Download Amber-OLED.json]** *(download slot)*
+
+---
+
+## 4. Purple Haze OLED — Black With a Vivid Accent
+
+True black base with a rich purple accent, for people who want the OLED benefit plus a bit of personality and pop. The purple against pure black has a genuinely striking look.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#080610\`
+- **Sent bubbles:** \`#2A1B42\`
+- **Received bubbles:** \`#0A0A0C\`
+- **Accent:** \`#B57EDC\`
+- **Text:** \`#EAE4F0\`
+
+*OLED black with a vivid purple character that pops against the darkness.*
+
+**[⬇ Download Purple-Haze-OLED.json]** *(download slot)*
+
+---
+
+## 5. Monochrome OLED — Pure Grayscale, No Color
+
+The minimalist's OLED theme. True black, white text, gray accents — zero color anywhere. For people who find colored accents distracting and want the calmest possible interface. Also genuinely striking in its restraint.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#080808\`
+- **Sent bubbles:** \`#1C1C1C\`
+- **Received bubbles:** \`#0C0C0C\`
+- **Accent:** \`#B0B0B0\`
+- **Text:** \`#F0F0F0\`
+
+*Pure grayscale OLED — no color, maximum calm, maximum battery savings.*
+
+**[⬇ Download Monochrome-OLED.json]** *(download slot)*
+
+---
+
+## Getting the Most OLED Benefit
+
+A few tips to maximize the battery and contrast benefit once you've applied one of these:
+
+- **Set the background to solid black too.** In the Backgrounds tab, use a solid \`#000000\` for the chat window and sidebar. An image background lights up pixels and cancels the OLED benefit.
+- **Skip animated backgrounds on OLED if battery is the goal.** Animations keep pixels lit and moving, which uses more power. Beautiful, but not battery-friendly.
+- **Pair with a slightly heavier font weight.** On pure black, ultra-thin fonts can lose contrast. A regular or medium weight reads better than a light weight. Good pairings: Inter, JetBrains Mono, IBM Plex Sans. See [best fonts for WhatsApp Web](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style).
+- **Increase font size slightly if needed.** High contrast on pure black can make small text feel sharper but harder to read for long periods. Nudge the size up a step if your eyes prefer it.
+
+---
+
+## OLED Black vs. Regular Dark Mode: Which Should You Use?
+
+An honest summary to help you decide:
+
+**Use true OLED black (these themes) if:**
+- You have an OLED / AMOLED display
+- You want to save battery during long sessions
+- You like maximum contrast
+
+**Use a softer gray dark mode if:**
+- You have an LCD screen (no battery benefit from pure black anyway)
+- You find pure-black-with-bright-text too high-contrast for long reading
+- You prefer a gentler, less stark look
+
+For softer dark themes, the Midnight and Solarized Dark options in our [10 best WhatsApp Web themes](/blog/best-whatsapp-web-themes-2026-free-json-downloads) post are gentler alternatives, and our [dark mode guide](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default) covers the topic in full.
+
+---
+
+## The Bottom Line
+
+If you have an OLED screen, true-black themes aren't just an aesthetic choice — they save real battery and deliver contrast that gray dark modes can't. All five above use a pure \`#000000\` base, so each one gives you that benefit; pick the accent color that suits you.
+
+All free, all import in seconds, all fully editable once applied.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try one. Built your own OLED theme? [Share it in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more on WhatsApp Web themes and dark mode:
+
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [How to get true dark mode on WhatsApp Web](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default)
+- [Aesthetic WhatsApp Web setups: 7 complete looks](/blog/aesthetic-whatsapp-web-setups-7-complete-looks-2026)`,
+},
+  {
   title: "Aesthetic WhatsApp Web Setups: 7 Complete Looks (Theme + Font + Background)",
   slug: "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
   seoIndex: true,
