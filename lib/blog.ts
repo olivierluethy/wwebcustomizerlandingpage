@@ -10,6 +10,255 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "10 Best WhatsApp Web Themes in 2026 (Free JSON Downloads)",
+  slug: "best-whatsapp-web-themes-2026-free-json-downloads",
+  seoIndex: true,
+  description: "10 free WhatsApp Web themes for 2026, each with a downloadable JSON file you can import in 10 seconds. Dark, light, OLED, retro, and aesthetic presets — copy any look instantly.",
+  date: "2026-07-04",
+  readTime: "8 min",
+  content: `# 10 Best WhatsApp Web Themes in 2026 (Free JSON Downloads)
+
+WhatsApp Web looks the same for everyone — the same green, the same layout, the same default everything. It doesn't have to. With a free extension and a JSON file, you can change the entire look of WhatsApp Web in about ten seconds.
+
+This post is a bit different from most "best themes" lists. Every theme below comes with a **downloadable JSON file** you can import directly into WhatsApp Web Customizer. No manual color-picking, no building anything from scratch. Download, import, done. Pick the look you like, grab the file, and your WhatsApp Web is transformed.
+
+Here are ten of the best, across every style — dark, light, OLED, retro, and full aesthetic recreations.
+
+---
+
+## First: How to Use These Theme Files (10 Seconds)
+
+Every theme below has a **Download JSON** button. Here's how to use it:
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) if you haven't (free, open source, ~30 seconds)
+2. Download the theme JSON file you want from below
+3. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+4. Go to the **Themes** tab → **Import**
+5. Select the downloaded JSON file
+6. The theme applies instantly
+
+To switch themes later, just import a different file — or save several and swap between them from your Custom themes. That's the whole workflow.
+
+New to importing themes? We have a full walkthrough in [how to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026).
+
+---
+
+## 1. Midnight — Deep Dark, Easy on the Eyes
+
+The everyday dark theme most people actually want: deep charcoal backgrounds (not harsh pure black), soft off-white text, and a calm blue accent. Comfortable for all-day use, gentle at night.
+
+- **Background:** \`#121B22\`
+- **Sidebar:** \`#1F2C34\`
+- **Sent bubbles:** \`#005C4B\`
+- **Received bubbles:** \`#1F2C34\`
+- **Accent:** \`#00A884\`
+- **Text:** \`#E9EDEF\`
+
+*Best for: daily drivers who want a refined dark mode that isn't jarring.*
+
+**[⬇ Download Midnight.json]** *(download slot)*
+
+---
+
+## 2. True OLED Black — Battery-Saving Pure Black
+
+For OLED laptop and monitor owners: true \`#000000\` black means the pixels are actually off, saving real battery and delivering infinite contrast. A brighter accent keeps it from feeling flat.
+
+- **Background:** \`#000000\`
+- **Sidebar:** \`#0A0A0A\`
+- **Sent bubbles:** \`#144D37\`
+- **Received bubbles:** \`#0F0F0F\`
+- **Accent:** \`#25D366\`
+- **Text:** \`#E0E0E0\`
+
+*Best for: OLED displays, night owls, and anyone who wants maximum contrast.*
+
+**[⬇ Download OLED-Black.json]** *(download slot)*
+
+---
+
+## 3. Clean Light — Bright, Minimal, Modern
+
+Not everyone wants dark mode. This is the light theme WhatsApp Web should have shipped with: crisp white, soft gray sidebar, one clean blue accent. Feels like a modern, well-designed tool.
+
+- **Background:** \`#FFFFFF\`
+- **Sidebar:** \`#F4F4F5\`
+- **Sent bubbles:** \`#D9FDD3\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#3390EC\`
+- **Text:** \`#111B21\`
+
+*Best for: bright rooms, daytime work, and minimalists.*
+
+**[⬇ Download Clean-Light.json]** *(download slot)*
+
+---
+
+## 4. Nord — The Cult-Favorite Cool Palette
+
+Based on the beloved Nord color scheme used across countless code editors and terminals. Muted, cool-toned, arctic blues and grays. Instantly recognizable to developers.
+
+- **Background:** \`#2E3440\`
+- **Sidebar:** \`#3B4252\`
+- **Sent bubbles:** \`#434C5E\`
+- **Received bubbles:** \`#3B4252\`
+- **Accent:** \`#88C0D0\`
+- **Text:** \`#ECEFF4\`
+
+*Best for: developers, Nord fans, and anyone who likes a cool, muted aesthetic.*
+
+**[⬇ Download Nord.json]** *(download slot)*
+
+---
+
+## 5. Dracula — The Most Popular Dark Theme in the World
+
+The Dracula palette is arguably the most widely-used developer theme on Earth. Dark purple-gray background, vivid accent colors. If you use Dracula in your editor, now your WhatsApp Web matches.
+
+- **Background:** \`#282A36\`
+- **Sidebar:** \`#21222C\`
+- **Sent bubbles:** \`#44475A\`
+- **Received bubbles:** \`#282A36\`
+- **Accent:** \`#BD93F9\`
+- **Text:** \`#F8F8F2\`
+
+*Best for: Dracula devotees and anyone who wants a proven, easy-on-the-eyes dark theme.*
+
+**[⬇ Download Dracula.json]** *(download slot)*
+
+---
+
+## 6. Solarized Dark — The Scientifically-Tuned Classic
+
+Solarized was engineered around precise color relationships for reduced eye strain. The dark variant has a distinctive teal-tinted background that's unlike any other theme here.
+
+- **Background:** \`#002B36\`
+- **Sidebar:** \`#073642\`
+- **Sent bubbles:** \`#586E75\`
+- **Received bubbles:** \`#073642\`
+- **Accent:** \`#268BD2\`
+- **Text:** \`#EEE8D5\`
+
+*Best for: long reading sessions and users who find typical dark themes too harsh.*
+
+**[⬇ Download Solarized-Dark.json]** *(download slot)*
+
+---
+
+## 7. Sunset — Warm Editorial Tones
+
+For users who find the standard cool-toned interfaces cold and clinical. Warm off-white backgrounds and a muted terracotta accent give WhatsApp Web an inviting, editorial feel.
+
+- **Background:** \`#FAF6F1\`
+- **Sidebar:** \`#F0E9E1\`
+- **Sent bubbles:** \`#F5DFD0\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#D77A5A\`
+- **Text:** \`#3A2E28\`
+
+*Best for: evening use, warm-tone lovers, and anyone tired of clinical gray interfaces.*
+
+**[⬇ Download Sunset.json]** *(download slot)*
+
+---
+
+## 8. iMessage — The Apple Blue Look
+
+The single most-requested aesthetic recreation. Clean white, light gray received bubbles, and the unmistakable iMessage blue for your sent messages. Android users who miss iMessage, this is for you.
+
+- **Background:** \`#FFFFFF\`
+- **Sidebar:** \`#F2F2F7\`
+- **Sent bubbles:** \`#0B93F6\`
+- **Received bubbles:** \`#E9E9EB\`
+- **Accent:** \`#0B93F6\`
+- **Text:** \`#000000\`
+
+*Best for: iMessage nostalgia and clean Apple-aesthetic fans.*
+
+**[⬇ Download iMessage.json]** *(download slot)*
+
+We have a full guide on this one: [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage).
+
+---
+
+## 9. Telegram — Clean and Blue
+
+The Telegram aesthetic: bright, spacious, with Telegram's signature blue. For the many people who use both apps and prefer Telegram's cleaner look.
+
+- **Background:** \`#FFFFFF\`
+- **Sidebar:** \`#F4F4F5\`
+- **Sent bubbles:** \`#3390EC\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#3390EC\`
+- **Text:** \`#000000\`
+
+*Best for: dual WhatsApp+Telegram users who prefer Telegram's design language.*
+
+**[⬇ Download Telegram.json]** *(download slot)*
+
+Full walkthrough: [how to make WhatsApp Web look like Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram).
+
+---
+
+## 10. Terminal Green — Retro CRT Aesthetic
+
+For the fun one. Black background, phosphor-green text and accents — the look of an old-school computer terminal. Purely aesthetic, completely delightful, guaranteed to get a "what is that?" from anyone who sees your screen.
+
+- **Background:** \`#0C0C0C\`
+- **Sidebar:** \`#0F1A0F\`
+- **Sent bubbles:** \`#1A3A1A\`
+- **Received bubbles:** \`#0F1A0F\`
+- **Accent:** \`#33FF33\`
+- **Text:** \`#33FF33\`
+
+*Best for: retro-computing fans, developers with a sense of humor, and standing out.*
+
+**[⬇ Download Terminal-Green.json]** *(download slot)*
+
+*(Tip: pair this one with a monospace font like JetBrains Mono for the full effect — see [best monospace fonts for WhatsApp Web](/blog/best-monospace-fonts-for-whatsapp-web-developer-setup-2026).)*
+
+---
+
+## How to Make These Your Own
+
+Every theme above is a starting point, not a locked preset. Once you've imported one, you can open it in the Theme editor and tweak anything — nudge the accent, deepen the background, swap the bubble colors. The imported theme becomes a custom theme you fully control.
+
+And because each is a JSON file, you can:
+
+- **Save multiple** and switch between them (a light theme for day, dark for night)
+- **Share them** with friends — send the JSON file and they import it the same way
+- **Edit them in a text editor** if you're comfortable with that — each \`--\` value maps to one part of the interface
+
+---
+
+## Pair Your Theme With the Right Font
+
+A theme sets the colors; the font sets the feel. Most of these themes pair beautifully with a considered font choice:
+
+- **Dark themes (Midnight, Dracula, Nord):** Inter or JetBrains Mono
+- **Light themes (Clean Light, iMessage, Telegram):** Inter or DM Sans
+- **Warm themes (Sunset):** Lato or Open Sans
+- **Terminal Green:** any monospace, for the full retro effect
+
+See our full guides: [best fonts for WhatsApp Web](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style) and [how to pair fonts and themes](/blog/how-to-pair-fonts-and-themes-on-whatsapp-web-2026).
+
+---
+
+## The Bottom Line
+
+You don't have to build a WhatsApp Web theme from scratch to have a great-looking setup. Download one of the ten above, import it in ten seconds, and you're done — or use it as a base and make it your own.
+
+All ten are free. The extension is free and open source. And if you build something you love, you can share the JSON file with anyone.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try one. Built a theme you're proud of? [Share it in our Discord](https://discord.gg/cppbDz4qhn) — we feature the best community themes.
+
+For more on WhatsApp Web themes:
+
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [How to get true dark mode on WhatsApp Web](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default)
+- [How to pair fonts and themes on WhatsApp Web](/blog/how-to-pair-fonts-and-themes-on-whatsapp-web-2026)`,
+},
+  {
   title: "WhatsApp Web for Business Users: A Practical Guide (2026)",
   slug: "whatsapp-web-for-business-users-practical-guide-2026",
   seoIndex: true,
