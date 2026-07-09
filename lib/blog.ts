@@ -10,6 +10,129 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Set an Animated Background on WhatsApp Web (2026)",
+  slug: "how-to-set-animated-background-whatsapp-web-2026",
+  seoIndex: true,
+  description: "How to set a moving, animated background on WhatsApp Web in 2026 — plus per-surface backgrounds, static vs animated tradeoffs, and how to get it looking right in under a minute.",
+  date: "2026-07-09",
+  readTime: "6 min",
+  content: `# How to Set an Animated Background on WhatsApp Web (2026)
+
+Most people who customize WhatsApp Web stop at a static wallpaper — an image or a solid color behind their chats. That's a real upgrade over the default doodle pattern. But there's a further step most users don't know exists: you can set a **living, animated background** that moves slowly behind your conversations.
+
+Gentle bubbles drifting upward. Slow liquid marble swirling. Soft gradients flowing into each other. WhatsApp itself offers nothing like this. With a free extension, it takes about thirty seconds.
+
+Here's how to do it properly — including the per-surface trick most people miss, and the honest tradeoffs of animated vs static.
+
+---
+
+## Quick Context: What WhatsApp Web Gives You Natively
+
+Almost nothing. WhatsApp Web has no background setting at all — no wallpaper picker, no color choice, no image upload. The doodle background you see is fixed.
+
+That means any background change on WhatsApp Web — static *or* animated — comes from a browser extension. We cover the full static-background workflow (solid colors, custom images, per-chat wallpapers) in [how to change your WhatsApp Web background or wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026). This post is about the animated ones.
+
+---
+
+## How to Set an Animated Background (30 Seconds)
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, ~30 seconds
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. Go to the **Backgrounds** tab
+4. Switch to the **Animated** sub-tab
+5. Click any animation to apply it
+
+It applies instantly, behind your chats. Click a different one to switch. That's the whole thing.
+
+Your messages, contacts, search, and every other WhatsApp Web function work exactly as normal on top of it — the animation only affects the visual layer behind everything.
+
+---
+
+## The Per-Surface Trick Most People Miss
+
+Here's the part that separates a decent setup from a genuinely good one: WhatsApp Web isn't one surface, it's several. The extension lets you set backgrounds **independently** for:
+
+- **The chat window** — the area behind your messages
+- **The sidebar** — your chat list panel
+- **The chat list** — the list itself
+- **The welcome screen** — what you see before opening a chat
+
+Most people set one background everywhere and wonder why it looks slightly off. The better approach:
+
+**Put the animation in the chat window only.** Keep the sidebar and chat list a solid, calm color that matches your theme. The result: a living, atmospheric conversation area, and a clean, readable sidebar that doesn't compete with it.
+
+This is how well-designed apps handle motion — animate one area, keep the navigation calm. It looks intentional rather than chaotic.
+
+---
+
+## Which Animation Should You Pick?
+
+The animations differ mainly in mood and speed. Broad guidance:
+
+- **Water Bubbles** — the most-set animation across our users. Slow bubbles drifting upward, soothing, works with nearly any theme. The safe first choice.
+- **Gradient Mesh** — soft gradient colors blending and flowing. Modern, elegant, pairs well with minimalist themes.
+- **Cozy Window** — atmospheric, warm, with gentle light movement. Homey rather than abstract.
+- **Liquid Marble** — slow marbled swirl, visually rich, looks striking on larger screens.
+- **Animated Gradient** — the simplest option: smooth flowing color, no distinct shapes. Best if you want motion without any visual objects.
+
+The rule that matters most: **slower is better for daily use.** Fast motion looks impressive for five minutes and becomes distracting by hour two. The most-loved animations are the calm ones.
+
+We go deeper on each in [best animated backgrounds for WhatsApp Web](/blog/best-animated-backgrounds-for-whatsapp-web-2026).
+
+---
+
+## Making It Look Right: Pair With Your Theme
+
+An animated background sits *behind* your chat bubbles, which means it interacts with your theme colors. A few principles:
+
+**Match the tone.** A dark theme wants a darker animation; a light theme wants a lighter one. High contrast between animation and bubbles makes text harder to read.
+
+**Keep bubble opacity in mind.** If your chat bubbles are fully opaque, the animation shows only around them — clean and readable. That's usually what you want for daily use.
+
+**Don't stack visual noise.** An animated background plus a bold theme plus a characterful font is too much. Pick one element to be interesting. If the animation is the star, keep the theme calm and the font neutral.
+
+For the full pairing logic, see [how to pair fonts and themes on WhatsApp Web](/blog/how-to-pair-fonts-and-themes-on-whatsapp-web-2026).
+
+---
+
+## Static vs Animated: The Honest Tradeoffs
+
+Animated backgrounds are the more impressive option, but they aren't strictly better. The real differences:
+
+**Animated wins on:** atmosphere, personality, the feeling that your WhatsApp Web is alive rather than static. It's genuinely delightful, and it's the thing people notice when they see your screen.
+
+**Static wins on:** battery and focus. An animation keeps pixels moving, which uses slightly more power — noticeable on a laptop away from a charger. And for deep concentration work, a completely still background is calmer. (This is the opposite tradeoff from our [OLED battery-saving themes](/blog/dark-whatsapp-web-themes-oled-ready-presets-download-2026), which minimize lit pixels entirely.)
+
+**A reasonable compromise many people land on:** animation on the desktop where you're plugged in, solid color on the laptop. Both configurations save independently, so switching takes one click.
+
+---
+
+## Switching Back or Turning It Off
+
+Nothing is permanent. To remove an animated background:
+
+- Go to **Backgrounds** → pick a solid color or a static image instead, or
+- Clear the background to return to the default
+
+Your theme, fonts, and other settings are unaffected — backgrounds are an independent layer.
+
+---
+
+## The Bottom Line
+
+WhatsApp Web has no native background feature at all, animated or otherwise. With a free extension, you can set a living animated background in thirty seconds — and if you apply it to the chat window only, keeping the sidebar calm, it looks genuinely designed rather than gimmicky.
+
+Start with Water Bubbles. It's the most-set animation for a reason: slow, calm, and it works with almost anything.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try one behind your chats.
+
+For more on WhatsApp Web backgrounds and customization:
+
+- [Best animated backgrounds for WhatsApp Web (2026)](/blog/best-animated-backgrounds-for-whatsapp-web-2026)
+- [How to change your WhatsApp Web background or wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "Best WhatsApp Web Themes for Focus & Productivity (2026)",
   slug: "best-whatsapp-web-themes-focus-productivity-2026",
   seoIndex: true,
