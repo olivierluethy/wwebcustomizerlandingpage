@@ -10,6 +10,197 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Aesthetic Animated Backgrounds for WhatsApp Web: 6 Vibes to Try (2026)",
+  slug: "aesthetic-animated-backgrounds-whatsapp-web-vibes-2026",
+  seoIndex: true,
+  description: "6 aesthetic animated background setups for WhatsApp Web in 2026 — each animation paired with the theme and colors that make it look intentional. Moving wallpapers that actually fit together.",
+  date: "2026-07-10",
+  readTime: "6 min",
+  content: `# Aesthetic Animated Backgrounds for WhatsApp Web: 6 Vibes to Try (2026)
+
+An animated background on WhatsApp Web is genuinely striking — bubbles drifting, marble swirling, gradients flowing behind your chats. But here's what most people get wrong: they pick an animation they like, drop it behind a default green interface, and it looks... off. The animation is beautiful. The whole thing isn't.
+
+The reason is simple. An animated background doesn't exist in isolation. It sits behind your chat bubbles, next to your sidebar, underneath your text. Whether it looks *designed* or just *applied* depends entirely on what surrounds it.
+
+This post is about that. Six complete vibes — each an animation paired with the theme colors that make it work. Not "here's a list of animations," but "here's how to make one look like you meant it."
+
+---
+
+## The Pairing Principle
+
+Before the six setups, the idea that makes all of them work:
+
+**Match the animation's tone to your theme, and let one of them lead.**
+
+If the animation is the star — rich, colorful, moving — the theme should be quiet. Muted bubbles, restrained accent, minimal contrast. The animation gets to be interesting because nothing else is.
+
+If your theme is the star — bold colors, strong accent, distinctive palette — the animation should be subtle. Slow, low-contrast, atmospheric rather than attention-grabbing.
+
+What never works: a bold animation *and* a bold theme. Both fight, both lose, and the whole thing reads as chaotic rather than intentional.
+
+Every setup below follows this rule.
+
+---
+
+## Getting Set Up
+
+All six use [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, ~30 seconds to install. For each vibe:
+
+- **Animation:** extension icon → **Backgrounds** tab → **Animated** sub-tab → pick it
+- **Theme colors:** **Themes** tab → **Create** → set the colors listed
+- **Key move:** apply the animation to the **chat window only**, keep the sidebar a solid color. This is the single biggest difference between "designed" and "messy."
+
+---
+
+## 1. Aquarium — Calm Blue Depths
+
+**Animation:** Water Bubbles
+**Vibe:** slow, soothing, like looking into a tank
+
+The most popular animation, and it shines when the colors around it commit to the underwater idea. Cool blues, soft contrast, bubbles rising quietly behind your messages.
+
+- **Chat window:** Water Bubbles animation
+- **Sidebar:** \`#0F1C24\` (deep ocean)
+- **Sent bubbles:** \`#14454F\`
+- **Received bubbles:** \`#122A33\`
+- **Accent:** \`#4FA8C5\`
+- **Text:** \`#DCE8ED\`
+
+*The animation leads. Everything else stays out of its way.*
+
+---
+
+## 2. Nebula — Gradient Mesh in Deep Space
+
+**Animation:** Gradient Mesh
+**Vibe:** slow-shifting color against near-black, like distant cosmic clouds
+
+Gradient Mesh's flowing colors look most impressive against darkness. Keep everything else nearly black and let the color do all the work.
+
+- **Chat window:** Gradient Mesh animation
+- **Sidebar:** \`#0A0A12\`
+- **Sent bubbles:** \`#1C1B2E\`
+- **Received bubbles:** \`#12121C\`
+- **Accent:** \`#8B7FD4\`
+- **Text:** \`#E4E2F0\`
+
+*Dark, quiet surroundings make the gradient feel luminous.*
+
+---
+
+## 3. Hygge — Cozy Window, Warm Everything
+
+**Animation:** Cozy Window
+**Vibe:** warm light, soft atmosphere, a rainy afternoon indoors
+
+The one setup where warmth is the whole point. Cozy Window's ambient light movement pairs with warm creams and browns for something that genuinely feels comfortable rather than just looking nice.
+
+- **Chat window:** Cozy Window animation
+- **Sidebar:** \`#2A231D\`
+- **Sent bubbles:** \`#3D342A\`
+- **Received bubbles:** \`#2F2822\`
+- **Accent:** \`#D4A574\`
+- **Text:** \`#EDE4D8\`
+
+*The coziest WhatsApp Web you can build. Best in the evening.*
+
+---
+
+## 4. Marble Hall — Liquid Marble, Elegant Neutrals
+
+**Animation:** Liquid Marble
+**Vibe:** slow, luxurious swirl against refined, gallery-quiet neutrals
+
+Liquid Marble is visually rich, so the theme goes almost entirely neutral — warm stone tones, near-invisible accent. The result feels expensive rather than busy.
+
+- **Chat window:** Liquid Marble animation
+- **Sidebar:** \`#F2EFEA\`
+- **Sent bubbles:** \`#E6E1DA\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#8C8378\`
+- **Text:** \`#2B2823\`
+
+*A rare light-mode animated setup. Understated and genuinely elegant.*
+
+---
+
+## 5. Lo-Fi — Animated Gradient, Muted and Mellow
+
+**Animation:** Animated Gradient
+**Vibe:** soft flowing color, dusk tones, quietly nostalgic
+
+Animated Gradient's simple color flow — no shapes, no objects — is the most low-key animation available. Paired with muted purples and warm grays, it lands somewhere between calm and slightly wistful.
+
+- **Chat window:** Animated Gradient animation
+- **Sidebar:** \`#241F2B\`
+- **Sent bubbles:** \`#37304180\`
+- **Received bubbles:** \`#2A2432\`
+- **Accent:** \`#A891B8\`
+- **Text:** \`#E5DFE9\`
+
+*Motion without demanding anything from you. Good background company.*
+
+---
+
+## 6. Retro Lounge — Lava Lamp, Warm Seventies
+
+**Animation:** Lava Lamp
+**Vibe:** slow blobby motion, amber and rust, unabashedly nostalgic
+
+The fun one. Lava Lamp's hypnotic blobs pair naturally with warm seventies tones — amber, rust, deep brown. Fully committed to the bit, and surprisingly pleasant to live with.
+
+- **Chat window:** Lava Lamp animation
+- **Sidebar:** \`#2B1D16\`
+- **Sent bubbles:** \`#4A2E1F\`
+- **Received bubbles:** \`#33221A\`
+- **Accent:** \`#E08A3C\`
+- **Text:** \`#F0E2D4\`
+
+*Retro charm. Guaranteed conversation starter when someone sees your screen.*
+
+---
+
+## Making Any of These Work Better
+
+A few refinements that apply across all six:
+
+**Keep bubbles opaque.** Semi-transparent chat bubbles over a moving background look interesting for a minute and become hard to read forever. Solid bubbles let the animation live *around* your messages, not underneath the text.
+
+**Sidebar stays still.** Say it again because it's the mistake everyone makes: animate the chat window, never the sidebar. A moving chat list is genuinely difficult to scan.
+
+**Neutral font, always.** With motion behind your chats, a characterful font is one element too many. Inter, IBM Plex Sans, or Public Sans — see [best fonts for WhatsApp Web](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style).
+
+**Slow beats fast.** Every setup above uses one of the calmer animations. That's not an accident — a background you look at for eight hours needs to be restful, not energetic.
+
+**Plugged in beats battery.** Animation keeps pixels moving, which uses a little more power. Lovely on a desktop; on a laptop away from a charger, consider a static background instead.
+
+---
+
+## When Animation Isn't the Answer
+
+Honest note: animated backgrounds are not always the right call.
+
+For **deep concentration work**, a completely still background is calmer — see our [focus and productivity themes](/blog/best-whatsapp-web-themes-focus-productivity-2026). For **maximum battery life on an OLED laptop**, a true-black static theme does the opposite of what an animation does — see our [OLED presets](/blog/dark-whatsapp-web-themes-oled-ready-presets-download-2026).
+
+Animated backgrounds are for when you want your WhatsApp Web to have *atmosphere*. If you want it to disappear, go static.
+
+---
+
+## The Bottom Line
+
+An animated background looks intentional when the colors around it agree with it. Pick a vibe above, apply the animation to the chat window, set the surrounding colors to match, and keep the sidebar still and solid.
+
+Start with **Aquarium** if you're not sure — Water Bubbles is the most-set animation for a reason, and the cool blue palette suits almost anyone.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build one. Made a pairing you love? [Share it in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [Best animated backgrounds for WhatsApp Web (2026)](/blog/best-animated-backgrounds-for-whatsapp-web-2026)
+- [How to set an animated background on WhatsApp Web](/blog/how-to-set-animated-background-whatsapp-web-2026)
+- [Aesthetic WhatsApp Web setups: 7 complete looks](/blog/aesthetic-whatsapp-web-setups-7-complete-looks-2026)`,
+},
+  {
   title: "Minimalist WhatsApp Web: How to Declutter Your Chat (2026)",
   slug: "minimalist-whatsapp-web-declutter-your-chat-2026",
   seoIndex: true,
