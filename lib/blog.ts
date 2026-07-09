@@ -10,6 +10,185 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Minimalist WhatsApp Web: How to Declutter Your Chat (2026)",
+  slug: "minimalist-whatsapp-web-declutter-your-chat-2026",
+  seoIndex: true,
+  description: "How to make WhatsApp Web genuinely minimalist in 2026 — hide the sidebar clutter, strip the visual noise, and apply a clean theme. Free JSON downloads included.",
+  date: "2026-07-09",
+  readTime: "7 min",
+  content: `# Minimalist WhatsApp Web: How to Declutter Your Chat (2026)
+
+Open WhatsApp Web and count what's competing for your attention. Archive. Status. Channels. Locked chats. A green header. A patterned background. Colored badges. A chat list packed edge to edge.
+
+Now count how many of those you actually use. For most people it's two or three.
+
+The rest is clutter — interface you never touch, quietly taking up space and attention every time you look at the screen. WhatsApp gives you no way to remove any of it. But you can, and it takes about two minutes.
+
+This is how to make WhatsApp Web genuinely minimal: hide what you don't use, strip the visual noise, and apply a clean theme. Three steps, in order of impact.
+
+---
+
+## Step 1: Hide the Interface You Never Use (The Biggest Win)
+
+This is the single most impactful change, and almost nobody knows it's possible.
+
+WhatsApp Web's sidebar contains several sections most users never open: **Archive**, **Status**, **Channels**, and **locked chats**. They're permanent fixtures. WhatsApp offers no setting to remove them.
+
+**Minimal Mode** in WhatsApp Web Customizer hides them entirely. What's left is a clean list of the conversations you actually have.
+
+**How to turn it on:**
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) (free, open source, ~30 seconds)
+2. Open [web.whatsapp.com](https://web.whatsapp.com) → click the extension icon
+3. Go to the **Display** tab
+4. Turn on **Minimal Mode**
+
+The clutter disappears immediately. If you'd rather keep one of them — some people genuinely use Archive — the individual visibility toggles let you hide them selectively rather than all at once.
+
+The effect is bigger than it sounds. Removing four unused sections from your sidebar doesn't just look cleaner; it makes the conversations you *do* use easier to find, because they're no longer surrounded by things you're subconsciously filtering out.
+
+*This is one of the most-used features in the extension, which tells you how many people find the default sidebar cluttered.*
+
+---
+
+## Step 2: Remove the Visual Noise
+
+WhatsApp Web's default background is a repeating doodle pattern. It's charming for about a week and visually noisy forever after.
+
+Set a **solid color background** instead:
+
+1. Extension icon → **Backgrounds** tab
+2. Choose a solid color (not an image, not a pattern)
+3. Apply it to the chat window
+
+Solid backgrounds are the foundation of a minimal interface. Every pattern, image, or texture adds visual load that your eye has to process. A plain surface lets the messages be the only thing on screen.
+
+Two more small strips worth doing:
+
+- **Skip animated backgrounds here.** They're lovely, but the opposite of minimal. Save those for a different mood.
+- **Turn off notification badges you don't need** by muting non-urgent chats — right-click any chat or group → **Mute**. Fewer colored badges, less pull.
+
+---
+
+## Step 3: Apply a Minimalist Theme
+
+With the clutter hidden and the noise stripped, the theme sets the final tone. Minimalist themes share a few traits: near-neutral palettes, one restrained accent, and very low contrast between elements — nothing competing for attention.
+
+Each theme below comes as a **downloadable JSON file**. Import it in about ten seconds: extension icon → **Themes** tab → **Import** → select the file.
+
+### Blank — Pure White Minimalism
+
+The most reductive option. Near-white everything, with the faintest gray separation between surfaces. Almost no color anywhere.
+
+- **Background:** \`#FFFFFF\`
+- **Sidebar:** \`#FAFAFA\`
+- **Sent bubbles:** \`#F0F0F0\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#9E9E9E\`
+- **Text:** \`#1A1A1A\`
+
+*The absolute minimum. Nothing to look at but your messages.*
+
+**[⬇ Download Blank.json]** *(download slot)*
+
+---
+
+### Bone — Warm Neutral, Softer Than White
+
+Pure white can be harsh. Bone uses warm off-whites for the same minimalism with a gentler feel — easier on the eyes across a full day.
+
+- **Background:** \`#FAF8F5\`
+- **Sidebar:** \`#F4F1EC\`
+- **Sent bubbles:** \`#EDE9E3\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#A39C92\`
+- **Text:** \`#26241F\`
+
+*Minimalism with warmth. The most comfortable of the set for long sessions.*
+
+**[⬇ Download Bone.json]** *(download slot)*
+
+---
+
+### Void — Minimal Dark
+
+Minimalism doesn't have to be light. Void applies the same principles in reverse: near-black surfaces, one muted accent, almost no color. Calm rather than dramatic.
+
+- **Background:** \`#141414\`
+- **Sidebar:** \`#101010\`
+- **Sent bubbles:** \`#1F1F1F\`
+- **Received bubbles:** \`#181818\`
+- **Accent:** \`#808080\`
+- **Text:** \`#DEDEDE\`
+
+*Dark minimalism. Quiet, restrained, no glare.*
+
+**[⬇ Download Void.json]** *(download slot)*
+
+---
+
+### Mono Ink — Grayscale With a Single Black Accent
+
+Pure grayscale, with black as the only "accent." The most graphic-design-feeling option here — high clarity, zero color, strong hierarchy.
+
+- **Background:** \`#FCFCFC\`
+- **Sidebar:** \`#F2F2F2\`
+- **Sent bubbles:** \`#E8E8E8\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#111111\`
+- **Text:** \`#111111\`
+
+*For people who want crisp, editorial minimalism rather than softness.*
+
+**[⬇ Download Mono-Ink.json]** *(download slot)*
+
+---
+
+## Step 4 (Optional): The Font
+
+A minimal interface deserves a font that doesn't editorialize. Neutral, highly legible, no personality competing with the emptiness you just created.
+
+Good choices: **Inter**, **Public Sans**, or **IBM Plex Sans**. Set it in the **Typography** tab, and nudge the size up one step — minimal interfaces have room to breathe, so slightly larger text reads better.
+
+Skip anything decorative, condensed, or characterful here. See [best fonts for WhatsApp Web](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style) if you want to compare.
+
+---
+
+## Why Minimalism Actually Helps (Not Just Aesthetics)
+
+Two practical effects, beyond looking nicer:
+
+**Faster visual search.** When the sidebar contains only conversations, finding the one you want is quicker. Every removed element is one less thing your eye scans past.
+
+**Less ambient attention drain.** Interface elements you never use still consume a little attention each time you look at the screen. Over a day of dipping in and out of WhatsApp Web, that adds up. Removing them removes the drain.
+
+This is the same reasoning behind why well-designed tools ship with less, not more. WhatsApp just doesn't give you the option — so you add it yourself.
+
+---
+
+## Keeping It (And Sharing It)
+
+Everything you've set — Minimal Mode, background, theme, font — persists across reloads and browser restarts automatically. Nothing to re-do.
+
+And because themes are JSON files, you can export your minimal setup and send it to anyone who admires it. See [how to share WhatsApp Web themes](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+---
+
+## The Bottom Line
+
+Minimalist WhatsApp Web is three moves: **hide the interface you don't use** (Minimal Mode — the biggest win), **strip the visual noise** (solid background, muted chats), and **apply a restrained theme** (any of the four above).
+
+Start with Minimal Mode. Even on its own, with no theme change at all, removing Archive, Status, Channels, and locked chats from your sidebar makes WhatsApp Web feel like a different, calmer application.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and turn on Minimal Mode first. Then pick a theme.
+
+For more:
+
+- [Best WhatsApp Web themes for focus and productivity](/blog/best-whatsapp-web-themes-focus-productivity-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [Aesthetic WhatsApp Web setups: 7 complete looks](/blog/aesthetic-whatsapp-web-setups-7-complete-looks-2026)`,
+},
+  {
   title: "How to Set an Animated Background on WhatsApp Web (2026)",
   slug: "how-to-set-animated-background-whatsapp-web-2026",
   seoIndex: true,
