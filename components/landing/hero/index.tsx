@@ -17,7 +17,7 @@ import {
   Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackButtonClick } from "@/lib/analytics";
+import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
 import { ActivityLayer } from "./activity-layer";
 
 /**
@@ -213,6 +213,7 @@ export function Hero() {
               <Button
                 size="lg"
                 className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
+                onMouseEnter={() => trackCtaHover("install_hero")}
                 onClick={() => {
                   trackButtonClick("install");
                   window.open(

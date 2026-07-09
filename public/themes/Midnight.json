@@ -1,0 +1,25 @@
+{
+  "id": "blog-midnight",
+  "name": "Midnight",
+  "source": "wwebcustomizer.com/blog",
+  "author": "WhatsApp Web Customizer",
+  "vars": {
+    "--wc-link": "rgba(0, 168, 132, 1)",
+    "--wc-accent": "rgba(0, 168, 132, 1)",
+    "--wc-text": "rgba(233, 237, 239, 1)",
+    "--wc-receipt": "rgba(0, 168, 132, 1)",
+    "--wc-bubble-in": "rgba(31, 44, 52, 1)",
+    "--wc-bubble-out": "rgba(0, 92, 75, 1)",
+    "--wc-load-main": "linear-gradient(45deg, rgba(31, 44, 52, 1), rgba(26, 37, 44, 1), rgba(31, 44, 52, 1))",
+    "--wc-load-side": "linear-gradient(45deg, rgba(31, 44, 52, 1), rgba(26, 37, 44, 1))",
+    "--wc-load-item": "linear-gradient(45deg, rgba(26, 37, 45, 1), rgba(40, 50, 58, 1))",
+    "--wc-load-item-rev": "linear-gradient(45deg, rgba(40, 50, 58, 1), rgba(26, 37, 45, 1))",
+    "--wc-load-item-up": "linear-gradient(to top, rgba(26, 37, 45, 1), rgba(40, 50, 58, 1))",
+    "--wc-bg-base": "rgba(18, 27, 34, 1)",
+    "--wc-bg-up": "linear-gradient(to top, rgba(30, 38, 45, 1), rgba(18, 27, 34, 1))",
+    "--wc-bg-down": "linear-gradient(to bottom, rgba(30, 38, 45, 1), rgba(18, 27, 34, 1))",
+    "--wc-bg-diag": "linear-gradient(45deg, rgba(30, 38, 45, 1), rgba(18, 27, 34, 1))",
+    "--wc-bg-diag-alt": "linear-gradient(45deg, rgba(18, 27, 34, 1), rgba(30, 38, 45, 1))",
+    "--wc-scroll": "rgba(57, 65, 71, 1)"
+  }
+}

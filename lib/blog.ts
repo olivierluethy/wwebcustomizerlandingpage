@@ -66,7 +66,7 @@ Dusk in a chat window. Deep plum surfaces with a burnt-orange accent that glows 
 
 *Best for: evenings, warm-tone lovers, and anyone who finds blue interfaces cold.*
 
-**[⬇ Download Sunset-Vibrant.json]** *(download slot)*
+**[⬇ Download Sunset-Vibrant.json]**
 
 ---
 
@@ -83,7 +83,7 @@ Maximum punch. Near-black surfaces with a vivid cyan accent that practically hum
 
 *Best for: bold dark-mode fans who find most dark themes too timid.*
 
-**[⬇ Download Electric.json]** *(download slot)*
+**[⬇ Download Electric.json]**
 
 ---
 
@@ -100,7 +100,7 @@ Ocean and sunset together. Deep teal surfaces with a coral accent — a genuinel
 
 *Best for: bringing some holiday into a grey week.*
 
-**[⬇ Download Tropical.json]** *(download slot)*
+**[⬇ Download Tropical.json]**
 
 ---
 
@@ -117,7 +117,7 @@ A rare light-mode entry, and the boldest one here. Soft cream surfaces with an u
 
 *Best for: people whose apps should be happy to see them.*
 
-**[⬇ Download Candy.json]** *(download slot)*
+**[⬇ Download Candy.json]**
 
 ---
 
@@ -134,7 +134,7 @@ Rich forest greens with a bright lime accent. It's what WhatsApp's green *could*
 
 *Best for: keeping WhatsApp green, but doing it properly.*
 
-**[⬇ Download Forest.json]** *(download slot)*
+**[⬇ Download Forest.json]**
 
 ---
 
@@ -151,7 +151,7 @@ Deep violet surfaces with a magenta accent. Luxurious, a touch dramatic, and it 
 
 *Best for: drama, and people who like purple more than is strictly reasonable.*
 
-**[⬇ Download Ultraviolet.json]** *(download slot)*
+**[⬇ Download Ultraviolet.json]**
 
 ---
 
@@ -168,7 +168,7 @@ The hardest color to use well, done properly. Charcoal surfaces with a warm yell
 
 *Best for: an energizing interface that still reads cleanly.*
 
-**[⬇ Download Citrus.json]** *(download slot)*
+**[⬇ Download Citrus.json]**
 
 ---
 
@@ -395,7 +395,7 @@ Two things worth noticing.
 
 **The blue is confident, not muted.** Where Linear desaturates its accent into sophistication, Things does the opposite — its blue is bright and cheerful and unapologetic. That optimism is half the app's personality. Don't tone it down.
 
-**[⬇ Download Things-Light.json]** *(download slot)*
+**[⬇ Download Things-Light.json]**
 
 ---
 
@@ -555,7 +555,7 @@ You get the same choice:
 
 The muted gray is doing more than it looks. Linear's calm comes from a clear hierarchy between primary and secondary text — and from the fact that neither is ever pure white.
 
-**[⬇ Download Linear-Dark.json]** *(download slot)*
+**[⬇ Download Linear-Dark.json]**
 
 ---
 
@@ -679,7 +679,7 @@ The single most important value is \#7F6DF2. Get that right and the whole thing 
 
 The second most important thing is **restraint with it.** Use the purple only for the active chat, links, and unread indicators. If purple shows up on your chat bubbles, it stops being an accent and starts being a color scheme — and it stops looking like Obsidian.
 
-**[⬇ Download Obsidian-Dark.json]** *(download slot)*
+**[⬇ Download Obsidian-Dark.json]**
 
 ---
 
@@ -833,8 +833,8 @@ Notion's dark mode follows the same warm-neutral philosophy in reverse — warm 
 
 Apply the colors one at a time. The moment the sidebar turns warm gray, it starts to feel like Notion.
 
-**[⬇ Download Notion-Light.json]** *(download slot)*
-**[⬇ Download Notion-Dark.json]** *(download slot)*
+**[⬇ Download Notion-Light.json]**
+**[⬇ Download Notion-Dark.json]**
 
 ---
 
@@ -1184,7 +1184,7 @@ The most reductive option. Near-white everything, with the faintest gray separat
 
 *The absolute minimum. Nothing to look at but your messages.*
 
-**[⬇ Download Blank.json]** *(download slot)*
+**[⬇ Download Blank.json]**
 
 ---
 
@@ -1201,7 +1201,7 @@ Pure white can be harsh. Bone uses warm off-whites for the same minimalism with 
 
 *Minimalism with warmth. The most comfortable of the set for long sessions.*
 
-**[⬇ Download Bone.json]** *(download slot)*
+**[⬇ Download Bone.json]**
 
 ---
 
@@ -1218,7 +1218,7 @@ Minimalism doesn't have to be light. Void applies the same principles in reverse
 
 *Dark minimalism. Quiet, restrained, no glare.*
 
-**[⬇ Download Void.json]** *(download slot)*
+**[⬇ Download Void.json]**
 
 ---
 
@@ -1235,7 +1235,7 @@ Pure grayscale, with black as the only "accent." The most graphic-design-feeling
 
 *For people who want crisp, editorial minimalism rather than softness.*
 
-**[⬇ Download Mono-Ink.json]** *(download slot)*
+**[⬇ Download Mono-Ink.json]**
 
 ---
 
@@ -1456,7 +1456,7 @@ A soft, warm off-white theme that feels like a clean sheet of paper. No harsh pu
 
 *Best for: daytime work, bright rooms, and anyone who finds standard interfaces too stark.*
 
-**[⬇ Download Paper.json]** *(download slot)*
+**[⬇ Download Paper.json]**
 
 ---
 
@@ -1473,7 +1473,7 @@ A soft dark theme in muted slate tones — not black, not harsh, just a calm dar
 
 *Best for: long work sessions, evening use, and anyone who wants dark mode without the harsh contrast.*
 
-**[⬇ Download Slate.json]** *(download slot)*
+**[⬇ Download Slate.json]**
 
 ---
 
@@ -1490,7 +1490,7 @@ Muted green tones are among the most restful colors for sustained focus — they
 
 *Best for: reducing eye strain and creating a calm, natural workspace feel.*
 
-**[⬇ Download Sage.json]** *(download slot)*
+**[⬇ Download Sage.json]**
 
 ---
 
@@ -1507,7 +1507,7 @@ Almost no color at all — soft grays with a barely-there cool tone. For people 
 
 *Best for: hardcore minimalists and anyone who wants zero visual noise.*
 
-**[⬇ Download Fog.json]** *(download slot)*
+**[⬇ Download Fog.json]**
 
 ---
 
@@ -1524,7 +1524,7 @@ A warm-toned dark theme designed for extended focus blocks. The warm undertone i
 
 *Best for: late-night focus blocks and anyone sensitive to cool-toned screens at night.*
 
-**[⬇ Download Deep-Work.json]** *(download slot)*
+**[⬇ Download Deep-Work.json]**
 
 ---
 
@@ -1541,7 +1541,7 @@ A cool, clean light theme with a calm blue accent. Blue is widely associated wit
 
 *Best for: a crisp, clean, "ready to concentrate" workspace feel.*
 
-**[⬇ Download Focus-Blue.json]** *(download slot)*
+**[⬇ Download Focus-Blue.json]**
 
 ---
 
@@ -2116,7 +2116,7 @@ The essential one. True black everywhere, one restrained green accent, off-white
 
 *The purest OLED experience. If you just want maximum black and battery savings, start here.*
 
-**[⬇ Download Pure-OLED.json]** *(download slot)*
+**[⬇ Download Pure-OLED.json]**
 
 ---
 
@@ -2133,7 +2133,7 @@ True black base, but with a cool blue accent instead of green. For people who wa
 
 *OLED black with a cool, modern blue personality.*
 
-**[⬇ Download Midnight-Blue-OLED.json]** *(download slot)*
+**[⬇ Download Midnight-Blue-OLED.json]**
 
 ---
 
@@ -2150,7 +2150,7 @@ True black with a warm amber accent. Warmer tones are easier on the eyes at nigh
 
 *Battery-saving black with a warm glow for evening sessions.*
 
-**[⬇ Download Amber-OLED.json]** *(download slot)*
+**[⬇ Download Amber-OLED.json]**
 
 ---
 
@@ -2167,7 +2167,7 @@ True black base with a rich purple accent, for people who want the OLED benefit 
 
 *OLED black with a vivid purple character that pops against the darkness.*
 
-**[⬇ Download Purple-Haze-OLED.json]** *(download slot)*
+**[⬇ Download Purple-Haze-OLED.json]**
 
 ---
 
@@ -2184,7 +2184,7 @@ The minimalist's OLED theme. True black, white text, gray accents — zero color
 
 *Pure grayscale OLED — no color, maximum calm, maximum battery savings.*
 
-**[⬇ Download Monochrome-OLED.json]** *(download slot)*
+**[⬇ Download Monochrome-OLED.json]**
 
 ---
 
@@ -2265,7 +2265,7 @@ That's the whole workflow, repeated for whichever look you choose. Let's go.
 The setup for people who like Linear, Things, and Notion. Restrained grayscale, one subtle accent, a clean geometric font, and a plain background that gets out of the way. Nothing shouts. Everything is deliberate.
 
 **Theme:** soft off-white background (\`#FAFAFA\`), light gray sidebar (\`#F0F0F1\`), barely-there bubble contrast, a single slate accent (\`#4A5568\`).
-**[⬇ Download Minimalist-Mono.json]** *(download slot)*
+**[⬇ Download Minimalist-Mono.json]**
 
 **Font:** Inter, one size up from default. Clean, neutral, modern.
 
@@ -2280,7 +2280,7 @@ The setup for people who like Linear, Things, and Notion. Restrained grayscale, 
 Built for long evening sessions. A warm-tinted dark theme (not cold blue-gray), a highly readable font, and a deep solid background that's restful rather than stark. Easy on the eyes past sunset.
 
 **Theme:** warm charcoal background (\`#1C1B1A\`), slightly lighter sidebar (\`#26241F\`), muted amber accent (\`#D4A574\`), soft cream text (\`#E8E4DD\`).
-**[⬇ Download Deep-Focus.json]** *(download slot)*
+**[⬇ Download Deep-Focus.json]**
 
 **Font:** Atkinson Hyperlegible — designed for maximum readability, which matters most when you're tired.
 
@@ -2295,7 +2295,7 @@ Built for long evening sessions. A warm-tinted dark theme (not cold blue-gray), 
 The bold one. Pure black background, electric magenta and cyan accents, a monospace font, and a subtly glowing feel. For people who want their screen to look like a sci-fi terminal.
 
 **Theme:** near-black background (\`#0A0A0F\`), dark violet sidebar (\`#15111F\`), electric magenta accent (\`#FF2E97\`), cyan-white text (\`#E0F7FF\`).
-**[⬇ Download Cyberpunk.json]** *(download slot)*
+**[⬇ Download Cyberpunk.json]**
 
 **Font:** JetBrains Mono or Fira Code — the monospace reinforces the terminal aesthetic.
 
@@ -2310,7 +2310,7 @@ The bold one. Pure black background, electric magenta and cyan accents, a monosp
 For people who find most interfaces too harsh. Muted pastel tones, rounded-feeling typography, and a soft background. Calm, approachable, a little bit cozy.
 
 **Theme:** soft lavender-white background (\`#F7F5FB\`), pale lilac sidebar (\`#EFEAF6\`), dusty rose accent (\`#D48FB0\`), gentle dark text (\`#4A4458\`).
-**[⬇ Download Soft-Pastel.json]** *(download slot)*
+**[⬇ Download Soft-Pastel.json]**
 
 **Font:** Nunito or DM Sans — softer, rounder letterforms that match the gentle palette.
 
@@ -2325,7 +2325,7 @@ For people who find most interfaces too harsh. Muted pastel tones, rounded-feeli
 For developers who want their chat app to match their editor. Based on a popular dark IDE palette, paired with a coding font. Everything feels consistent with the rest of your setup.
 
 **Theme:** One Dark background (\`#282C34\`), darker sidebar (\`#21252B\`), signature blue accent (\`#61AFEF\`), off-white text (\`#ABB2BF\`).
-**[⬇ Download Developer-Dark.json]** *(download slot)*
+**[⬇ Download Developer-Dark.json]**
 
 **Font:** JetBrains Mono — matches your editor, renders shared code snippets cleanly.
 
@@ -2340,7 +2340,7 @@ For developers who want their chat app to match their editor. Based on a popular
 Inspired by modern editorial and publishing design. Warm off-white, generous feel, a refined font, and a clean background. Looks like a beautifully-typeset reading experience.
 
 **Theme:** warm paper-white background (\`#FBF9F5\`), soft sidebar (\`#F2EEE7\`), deep ink accent (\`#2C4A52\`), rich dark text (\`#2A2620\`).
-**[⬇ Download Editorial-Light.json]** *(download slot)*
+**[⬇ Download Editorial-Light.json]**
 
 **Font:** IBM Plex Sans or Lato — refined, readable, with a considered editorial quality.
 
@@ -2355,7 +2355,7 @@ Inspired by modern editorial and publishing design. Warm off-white, generous fee
 The pure fun one. Black screen, phosphor-green text, monospace font — the look of a 1980s computer terminal. Completely impractical, completely delightful, guaranteed to make people ask what you're using.
 
 **Theme:** CRT black background (\`#0C0C0C\`), dark green sidebar (\`#0F1A0F\`), phosphor green accent and text (\`#33FF33\`).
-**[⬇ Download Retro-Terminal.json]** *(download slot)*
+**[⬇ Download Retro-Terminal.json]**
 
 **Font:** any monospace — JetBrains Mono, Fira Code, or a pixel font if you have one, for maximum retro effect.
 
@@ -2463,7 +2463,7 @@ The everyday dark theme most people actually want: deep charcoal backgrounds (no
 
 *Best for: daily drivers who want a refined dark mode that isn't jarring.*
 
-**[⬇ Download Midnight.json]** *(download slot)*
+**[⬇ Download Midnight.json]**
 
 ---
 
@@ -2480,7 +2480,7 @@ For OLED laptop and monitor owners: true \`#000000\` black means the pixels are 
 
 *Best for: OLED displays, night owls, and anyone who wants maximum contrast.*
 
-**[⬇ Download OLED-Black.json]** *(download slot)*
+**[⬇ Download OLED-Black.json]**
 
 ---
 
@@ -2497,7 +2497,7 @@ Not everyone wants dark mode. This is the light theme WhatsApp Web should have s
 
 *Best for: bright rooms, daytime work, and minimalists.*
 
-**[⬇ Download Clean-Light.json]** *(download slot)*
+**[⬇ Download Clean-Light.json]**
 
 ---
 
@@ -2514,7 +2514,7 @@ Based on the beloved Nord color scheme used across countless code editors and te
 
 *Best for: developers, Nord fans, and anyone who likes a cool, muted aesthetic.*
 
-**[⬇ Download Nord.json]** *(download slot)*
+**[⬇ Download Nord.json]**
 
 ---
 
@@ -2531,7 +2531,7 @@ The Dracula palette is arguably the most widely-used developer theme on Earth. D
 
 *Best for: Dracula devotees and anyone who wants a proven, easy-on-the-eyes dark theme.*
 
-**[⬇ Download Dracula.json]** *(download slot)*
+**[⬇ Download Dracula.json]**
 
 ---
 
@@ -2548,7 +2548,7 @@ Solarized was engineered around precise color relationships for reduced eye stra
 
 *Best for: long reading sessions and users who find typical dark themes too harsh.*
 
-**[⬇ Download Solarized-Dark.json]** *(download slot)*
+**[⬇ Download Solarized-Dark.json]**
 
 ---
 
@@ -2565,7 +2565,7 @@ For users who find the standard cool-toned interfaces cold and clinical. Warm of
 
 *Best for: evening use, warm-tone lovers, and anyone tired of clinical gray interfaces.*
 
-**[⬇ Download Sunset.json]** *(download slot)*
+**[⬇ Download Sunset.json]**
 
 ---
 
@@ -2582,7 +2582,7 @@ The single most-requested aesthetic recreation. Clean white, light gray received
 
 *Best for: iMessage nostalgia and clean Apple-aesthetic fans.*
 
-**[⬇ Download iMessage.json]** *(download slot)*
+**[⬇ Download iMessage.json]**
 
 We have a full guide on this one: [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage).
 
@@ -2601,7 +2601,7 @@ The Telegram aesthetic: bright, spacious, with Telegram's signature blue. For th
 
 *Best for: dual WhatsApp+Telegram users who prefer Telegram's design language.*
 
-**[⬇ Download Telegram.json]** *(download slot)*
+**[⬇ Download Telegram.json]**
 
 Full walkthrough: [how to make WhatsApp Web look like Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram).
 
@@ -2620,7 +2620,7 @@ For the fun one. Black background, phosphor-green text and accents — the look 
 
 *Best for: retro-computing fans, developers with a sense of humor, and standing out.*
 
-**[⬇ Download Terminal-Green.json]** *(download slot)*
+**[⬇ Download Terminal-Green.json]**
 
 *(Tip: pair this one with a monospace font like JetBrains Mono for the full effect — see [best monospace fonts for WhatsApp Web](/blog/best-monospace-fonts-for-whatsapp-web-developer-setup-2026).)*
 

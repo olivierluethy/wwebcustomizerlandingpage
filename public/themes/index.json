@@ -1,0 +1,268 @@
+{
+  "themes": [
+    {
+      "name": "Amber OLED",
+      "filename": "Amber-OLED.json",
+      "slug": "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+      "id": "blog-amber-oled"
+    },
+    {
+      "name": "Blank",
+      "filename": "Blank.json",
+      "slug": "minimalist-whatsapp-web-declutter-your-chat-2026",
+      "id": "blog-blank"
+    },
+    {
+      "name": "Bone",
+      "filename": "Bone.json",
+      "slug": "minimalist-whatsapp-web-declutter-your-chat-2026",
+      "id": "blog-bone"
+    },
+    {
+      "name": "Candy",
+      "filename": "Candy.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-candy"
+    },
+    {
+      "name": "Citrus",
+      "filename": "Citrus.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-citrus"
+    },
+    {
+      "name": "Clean Light",
+      "filename": "Clean-Light.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-clean-light"
+    },
+    {
+      "name": "Cyberpunk",
+      "filename": "Cyberpunk.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-cyberpunk"
+    },
+    {
+      "name": "Deep Focus",
+      "filename": "Deep-Focus.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-deep-focus"
+    },
+    {
+      "name": "Deep Work",
+      "filename": "Deep-Work.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-deep-work"
+    },
+    {
+      "name": "Developer Dark",
+      "filename": "Developer-Dark.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-developer-dark"
+    },
+    {
+      "name": "Dracula",
+      "filename": "Dracula.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-dracula"
+    },
+    {
+      "name": "Editorial Light",
+      "filename": "Editorial-Light.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-editorial-light"
+    },
+    {
+      "name": "Electric",
+      "filename": "Electric.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-electric"
+    },
+    {
+      "name": "Focus Blue",
+      "filename": "Focus-Blue.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-focus-blue"
+    },
+    {
+      "name": "Fog",
+      "filename": "Fog.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-fog"
+    },
+    {
+      "name": "Forest",
+      "filename": "Forest.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-forest"
+    },
+    {
+      "name": "iMessage",
+      "filename": "iMessage.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-imessage"
+    },
+    {
+      "name": "Linear Dark",
+      "filename": "Linear-Dark.json",
+      "slug": "how-to-make-whatsapp-web-look-like-linear-2026",
+      "id": "blog-linear-dark"
+    },
+    {
+      "name": "Midnight",
+      "filename": "Midnight.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-midnight"
+    },
+    {
+      "name": "Midnight Blue OLED",
+      "filename": "Midnight-Blue-OLED.json",
+      "slug": "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+      "id": "blog-midnight-blue-oled"
+    },
+    {
+      "name": "Minimalist Mono",
+      "filename": "Minimalist-Mono.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-minimalist-mono"
+    },
+    {
+      "name": "Mono Ink",
+      "filename": "Mono-Ink.json",
+      "slug": "minimalist-whatsapp-web-declutter-your-chat-2026",
+      "id": "blog-mono-ink"
+    },
+    {
+      "name": "Monochrome OLED",
+      "filename": "Monochrome-OLED.json",
+      "slug": "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+      "id": "blog-monochrome-oled"
+    },
+    {
+      "name": "Nord",
+      "filename": "Nord.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-nord"
+    },
+    {
+      "name": "Notion Dark",
+      "filename": "Notion-Dark.json",
+      "slug": "how-to-make-whatsapp-web-look-like-notion-2026",
+      "id": "blog-notion-dark"
+    },
+    {
+      "name": "Notion Light",
+      "filename": "Notion-Light.json",
+      "slug": "how-to-make-whatsapp-web-look-like-notion-2026",
+      "id": "blog-notion-light"
+    },
+    {
+      "name": "Obsidian Dark",
+      "filename": "Obsidian-Dark.json",
+      "slug": "how-to-make-whatsapp-web-look-like-obsidian-2026",
+      "id": "blog-obsidian-dark"
+    },
+    {
+      "name": "OLED Black",
+      "filename": "OLED-Black.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-oled-black"
+    },
+    {
+      "name": "Paper",
+      "filename": "Paper.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-paper"
+    },
+    {
+      "name": "Pure OLED",
+      "filename": "Pure-OLED.json",
+      "slug": "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+      "id": "blog-pure-oled"
+    },
+    {
+      "name": "Purple Haze OLED",
+      "filename": "Purple-Haze-OLED.json",
+      "slug": "dark-whatsapp-web-themes-oled-ready-presets-download-2026",
+      "id": "blog-purple-haze-oled"
+    },
+    {
+      "name": "Retro Terminal",
+      "filename": "Retro-Terminal.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-retro-terminal"
+    },
+    {
+      "name": "Sage",
+      "filename": "Sage.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-sage"
+    },
+    {
+      "name": "Slate",
+      "filename": "Slate.json",
+      "slug": "best-whatsapp-web-themes-focus-productivity-2026",
+      "id": "blog-slate"
+    },
+    {
+      "name": "Soft Pastel",
+      "filename": "Soft-Pastel.json",
+      "slug": "aesthetic-whatsapp-web-setups-7-complete-looks-2026",
+      "id": "blog-soft-pastel"
+    },
+    {
+      "name": "Solarized Dark",
+      "filename": "Solarized-Dark.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-solarized-dark"
+    },
+    {
+      "name": "Sunset",
+      "filename": "Sunset.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-sunset"
+    },
+    {
+      "name": "Sunset Vibrant",
+      "filename": "Sunset-Vibrant.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-sunset-vibrant"
+    },
+    {
+      "name": "Telegram",
+      "filename": "Telegram.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-telegram"
+    },
+    {
+      "name": "Terminal Green",
+      "filename": "Terminal-Green.json",
+      "slug": "best-whatsapp-web-themes-2026-free-json-downloads",
+      "id": "blog-terminal-green"
+    },
+    {
+      "name": "Things Light",
+      "filename": "Things-Light.json",
+      "slug": "how-to-make-whatsapp-web-look-like-things-3-2026",
+      "id": "blog-things-light"
+    },
+    {
+      "name": "Tropical",
+      "filename": "Tropical.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-tropical"
+    },
+    {
+      "name": "Ultraviolet",
+      "filename": "Ultraviolet.json",
+      "slug": "colorful-vibrant-whatsapp-web-themes-download-2026",
+      "id": "blog-ultraviolet"
+    },
+    {
+      "name": "Void",
+      "filename": "Void.json",
+      "slug": "minimalist-whatsapp-web-declutter-your-chat-2026",
+      "id": "blog-void"
+    }
+  ]
+}

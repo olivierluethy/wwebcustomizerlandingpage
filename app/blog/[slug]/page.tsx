@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar, Clock, Chrome } from "lucide-react";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Navigation } from "@/components/landing/navigation";
 import { Footer } from "@/components/landing/footer";
+import { ThemeDownloadButton } from "@/components/theme-download-button";
 
 // Existing Chrome Web Store listing URL (single source of truth for blog CTAs).
 const CWS_URL =
@@ -48,7 +49,7 @@ export async function generateMetadata({
 
 // 🔥 ERSETZE DEINEN GESAMTEN renderMarkdown() BLOCK MIT DIESEM
 
-function renderMarkdown(content: string) {
+function renderMarkdown(content: string, postSlug: string) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
 
@@ -249,6 +250,30 @@ function renderMarkdown(content: string) {
 
     if (inCodeBlock) {
       codeLines.push(line);
+      return;
+    }
+
+    // ========================================
+    // THEME DOWNLOAD BUTTON
+    // Marker: **[⬇ Download <Name>.json]**  (replaces the old download slots)
+    // ========================================
+
+    const downloadMatch = trimmed.match(
+      /^\*\*\[[^\]]*Download\s+([A-Za-z0-9_-]+)\.json\]\*\*$/
+    );
+
+    if (downloadMatch) {
+      flushList();
+      flushTable();
+
+      elements.push(
+        <ThemeDownloadButton
+          key={i}
+          themeName={downloadMatch[1]}
+          postSlug={postSlug}
+        />
+      );
+
       return;
     }
 
@@ -533,7 +558,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Der Titel (H1) und die Beschreibung kommen jetzt 
                 direkt aus dem Markdown-Renderer unten */}
             <div className="prose prose-invert prose-lg max-w-none">
-              {renderMarkdown(post.content)}
+              {renderMarkdown(post.content, post.slug)}
             </div>
 
             {/* Blog-post CTA block */}

@@ -1,0 +1,25 @@
+{
+  "id": "blog-imessage",
+  "name": "iMessage",
+  "source": "wwebcustomizer.com/blog",
+  "author": "WhatsApp Web Customizer",
+  "vars": {
+    "--wc-link": "rgba(11, 147, 246, 1)",
+    "--wc-accent": "rgba(11, 147, 246, 1)",
+    "--wc-text": "rgba(0, 0, 0, 1)",
+    "--wc-receipt": "rgba(11, 147, 246, 1)",
+    "--wc-bubble-in": "rgba(233, 233, 235, 1)",
+    "--wc-bubble-out": "rgba(11, 147, 246, 1)",
+    "--wc-load-main": "linear-gradient(45deg, rgba(242, 242, 247, 1), rgba(230, 230, 235, 1), rgba(242, 242, 247, 1))",
+    "--wc-load-side": "linear-gradient(45deg, rgba(242, 242, 247, 1), rgba(230, 230, 235, 1))",
+    "--wc-load-item": "linear-gradient(45deg, rgba(247, 247, 250, 1), rgba(232, 232, 235, 1))",
+    "--wc-load-item-rev": "linear-gradient(45deg, rgba(232, 232, 235, 1), rgba(247, 247, 250, 1))",
+    "--wc-load-item-up": "linear-gradient(to top, rgba(247, 247, 250, 1), rgba(232, 232, 235, 1))",
+    "--wc-bg-base": "rgba(255, 255, 255, 1)",
+    "--wc-bg-up": "linear-gradient(to top, rgba(242, 242, 242, 1), rgba(255, 255, 255, 1))",
+    "--wc-bg-down": "linear-gradient(to bottom, rgba(242, 242, 242, 1), rgba(255, 255, 255, 1))",
+    "--wc-bg-diag": "linear-gradient(45deg, rgba(242, 242, 242, 1), rgba(255, 255, 255, 1))",
+    "--wc-bg-diag-alt": "linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(242, 242, 242, 1))",
+    "--wc-scroll": "rgba(209, 209, 209, 1)"
+  }
+}

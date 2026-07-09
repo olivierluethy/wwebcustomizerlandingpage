@@ -1,0 +1,25 @@
+{
+  "id": "blog-void",
+  "name": "Void",
+  "source": "wwebcustomizer.com/blog",
+  "author": "WhatsApp Web Customizer",
+  "vars": {
+    "--wc-link": "rgba(128, 128, 128, 1)",
+    "--wc-accent": "rgba(128, 128, 128, 1)",
+    "--wc-text": "rgba(222, 222, 222, 1)",
+    "--wc-receipt": "rgba(128, 128, 128, 1)",
+    "--wc-bubble-in": "rgba(24, 24, 24, 1)",
+    "--wc-bubble-out": "rgba(31, 31, 31, 1)",
+    "--wc-load-main": "linear-gradient(45deg, rgba(16, 16, 16, 1), rgba(14, 14, 14, 1), rgba(16, 16, 16, 1))",
+    "--wc-load-side": "linear-gradient(45deg, rgba(16, 16, 16, 1), rgba(14, 14, 14, 1))",
+    "--wc-load-item": "linear-gradient(45deg, rgba(18, 18, 18, 1), rgba(32, 32, 32, 1))",
+    "--wc-load-item-rev": "linear-gradient(45deg, rgba(32, 32, 32, 1), rgba(18, 18, 18, 1))",
+    "--wc-load-item-up": "linear-gradient(to top, rgba(18, 18, 18, 1), rgba(32, 32, 32, 1))",
+    "--wc-bg-base": "rgba(20, 20, 20, 1)",
+    "--wc-bg-up": "linear-gradient(to top, rgba(32, 32, 32, 1), rgba(20, 20, 20, 1))",
+    "--wc-bg-down": "linear-gradient(to bottom, rgba(32, 32, 32, 1), rgba(20, 20, 20, 1))",
+    "--wc-bg-diag": "linear-gradient(45deg, rgba(32, 32, 32, 1), rgba(20, 20, 20, 1))",
+    "--wc-bg-diag-alt": "linear-gradient(45deg, rgba(20, 20, 20, 1), rgba(32, 32, 32, 1))",
+    "--wc-scroll": "rgba(56, 56, 56, 1)"
+  }
+}

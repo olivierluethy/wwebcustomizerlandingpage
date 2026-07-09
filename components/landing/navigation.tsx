@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Chrome, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { trackNavClick } from "@/lib/analytics";
+import { trackNavClick, trackCtaHover } from "@/lib/analytics";
 import Image from 'next/image'
 
 const navLinks = [
@@ -108,6 +108,7 @@ export function Navigation() {
             <Button
               size="sm"
               className="bg-primary text-primary-foreground hover:bg-primary/90"
+              onMouseEnter={() => trackCtaHover("install_nav")}
               onClick={() => {
                 handleNavClick("install");
                 window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
@@ -169,6 +170,7 @@ export function Navigation() {
                   </Button>
                   <Button
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    onMouseEnter={() => trackCtaHover("install_nav_mobile")}
                     onClick={() => {
                       handleNavClick("install");
                       window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");

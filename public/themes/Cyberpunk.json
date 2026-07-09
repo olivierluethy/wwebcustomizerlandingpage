@@ -1,0 +1,25 @@
+{
+  "id": "blog-cyberpunk",
+  "name": "Cyberpunk",
+  "source": "wwebcustomizer.com/blog",
+  "author": "WhatsApp Web Customizer",
+  "vars": {
+    "--wc-link": "rgba(255, 46, 151, 1)",
+    "--wc-accent": "rgba(255, 46, 151, 1)",
+    "--wc-text": "rgba(224, 247, 255, 1)",
+    "--wc-receipt": "rgba(255, 46, 151, 1)",
+    "--wc-bubble-in": "rgba(21, 22, 27, 1)",
+    "--wc-bubble-out": "rgba(44, 15, 34, 1)",
+    "--wc-load-main": "linear-gradient(45deg, rgba(21, 17, 31, 1), rgba(18, 14, 26, 1), rgba(21, 17, 31, 1))",
+    "--wc-load-side": "linear-gradient(45deg, rgba(21, 17, 31, 1), rgba(18, 14, 26, 1))",
+    "--wc-load-item": "linear-gradient(45deg, rgba(17, 14, 25, 1), rgba(31, 28, 39, 1))",
+    "--wc-load-item-rev": "linear-gradient(45deg, rgba(31, 28, 39, 1), rgba(17, 14, 25, 1))",
+    "--wc-load-item-up": "linear-gradient(to top, rgba(17, 14, 25, 1), rgba(31, 28, 39, 1))",
+    "--wc-bg-base": "rgba(10, 10, 15, 1)",
+    "--wc-bg-up": "linear-gradient(to top, rgba(22, 22, 27, 1), rgba(10, 10, 15, 1))",
+    "--wc-bg-down": "linear-gradient(to bottom, rgba(22, 22, 27, 1), rgba(10, 10, 15, 1))",
+    "--wc-bg-diag": "linear-gradient(45deg, rgba(22, 22, 27, 1), rgba(10, 10, 15, 1))",
+    "--wc-bg-diag-alt": "linear-gradient(45deg, rgba(10, 10, 15, 1), rgba(22, 22, 27, 1))",
+    "--wc-scroll": "rgba(49, 53, 58, 1)"
+  }
+}

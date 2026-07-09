@@ -1,0 +1,25 @@
+{
+  "id": "blog-amber-oled",
+  "name": "Amber OLED",
+  "source": "wwebcustomizer.com/blog",
+  "author": "WhatsApp Web Customizer",
+  "vars": {
+    "--wc-link": "rgba(224, 164, 88, 1)",
+    "--wc-accent": "rgba(224, 164, 88, 1)",
+    "--wc-text": "rgba(237, 230, 220, 1)",
+    "--wc-receipt": "rgba(224, 164, 88, 1)",
+    "--wc-bubble-in": "rgba(10, 10, 10, 1)",
+    "--wc-bubble-out": "rgba(61, 42, 18, 1)",
+    "--wc-load-main": "linear-gradient(45deg, rgba(10, 7, 5, 1), rgba(9, 6, 4, 1), rgba(10, 7, 5, 1))",
+    "--wc-load-side": "linear-gradient(45deg, rgba(10, 7, 5, 1), rgba(9, 6, 4, 1))",
+    "--wc-load-item": "linear-gradient(45deg, rgba(6, 4, 3, 1), rgba(21, 19, 18, 1))",
+    "--wc-load-item-rev": "linear-gradient(45deg, rgba(21, 19, 18, 1), rgba(6, 4, 3, 1))",
+    "--wc-load-item-up": "linear-gradient(to top, rgba(6, 4, 3, 1), rgba(21, 19, 18, 1))",
+    "--wc-bg-base": "rgba(0, 0, 0, 1)",
+    "--wc-bg-up": "linear-gradient(to top, rgba(13, 13, 13, 1), rgba(0, 0, 0, 1))",
+    "--wc-bg-down": "linear-gradient(to bottom, rgba(13, 13, 13, 1), rgba(0, 0, 0, 1))",
+    "--wc-bg-diag": "linear-gradient(45deg, rgba(13, 13, 13, 1), rgba(0, 0, 0, 1))",
+    "--wc-bg-diag-alt": "linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(13, 13, 13, 1))",
+    "--wc-scroll": "rgba(43, 41, 40, 1)"
+  }
+}
