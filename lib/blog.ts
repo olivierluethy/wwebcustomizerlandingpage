@@ -10,6 +10,152 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Obsidian (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-obsidian-2026",
+  seoIndex: true,
+  description: "Recreate Obsidian's dark, purple-accented aesthetic on WhatsApp Web in 2026 — the real accent hex, the right font, and why Obsidian's restraint is the part to copy. Free theme download.",
+  date: "2026-07-11",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Obsidian (2026)
+
+If you use Obsidian, you already know something most people don't: that a tool you stare at for hours should look the way *you* want it to look. Obsidian's entire culture is built around that idea — hundreds of community themes, a CSS variable for everything, people who have spent genuine hours tuning their vault's appearance.
+
+Then you open WhatsApp Web. Bright green. Doodle background. Zero settings.
+
+Here's how to bring Obsidian's dark, quietly purple aesthetic to WhatsApp Web — the real colors, the right typography, and the philosophy that actually makes it look like Obsidian rather than just "a dark theme with purple in it."
+
+---
+
+## What Actually Makes Obsidian Look Like Obsidian
+
+Obsidian's default dark theme is deceptively simple, and there's an instructive detail in how its own community treats it: people try dozens of third-party themes and a striking number come back to the default. It's not that the community themes are bad. It's that the default is *restrained* in a way that survives eight-hour sessions.
+
+Three things define it:
+
+**One purple, used sparingly.** Obsidian's accent is \#7F6DF2 — a soft, slightly muted violet. It appears on links, active states, and internal references. Nowhere else. It's an accent in the true sense: rare enough to mean something.
+
+**Warm-neutral darks, not blue-grays.** Obsidian's dark surfaces are near-neutral. No cold slate tint, no navy undertone. Just genuinely dark gray.
+
+**Text that isn't white.** Obsidian's normal text is \#DCDDDE, muted text is \#999, faint text is \#666. Pure white never appears. That three-tier text hierarchy is doing quiet, constant work — it's why Obsidian's interface reads as calm rather than shouty.
+
+Copy those three things and the recreation lands. Miss them and you get a generic dark theme with a purple button.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web has no theming of its own. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds. If you're an Obsidian user, you'll find the theme editor immediately familiar: it exposes each interface surface as its own value, the same way Obsidian exposes CSS variables.
+
+---
+
+## Step 2: The Obsidian Palette
+
+Extension icon → **Themes** tab → **Create**.
+
+The accent and text colors below are Obsidian's actual values, taken from its CSS variables. The surface colors recreate Obsidian's dark-neutral character:
+
+- **Background:** \#202020 — the main note surface
+- **Sidebar:** \#161616 — Obsidian's file explorer sits darker than the note pane
+- **Sent bubbles:** \#2A2A2A
+- **Received bubbles:** \#1E1E1E
+- **Accent:** \#7F6DF2 — the Obsidian purple, exact
+- **Accent hover / active:** \#8875FF — Obsidian's hover state, exact
+- **Text (normal):** \#DCDDDE — exact
+- **Text (muted):** \#999999 — for timestamps and secondary text
+
+The single most important value is \#7F6DF2. Get that right and the whole thing reads as Obsidian to anyone who uses it.
+
+The second most important thing is **restraint with it.** Use the purple only for the active chat, links, and unread indicators. If purple shows up on your chat bubbles, it stops being an accent and starts being a color scheme — and it stops looking like Obsidian.
+
+**[⬇ Download Obsidian-Dark.json]** *(download slot)*
+
+---
+
+## Step 3: The Two-Tier Sidebar
+
+Obsidian's file explorer is darker than the note pane beside it. That contrast is subtle — \#161616 against \#202020 — but it's the reason Obsidian's layout reads as structured rather than flat.
+
+WhatsApp Web Customizer lets you set the sidebar and chat window independently, so you can reproduce it exactly:
+
+- **Backgrounds** tab → set the chat window to \#202020
+- Set the sidebar to \#161616
+
+Two shades apart. Barely visible. Completely load-bearing.
+
+---
+
+## Step 4: The Font
+
+Obsidian ships with a clean system-sans by default, and its power users overwhelmingly reach for one of two things: a neutral UI sans, or a monospace for the markdown-editing feel.
+
+Extension icon → **Typography** tab:
+
+- **For the default Obsidian feel:** **Inter** — neutral, highly legible, close to what Obsidian's interface uses
+- **For the markdown-editor feel:** **JetBrains Mono** or **Fira Code** — if your vault is set to a monospace editor font, this makes WhatsApp Web feel like an extension of it
+
+Nudge the size up one step either way. Obsidian users tend to read a lot of text, and the default WhatsApp Web size is calibrated for smaller screens than most of us use.
+
+If you're deciding between the two, see [best monospace fonts for WhatsApp Web](/blog/best-monospace-fonts-for-whatsapp-web-developer-setup-2026).
+
+---
+
+## Step 5: Background — Nothing
+
+Obsidian has no wallpaper. Its background is a solid color, and the content is the interface.
+
+**Backgrounds** tab → solid \#202020. No image, no pattern, no animation.
+
+This is the step people skip and then wonder why their recreation feels wrong. Obsidian's emptiness isn't an absence of design — it's the design.
+
+---
+
+## Step 6: Strip What Obsidian Wouldn't Show You
+
+Obsidian's sidebar shows your files and nothing else. No promotional sections, no feature you never open.
+
+WhatsApp Web's sidebar shows Archive, Status, Channels, and locked chats. Most people use none of them.
+
+Turn on **Minimal Mode** in the **Display** tab. Those four disappear, leaving a clean list of conversations — structurally much closer to what Obsidian's explorer looks like.
+
+For Obsidian users specifically, this step probably matters more than the colors. Obsidian's appeal is that it shows you your stuff and gets out of the way.
+
+---
+
+## Why Obsidian Users Find This Easy
+
+You already understand the model. Obsidian exposes its interface as CSS variables you can override; this extension exposes WhatsApp Web's interface as values you can set. Same idea, different application.
+
+And themes here work the way Obsidian themes work — as **portable files**. Export your theme as JSON, send it to someone, they import it and get your exact setup. If you've ever installed a community theme in Obsidian, the mental model transfers directly. See [how to share WhatsApp Web themes](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+The difference is that WhatsApp Web has no community themes at all, because WhatsApp never gave anyone the hooks. That's the gap this fills.
+
+---
+
+## Going Further
+
+**Match your actual vault theme.** If you run a specific Obsidian community theme, pull its accent and background hexes from its CSS and use those instead of the defaults above. The extension takes any hex value, so you can match your exact vault.
+
+**Build a light variant.** Obsidian's light mode follows the same restraint with warmer neutrals. Save both and swap by time of day.
+
+**Try other looks.** The same approach works for [Notion](/blog/how-to-make-whatsapp-web-look-like-notion-2026), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord), [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), and [Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram).
+
+---
+
+## The Bottom Line
+
+Obsidian's look comes down to \#7F6DF2 used sparingly, warm-neutral darks rather than blue-grays, a three-tier text hierarchy that never touches pure white, a two-shade sidebar, and an empty background.
+
+The restraint is the aesthetic. That's the part to copy.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Matched your vault theme exactly? [Share the JSON in our Discord](https://discord.gg/cppbDz4qhn) — that's exactly the kind of theme other people want.
+
+For more:
+
+- [Best WhatsApp Web setup for designers, developers, and visual workers](/blog/best-whatsapp-web-setup-for-designers-developers-visual-workers-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [Best monospace fonts for WhatsApp Web](/blog/best-monospace-fonts-for-whatsapp-web-developer-setup-2026)`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Notion (2026)",
   slug: "how-to-make-whatsapp-web-look-like-notion-2026",
   seoIndex: true,
