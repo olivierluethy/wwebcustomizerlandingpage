@@ -10,6 +10,132 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Best WhatsApp Web Setup for Students (2026)",
+  slug: "best-whatsapp-web-setup-for-students-2026",
+  seoIndex: true,
+  description: "How to set up WhatsApp Web for studying in 2026 — tame group chat chaos, cut distractions during study blocks, protect your screen in the library, and make it easier on your eyes.",
+  date: "2026-07-12",
+  readTime: "7 min",
+  content: `# Best WhatsApp Web Setup for Students (2026)
+
+For a lot of students, WhatsApp isn't a social app — it's infrastructure. The course group, the project group, the group for the group project that split off from the main group. Lecture notes get shared there. Deadlines get announced there. Missing it isn't an option.
+
+Which is the problem. You need WhatsApp open while you work, and WhatsApp open while you work is a machine for destroying concentration.
+
+Here's a setup that keeps you reachable without wrecking your focus — plus a few things that make long study sessions genuinely easier on your eyes.
+
+---
+
+## Start Here: Use WhatsApp Web, Not Your Phone
+
+The single biggest change isn't a setting. It's putting your phone in a drawer.
+
+If WhatsApp lives on the phone next to your laptop, every message is an invitation to pick it up, and picking it up is an invitation to everything else on the phone. WhatsApp Web lets you stay reachable on the machine you're already working on, with the phone out of reach.
+
+Go to [web.whatsapp.com](https://web.whatsapp.com), scan the QR code from your phone (**Linked Devices → Link a Device**), and put the phone away. Your phone can be face-down in a bag for up to 14 days before WhatsApp Web logs you out.
+
+That's the whole trick, and it's worth more than every tip below combined.
+
+---
+
+## Tame the Group Chats
+
+Course groups are noisy by nature. Two hundred people, one question, forty replies. You need the information without the interruptions.
+
+**Mute aggressively.** Right-click any group → **Mute** → **Always**. Muted groups still show up in your list and still collect messages — you just check them when you choose to, not when they choose. Mute every group that isn't genuinely urgent. That's most of them.
+
+**Pin the three that matter.** Right-click → **Pin Chat**. Your current project group, your closest study partner, whoever you actually need to hear from today. WhatsApp Web allows three pins; use them deliberately.
+
+**Star the important messages.** Deadlines, exam room numbers, the link to the shared drive, the professor's clarification about the assignment. Star them and they collect in one place instead of disappearing into 400 messages of "thanks!!" Right-click a message → **Star**.
+
+**Search instead of scroll.** \`Ctrl + F\` (or \`Cmd + F\`) searches across all your chats. When someone says "it's in the group chat," search takes three seconds. Scrolling takes ten minutes.
+
+---
+
+## Protect Your Screen in Shared Spaces
+
+If you study in a library, a cafe, a shared flat, or anywhere with people behind you, your WhatsApp Web is readable from several metres away. Contact names, message previews, whole conversations.
+
+Most of the time that's merely awkward. Sometimes it isn't.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — a free, open-source Chrome extension — includes a **privacy blur** that hides message content and contact names until you hover over them. From the next desk over, your screen is unreadable noise. From your seat, everything works normally.
+
+It's also genuinely useful during screen shares, which you'll do more of than you expect during group projects.
+
+---
+
+## Make It Easier to Look At
+
+You're going to stare at this thing for hours. WhatsApp Web's default font is small, its default background is a busy doodle pattern, and its default green is loud. None of that is adjustable in WhatsApp itself.
+
+The same extension fixes all three, and the fixes are worth more than they sound over a long study session:
+
+**Increase the font size.** The default is calibrated for small laptop screens from a decade ago. On any modern display it's too small, and squinting for four hours has a cost. Typography tab → push the size up one or two steps.
+
+**Pick a font built for reading.** **Atkinson Hyperlegible** was designed by the Braille Institute specifically for legibility, and it reduces reading effort even if your eyesight is fine. **Inter** and **Lexend** are also excellent. See [best fonts for WhatsApp Web](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style).
+
+**Kill the doodle background.** Backgrounds tab → a solid, calm color. Patterns add visual load you're paying for constantly without noticing.
+
+**Use a calm theme.** Low saturation, gentle contrast, one quiet accent. We put together a set specifically for this in [best WhatsApp Web themes for focus and productivity](/blog/best-whatsapp-web-themes-focus-productivity-2026) — Paper for daytime, Slate or Deep Work for evening.
+
+---
+
+## Cut the Clutter
+
+WhatsApp Web's sidebar contains Archive, Status, Channels, and locked chats. Be honest: how many of those do you open?
+
+Turn on **Minimal Mode** in the extension's Display tab and all four disappear, leaving a clean list of the conversations you actually have. Finding the right chat gets faster because there's less to scan past.
+
+More on this in [minimalist WhatsApp Web](/blog/minimalist-whatsapp-web-declutter-your-chat-2026).
+
+---
+
+## A Study Session Routine
+
+Putting it together, here's what a focused block actually looks like:
+
+1. **Phone in the drawer.** Not face-down on the desk. In the drawer.
+2. **WhatsApp Web open in a background tab**, not the foreground. You're reachable; you're not watching.
+3. **Everything muted except your pins.** If it's genuinely urgent, someone will message you directly.
+4. **Check it on your break**, not between paragraphs. Set a timer if you need to.
+
+The setup exists so you can stop thinking about WhatsApp. If you've built it right, you should be able to leave it open for three hours and only look twice.
+
+---
+
+## Two Things Worth Knowing
+
+**Voice message transcripts.** If your group chats are full of two-minute voice notes from someone who won't type, you can read them instead of listening. Enable **Voice Message Transcripts** once on your phone (Settings → Chats), then right-click any voice message on WhatsApp Web → **Transcribe**. Transcripts are generated on your phone, so nothing gets uploaded anywhere. Details in [our transcripts guide](/blog/how-to-use-voice-message-transcripts-on-whatsapp-web-2026).
+
+**Multi-device.** WhatsApp Web works on up to four computers at once. Library machine, laptop, the desktop at home — all logged in simultaneously, all syncing. Just remember to **log out of shared or university computers** when you leave. Sessions persist for 14 days, and someone finding yours open can read everything.
+
+---
+
+## On the Cost of All This
+
+Everything above is free. The extension is free and open source — the code is on GitHub and anyone can read it. There's no account, no trial, no student plan to sign up for, because there's nothing to pay for.
+
+That matters more when you're a student than it does later.
+
+---
+
+## The Bottom Line
+
+The best WhatsApp Web setup for studying is mostly about subtraction: phone out of reach, groups muted, sidebar stripped, background quiet, notifications reserved for the three people who matter today.
+
+Then make what's left easy on your eyes — bigger text, a readable font, a calm theme — and add a privacy blur if you work anywhere public.
+
+You'll be as reachable as you were before, and you'll get considerably more done.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, about 30 seconds.
+
+For more:
+
+- [Best WhatsApp Web themes for focus and productivity](/blog/best-whatsapp-web-themes-focus-productivity-2026)
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [WhatsApp Web keyboard shortcuts: the complete 2026 list](/blog/whatsapp-web-keyboard-shortcuts-the-complete-2026-list)`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Things 3 (2026)",
   slug: "how-to-make-whatsapp-web-look-like-things-3-2026",
   seoIndex: true,
