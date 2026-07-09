@@ -10,6 +10,143 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Things 3 (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-things-3-2026",
+  seoIndex: true,
+  description: "Recreate the calm, bright, award-winning Things 3 aesthetic on WhatsApp Web in 2026 — the warm whites, the signature blue, and an honest look at what does and doesn't transfer. Free theme download.",
+  date: "2026-07-12",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Things 3 (2026)
+
+Things 3 won Apple's Design Award, and more than a decade on it's still the app designers point at when they want to explain what restraint looks like. Bright, warm, generously spaced, with one confident blue and nothing else fighting for your attention.
+
+WhatsApp Web is the opposite kind of interface. Dense, green, patterned, and never revisited.
+
+If you've been living in Things all day and find WhatsApp Web visually exhausting by comparison, here's how to close most of that gap — and an honest account of the part you can't.
+
+---
+
+## First: Things' Aesthetic Is Mostly Space
+
+Here's what actually makes Things look like Things, and it isn't the color.
+
+Reviews of Things 3 keep landing on the same three things: brightly-colored icons, revamped typography, and beautiful use of white space. Cultured Code's own description of their recent refresh is telling — they talk about the curvature of controls, and **wider spacing that feels a bit more relaxed.** Not a new palette. Spacing.
+
+That matters for this guide, because **WhatsApp Web doesn't let you move pixels.** You can change every color, every font, every surface. You cannot widen the gap between messages or add padding around the chat list. An extension styles the interface; it doesn't rebuild the layout.
+
+So let's be straight about what you're getting: a very convincing Things *palette and typography* on WhatsApp Web, plus two moves that buy back a real amount of breathing room. Not a pixel-perfect Things clone, because that isn't possible. Anyone promising otherwise is selling you something.
+
+What you *can* get is genuinely lovely, and it's the calmest light-mode WhatsApp Web you can build.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web has no theming of its own — no colors, no fonts, no background settings. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds to install.
+
+---
+
+## Step 2: The Palette — Warm Whites, One Blue
+
+Things is a native Apple app, so it leans on system colors rather than publishing a fixed token list. These values recreate its character: bright warm whites, near-invisible separation between surfaces, and the signature blue used sparingly.
+
+Extension icon → **Themes** tab → **Create**:
+
+- **Background:** \`#FFFFFF\` — Things commits fully to white. No gray-white, no tint.
+- **Sidebar:** \`#FAFAF8\` — a barely-warm off-white, a hair softer than the content area
+- **Received bubbles:** \`#F4F4F2\`
+- **Sent bubbles:** \`#E8F0FC\` — the faintest wash of the accent blue
+- **Accent:** \`#3D82F7\` — the bright, friendly Things blue
+- **Text:** \`#1D1D1F\` — near-black, never pure black
+- **Muted text:** \`#8E8E93\` — for timestamps and secondary labels
+
+Two things worth noticing.
+
+**The sidebar is warm, the content is pure white.** That's the inverse of most dark-first tools, where the chrome is darker. Things lifts everything toward light and lets the tiniest warmth distinguish the panels. It's why the app feels sunny rather than clinical.
+
+**The blue is confident, not muted.** Where Linear desaturates its accent into sophistication, Things does the opposite — its blue is bright and cheerful and unapologetic. That optimism is half the app's personality. Don't tone it down.
+
+**[⬇ Download Things-Light.json]** *(download slot)*
+
+---
+
+## Step 3: The Font
+
+Things uses San Francisco, Apple's system typeface. It isn't licensed for general use, but the free match is the same one that works for any Apple recreation: **Inter**.
+
+Extension icon → **Typography** tab → select **Inter**.
+
+Then do the thing that matters most in this entire guide: **increase the font size by two steps, not one.**
+
+---
+
+## Step 4: Buy Back the White Space
+
+This is where you recover some of what the layout won't give you. Two moves, and together they do more for the Things feeling than any color choice.
+
+**Increase the font size.** Larger text creates implicit spacing — lines sit further apart, messages occupy more vertical room, and the interface stops feeling cramped. It's not real padding, but visually it reads close.
+
+**Turn on Minimal Mode** (Display tab). Archive, Status, Channels, and locked chats vanish from your sidebar. Things' sidebar contains your areas and projects and nothing else; removing four sections you never open moves WhatsApp Web meaningfully closer to that.
+
+Density is the enemy here. Every element you remove and every point of font size you add is space you're clawing back.
+
+---
+
+## Step 5: Background — White, and Nothing Else
+
+Things has no wallpaper, no texture, no pattern. Its emptiness is what the icons and typography sit against.
+
+**Backgrounds** tab → solid \`#FFFFFF\`.
+
+Not an image. Not a gradient. Not an animation. A Things recreation with a moving background isn't a Things recreation.
+
+---
+
+## What You Get, Honestly
+
+With all five steps done, WhatsApp Web will be bright, warm, spacious-feeling, and blue-accented. Someone who uses Things will recognize the family resemblance immediately.
+
+What it won't have is Things' actual geometry — the rounded corners, the generous padding, the micro-interactions that reviewers single out. Those live in the layout, and no extension reaches them.
+
+Whether that's enough depends on what you wanted. If you wanted WhatsApp Web to *feel* like the calm, bright, well-made corner of your desktop that Things occupies, this delivers it. If you wanted a pixel clone, nothing can.
+
+---
+
+## Why This Look Suits WhatsApp Web Better Than Most
+
+An observation, having built a lot of these: light recreations are harder than dark ones, and most people default to dark themes because they're forgiving. Dark hides poor contrast decisions.
+
+Things is the counter-argument. A well-made light interface is calmer than a dark one for daytime work, easier to read in a bright room, and — when the whites are warm rather than clinical — genuinely pleasant to sit in front of for hours.
+
+If every customization you've tried has been a dark theme, this is worth a week.
+
+---
+
+## Going Further
+
+**Pair it with a calm workflow.** Things' serenity is behavioral as much as visual. Mute the noisy groups. Pin three chats. Let the rest wait.
+
+**Try the other light recreations.** The [iMessage look](/blog/how-to-make-whatsapp-web-look-like-imessage) shares Things' Apple lineage, and [Notion](/blog/how-to-make-whatsapp-web-look-like-notion-2026) is the same idea in warm grays rather than warm whites.
+
+**Or go the other way.** If you want dark and precise instead, see [Linear](/blog/how-to-make-whatsapp-web-look-like-linear-2026) or [Obsidian](/blog/how-to-make-whatsapp-web-look-like-obsidian-2026).
+
+---
+
+## The Bottom Line
+
+Things' look is warm whites, one bright confident blue, near-black text, and a great deal of space. You can have three of those four on WhatsApp Web exactly, and approximate the fourth by pushing the font size up and stripping the sidebar with Minimal Mode.
+
+The blue is the signature. The space is the soul. Get both as close as the platform allows, and WhatsApp Web becomes the calmest bright interface on your desktop.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Got it looking right? [Share the JSON in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [Best WhatsApp Web themes for focus and productivity](/blog/best-whatsapp-web-themes-focus-productivity-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Linear (2026)",
   slug: "how-to-make-whatsapp-web-look-like-linear-2026",
   seoIndex: true,
