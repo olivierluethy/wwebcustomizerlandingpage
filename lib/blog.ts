@@ -10,6 +10,152 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Linear (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-linear-2026",
+  seoIndex: true,
+  description: "Recreate Linear's ultra-minimal dark aesthetic on WhatsApp Web in 2026 — built on Linear's own three-variable theme philosophy, not a fake hex list. Free theme download.",
+  date: "2026-07-11",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Linear (2026)
+
+Linear's interface is so distinctive that the entire aesthetic got named after it. "Linear style" is now shorthand across the design world for a particular look: dark, monochrome, precise, one restrained accent, nothing decorative. A generation of SaaS products have copied it.
+
+Then there's WhatsApp Web. Bright green, doodle background, unchanged since 2015.
+
+If you spend your day in Linear and your evenings in WhatsApp Web, the gap is jarring. Here's how to close it — using Linear's actual design philosophy rather than a copied color list.
+
+---
+
+## There Is No Linear Hex Palette (And That's the Interesting Part)
+
+Most "recreate this app's theme" guides hand you a list of hex codes. For Linear, that would be dishonest, because Linear doesn't work that way.
+
+When Linear redesigned their UI, they rebuilt their theming system so that instead of defining 98 specific variables per theme, they define **three**: a base color, an accent color, and a contrast value. Everything else — borders, elevated surfaces, panels, dialogs — is generated from those three. They do the generation in LCH color space, which is closer to how human vision actually works than the more common HSL, so a purple and a blue at the same lightness genuinely *look* equally light.
+
+That's the real Linear aesthetic. Not a palette — a system.
+
+So this guide gives you those three decisions, and how to translate them onto WhatsApp Web.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web offers no theming at all. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds.
+
+If you've ever built a custom theme in Linear, this will feel familiar: pick your surfaces, pick your accent, let restraint do the rest.
+
+---
+
+## Step 2: The Base — A Very Dark, Very Neutral Surface
+
+Linear's dark base is nearly black and nearly colorless. Not slate, not navy, not warm brown. Just dark.
+
+The one refinement worth knowing: pure \`#000000\` is generally considered too black for a UI base. The convention Linear-style interfaces follow is to take your brand or accent hue and pull it down to a very low lightness — one to ten percent — so the darkness harmonizes with the accent rather than sitting apart from it.
+
+Applied to WhatsApp Web:
+
+- **Background:** \`#0D0E10\` — near-black with the faintest cool cast
+- **Sidebar:** \`#08090A\` — Linear's chrome sits *darker* than its content area
+- **Received bubbles:** \`#151619\`
+- **Sent bubbles:** \`#1C1D21\`
+
+Note the direction of that contrast. In Notion and Obsidian the sidebar is darker too, but Linear takes it further — the surrounding chrome recedes almost completely, and the content is the only thing with presence.
+
+---
+
+## Step 3: The Accent — One Color, Used Almost Nowhere
+
+Linear's signature accent is a desaturated indigo-purple. The critical word is *desaturated*. It reads as sophisticated rather than loud precisely because it's pulled back from full saturation.
+
+- **Accent:** \`#5E6AD2\`
+
+And then — this is the part people get wrong — **barely use it.**
+
+In Linear, the accent appears on the active item, on links, on the primary button. That's it. Everything else is monochrome. Design analyses of Linear consistently describe it as ultra-minimal with a precise purple accent, and the precision is the point. An accent that appears everywhere isn't an accent; it's a color scheme.
+
+For WhatsApp Web, that means: purple on the active chat and unread indicators only. Chat bubbles stay neutral gray. Resist the urge.
+
+---
+
+## Step 4: The Contrast — Pick Your Level
+
+Linear's third variable is contrast, and it does real work — they use it to generate high-contrast variants for accessibility without designing separate themes.
+
+You get the same choice:
+
+- **Text (standard contrast):** \`#E6E6E7\` — off-white, never pure white
+- **Text (higher contrast):** \`#F5F5F6\`
+- **Muted text (timestamps, secondary):** \`#8A8F98\`
+
+The muted gray is doing more than it looks. Linear's calm comes from a clear hierarchy between primary and secondary text — and from the fact that neither is ever pure white.
+
+**[⬇ Download Linear-Dark.json]** *(download slot)*
+
+---
+
+## Step 5: The Font — This One Is Exact
+
+No guessing needed here. Linear uses **Inter Display** for headings and regular **Inter** for everything else.
+
+Extension icon → **Typography** tab → select **Inter**. Nudge the size up one step.
+
+Since WhatsApp Web has no heading hierarchy to speak of, plain Inter across the interface is the correct call — Inter Display is a display cut, meant for large type. Using it at chat-message size would be the wrong tool.
+
+---
+
+## Step 6: Background — Empty, Obviously
+
+Linear has no wallpaper. Linear-style design is defined partly by what it removes.
+
+**Backgrounds** tab → solid \`#0D0E10\`. No image, no pattern, no animation.
+
+---
+
+## Step 7: Remove What Linear Wouldn't Ship
+
+Linear's sidebar contains exactly what you use. There is no Archive tab you never open, no Status section, no Channels.
+
+Turn on **Minimal Mode** in the **Display** tab. Archive, Status, Channels, and locked chats disappear.
+
+For a Linear recreation this step is close to mandatory. Linear's interface philosophy is *offering minimal choices* — being direct, removing what doesn't earn its place. Hiding four unused sidebar sections is the most Linear thing you can do to WhatsApp Web.
+
+---
+
+## Why Linear Users Take to This Immediately
+
+Linear built custom theming into their product early, and their community runs on it — themes get shared as pasteable color lists in a dedicated channel, and there's a whole site where people trade them. If you use Linear, you probably already have opinions about your theme.
+
+The model here is the same, one step further: themes are **JSON files** you export, send to someone, and they import. Same sharing instinct, portable format. See [how to share WhatsApp Web themes](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+The difference is that Linear *gave* you the hooks. WhatsApp never did — which is why WhatsApp Web has no theme community at all, and why one has to be built from outside.
+
+---
+
+## Going Further
+
+**Match your actual Linear theme.** If you run a custom theme in Linear, use its base and accent instead of the values above. The extension accepts any hex, so your WhatsApp Web can match your issue tracker precisely.
+
+**Keep the restraint.** The strongest temptation with a Linear recreation is to add more purple. Don't. The single hardest and most important part of this aesthetic is how little accent color it uses.
+
+**Try other looks.** The same method works for [Obsidian](/blog/how-to-make-whatsapp-web-look-like-obsidian-2026), [Notion](/blog/how-to-make-whatsapp-web-look-like-notion-2026), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord), and [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage).
+
+---
+
+## The Bottom Line
+
+Linear's look isn't a palette you copy — it's three decisions: a near-black neutral base, one desaturated accent used almost nowhere, and a deliberate contrast level. Add Inter, an empty background, and Minimal Mode, and WhatsApp Web stops looking like a chat app and starts looking like a tool.
+
+The restraint is the whole thing. Every color you *don't* add makes it more convincing.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Matched your Linear theme exactly? [Share the JSON in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [Best WhatsApp Web setup for designers, developers, and visual workers](/blog/best-whatsapp-web-setup-for-designers-developers-visual-workers-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Obsidian (2026)",
   slug: "how-to-make-whatsapp-web-look-like-obsidian-2026",
   seoIndex: true,
