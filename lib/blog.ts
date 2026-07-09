@@ -10,6 +10,152 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Notion (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-notion-2026",
+  seoIndex: true,
+  description: "Recreate Notion's calm, warm-gray aesthetic on WhatsApp Web in 2026 — the exact palette, the font that matches, and the one detail most people get wrong. Free theme download.",
+  date: "2026-07-10",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Notion (2026)
+
+If you live in Notion, switching to WhatsApp Web is jarring. Notion is calm — warm neutrals, generous space, one restrained blue, typography that gets out of the way. WhatsApp Web is bright green, patterned, and loud by comparison.
+
+You can close that gap in about three minutes. Real Notion colors, real Notion-matched typography, and the one detail that separates a convincing recreation from a WhatsApp Web that's just been painted white.
+
+---
+
+## The Detail Everyone Gets Wrong
+
+Most attempts at a "Notion look" go straight to white background, black text, blue accent. It looks clean, but it never quite feels like Notion. Something's off.
+
+Here's why: **Notion doesn't use pure grays. It uses warm grays.**
+
+Every neutral surface in Notion is subtly warmed — a hint of yellow-brown mixed in. Notion's muted surface is \`#F0EFED\`, not \`#F0F0F0\`. Its border is \`#DFDCD9\`, not \`#DFDFDF\`. It's a two-or-three-point shift you'd never notice in isolation, and it's entirely responsible for why Notion feels soft and inviting rather than clinical.
+
+Cool grays feel like a spreadsheet. Warm grays feel like paper. That's the whole trick.
+
+Get that right and everything else falls into place.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web has no theming of its own — no colors, no fonts, no background settings. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)**: free, open source, about 30 seconds to install.
+
+Once it's in, pin it to your toolbar and open [web.whatsapp.com](https://web.whatsapp.com).
+
+---
+
+## Step 2: The Notion Palette
+
+Open the extension → **Themes** tab → **Create**. These are the values, drawn from Notion's actual interface tokens:
+
+**Light mode (Notion's default)**
+
+- **Background:** \`#FFFFFF\` — Notion's page surface is genuinely pure white
+- **Sidebar:** \`#F6F5F4\` — the warm light gray Notion uses for its sidebar
+- **Sent bubbles:** \`#F0EFED\` — Notion's muted surface color
+- **Received bubbles:** \`#FFFFFF\` with a \`#DFDCD9\` border tone
+- **Accent:** \`#097FE8\` — Notion's functional blue, used for buttons and active states
+- **Link/hover accent:** \`#0075DE\` — the slightly deeper blue Notion reserves for inline links
+- **Text:** \`#000000\` — Notion commits to true black text on white
+
+Notice the pattern: **the background is pure white, but every gray around it is warm.** That contrast is the signature.
+
+**Dark mode (a faithful adaptation)**
+
+Notion's dark mode follows the same warm-neutral philosophy in reverse — warm near-blacks rather than cool slate. These values recreate that character:
+
+- **Background:** \`#191919\`
+- **Sidebar:** \`#202020\`
+- **Sent bubbles:** \`#2C2C2A\`
+- **Received bubbles:** \`#1F1F1E\`
+- **Accent:** \`#529CCA\` (Notion's dark-mode blue reads softer than the light-mode one)
+- **Text:** \`#EBEBEA\` — off-white, never pure white
+
+Apply the colors one at a time. The moment the sidebar turns warm gray, it starts to feel like Notion.
+
+**[⬇ Download Notion-Light.json]** *(download slot)*
+**[⬇ Download Notion-Dark.json]** *(download slot)*
+
+---
+
+## Step 3: The Font
+
+Notion uses a custom typeface called **NotionInter** — which, as the name suggests, is a customized version of **Inter**. That makes this the rare recreation where the free match is essentially the real thing.
+
+1. Extension icon → **Typography** tab
+2. Select **Inter**
+3. Nudge the size up one step
+
+Notion's body text is 16px at weight 400, with heavier weights reserved for headings. On WhatsApp Web that translates to: regular weight, slightly larger than the default. Resist going bold — Notion's calm comes partly from its typographic restraint.
+
+If you want Notion's serif mood instead, Notion pairs Lyon Text as its secondary serif. **Georgia** is the closest free stand-in, though for a chat interface the sans is the better choice.
+
+---
+
+## Step 4: The Background — Keep It Empty
+
+Notion has no wallpaper. No pattern, no doodle, no texture. Its emptiness is the point.
+
+Extension icon → **Backgrounds** tab → set a **solid color**:
+
+- Light mode: \`#FFFFFF\`
+- Dark mode: \`#191919\`
+
+Skip images entirely. Skip animations. A Notion recreation with a moving background isn't a Notion recreation.
+
+---
+
+## Step 5: Strip the Clutter
+
+Notion's sidebar contains what you use and nothing else. WhatsApp Web's contains Archive, Status, Channels, and locked chats — sections most people never open.
+
+Turn on **Minimal Mode** in the **Display** tab. Those four sections disappear, leaving a clean conversation list.
+
+This step does more for the Notion feeling than any color choice. Notion's restraint isn't just visual — it's about what *isn't* there.
+
+---
+
+## Why This Recreation Works Better Than Most
+
+Notion's aesthetic is unusually recreatable, for three reasons:
+
+**Its palette is small.** Notion is famously strict about color — Ivan Zhao's design team limits the system to a tight set of neutrals plus one functional blue. Fewer colors means fewer things to get wrong.
+
+**Its font is essentially free.** Most recreations require substituting a proprietary typeface with an approximation. Here, NotionInter is derived from Inter, so you're using the same underlying design.
+
+**Its layout philosophy is subtractive.** Notion looks the way it does largely because of what it omits. Minimal Mode does the same thing to WhatsApp Web, which means you're not just matching colors — you're matching the design logic.
+
+The result is one of the most convincing recreations available on WhatsApp Web, and one of the calmest interfaces you can build.
+
+---
+
+## Going Further
+
+**Build both variants.** Notion users typically switch between light and dark by time of day. Save both themes and swap with one click.
+
+**Pair it with a calm workflow.** Mute noisy groups. Pin your three most-used chats. Notion's calm is behavioral as much as visual.
+
+**Try other looks.** The same approach works for [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), [Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord), and [Slack](/blog/how-to-make-whatsapp-web-look-like-slack).
+
+---
+
+## The Bottom Line
+
+The Notion look on WhatsApp Web comes down to four things: **warm grays instead of cool ones**, Inter as the font, a completely empty background, and Minimal Mode to strip what Notion wouldn't show you.
+
+The warm grays are the part that matters. \`#F6F5F4\` instead of \`#F5F5F5\` sounds like nothing. It's the entire difference between clinical and calm.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Nailed the look? [Share your theme file in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [Best fonts for WhatsApp Web in 2026](/blog/best-fonts-for-whatsapp-web-2026-12-picks-readability-style)`,
+},
+  {
   title: "Aesthetic Animated Backgrounds for WhatsApp Web: 6 Vibes to Try (2026)",
   slug: "aesthetic-animated-backgrounds-whatsapp-web-vibes-2026",
   seoIndex: true,
