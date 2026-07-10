@@ -10,6 +10,176 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Back Up and Restore Your WhatsApp Web Customization (2026)",
+  slug: "how-to-back-up-restore-whatsapp-web-customization-2026",
+  seoIndex: true,
+  description: "How to back up your WhatsApp Web themes, fonts, and setup so you never lose them — and how to restore everything on a new computer in a few minutes. Honest guide for 2026.",
+  date: "2026-07-13",
+  readTime: "6 min",
+  content: `# How to Back Up and Restore Your WhatsApp Web Customization (2026)
+
+You spent an evening getting WhatsApp Web exactly right. The theme is tuned, the font is the one you like, the background is calm, the clutter is hidden.
+
+Then you get a new laptop. Or you clear your browser data. Or you reinstall Chrome. And it's all gone.
+
+This is entirely avoidable, and it takes about two minutes to protect yourself. Here's what backs up cleanly, what you need to keep a copy of yourself, and how to restore everything on a new machine.
+
+---
+
+## The Honest Version First
+
+There is no single "export everything" button. Your customization lives in a few different places, and they back up differently:
+
+| What | Backs up how |
+|---|---|
+| **Themes** | Export as a JSON file. Perfect, complete, portable. |
+| **Custom fonts** | Keep the original font file or the Google Fonts URL. |
+| **Background images** | Keep the original image file. |
+| **Toggles** (Minimal Mode, privacy blur, visibility settings) | Not exportable — but they take 30 seconds to re-enable. |
+| **Font size** | Not exportable — one slider to redo. |
+
+The good news: the part that took you the longest — the theme — is the part that exports perfectly. The rest is either a file you already have or a switch you flip once.
+
+---
+
+## Step 1: Export Your Themes (The Important One)
+
+This is the backup that matters. A theme is a JSON file containing every color choice you made.
+
+1. Open [web.whatsapp.com](https://web.whatsapp.com) → click the [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) icon
+2. Go to the **Themes** tab
+3. Find your theme under **Custom themes**
+4. Click **Export** / **Download**
+5. A \`.json\` file lands in your Downloads folder
+
+Do this for **every** custom theme you've built, not just the one you're currently using. Each one is a separate file, and each is a few kilobytes — you're not saving space by skipping any.
+
+**Where to keep them:** anywhere that isn't only on this computer. A cloud drive folder, an email to yourself, a note, a Git repo if you're that kind of person. The whole point is surviving the loss of this machine.
+
+A folder called \`whatsapp-themes\` in your cloud storage takes ten seconds to make and solves this problem permanently.
+
+---
+
+## Step 2: Keep Your Font Files and URLs
+
+If you uploaded a custom font through the Font Manager, the extension stores it locally. Clearing extension data removes it.
+
+**Two cases:**
+
+**You uploaded a font file** (TTF, OTF, WOFF). Keep the original file. Put it in the same folder as your themes. When you restore, you re-upload it.
+
+**You loaded a font by URL** (Google Fonts or similar). Save the URL. Paste it into a text file next to your themes. Restoring is pasting it back in.
+
+If you use a built-in font from the 500+ library, there's nothing to back up — it's always there.
+
+More on the Font Manager in [how to add custom fonts to WhatsApp Web](/blog/how-to-add-custom-fonts-to-whatsapp-web-upload-google-fonts).
+
+---
+
+## Step 3: Keep Your Background Images
+
+Same principle. If you set a custom background image, the extension stores it locally. Keep the original image file in your backup folder.
+
+If you used a solid color, note the hex value. If you used an animated background, there's nothing to save — just remember which one.
+
+---
+
+## Step 4: Write Down Your Toggles
+
+The settings that aren't exportable are also the fastest to redo. Jot them in a text file with your themes:
+
+- Minimal Mode: on/off
+- Which visibility toggles you hid (Archive, Status, Channels, locked chats)
+- Privacy blur: on/off, and which elements
+- Font size: which step
+- Which font you're using
+
+Five lines. It'll save you ten minutes of "wait, what did I have this set to?"
+
+---
+
+## What a Complete Backup Looks Like
+
+A folder, in your cloud storage:
+
+\`\`\`
+whatsapp-web-backup/
+  Midnight.json
+  Deep-Focus.json
+  my-custom-theme.json
+  Inter-Variable.ttf
+  background.jpg
+  settings.txt
+\`\`\`
+
+That's it. That folder fully restores your WhatsApp Web on any computer, in any browser, forever.
+
+---
+
+## Restoring on a New Computer
+
+Takes about three minutes:
+
+1. **Install the extension** — [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) from the Chrome Web Store, ~30 seconds
+2. **Open WhatsApp Web** and link your phone as usual
+3. **Import your themes** — Themes tab → Import → select each \`.json\` file. They reappear in Custom themes.
+4. **Re-add your fonts** — Typography → Font Manager → upload the file, or paste the URL
+5. **Re-set your background** — Backgrounds tab → upload your image or set your color
+6. **Flip your toggles back** — Minimal Mode, privacy blur, font size, from your \`settings.txt\`
+
+Apply the theme. You're back exactly where you were.
+
+---
+
+## When You Actually Need This
+
+People discover they needed a backup at bad moments. The common ones:
+
+**New computer.** Obvious, and the one people plan for.
+
+**Clearing browser data.** Easy to do accidentally while troubleshooting something unrelated — including, ironically, while fixing a WhatsApp Web loading problem. Clearing cookies and cached files for the site is a standard fix, and it can take your extension settings with it depending on what you clear.
+
+**Reinstalling the extension.** Removing and reinstalling resets local storage. If you're ever troubleshooting a stubborn issue and the advice is "reinstall the extension," **export your themes first.**
+
+**Switching browsers.** Chrome to Brave, Chrome to Edge. The extension works in all of them, but each browser profile has its own storage.
+
+**Switching machines during the day.** Work laptop and home desktop. Import the same theme file on both and they match — which is also, incidentally, the easiest way to keep two computers looking identical.
+
+---
+
+## Backup, Sharing, and Teams
+
+The same JSON file that backs up your theme also **shares** it. Send it to a friend and they import it and get your exact look. Send it to your team and everyone matches.
+
+That's not a coincidence — it's why themes are files rather than settings buried in browser storage. See [how to share WhatsApp Web themes with friends](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+If you built a theme worth keeping, it's probably worth sharing. [Our Discord](https://discord.gg/cppbDz4qhn) collects community themes.
+
+---
+
+## A Note on What We'd Like to Improve
+
+We'll be straight with you: a single "export all settings" button would make this whole article unnecessary, and we know it. Right now themes export cleanly and everything else needs a little manual care.
+
+If that's something you'd value, say so in [our Discord](https://discord.gg/cppbDz4qhn). Feature requests from actual users are how most of this extension got built — the font size control exists because one person asked for it.
+
+---
+
+## The Bottom Line
+
+Export every custom theme as a JSON file. Keep your font files, your background image, and a five-line note of your toggles. Put all of it in one cloud folder.
+
+Two minutes now. Never lose your setup again — and restore it on any computer in about three minutes.
+
+👉 If you haven't customized WhatsApp Web yet, [install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source. Then come back and back it up.
+
+For more:
+
+- [How to share WhatsApp Web themes with friends](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026)
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "Colorful & Vibrant WhatsApp Web Themes to Download (2026)",
   slug: "colorful-vibrant-whatsapp-web-themes-download-2026",
   seoIndex: true,
