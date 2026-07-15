@@ -10,6 +10,322 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "Cute WhatsApp Web Themes to Download (2026)",
+  slug: "cute-whatsapp-web-themes-download-2026",
+  seoIndex: true,
+  description: "6 cute WhatsApp Web themes to download — soft pastels, sakura pink, matcha green and more. Free JSON files, import in 10 seconds, and actually readable.",
+  date: "2026-07-16",
+  readTime: "6 min",
+  content: `# Cute WhatsApp Web Themes to Download (2026)
+
+WhatsApp Web is not cute. It's green, it's flat, and it has the visual personality of a filing cabinet. Which is fine for a tool — except this is where you talk to your friends, your best friend, your group chat that never sleeps. It should feel like something.
+
+So here are six genuinely cute WhatsApp Web themes: soft pastels, gentle colours, nothing harsh. Each comes as a downloadable file you import in about ten seconds.
+
+And — importantly — each one is still readable. More on why that matters below.
+
+---
+
+## The Problem With Most Cute Themes
+
+Quick honesty before the list, because this is where cute themes usually go wrong.
+
+**Pastel on pastel doesn't work.** A soft pink background with soft pink text looks adorable in a screenshot and is genuinely painful after ten minutes. You squint. You lean in. You get a headache. And then you switch back to boring old green, which is a shame.
+
+The fix is simple and every theme below uses it: **soft, gentle backgrounds — but text that's properly dark.** Near-black text on a pastel background is still cute. It's just cute *and* legible. You keep the whole aesthetic and lose nothing.
+
+Cute doesn't have to mean squinting.
+
+---
+
+## How to Use These (10 Seconds)
+
+1. Install [WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, ~30 seconds
+2. Download the theme file below
+3. Open [web.whatsapp.com](https://web.whatsapp.com) → extension icon → **Themes** tab → **Import**
+4. Pick the file — it applies instantly
+
+Don't like it? Import a different one. Nothing is permanent.
+
+---
+
+## 1. Sakura — Cherry Blossom Pink
+
+Soft petal pink with a deeper rose accent. The classic cute theme, done properly — gentle enough to be pretty, contrasted enough to read all day.
+
+- **Background:** \`#FFF5F7\`
+- **Sidebar:** \`#FCE9EE\`
+- **Sent bubbles:** \`#FAD3DE\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#E87CA0\`
+- **Text:** \`#3D2830\`
+
+*The one most people want. Start here.*
+
+**[⬇ Download Sakura.json]** *(download slot)*
+
+---
+
+## 2. Matcha Latte — Soft Green Cream
+
+Gentle matcha green against warm cream. Cosy rather than sweet — like a quiet café afternoon. Also, quietly, the nicest way to keep WhatsApp green while removing everything you disliked about WhatsApp's green.
+
+- **Background:** \`#F7F9F2\`
+- **Sidebar:** \`#EDF2E4\`
+- **Sent bubbles:** \`#DDE9CC\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#8FB573\`
+- **Text:** \`#2E3524\`
+
+*Cute but grown-up. Good if pink isn't your thing.*
+
+**[⬇ Download Matcha-Latte.json]** *(download slot)*
+
+---
+
+## 3. Peach Fizz — Warm and Sunny
+
+Soft peach and warm apricot. The warmest theme here — it makes WhatsApp Web feel like late afternoon light, which is a strange thing to say about a chat app and completely true.
+
+- **Background:** \`#FFF6F0\`
+- **Sidebar:** \`#FDE9DC\`
+- **Sent bubbles:** \`#FBD9C4\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#F0906A\`
+- **Text:** \`#3D2A20\`
+
+*For people who find blue-toned interfaces cold.*
+
+**[⬇ Download Peach-Fizz.json]** *(download slot)*
+
+---
+
+## 4. Cotton Candy — Pink and Blue Pastel
+
+Two pastels, used properly: pink for your messages, soft blue as the accent. The trick is that they never touch — each has its own job, so it reads as playful rather than muddled.
+
+- **Background:** \`#FDF7FC\`
+- **Sidebar:** \`#F4ECF8\`
+- **Sent bubbles:** \`#FBDCEC\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#8FB8E8\`
+- **Text:** \`#33283C\`
+
+*The most playful of the set.*
+
+**[⬇ Download Cotton-Candy.json]** *(download slot)*
+
+---
+
+## 5. Blueberry Milk — Soft and Calm
+
+Gentle blue and cream. The calmest theme here — cute without being sweet, which makes it the easiest one to justify having open during work.
+
+- **Background:** \`#F5F8FD\`
+- **Sidebar:** \`#E8EFF9\`
+- **Sent bubbles:** \`#D8E5F5\`
+- **Received bubbles:** \`#FFFFFF\`
+- **Accent:** \`#7BA3D9\`
+- **Text:** \`#26303D\`
+
+*Cute enough for you, neutral enough for your colleagues.*
+
+**[⬇ Download Blueberry-Milk.json]** *(download slot)*
+
+---
+
+## 6. Midnight Sakura — Cute, But Dark
+
+Almost every cute theme is light, which is a problem at 1am. This is the rare cute dark one: deep plum-black surfaces with the same soft pink accent as Sakura. Gentle in the dark, still unmistakably cute.
+
+- **Background:** \`#1F1620\`
+- **Sidebar:** \`#181119\`
+- **Sent bubbles:** \`#3A2632\`
+- **Received bubbles:** \`#251A26\`
+- **Accent:** \`#F0A2BE\`
+- **Text:** \`#F2E4EA\`
+
+*Save this one alongside Sakura and switch when it gets late.*
+
+**[⬇ Download Midnight-Sakura.json]** *(download slot)*
+
+---
+
+## Make It Even Cuter
+
+The theme is the colours. Three more things finish the look:
+
+**A rounder font.** Sharp, technical fonts fight a soft palette. **Nunito** is the pick — rounded, friendly, and genuinely readable. **Quicksand** is even rounder if you want to commit. Set it in the **Typography** tab.
+
+**A soft background.** Backgrounds tab → a solid pastel that matches your theme, or upload a gentle image. Avoid anything busy — it fights the palette and kills the calm.
+
+**Clear the clutter.** Turn on **Minimal Mode** in the Display tab to hide Archive, Status, and Channels. Cute plus tidy beats cute plus cluttered every time.
+
+---
+
+## Match With Your Friends
+
+Because every theme is a file, you can send it to someone. They import it and their WhatsApp Web looks exactly like yours.
+
+Matching themes with your best friend or your group is a genuinely nice thing that costs nothing — download the file, send it in the chat, they import it. Done. See [how to share WhatsApp Web themes](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+---
+
+## Make Them Yours
+
+Every theme imports as a **fully editable** custom theme. If Sakura's pink isn't quite your pink, open it in the editor and nudge it. Want Matcha's background but Cotton Candy's accent? Do that.
+
+The only rule worth keeping: **don't lighten the text.** Everything else is yours to change. The dark text is what stops the whole thing becoming unreadable — it's the reason these are still comfortable at hour three.
+
+---
+
+## The Bottom Line
+
+Cute and readable aren't opposites — you just need soft backgrounds with proper dark text. All six above do that, all are free, and all import in about ten seconds.
+
+Start with **Sakura** if you're not sure. Grab **Midnight Sakura** too, and switch when it gets late.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and try one. Made a cuter one? [Share it in our Discord](https://discord.gg/cppbDz4qhn) — we feature community themes.
+
+For more:
+
+- [Colorful & vibrant WhatsApp Web themes to download](/blog/colorful-vibrant-whatsapp-web-themes-download-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [How to change your WhatsApp Web background or wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026)`,
+},
+  {
+  title: "How to Hide Status and Archived Chats on WhatsApp Web (2026)",
+  slug: "how-to-hide-status-archived-chats-whatsapp-web-2026",
+  seoIndex: true,
+  description: "How to hide Status and Archived chats on WhatsApp Web — the real settings WhatsApp gives you, the underused Keep Chats Archived toggle, and how to remove both from your sidebar entirely.",
+  date: "2026-07-16",
+  readTime: "6 min",
+  content: `# How to Hide Status and Archived Chats on WhatsApp Web (2026)
+
+Your WhatsApp Web sidebar has a Status section you never post to and an Archived row for chats you archived in 2023 and haven't thought about since. Both sit there permanently, taking up the top of your chat list, every single day.
+
+The good news: WhatsApp gives you more control here than most people realise — genuinely useful settings that are quietly buried and rarely used. The less good news: none of them actually remove either section from your screen.
+
+Here's both halves — what WhatsApp lets you do, and how to get rid of them entirely.
+
+---
+
+## Part 1: Archived Chats
+
+### The setting almost nobody has turned on
+
+Before hiding anything, there's a WhatsApp setting worth knowing about, because it fixes the most annoying thing about Archive.
+
+By default, archiving a chat is temporary. Someone messages you and **the chat jumps straight back into your main list.** You archive it again. They message again. It comes back. Archiving becomes pointless for exactly the chats you most want out of the way — the noisy ones.
+
+**Keep chats archived** fixes this. With it on, archived chats stay archived when new messages arrive. WhatsApp's own documentation is explicit: a new message leaves the chat in Archived unless this setting is turned off.
+
+**To turn it on** (it's a phone setting, and it syncs to WhatsApp Web):
+
+- **Android:** WhatsApp → three-dot menu → **Settings → Chats** → toggle on **Keep chats archived**
+- **iPhone:** WhatsApp → **Settings → Chats** → toggle on **Keep chats archived**
+
+Now archiving actually means something. That group of 200 people planning an event you attended once? Archive it and it's genuinely gone until you go looking.
+
+### What archiving does and doesn't do
+
+Worth being clear, because archiving is widely misunderstood:
+
+- **The other person is never notified.** Archiving is completely invisible to them.
+- **Nothing is deleted.** Full history stays, and archived chats remain searchable.
+- **It's not privacy.** Anyone with your unlocked screen can open the Archived folder. For actual hiding, use Chat Lock.
+- **Archived chats can still notify you** unless you also mute them. Archive tidies your list; mute silences alerts. Do both.
+
+### Hiding the Archived row itself
+
+Even with everything configured perfectly, the **Archived** row still sits at the top of your chat list. WhatsApp has no setting to remove it.
+
+That's Part 3 below.
+
+---
+
+## Part 2: Status
+
+### What WhatsApp actually lets you control
+
+Status has real privacy settings — they just don't hide the section.
+
+**Control who sees your status** (phone → **Settings → Privacy → Status**):
+- My contacts
+- My contacts except…
+- Only share with…
+
+**Mute someone's status updates:** open the Status/Updates tab on your phone, press and hold their update, tap **Mute**. They're never told, and their updates stop appearing at the front of your view.
+
+Mute every contact whose updates you don't care about and the Status section quietens down considerably. But it doesn't disappear.
+
+### The thing you can't do
+
+There is **no setting to remove Status from WhatsApp Web.** You can control who sees yours, and mute everyone else's, and the section still occupies your sidebar. If you don't post status and don't watch anyone else's — which is most people — it's pure dead weight.
+
+---
+
+## Part 3: Removing Both From Your Sidebar
+
+WhatsApp Web won't hide them. Your browser will.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** is a free, open-source Chrome extension with visibility toggles for exactly the sections WhatsApp won't let you turn off.
+
+1. Install it from the Chrome Web Store (~30 seconds)
+2. Open [web.whatsapp.com](https://web.whatsapp.com) → click the extension icon
+3. Go to the **Display** tab
+4. Switch off **Status** and **Archive**
+
+Gone. Immediately.
+
+**Want only one of them?** Use the individual toggles rather than Minimal Mode — hide Archive, keep Status, or the reverse. Whatever you actually use, stays.
+
+**Want the full clean-up?** Turn on **Minimal Mode** and it also hides Channels and locked chats. What's left is a list of conversations and nothing else.
+
+Important: this is purely visual, on your machine. Your archived chats still exist and are still searchable. Your status still works. Your account and your phone are untouched. You're simply not being shown sections you don't use.
+
+---
+
+## The Recommended Setup
+
+Putting it together — the configuration most people end up happy with:
+
+1. **Turn on Keep chats archived** (phone → Settings → Chats). Archiving finally works properly.
+2. **Archive aggressively.** Every group you're in out of obligation, every chat that isn't active. It's reversible and nobody knows.
+3. **Mute the status updates you don't care about.**
+4. **Hide Status and Archive** from the sidebar with the extension.
+
+Total time: about three minutes. The result is a WhatsApp Web that shows you conversations you actually have, and nothing else.
+
+---
+
+## Why WhatsApp Won't Ship This
+
+Every section WhatsApp adds to your sidebar is a surface they want engaged with. A toggle that hides Status would reduce Status usage. That's a straightforward business reason, and it's theirs to weigh.
+
+The counter-argument is just as simple: it's your screen. If you never post a status and archived that group two years ago, being shown both permanently isn't a feature — it's a tax.
+
+WhatsApp Web is a webpage, and an extension can restyle a webpage. That's the entire mechanism. The extension is [open source on GitHub](https://github.com/BaskLash/WhatsApp-Web-Customizer) — it never reads your messages, it only hides elements your browser is already rendering.
+
+---
+
+## The Bottom Line
+
+**Archive:** turn on **Keep chats archived** on your phone — it's the setting that makes archiving actually work, and most people have never found it. Then hide the Archived row with the extension.
+
+**Status:** control who sees yours and mute the rest natively; hide the section entirely with the extension.
+
+Neither can be removed through WhatsApp itself. Both take about thirty seconds with a free extension.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf), open the Display tab, switch them off.
+
+For more:
+
+- [How to remove Channels from WhatsApp Web](/blog/how-to-remove-channels-from-whatsapp-web-2026)
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)`,
+},
+  {
   title: "How to Change WhatsApp Web Colors (Complete Guide 2026)",
   slug: "how-to-change-whatsapp-web-colors-2026",
   seoIndex: true,
