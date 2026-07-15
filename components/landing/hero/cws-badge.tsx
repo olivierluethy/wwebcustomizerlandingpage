@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Chrome, Star } from "lucide-react";
-import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
+import { trackButtonClick, trackCtaHover, trackInstallClick } from "@/lib/analytics";
 
 /**
  * Chrome Web Store trust block.
@@ -24,7 +24,10 @@ export function CwsBadge() {
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => trackCtaHover("cws_badge")}
-      onClick={() => trackButtonClick("cws_badge")}
+      onClick={() => {
+        trackButtonClick("cws_badge");
+        trackInstallClick("cws_badge");
+      }}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.85, duration: 0.6 }}

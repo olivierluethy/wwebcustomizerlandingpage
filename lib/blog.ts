@@ -10,6 +10,573 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Change WhatsApp Web Colors (Complete Guide 2026)",
+  slug: "how-to-change-whatsapp-web-colors-2026",
+  seoIndex: true,
+  description: "How to change WhatsApp Web's colors in 2026 — get rid of the green, recolor every element, and build your own palette. Free, no coding, takes about two minutes.",
+  date: "2026-07-15",
+  readTime: "7 min",
+  content: `# How to Change WhatsApp Web Colors (Complete Guide 2026)
+
+WhatsApp Web has been the same shade of green since 2015. Not a customisable green — *the* green. There's no colour setting, no accent picker, no "choose your palette" screen. You get what Meta chose a decade ago, and that's the end of it.
+
+Except it isn't. You can change every colour on WhatsApp Web — the green, the background, the chat bubbles, the sidebar, the text — in about two minutes, for free, without touching any code.
+
+Here's the complete guide.
+
+---
+
+## First: What WhatsApp Lets You Change (Almost Nothing)
+
+Let's be clear about the starting point, because a lot of guides waste your time here.
+
+**WhatsApp Web has exactly one appearance setting: light or dark mode.** That's it. Settings → Theme → Light / Dark / System. No colours, no accents, no palettes.
+
+Dark mode swaps the greens for a darker green and the whites for grays. If you were hoping for a blue WhatsApp, or a purple one, or one that matches your desktop — WhatsApp doesn't offer it and shows no sign of ever offering it.
+
+There is no hidden menu. You're not missing it.
+
+---
+
+## The Fix: A Free Extension
+
+Because WhatsApp Web is a webpage, a browser extension can restyle it. That's the whole mechanism.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds to install — exposes every colour on WhatsApp Web as something you can set.
+
+1. Install it from the Chrome Web Store
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. Go to the **Themes** tab → **Create**
+4. Start setting colours
+
+The change is live as you go — you'll see WhatsApp Web recolour in real time as you pick.
+
+---
+
+## Getting Rid of the Green (The Reason Most People Are Here)
+
+Let's address the actual request. Most people searching for this want one thing: **the green gone.**
+
+The green appears in more places than you'd guess, which is why half-measures look wrong. To remove it properly, change these:
+
+- **Accent colour** — the biggest one. This is the green on active states, unread badges, links, and the send button. Set it to whatever you want the app to *feel* like: a blue, a purple, a warm orange.
+- **Sent message bubbles** — WhatsApp's signature light green (\`#D9FDD3\` in light mode, \`#005C4B\` in dark). Change this and half the greenness disappears immediately.
+- **Header / top bar** — the darker green strip.
+- **Unread badges** — small, but they're bright and your eye goes straight to them.
+
+Miss the bubbles and you'll have a non-green interface full of green messages. Miss the accent and every notification badge stays green. Change all four and the green is genuinely gone.
+
+**A fast neutral swap**, if you just want green out and don't want to think:
+
+- **Accent:** \`#3390EC\` (a clean blue)
+- **Sent bubbles:** \`#E8F0FC\` (light) or \`#1C3A5E\` (dark)
+- **Everything else:** leave as is
+
+Ninety seconds, no green.
+
+---
+
+## The Full Colour Map
+
+If you want to build a proper palette rather than just kill the green, here's what each setting actually controls. This is the part no other guide covers, and it's what stops people getting a muddled result.
+
+**Background** — the area behind your messages. The largest surface on screen, so it sets the overall mood more than anything else.
+
+**Sidebar** — your chat list panel. **Tip:** making this *slightly* different from the background is what makes an interface look designed rather than flat. Every well-made app does this — a couple of shades apart is enough.
+
+**Sent bubbles** — your messages.
+
+**Received bubbles** — their messages. Usually close to the background with just enough separation to read as distinct.
+
+**Accent** — active chat, links, unread indicators, buttons. **Use it sparingly.** One colour, appearing rarely, reads as confident. The same colour everywhere reads as a mess.
+
+**Text** — avoid pure black on white or pure white on black. Near-black (\`#1A1A1A\`) and off-white (\`#E6E6E6\`) are easier on the eyes over a long day, which is why almost every serious app uses them.
+
+**Muted text** — timestamps and secondary labels. A clear step between primary and muted text is doing quiet work: it's a big part of why some interfaces feel calm and others feel shouty.
+
+---
+
+## Three Rules That Keep It From Looking Wrong
+
+Most bad custom themes break one of these.
+
+**1. Pick one colour to be loud.** One accent, used rarely. If three colours are competing, none of them wins and the whole thing feels chaotic.
+
+**2. Keep text contrast.** A gorgeous palette you can't read is a failed palette. If you're squinting at your own theme after ten minutes, the contrast is too low — no amount of taste fixes that.
+
+**3. Layer your surfaces.** Sidebar and background should differ slightly. Flat interfaces where everything is the same colour look unfinished, and it's the single most common mistake.
+
+---
+
+## Don't Want to Pick Colours Yourself?
+
+Fair enough — most people don't want to be a designer, they just want it to look good.
+
+Every theme we've published comes as a downloadable file you import in about ten seconds:
+
+- [10 best WhatsApp Web themes (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads) — the general collection
+- [Colorful & vibrant themes](/blog/colorful-vibrant-whatsapp-web-themes-download-2026) — if you want bold
+- [Focus & productivity themes](/blog/best-whatsapp-web-themes-focus-productivity-2026) — if you want calm
+- [Dark & OLED themes](/blog/dark-whatsapp-web-themes-oled-ready-presets-download-2026) — if you want dark
+
+Import one, then tweak it. Starting from something that works and adjusting is far easier than starting from a blank palette — and everything stays editable once imported.
+
+---
+
+## Copying a Look You Already Like
+
+If you have a colour scheme you love elsewhere, use its values directly. The extension takes any hex, so you can match your setup exactly:
+
+- Your **code editor** — Dracula, Nord, Solarized, Tokyo Night. Pull the hexes from its theme file.
+- Your **brand colours** — accent = your primary, background = your neutral.
+- **Another app you like** — we've written recipes for [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), [Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord), [Notion](/blog/how-to-make-whatsapp-web-look-like-notion-2026), and more.
+
+---
+
+## Keeping It
+
+Your colours save automatically and survive reloads, tab closes, and browser restarts. Nothing to re-do.
+
+You can also export your palette as a JSON file — useful for backing it up, moving it to another computer, or sending it to someone who liked your setup. See [how to share WhatsApp Web themes](/blog/how-to-share-whatsapp-web-themes-json-import-export-2026).
+
+---
+
+## The Bottom Line
+
+WhatsApp Web gives you light mode and dark mode. That's all it will ever give you.
+
+A free extension gives you every colour: accent, background, sidebar, both bubble colours, text, muted text. If you only want the green gone, change the **accent** and the **sent bubbles** and you're done in ninety seconds. If you want a proper palette, follow the three rules — one loud colour, real text contrast, layered surfaces — and it'll look deliberate rather than random.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, no account.
+
+For more:
+
+- [How to install custom themes on WhatsApp Web](/blog/whatsapp-web-themes-how-to-install-custom-themes-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [How to get true dark mode on WhatsApp Web](/blog/how-to-get-dark-mode-on-whatsapp-web-beyond-the-default)`,
+},
+  {
+  title: "How to Blur Messages and Hide Contact Names on WhatsApp Web (2026)",
+  slug: "how-to-blur-messages-hide-contact-names-whatsapp-web-2026",
+  seoIndex: true,
+  description: "How to blur your WhatsApp Web messages and hide contact names so nobody can read your screen. Every privacy toggle explained — free, and set up in under a minute.",
+  date: "2026-07-15",
+  readTime: "6 min",
+  content: `# How to Blur Messages and Hide Contact Names on WhatsApp Web (2026)
+
+WhatsApp encrypts your messages end-to-end. Nobody can intercept them, not even Meta.
+
+Then you open WhatsApp Web on a 27-inch monitor in an open-plan office, and your entire conversation is legible from four metres away. Contact names, message previews, the lot. The encryption is flawless and completely beside the point, because the leak isn't the network — it's the screen.
+
+WhatsApp has no setting for this. Here's how to fix it in about a minute.
+
+---
+
+## The Problem, Stated Plainly
+
+Every threat model WhatsApp defends against assumes an attacker on the wire. None of them cover the person sitting behind you.
+
+Realistic situations where your screen betrays you:
+
+- **Open-plan offices** — anyone walking past your desk reads your chat list
+- **Screen sharing** — you share your screen for a meeting, a message arrives, everyone sees who it's from and what it says
+- **Cafés and coworking** — the person behind you has a perfect view
+- **Home** — family, flatmates, anyone glancing over
+- **Presenting** — WhatsApp Web open on a second monitor that's mirrored to a projector
+
+The information leaking isn't just message text. **Contact names alone are sensitive** — a recruiter's name, a lawyer's name, a doctor's name, an ex's name. Someone doesn't need to read the conversation to learn something you'd rather they didn't.
+
+---
+
+## The Fix: Blur It Until You Hover
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, ~30 seconds to install — blurs the sensitive parts of WhatsApp Web until you hover your mouse over them.
+
+The result: from a distance, your screen is unreadable noise. From your seat, you hover and read normally. You lose almost nothing; everyone else loses everything.
+
+**To turn it on:**
+
+1. Install the extension from the Chrome Web Store
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. Go to the **Privacy** tab
+4. Toggle on what you want blurred
+
+That's it. Nothing to configure, no account, and it applies instantly.
+
+---
+
+## Every Toggle, and What It Actually Does
+
+The blur isn't one switch — it's several, so you can protect exactly what matters to you and leave the rest usable.
+
+### Blur contact names
+
+Hides the names in your chat list and conversation headers. Hover to reveal.
+
+**The most under-rated toggle.** If you turn on exactly one thing, make it this. Names are the highest-signal, lowest-effort thing to read off someone's screen — a passer-by can't read three paragraphs at a glance, but they can absolutely read a name.
+
+### Blur message previews
+
+Hides the one-line preview under each chat in your sidebar. That preview is the single most-readable thing on the screen: short, bold, and positioned exactly where a wandering eye lands.
+
+### Blur chat messages
+
+Blurs the message bubbles inside the open conversation. This is the heavier one — you'll hover to read — so it's best when someone is genuinely behind you rather than as an all-day default.
+
+### Blur profile photos
+
+Hides contact avatars. Useful more often than you'd think: a face is recognisable across a room even when text isn't.
+
+### Hide typing indicator
+
+Stops "typing…" appearing on your screen. Small, but it's a movement cue that draws the eye — motion attracts attention in a way static text doesn't.
+
+### Hide recording indicator
+
+Same idea for voice-message recording.
+
+---
+
+## Which Ones Should You Actually Turn On?
+
+Honest guidance, because turning everything on makes WhatsApp Web tiring to use and you'll switch it off within a day.
+
+**Working in an office or café, all day:** blur **contact names** and **message previews**. Leave the open conversation readable. This is the setup most people settle on — high protection, near-zero friction, and you can still use WhatsApp Web normally.
+
+**Screen sharing or presenting:** turn on **everything**, including chat messages, for the duration. Worst case then becomes "someone messaged you" with no detail. Switch it back after.
+
+**At home with family around:** **contact names** and **profile photos**. The content usually matters less than who you're talking to.
+
+**Genuinely sensitive work** — journalism, legal, medical, HR: everything on, permanently. You'll adapt to hovering faster than you expect.
+
+---
+
+## The Honest Part: This Is Friction
+
+A blur you have to hover through is, by definition, slightly slower than not having one.
+
+We'd rather say that plainly than pretend otherwise. In our own usage data, the privacy features show a real try-then-revert pattern — people switch everything on, find it heavy, and turn it back off. That's not a failure of the feature; it's people discovering that maximum protection costs more than they wanted to pay.
+
+Which is exactly why the toggles are granular. **Don't start with everything.** Start with contact names alone. Live with it a week. It costs you almost nothing and removes the most-leaked information on your screen. Add message previews if you want more. Only go further if your situation actually demands it.
+
+The setting you keep is worth more than the setting you admire and switch off.
+
+---
+
+## What This Doesn't Do
+
+Being clear about the limits:
+
+- **It's not encryption.** Your messages were already end-to-end encrypted; this changes nothing about that, for better or worse.
+- **It doesn't stop screenshots.** Anyone with access to your unlocked computer can hover and read.
+- **It doesn't protect against someone using your machine.** For that, lock your screen — or see [WhatsApp Chat Lock](/blog/whatsapp-web-in-2026-every-feature-update-and-change-you-should-know).
+- **It's local.** The blur is applied in your browser. It doesn't touch your account, your phone, or what anyone else sees.
+
+It solves exactly one problem: people looking at your screen. It solves that one well.
+
+---
+
+## Why WhatsApp Doesn't Ship This
+
+A reasonable question. Most messaging apps don't, and the honest answer is that shoulder-surfing isn't in their threat model — encryption is measurable and demoable, screen privacy isn't.
+
+But WhatsApp Web is a webpage, and a browser extension can restyle a webpage. The blur is a CSS filter applied to elements your browser is already rendering. It's not clever, and it never needs to read your messages to do it — it doesn't know or care what the text says, it just blurs the box it's in.
+
+That's also why the extension can be open source without any awkwardness: [the code is on GitHub](https://github.com/BaskLash/WhatsApp-Web-Customizer), and you can read exactly what it touches.
+
+---
+
+## While You're There
+
+The extension's other features are visual: themes, 500+ fonts, custom backgrounds, and Minimal Mode to hide sidebar sections you don't use. None of them affect privacy either way — but if you're already customising, [minimalist WhatsApp Web](/blog/minimalist-whatsapp-web-declutter-your-chat-2026) pairs naturally with the blur. Less on screen, less to leak.
+
+---
+
+## The Bottom Line
+
+Your messages are encrypted. Your screen isn't. If you use WhatsApp Web anywhere other people can see it, blurring **contact names** is the single highest-value thirty seconds you can spend — and it costs you almost nothing day to day.
+
+Add message previews if you want more. Turn everything on when you're screen sharing. Don't start with everything, because you won't keep it.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) — free, open source, no account.
+
+For more:
+
+- [Is WhatsApp Web safe? Privacy and security explained](/blog/is-whatsapp-web-safe-privacy-and-security-explained-2026)
+- [How to read WhatsApp messages without showing online or blue ticks](/blog/how-to-read-whatsapp-messages-without-showing-online-blue-ticks-2026)
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)`,
+},
+  {
+  title: "How to Make WhatsApp Web Look Like an iPhone (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-an-iphone-2026",
+  seoIndex: true,
+  description: "Give WhatsApp Web the iOS look — the system gray ramp, semantic layering, and the Liquid Glass era palette. Honest guide with real values and a free theme download.",
+  date: "2026-07-14",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like an iPhone (2026)
+
+There's a particular calm to the way an iPhone looks. Not the wallpaper, not the icons — the *system*. Soft gray backgrounds. Cards that float slightly above the surface behind them. One blue that means "tap this." Text that's black, or gray, or lighter gray, and never anything else.
+
+Open WhatsApp Web next to it and the difference is jarring. Green header, doodle pattern, one flat surface for everything.
+
+Here's how to bring the iOS system look to WhatsApp Web — the whole-OS aesthetic, not just the Messages app.
+
+---
+
+## First: iPhone Look vs iMessage Look
+
+Worth separating these, because they're related but not the same thing.
+
+**The iMessage look** is the Messages app specifically: blue sent bubbles, gray received bubbles, white background. If that's what you're after, we have a dedicated guide: [how to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage). It's the most popular recreation we've written.
+
+**The iPhone look** — this post — is the iOS *system* aesthetic. The soft grays you see in Settings. The layered card surfaces. The system blue. It's a calmer, more neutral look that doesn't shout "messaging app," and it's what most people actually mean when they say something "looks like an iPhone."
+
+If you want blue bubbles, go to the iMessage guide. If you want WhatsApp Web to feel like it belongs on iOS, stay here.
+
+---
+
+## The Honest Bit: Apple Doesn't Publish Hex Codes
+
+Before the values, something most guides won't tell you.
+
+Apple's colour system is **semantic, not literal.** Instead of "use this hex," Apple gives named, adaptive tokens — \`systemBlue\`, \`label\`, \`systemBackground\`, \`systemGray\` through \`systemGray6\` — that shift automatically for light mode, dark mode, increased contrast, and vibrancy. Apple documents \`systemBlue\` as a colour that adapts to the current trait environment, and deliberately does not guarantee a hex value.
+
+The famous \`#007AFF\` everyone quotes as "iOS blue"? **Community-measured, not an Apple spec.** It can differ between OS versions.
+
+So the values below are the widely-measured light and dark defaults. They're accurate enough to build a convincing theme, and anyone telling you they're official specs is guessing. Design to the *role* — one blue for actions, a gray ramp for layering — and the exact digits matter less than the structure.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web has no theming of its own. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds.
+
+---
+
+## Step 2: The iOS Palette
+
+Extension icon → **Themes** tab → **Create**.
+
+**Light (the iOS default)**
+
+- **Background:** \`#FFFFFF\` — \`systemBackground\`
+- **Sidebar:** \`#F2F2F7\` — \`systemGray6\`, the soft gray behind every Settings screen
+- **Received bubbles:** \`#FFFFFF\` — cards sit *lighter* than the surface behind them
+- **Sent bubbles:** \`#E5E5EA\` — \`systemGray5\`
+- **Accent:** \`#007AFF\` — \`systemBlue\` (community-measured)
+- **Text:** \`#000000\` — \`label\`
+- **Muted text:** \`#8E8E93\` — \`systemGray\`, for timestamps and secondary labels
+
+**Dark**
+
+- **Background:** \`#000000\` — iOS dark mode commits to true black
+- **Sidebar:** \`#1C1C1E\` — \`systemGray6\` dark
+- **Received bubbles:** \`#2C2C2E\` — \`systemGray5\` dark
+- **Sent bubbles:** \`#1C1C1E\`
+- **Accent:** \`#0A84FF\` — \`systemBlue\` dark, brighter to hold its own against black
+- **Text:** \`#FFFFFF\`
+- **Muted text:** \`#8E8E93\`
+
+**[⬇ Download iPhone-Light.json]** *(download slot)*
+**[⬇ Download iPhone-Dark.json]** *(download slot)*
+
+---
+
+## Step 3: The Layering Rule (This Is the Whole Thing)
+
+Here's what separates an actual iOS-looking interface from "white with a blue button."
+
+**iOS layers surfaces.** In light mode, the *background* is gray and the *content cards* are white — cards float above the surface. In dark mode, it inverts: background is pure black, cards are lighter. Apple's gray ramp exists precisely to build that hierarchy, running from \`systemGray6\` (most subtle) up to \`systemGray\` (most dominant).
+
+Applied to WhatsApp Web: your sidebar should be \`#F2F2F7\` and your chat window \`#FFFFFF\`. The chat area sits *above* the sidebar visually. Most people set both to white, get a flat page, and can't work out why it doesn't feel like iOS.
+
+That single decision does more than the blue does.
+
+---
+
+## Step 4: Use the Blue Almost Nowhere
+
+iOS uses \`systemBlue\` to mean one thing: *this is interactive.* Links, buttons, active states. Nothing else is blue.
+
+On WhatsApp Web that means: blue for the active chat and unread indicators, and nowhere else. No blue bubbles (that's the iMessage look — different post). No blue headers.
+
+Restraint with the accent is a signature of the whole aesthetic. An interface with blue everywhere doesn't look like iOS; it looks like a website from 2012.
+
+---
+
+## Step 5: The Font
+
+Apple uses San Francisco. It isn't licensed for general use, but **Inter** is the closest free match and it's genuinely close — it was designed for the same job at the same sizes.
+
+Extension icon → **Typography** tab → **Inter**. Push the size up one step; iOS body text is more generous than WhatsApp Web's default.
+
+---
+
+## Step 6: Background — Solid, Always
+
+iOS has no wallpaper behind Settings, behind Mail, behind Messages. The system surfaces are solid colour.
+
+**Backgrounds** tab → solid \`#F2F2F7\` (light) or \`#000000\` (dark). No images, no patterns, no animation.
+
+---
+
+## Step 7: Strip What iOS Wouldn't Show
+
+iOS is ruthless about not showing you things you don't use. WhatsApp Web's sidebar has Archive, Status, Channels, and locked chats sitting there permanently.
+
+Turn on **Minimal Mode** in the **Display** tab and they're gone. What's left is a clean list — much closer to how an iOS app presents itself.
+
+---
+
+## A Note on Liquid Glass
+
+If you've updated an Apple device recently, you've met **Liquid Glass** — the translucent material Apple introduced at WWDC25, described as reflecting and refracting its surroundings while dynamically transforming to bring focus to content. It's their biggest visual redesign in years and it spans iOS 26, iPadOS 26, and macOS Tahoe 26.
+
+Honest answer: **you can't reproduce it on WhatsApp Web.** Liquid Glass is real-time refraction of whatever sits behind a surface. A theme sets colours; it can't compute optics. Anyone claiming a Chrome extension delivers Liquid Glass is selling you something.
+
+What you *can* borrow is the principle underneath it — layered surfaces, content elevated above its background, restraint everywhere else. That's Step 3, and it's the part that actually reads as Apple. The glass is the finish; the layering is the structure.
+
+---
+
+## Going Further
+
+**Build both variants.** iOS switches by time of day; save light and dark and swap with one click.
+
+**Want the Messages app instead?** [The iMessage guide](/blog/how-to-make-whatsapp-web-look-like-imessage) does blue bubbles properly.
+
+**Other Apple-adjacent looks:** [Things 3](/blog/how-to-make-whatsapp-web-look-like-things-3-2026) shares the warm-light lineage.
+
+---
+
+## The Bottom Line
+
+The iPhone look is four things: a gray background with lighter content floating on it, one blue used almost nowhere, Inter at a generous size, and nothing else on screen.
+
+Get the layering right — sidebar \`#F2F2F7\`, chat window \`#FFFFFF\` — and it reads as iOS before you've touched anything else. That's the move most guides miss.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Nailed it? [Share the JSON in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [How to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage)
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
+  title: "How to Remove Channels from WhatsApp Web (2026)",
+  slug: "how-to-remove-channels-from-whatsapp-web-2026",
+  seoIndex: true,
+  description: "Want Channels gone from WhatsApp Web? There's no native off switch — here's the honest 2026 guide to what actually works, what doesn't, and how to hide it completely.",
+  date: "2026-07-14",
+  readTime: "5 min",
+  content: `# How to Remove Channels from WhatsApp Web (2026)
+
+You opened WhatsApp Web to message people. Instead there's a Channels icon in your sidebar — a broadcast feed you never asked for, following brands you never chose, sitting permanently next to your actual conversations.
+
+You went looking for the setting to turn it off. There isn't one.
+
+You're not missing it. It genuinely doesn't exist. Here's the honest situation, what actually works, and what doesn't.
+
+---
+
+## The Short Answer
+
+**WhatsApp does not let you remove Channels.** There is no toggle, no setting, no hidden menu. Muting a channel stops its notifications but leaves it exactly where it is. This is deliberate — Channels is a product Meta is pushing, and pushed features rarely come with an off switch.
+
+Enough people dislike this that there's a public petition asking Meta to make Channels optional. It hasn't happened.
+
+On WhatsApp Web specifically, Channels syncs from your phone and appears in your interface whether you engage with it or not. You cannot remove it from the web client using WhatsApp's own settings.
+
+So there are exactly two real options: reduce it natively as far as WhatsApp allows, or hide it completely with a browser extension. Both below.
+
+---
+
+## What WhatsApp Natively Lets You Do (Not Much)
+
+Three things, none of which actually remove it:
+
+**Unfollow every channel.** On your phone, open each channel you follow → unfollow. On mobile this genuinely helps — with zero channels followed, the Updates tab reverts to something closer to the old, simpler status view. But the Channels section itself remains.
+
+**Delete any channel you created.** If you ever made one, open it on your phone → three-dot menu → Delete channel.
+
+**Mute them.** Silences notifications. Changes nothing visually. The channel stays in your list.
+
+That's the complete set of native options. Notice what's missing: any way to make Channels disappear.
+
+**A myth worth killing:** reinstalling WhatsApp does not remove Channels. Neither does clearing data, switching devices, or logging out and back in. It's part of the app now.
+
+---
+
+## What Actually Works on WhatsApp Web
+
+WhatsApp Web can't hide Channels. Your browser can.
+
+**[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** is a free, open-source Chrome extension with a feature called **Minimal Mode** that hides the interface sections WhatsApp won't let you turn off — Channels included.
+
+**How to do it:**
+
+1. Install the extension from the Chrome Web Store (free, ~30 seconds)
+2. Open [web.whatsapp.com](https://web.whatsapp.com) and click the extension icon
+3. Go to the **Display** tab
+4. Turn on **Minimal Mode**
+
+Channels disappears. So do Status, Archive, and locked chats — the other sections most people never open.
+
+**If you only want Channels gone** and want to keep the rest, use the individual visibility toggles instead of Minimal Mode. Switch off Channels alone and leave Status and Archive alone.
+
+Either way, it's a visual change on your end. Your phone is untouched, your account is untouched, nothing is deleted. You're simply not shown a section you don't use.
+
+---
+
+## Why an Extension Can Do This and WhatsApp Won't
+
+A fair question. The answer is a difference of incentives, not of technology.
+
+WhatsApp Web is a webpage. A browser extension can restyle a webpage — including hiding elements. That's all Minimal Mode does: it tells your browser not to render the Channels section.
+
+WhatsApp *could* ship this as a setting tomorrow. It's trivially easy. They don't, because Channels is a growth product and hiding it would reduce its reach. That's a business decision, and it's theirs to make.
+
+But it's your screen. If you want a messaging app that shows you messages, you're allowed to have that.
+
+---
+
+## What Else Minimal Mode Hides
+
+While you're in there, the same feature removes the other sidebar sections most people never touch:
+
+- **Status** — if you don't post or watch status updates, it's dead weight
+- **Archive** — most people archive a handful of chats and never look again
+- **Locked chats** — useful feature, but the entry doesn't need permanent space
+
+Turn all four off and WhatsApp Web becomes a list of conversations and nothing else. It's a noticeably calmer application — and finding the chat you want gets faster, because there's less to scan past.
+
+We went deeper on this in [minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026).
+
+---
+
+## While You're There
+
+Once the clutter is gone, the rest of WhatsApp Web's dated defaults become more noticeable — the same green, the same small font, the same doodle background. The extension handles those too: themes, 500+ fonts, custom backgrounds, and a privacy blur for working in public.
+
+None of it costs anything. The extension is free and fully open source — the code is on GitHub, and anyone can check exactly what it does. It has no account, no tracking of your messages, and it can't read your conversations; it only restyles the page in your browser.
+
+---
+
+## The Bottom Line
+
+There is no native way to remove Channels from WhatsApp Web. Muting doesn't do it. Unfollowing doesn't do it. Reinstalling doesn't do it. WhatsApp simply hasn't shipped an off switch, and there's no sign they intend to.
+
+A free extension hides it in about thirty seconds — either on its own, or along with Status, Archive, and locked chats.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf), open the Display tab, turn on Minimal Mode. Done.
+
+For more:
+
+- [Minimalist WhatsApp Web: how to declutter your chat](/blog/minimalist-whatsapp-web-declutter-your-chat-2026)
+- [15 hidden WhatsApp Web features you're probably not using](/blog/15-hidden-whatsapp-web-features-youre-probably-not-using)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "How to Back Up and Restore Your WhatsApp Web Customization (2026)",
   slug: "how-to-back-up-restore-whatsapp-web-customization-2026",
   seoIndex: true,

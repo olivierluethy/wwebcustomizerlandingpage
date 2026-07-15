@@ -6,6 +6,7 @@ import { Menu, X, Chrome, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackNavClick, trackCtaHover } from "@/lib/analytics";
+import { useInstallCta } from "@/components/use-install-cta";
 import Image from 'next/image'
 
 const navLinks = [
@@ -19,6 +20,7 @@ const navLinks = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const install = useInstallCta("install_nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,8 +112,8 @@ export function Navigation() {
               className="bg-primary text-primary-foreground hover:bg-primary/90"
               onMouseEnter={() => trackCtaHover("install_nav")}
               onClick={() => {
-                handleNavClick("install");
-                window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+                trackNavClick("install");
+                install.onClick();
               }}
               asChild
             >
@@ -120,6 +122,7 @@ export function Navigation() {
                 Add to Chrome
               </a>
             </Button>
+            {install.fallback}
           </div>
 
           {/* Mobile Menu Button */}
@@ -171,9 +174,11 @@ export function Navigation() {
                   <Button
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                     onMouseEnter={() => trackCtaHover("install_nav_mobile")}
-                    onClick={() => {
-                      handleNavClick("install");
-                      window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
+                    onClick={(e) => {
+                      // Keep the menu OPEN so the mobile copy-link fallback can
+                      // render beneath the button (handleNavClick would close it).
+                      trackNavClick("install");
+                      install.onClick(e);
                     }}
                     asChild
                   >
@@ -182,6 +187,7 @@ export function Navigation() {
                       Add to Chrome
                     </a>
                   </Button>
+                  {install.fallback}
                 </div>
               </div>
             </motion.div>

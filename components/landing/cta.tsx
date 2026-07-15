@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Chrome, Github, MessageCircle, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
+import { useInstallCta } from "@/components/use-install-cta";
 
 export function CTA() {
+  const install = useInstallCta("install_cta_section");
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
@@ -29,14 +31,12 @@ export function CTA() {
               size="lg"
               className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
               onMouseEnter={() => trackCtaHover("install_cta_section")}
-              onClick={() => {
-                trackButtonClick("install");
-                window.open("https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de", "_blank");
-              }}
+              onClick={install.onClick}
             >
               <Chrome className="mr-2 h-5 w-5" />
               Install Extension
             </Button>
+            {install.fallback}
 
             <Button
   size="lg"

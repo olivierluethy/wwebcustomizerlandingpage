@@ -6,10 +6,9 @@ import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Navigation } from "@/components/landing/navigation";
 import { Footer } from "@/components/landing/footer";
 import { ThemeDownloadButton } from "@/components/theme-download-button";
-
-// Existing Chrome Web Store listing URL (single source of truth for blog CTAs).
-const CWS_URL =
-  "https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de";
+import { PostInstallBanner } from "@/components/post-install-banner";
+import { BlogContent } from "@/components/blog-content";
+import { InstallCtaButton } from "@/components/install-cta-button";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -52,6 +51,11 @@ export async function generateMetadata({
 function renderMarkdown(content: string, postSlug: string) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
+
+  // On posts that offer theme downloads, the install CTA must appear (and
+  // dominate) ABOVE the first download button — a theme JSON is useless without
+  // the extension. We inject the prominent banner right before the first one.
+  let firstDownloadRendered = false;
 
   let listItems: React.ReactNode[] = [];
   let listType: "ul" | "ol" | null = null;
@@ -265,6 +269,13 @@ function renderMarkdown(content: string, postSlug: string) {
     if (downloadMatch) {
       flushList();
       flushTable();
+
+      if (!firstDownloadRendered) {
+        elements.push(
+          <PostInstallBanner key={`install-banner-${i}`} postSlug={postSlug} />
+        );
+        firstDownloadRendered = true;
+      }
 
       elements.push(
         <ThemeDownloadButton
@@ -557,9 +568,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Der Titel (H1) und die Beschreibung kommen jetzt 
                 direkt aus dem Markdown-Renderer unten */}
-            <div className="prose prose-invert prose-lg max-w-none">
+            <BlogContent postSlug={post.slug}>
               {renderMarkdown(post.content, post.slug)}
-            </div>
+            </BlogContent>
 
             {/* Blog-post CTA block */}
             <div
@@ -588,10 +599,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <a
-                href={CWS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <InstallCtaButton
+                location="blog_footer_cta"
+                postSlug={post.slug}
                 className="inline-flex items-center gap-2"
                 style={{
                   background: "#4ade80",
@@ -607,7 +617,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               >
                 <Chrome className="h-4 w-4" />
                 Add to Chrome — it&apos;s free
-              </a>
+              </InstallCtaButton>
             </div>
 
             <footer className="mt-16 pt-8 border-t border-border">

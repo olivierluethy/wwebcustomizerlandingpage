@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
+import { useInstallCta } from "@/components/use-install-cta";
 import { ActivityLayer } from "./activity-layer";
 
 /**
@@ -50,6 +51,7 @@ const FEATURE_CARDS = [
 ];
 
 export function Hero() {
+  const install = useInstallCta("install_hero");
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Ambient background ----------------------------------------------- */}
@@ -214,17 +216,12 @@ export function Hero() {
                 size="lg"
                 className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
                 onMouseEnter={() => trackCtaHover("install_hero")}
-                onClick={() => {
-                  trackButtonClick("install");
-                  window.open(
-                    "https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf?authuser=0&hl=de",
-                    "_blank"
-                  );
-                }}
+                onClick={install.onClick}
               >
                 <Chrome className="mr-2 h-5 w-5" />
                 Add to Chrome — it&apos;s free
               </Button>
+              {install.fallback}
             </div>
 
             <Button
