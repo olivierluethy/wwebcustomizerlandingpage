@@ -10,6 +10,194 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Wallpaper Ideas: 12 Backgrounds That Actually Work (2026)",
+  slug: "whatsapp-web-wallpaper-ideas-backgrounds-that-work-2026",
+  seoIndex: true,
+  description: "12 WhatsApp Web wallpaper ideas that actually work behind your chats — and why your favourite desktop wallpaper won't. Honest guidance on what to choose.",
+  date: "2026-07-17",
+  readTime: "7 min",
+  content: `# WhatsApp Web Wallpaper Ideas: 12 Backgrounds That Actually Work (2026)
+
+Everyone's first instinct is the same: take a wallpaper you love — a landscape, a favourite photo, that mountain shot from your desktop — and put it behind your chats.
+
+And it looks bad. Not slightly bad. Distractingly, unusably bad, in a way that's hard to articulate until you understand why.
+
+Here's why, and twelve ideas that genuinely work instead.
+
+---
+
+## The Rule Nobody Tells You
+
+**A chat wallpaper is not a desktop wallpaper.** They have opposite jobs.
+
+A desktop wallpaper is *meant* to be looked at. Sharp detail, strong focal point, rich contrast, something interesting happening. That's the whole point — it's the thing on screen.
+
+A chat wallpaper sits **behind text you need to read for hours.** Every quality that makes a desktop wallpaper great actively sabotages it:
+
+- **Detail** competes with your messages for attention
+- **A focal point** pulls your eye away from the conversation, constantly
+- **High contrast** makes text bubbles hard to separate from what's behind them
+- **Bright areas** blow out light text; **dark areas** swallow dark text
+
+The mountain photo isn't the problem. The mountain photo *doing its job* is the problem.
+
+**The rule:** a good chat wallpaper is boring on purpose. Low contrast, no focal point, no detail. It should be something you notice once and then never see again.
+
+Every idea below follows it.
+
+---
+
+## 1. A Solid Colour
+
+The most underrated option, and genuinely what most people end up happy with.
+
+No image at all — one calm colour behind your chats. Zero competition with text, zero visual load, and it makes your theme's bubble colours read cleanly because nothing is fighting them.
+
+Try \`#F4F4F2\` for light, \`#141414\` for dark. Boring? Yes. That's the point.
+
+---
+
+## 2. A Very Soft Gradient
+
+A gentle two-tone fade — dark at the top, slightly darker at the bottom. Adds depth without adding anything to look at.
+
+The trick is subtlety: the two colours should be **close together**. \`#1A1A1F\` → \`#101014\` reads as depth. A blue-to-pink sunset gradient reads as a distraction.
+
+---
+
+## 3. Your Own Photo, Heavily Blurred
+
+This is how you keep the photo you love without the problems it causes.
+
+Take the image, blur it hard — genuinely hard, not a light touch — and use that. You keep the colours and the mood and the personal meaning. You lose the detail and the focal point, which are the parts that were hurting you.
+
+It reads as atmosphere rather than as a photo. That's exactly right.
+
+---
+
+## 4. A Dark Abstract
+
+Soft shapes, muted colours, nothing recognisable. Dark abstracts work because there's nothing for your eye to identify and latch onto — it slides right off.
+
+Look for: low contrast, no clear subject, dark overall. Avoid: anything with a bright spot, which becomes a permanent attention magnet in your peripheral vision.
+
+---
+
+## 5. A Texture
+
+Paper grain. Linen. Concrete. Fine noise. Textures are detail *without* structure — no shapes, no focal point, just surface.
+
+They add a subtle sense of material and richness that a flat colour doesn't have, at almost no cost to readability. One of the safest choices here.
+
+---
+
+## 6. Nature, But Far Away
+
+If you want nature, the trick is distance. Fog over a valley. A wide flat ocean horizon. An overcast sky. Sand.
+
+These work because distance *removes* detail. A close-up forest is a thousand competing shapes; a foggy hillside is two soft shapes and nothing else.
+
+---
+
+## 7. A Very Low-Contrast Pattern
+
+Geometric shapes, dots, a grid — but barely visible. Think 5% opacity, not 50%.
+
+This is roughly what WhatsApp's own doodle background is *trying* to do. It fails because the doodles are too visible and too illustrative. The idea is right; the execution is too loud. Do the same thing, quieter.
+
+---
+
+## 8. Night Sky
+
+Dark with faint stars. Almost the perfect chat wallpaper by accident: overwhelmingly dark, evenly distributed, no focal point, and the small bright points are too small to compete with text.
+
+Just avoid anything with a big bright moon or a galaxy core — those are focal points wearing a disguise.
+
+---
+
+## 9. Your Photo, Desaturated
+
+If blurring feels like too much, try removing the colour instead. A black-and-white or heavily desaturated photo keeps the composition but loses the chromatic competition with your bubbles.
+
+Works particularly well with a monochrome theme — the whole interface reads as one coherent thing.
+
+---
+
+## 10. Duotone
+
+Take any image, flatten it to two colours pulled from your theme, and it stops fighting your palette entirely — because it *is* your palette.
+
+More effort than the other options. Genuinely striking when done well, and it looks deliberately designed in a way stock images never do.
+
+---
+
+## 11. Darkened Edges (Vignette)
+
+Any image, plus a strong vignette pulling the edges down. It focuses attention toward the centre — which is where your messages are.
+
+A useful rescue technique: it makes a wallpaper that *almost* works actually work.
+
+---
+
+## 12. Nothing At All
+
+Worth saying plainly: **no wallpaper is a legitimate choice.** A clean solid surface with well-chosen bubble colours and a good font is a genuinely lovely interface.
+
+If you've tried five wallpapers and none feel right, the answer might be that your theme is already doing the work and the wallpaper has nothing to add.
+
+---
+
+## What To Avoid
+
+The reliable failures:
+
+- **Anything with faces.** Eyes are attention magnets. You will look at them. Every time.
+- **Anything with text or logos.** Text behind text is genuinely awful.
+- **Busy patterns.** WhatsApp's own default is the example.
+- **High contrast anywhere.** A bright patch will swallow your light bubbles; a black patch will swallow dark ones.
+- **Anything you love too much.** If it's a photo you want to *look at*, it belongs on your desktop, not behind your chats. You'll keep looking at it, and that's the problem.
+
+---
+
+## One Trick That Fixes Most Of This
+
+If your wallpaper looks almost right but not quite: **use a different background for the chat window than for the sidebar.**
+
+Put the wallpaper behind your chats and keep the sidebar a solid colour. The chat list stays perfectly readable, the conversation area gets the atmosphere, and the whole thing reads as designed rather than as an image stretched behind everything.
+
+Most people set one background everywhere and wonder why it feels off. This is usually why. More on how the surfaces work in [how to set a different background for each part of WhatsApp Web](/blog/different-background-for-each-part-of-whatsapp-web-2026).
+
+---
+
+## Want Motion Instead?
+
+Everything above is static. If you'd rather have something gently alive behind your chats — drifting bubbles, slow gradients, a marbled swirl — that's a different approach with the same rules: slow, calm, low contrast.
+
+See [best animated backgrounds for WhatsApp Web](/blog/best-animated-backgrounds-for-whatsapp-web-2026).
+
+---
+
+## Actually Setting One
+
+WhatsApp Web has no background setting at all — no wallpaper picker, no colour choice. All of the above needs a free extension: **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)**, open source, about 30 seconds.
+
+The step-by-step is in [how to change your WhatsApp Web background or wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026) — this post is about *what* to choose; that one covers *how*.
+
+---
+
+## The Bottom Line
+
+Your favourite wallpaper is probably a bad chat wallpaper, and that's not a failure of taste — it's a mismatch of job. Behind text, you want boring: low contrast, no focal point, no detail.
+
+Start with a solid colour or a heavily blurred version of a photo you like. If it looks slightly dull on its own, it's probably right.
+
+For more:
+
+- [How to change your WhatsApp Web background or wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026)
+- [Best animated backgrounds for WhatsApp Web](/blog/best-animated-backgrounds-for-whatsapp-web-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)`,
+},
+  {
   title: "Cute WhatsApp Web Themes to Download (2026)",
   slug: "cute-whatsapp-web-themes-download-2026",
   seoIndex: true,
