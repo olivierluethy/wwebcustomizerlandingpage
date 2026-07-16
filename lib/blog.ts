@@ -10,6 +10,164 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "How to Make WhatsApp Web Look Like Instagram DMs (2026)",
+  slug: "how-to-make-whatsapp-web-look-like-instagram-dms-2026",
+  seoIndex: true,
+  description: "Recreate the Instagram DM look on WhatsApp Web — the signature gradient bubbles, true black dark mode, and the exact brand colours. Free theme download.",
+  date: "2026-07-17",
+  readTime: "6 min",
+  content: `# How to Make WhatsApp Web Look Like Instagram DMs (2026)
+
+Instagram DMs have a look. Not just dark — *that gradient*. Your messages sit in a bubble that fades from blue through purple to pink, floating on true black, and it's instantly recognisable from across a room.
+
+WhatsApp Web has green rectangles.
+
+Here's how to bring the Instagram DM aesthetic to WhatsApp Web, gradient bubbles and all.
+
+---
+
+## The Funny Part
+
+Before we start, something worth knowing: **Instagram's own web version can't do this.**
+
+Chat themes — the gradient bubbles, the colour options — are mobile only. Open Instagram in a browser and there's no theme picker at all. It's a mobile feature that never made it to the desktop.
+
+So by the end of this guide, your WhatsApp Web will look more like Instagram DMs than Instagram Web does. Which is a slightly absurd sentence, and completely true.
+
+---
+
+## The Signature Is the Gradient
+
+Every other messaging app uses a flat colour for your sent messages. iMessage is blue. Telegram is blue. WhatsApp is green. One colour, one bubble.
+
+Instagram uses a **gradient** — and that single decision is why the look is so recognisable. It's not "purple messages," it's a colour that *moves* across the bubble.
+
+That's also why most attempts at this fail. People pick a purple, apply it flat, and it looks like a purple chat app. The gradient isn't decoration; it's the entire identity.
+
+Good news: the extension's theme values accept CSS, not just hex codes — so a real gradient works.
+
+---
+
+## Step 1: Install the Extension
+
+WhatsApp Web has no theming at all — no colours, no gradients, nothing. Everything below runs through **[WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)** — free, open source, about 30 seconds.
+
+---
+
+## Step 2: The Instagram Palette
+
+Extension icon → **Themes** tab → **Create**.
+
+Instagram's brand gradient is well documented — the widely-used values run \`#405DE6\` → \`#5851DB\` → \`#833AB4\` → \`#C13584\` → \`#E1306C\` → \`#FD1D1D\` → \`#FCB045\`, blue through purple, pink, red, and out to orange. The DM bubbles use the blue-to-pink portion of that ramp.
+
+**Dark (Instagram's default — this is the one)**
+
+- **Background:** \`#000000\` — Instagram commits fully to black
+- **Sidebar:** \`#000000\` — same; Instagram doesn't layer its dark surfaces
+- **Sent bubbles:** \`linear-gradient(to bottom right, #4F5BD5, #962FBF, #D62976)\` — the signature
+- **Received bubbles:** \`#262626\`
+- **Accent:** \`#E1306C\` — Instagram pink, for active states and unread
+- **Text:** \`#FAFAFA\`
+- **Muted text:** \`#A8A8A8\`
+
+**Light**
+
+- **Background:** \`#FFFFFF\`
+- **Sidebar:** \`#FFFFFF\`
+- **Sent bubbles:** the same gradient — it's the signature in both modes
+- **Received bubbles:** \`#EFEFEF\`
+- **Accent:** \`#E1306C\`
+- **Text:** \`#000000\`
+- **Muted text:** \`#8E8E8E\`
+
+**A note on accuracy:** Instagram's exact DM gradient has shifted across app versions, and Meta doesn't publish the values. These are the established brand-palette hexes and they read unmistakably as Instagram. Anyone claiming to have the official DM gradient spec is guessing.
+
+**[⬇ Download Instagram-Dark.json]** *(download slot)*
+**[⬇ Download Instagram-Light.json]** *(download slot)*
+
+---
+
+## Step 3: Getting the Gradient Right
+
+Two details separate "Instagram" from "purple."
+
+**Direction matters.** \`to bottom right\` gives the diagonal sweep Instagram uses. A left-to-right gradient reads as a progress bar. A top-to-bottom one reads as a button from 2009. Diagonal is the one.
+
+**Three stops, not two.** Blue → purple → pink. A two-stop blue-to-pink gradient skips the purple and lands somewhere muddy in the middle. The purple in the centre is what makes it feel like Instagram rather than like a gradient someone made.
+
+If you want to push further, the full brand ramp — out through \`#FD1D1D\` red into \`#FCB045\` orange — is the app-icon gradient. It's gorgeous and it's a lot. On a chat bubble it fights your text. The blue-purple-pink section is the DM look for a reason.
+
+---
+
+## Step 4: Don't Layer the Sidebar
+
+This one's counter-intuitive if you've done our other recreations.
+
+Notion, Obsidian, Linear and iOS all layer their surfaces — sidebar one shade, content another. **Instagram doesn't.** In dark mode it's black everywhere, separated by thin \`#262626\` borders rather than by tonal shifts.
+
+So: sidebar and chat window both \`#000000\`. It feels wrong while you're building it and correct the moment it's done.
+
+---
+
+## Step 5: The Font
+
+Instagram uses a proprietary sans, and — like most apps in this position — **Inter** is the closest free match.
+
+**Typography** tab → **Inter**. Nudge the size up one step.
+
+---
+
+## Step 6: Background — Black, Nothing Else
+
+Instagram DMs have no wallpaper. The bubbles are the entire visual interest, which is exactly why they can afford to be that loud.
+
+**Backgrounds** tab → solid \`#000000\`. Adding an image behind a gradient bubble is one thing too many.
+
+---
+
+## Step 7: Strip the Clutter
+
+Instagram DMs are a list of conversations. No Archive tab, no Status row, no Channels.
+
+Turn on **Minimal Mode** in the **Display** tab. Same shape, immediately.
+
+---
+
+## Why This Recreation Works So Well
+
+Instagram's aesthetic transfers unusually cleanly, for a reason worth naming: **it's carried almost entirely by one element.** The gradient bubble does all the work. Everything else — black background, gray received bubbles, thin borders — is deliberately quiet so the gradient can be loud.
+
+That makes it easy to reproduce and hard to get subtly wrong. Either you have the gradient or you don't.
+
+Compare that to [Things 3](/blog/how-to-make-whatsapp-web-look-like-things-3-2026), where the identity is spacing you can't change, or [Linear](/blog/how-to-make-whatsapp-web-look-like-linear-2026), where it's restraint distributed across everything. Instagram put its personality in one place. Copy that one place and you're done.
+
+---
+
+## Going Further
+
+**Make your own gradient.** Instagram's DM themes are really just a gradient picker — so pick your own. Any two or three colours in \`linear-gradient(to bottom right, ...)\` works. Your favourites, your team's brand, whatever you like. That's a customisation Instagram's own web version won't give you.
+
+**Save both modes** and switch by time of day.
+
+**Try other looks:** [iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage), [Telegram](/blog/how-to-make-whatsapp-web-look-like-telegram), [Discord](/blog/how-to-make-whatsapp-web-look-like-discord).
+
+---
+
+## The Bottom Line
+
+The Instagram DM look is one gradient and a lot of restraint: \`linear-gradient(to bottom right, #4F5BD5, #962FBF, #D62976)\` on your sent bubbles, true black everywhere else, gray received bubbles, nothing else competing.
+
+Get the gradient diagonal and three-stop and it's unmistakable. Get it flat and it's just purple.
+
+👉 [Install WhatsApp Web Customizer](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf) and build it. Made a better gradient? [Share the JSON in our Discord](https://discord.gg/cppbDz4qhn).
+
+For more:
+
+- [Colorful & vibrant WhatsApp Web themes to download](/blog/colorful-vibrant-whatsapp-web-themes-download-2026)
+- [10 best WhatsApp Web themes in 2026 (free JSON downloads)](/blog/best-whatsapp-web-themes-2026-free-json-downloads)
+- [How to make WhatsApp Web look like iMessage](/blog/how-to-make-whatsapp-web-look-like-imessage)`,
+},
+  {
   title: "WhatsApp Web Wallpaper Ideas: 12 Backgrounds That Actually Work (2026)",
   slug: "whatsapp-web-wallpaper-ideas-backgrounds-that-work-2026",
   seoIndex: true,
