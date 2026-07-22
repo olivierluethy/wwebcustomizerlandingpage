@@ -7,6 +7,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackNavClick, trackCtaHover } from "@/lib/analytics";
 import { useInstallCta } from "@/components/use-install-cta";
+import { InstallReassurance } from "@/components/install-reassurance";
+import { useCtaImpression } from "@/components/use-cta-impression";
+import { INSTALL_BUTTON_LABEL } from "@/lib/install-cta-copy";
 import Image from 'next/image'
 
 const navLinks = [
@@ -21,6 +24,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const install = useInstallCta("install_nav");
+  const navCtaRef = useCtaImpression("install_nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,13 +91,14 @@ export function Navigation() {
               variant="outline"
               size="sm"
               className="border-border text-foreground hover:bg-secondary"
-              onClick={() => {
-                handleNavClick("discord");
-                window.open("https://discord.gg/cppbDz4qhn", "_blank");
-              }}
+              onClick={() => handleNavClick("discord")}
               asChild
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              {/* Real href. This anchor previously pointed at a bare fragment
+                  with target="_blank" while onClick did the window.open, so one
+                  click opened TWO tabs: the destination, plus a junk copy of
+                  this page. */}
+              <a href="https://discord.gg/cppbDz4qhn" target="_blank" rel="noopener noreferrer">
                 {/* Discord SVG Icon */}
   <svg
     role="img"
@@ -107,21 +112,28 @@ export function Navigation() {
                 Join Discord
               </a>
             </Button>
-            <Button
-              size="sm"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-              onMouseEnter={() => trackCtaHover("install_nav")}
-              onClick={() => {
-                trackNavClick("install");
-                install.onClick();
-              }}
-              asChild
-            >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+            <div ref={navCtaRef} className="group relative">
+              <Button
+                size="sm"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onMouseEnter={() => trackCtaHover("install_nav")}
+                onClick={(e) => {
+                  trackNavClick("install");
+                  install.onClick(e);
+                }}
+              >
+                {/* A real <button>, not an anchor: there is no URL to navigate
+                    to. On desktop the store is opened programmatically; on
+                    mobile the click must be suppressed so the fallback modal
+                    can open. The old anchor pointed at a bare fragment with
+                    target="_blank", which spawned a junk tab on every click AND
+                    swallowed the event object, so preventDefault could never
+                    run. */}
                 <Chrome className="mr-2 h-4 w-4" />
-                Add to Chrome
-              </a>
-            </Button>
+                {INSTALL_BUTTON_LABEL}
+              </Button>
+              <InstallReassurance location="install_nav" popover />
+            </div>
             {install.fallback}
           </div>
 
@@ -160,33 +172,32 @@ export function Navigation() {
                   <Button
                     variant="outline"
                     className="w-full border-border text-foreground hover:bg-secondary"
-                    onClick={() => {
-                      handleNavClick("discord");
-                      window.open("https://discord.gg/cppbDz4qhn", "_blank");
-                    }}
+                    onClick={() => handleNavClick("discord")}
                     asChild
                   >
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://discord.gg/cppbDz4qhn" target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-4 w-4" />
                       Join Discord
                     </a>
                   </Button>
+                  {/* No cta_hover here: this button only exists on the touch
+                      breakpoint, where a tap opens the copy-link fallback and
+                      deliberately does not fire install_click. Hovers logged
+                      here could never convert, so they only inflated the
+                      hover→click denominator. */}
                   <Button
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                    onMouseEnter={() => trackCtaHover("install_nav_mobile")}
                     onClick={(e) => {
                       // Keep the menu OPEN so the mobile copy-link fallback can
                       // render beneath the button (handleNavClick would close it).
                       trackNavClick("install");
                       install.onClick(e);
                     }}
-                    asChild
                   >
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <Chrome className="mr-2 h-4 w-4" />
-                      Add to Chrome
-                    </a>
+                    <Chrome className="mr-2 h-4 w-4" />
+                    {INSTALL_BUTTON_LABEL}
                   </Button>
+                  <InstallReassurance location="install_nav" />
                   {install.fallback}
                 </div>
               </div>

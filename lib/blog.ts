@@ -5709,6 +5709,8 @@ If you don't have one installed yet, [WhatsApp Web Customizer](https://chromeweb
 
 The rest of this guide assumes you have the extension (or another font-changing extension) installed and the font change still isn't applying.
 
+[[install-cta topic="fonts"]]
+
 ---
 
 ## Fix 1: Refresh the WhatsApp Web Page
@@ -5859,6 +5861,8 @@ If your font issue is being investigated, or you're between fixes, the rest of W
 - **Minimal Mode** — clean up the sidebar by hiding unused sections
 
 These are all theme- and feature-level settings that don't rely on the font system, so a font issue shouldn't affect them.
+
+[[install-cta topic="fonts"]]
 
 ---
 

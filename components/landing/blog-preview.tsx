@@ -3,12 +3,30 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/blog";
 import { trackArticleClick } from "@/lib/analytics";
 
-export function BlogPreview() {
-  const posts = getAllPosts().slice(0, 3);
+/** Only the fields this card renders. Deliberately NOT `BlogPost` — that type
+ *  carries `content`, and accepting it would invite passing whole posts, which
+ *  would serialize ~756K of markdown into the page payload. */
+export interface BlogPreviewItem {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+}
 
+/**
+ * Homepage "From the Blog" strip.
+ *
+ * Posts arrive as PROPS from the server component that renders this. It used to
+ * call `getAllPosts()` directly, and because this file is `"use client"` that
+ * pulled all of `lib/blog.ts` — every post's full markdown body — into an 804K
+ * client chunk the homepage downloaded, in order to show three titles.
+ *
+ * Never import `@/lib/blog` from this file.
+ */
+export function BlogPreview({ posts }: { posts: BlogPreviewItem[] }) {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
@@ -48,7 +66,7 @@ export function BlogPreview() {
             >
               <Link
                 href={`/blog/${post.slug}`}
-                onClick={() => trackArticleClick(post.slug)}
+                onClick={() => trackArticleClick(post.slug, "blog_preview")}
                 className="block p-6 rounded-xl bg-card border border-border hover:border-accent/30 transition-all h-full group"
               >
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
