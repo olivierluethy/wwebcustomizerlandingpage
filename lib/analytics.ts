@@ -77,14 +77,94 @@ export const CHROME_STORE_SHARE_URL = CHROME_STORE_URL.split("?")[0];
 export const isChromeStoreUrl = (href: string | null | undefined): boolean =>
   !!href && href.includes("chromewebstore.google.com");
 
+/**
+ * THE CANONICAL PLACEMENT VOCABULARY.
+ *
+ * Every install CTA on the site reports one of these, and the same value is
+ * used by `install_click`, `cta_hover` and `install_cta_viewed`, so the three
+ * join on one property and a per-placement funnel needs no value mapping.
+ *
+ * This is a typed union, not a comment: `trackInstallClick("instal_hero")` is a
+ * build error, which is the only way a vocabulary stays canonical over time.
+ * Adding a placement means adding it here first.
+ *
+ * NOT IN THIS LIST — "mobile_fallback". Mobile and tablet visitors cannot
+ * install a Chrome extension, so they never fire install_click at all; they get
+ * the modal and fire `mobile_install_fallback_shown` / `_used` instead, which
+ * already carry the originating `location` from this same list. Adding a
+ * mobile_fallback location would fold non-installs back into the install metric
+ * and inflate it by the whole ~24% mobile share.
+ */
+export const INSTALL_LOCATIONS = [
+  /** Homepage hero, primary above-the-fold CTA. */
+  "install_hero",
+  /** Top navigation bar (desktop bar and mobile drawer both report this). */
+  "install_nav",
+  /** Mid-homepage "Ready to transform your WhatsApp Web?" section. */
+  "install_cta_section",
+  /** Chrome Web Store trust badge in the hero. Desktop clicks only. */
+  "cws_badge",
+  /** Chrome Web Store links inside post markdown, via a delegated listener. */
+  "blog_body",
+  /** <BlogInstallCTA>, injected mid-article by an [[install-cta]] marker. */
+  "blog_inline_cta",
+  /** <PostInstallBanner>, above the first theme download on a post. */
+  "blog_install_banner",
+  /** End-of-post CTA block. */
+  "blog_footer_cta",
+  /** Dismissible sticky bar on blog posts. */
+  "blog_sticky_bar",
+  /** Before/after theme preview (hero and theme posts). */
+  "theme_preview",
+  /** Theme acquisition block on theme posts. */
+  "post_download_prompt",
+] as const;
+
+export type InstallLocation = (typeof INSTALL_LOCATIONS)[number];
+
 export type DeviceType = "desktop" | "mobile" | "tablet";
 
 /**
+ * True when the PRIMARY input device is a finger/stylus rather than a mouse.
+ *
+ * Note `pointer:` describes the primary pointing device, not merely an
+ * available one. A touchscreen laptop driven by a trackpad reports
+ * `pointer: fine`, so it is correctly left as desktop — `any-pointer: coarse`
+ * would wrongly catch it, which is why it isn't used here.
+ *
+ * Returns false whenever matchMedia is unavailable, so the UA classifier below
+ * remains the sole authority rather than the check failing open.
+ */
+const hasCoarsePrimaryPointer = (): boolean => {
+  if (typeof window === "undefined") return false;
+  if (typeof window.matchMedia !== "function") return false;
+  try {
+    return window.matchMedia("(pointer: coarse)").matches;
+  } catch {
+    return false;
+  }
+};
+
+/**
  * Best-effort device classifier that mirrors what PostHog reports as
- * `$device_type` (which is itself UA-derived). We classify from the User-Agent
- * rather than viewport width so a narrow desktop window isn't mislabelled as
- * mobile — the conversion question is "can this person install a Chrome
- * extension", which is a device fact, not a viewport fact.
+ * `$device_type` (which is itself UA-derived).
+ *
+ * Deliberately NOT viewport-based. The conversion question is "can this person
+ * install a Chrome extension" — a device fact, not a window-size fact. A
+ * desktop user with a half-width or split-screen window must keep the ability
+ * to install, and a width breakpoint would take it away from them. Being wrong
+ * in that direction costs a real install, so the check is built to avoid false
+ * "mobile" positives specifically.
+ *
+ * Two independent signals:
+ *   1. User-Agent — primary, unchanged.
+ *   2. Primary pointer type — corroboration only, and only ever able to move a
+ *      device from desktop to tablet, never the reverse.
+ *
+ * Signal 2 exists for iPadOS, whose Safari requests desktop sites by default
+ * and reports a Macintosh UA. Those visitors were previously classified as
+ * desktop and sent to a store page they cannot install from. A coarse primary
+ * pointer on a Mac-looking UA is, in practice, an iPad.
  */
 export const getDeviceType = (): DeviceType => {
   if (typeof navigator === "undefined") return "desktop";
@@ -95,6 +175,9 @@ export const getDeviceType = (): DeviceType => {
   if (/Mobi|iPhone|iPod|Android.*Mobile|Windows Phone|BlackBerry|IEMobile/i.test(ua)) {
     return "mobile";
   }
+  // UA says desktop. Only a coarse PRIMARY pointer overrides that, and only to
+  // "tablet" — a real desktop with a mouse can never land here.
+  if (hasCoarsePrimaryPointer()) return "tablet";
   return "desktop";
 };
 
@@ -106,13 +189,17 @@ export const getDeviceType = (): DeviceType => {
  * overlaps (install_nav / install_hero / install_cta_section).
  */
 export const trackInstallClick = (
-  location: string,
-  opts?: { postSlug?: string | null }
+  location: InstallLocation,
+  opts?: { postSlug?: string | null; topic?: string | null }
 ) => {
   const props = {
     location,
     pathname: typeof window !== "undefined" ? window.location.pathname : null,
     post_slug: opts?.postSlug ?? null,
+    // Only the inline blog CTA (location: "blog_inline_cta") sets this — it's
+    // the reader's problem area, so conversions can be broken down by which
+    // kind of post earned them. Null everywhere else.
+    topic: opts?.topic ?? null,
     device_type: getDeviceType(),
   };
   if (typeof window !== "undefined" && window.gtag) {
@@ -134,19 +221,89 @@ export const trackInstallPromptShown = (themeName: string, postSlug: string) => 
   capturePosthog("install_prompt_shown", props);
 };
 
-/** Mobile/tablet visitors can't install a Chrome extension. Instead of sending
- *  them to a dead store page we show a "send this to your computer" affordance;
- *  these two events measure that it's shown and used. PostHog-only. */
-export const trackMobileFallbackShown = (location: string) => {
-  capturePosthog("mobile_install_fallback_shown", { location });
+/**
+ * Mobile/tablet visitors can't install a Chrome extension. Instead of sending
+ * them to a dead store page we open a "continue on your computer" modal; these
+ * two events measure that it's shown and used. PostHog-only.
+ *
+ * These — NOT install_click — are the mobile conversion metric. install_click
+ * means "reached the Chrome Web Store", which a phone visitor by definition
+ * hasn't done; firing it here would inflate the site-wide install number by the
+ * whole mobile share (~24% of traffic) with events where nobody arrived at a
+ * store, and would silently pollute the desktop hover→click funnel.
+ *
+ * Recovery rate = mobile_install_fallback_used / mobile_install_fallback_shown,
+ * broken down by `method` to see which path people actually take.
+ */
+export const trackMobileFallbackShown = (location: InstallLocation) => {
+  capturePosthog("mobile_install_fallback_shown", {
+    location,
+    device_type: getDeviceType(),
+    pathname: typeof window !== "undefined" ? window.location.pathname : null,
+  });
 };
 
-export const trackMobileFallbackUsed = (method: string, location: string) => {
-  capturePosthog("mobile_install_fallback_used", { method, location });
+export type MobileFallbackMethod = "copy_link" | "email" | "qr";
+
+export const trackMobileFallbackUsed = (
+  method: MobileFallbackMethod,
+  location: InstallLocation
+) => {
+  capturePosthog("mobile_install_fallback_used", {
+    method,
+    location,
+    device_type: getDeviceType(),
+    pathname: typeof window !== "undefined" ? window.location.pathname : null,
+  });
 };
 
-export const trackArticleClick = (articleSlug: string) => {
-  trackEvent("article_click", "article", articleSlug);
+/**
+ * Navigation to another post — the related-posts block and the homepage blog
+ * strip. `article_slug` is the DESTINATION; `pathname` is where the click came
+ * from, so second-pageview paths read end to end.
+ *
+ * GA still receives the slug as `event_label` so existing reports resolve;
+ * query PostHog on `article_slug` for anything new.
+ */
+/**
+ * CTA IMPRESSION — fired once per placement per page view, the first time an
+ * install CTA is at least half visible in the viewport.
+ *
+ * NAMED install_cta_viewed, NOT install_prompt_shown. `install_prompt_shown`
+ * already exists and means something narrower and unrelated: the theme-download
+ * block turning into its "you still need the extension" confirmation, carrying
+ * {theme_name, post_slug}. Reusing that name for generic CTA impressions would
+ * merge two different things into one series and silently corrupt the existing
+ * download→install funnel it was added for.
+ *
+ * Completes the per-placement funnel:
+ *   install_cta_viewed → cta_hover (desktop only) → install_click
+ * all keyed on the same `location`.
+ */
+export const trackInstallCtaViewed = (location: InstallLocation) => {
+  capturePosthog("install_cta_viewed", {
+    location,
+    device_type: getDeviceType(),
+    pathname: typeof window !== "undefined" ? window.location.pathname : null,
+  });
+};
+
+export const trackArticleClick = (
+  articleSlug: string,
+  source: "related_posts" | "blog_preview" | "other" = "other"
+) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "article_click", {
+      event_category: "article",
+      event_label: articleSlug,
+    });
+  }
+  capturePosthog("article_click", {
+    article_slug: articleSlug,
+    source,
+    pathname: typeof window !== "undefined" ? window.location.pathname : null,
+    device_type: getDeviceType(),
+  });
 };
 
 export const trackScrollDepth = (depth: number) => {
@@ -170,9 +327,34 @@ export const trackLegalPageView = (pageName: string) => {
  * Chrome" / install buttons). Autocapture + heatmaps already show hover
  * heat, but a named event lets us build a precise hover→click funnel on the
  * money buttons. PostHog-only on purpose — we don't add hover noise to GA.
+ *
+ * Emits `location` using the SAME taxonomy as trackInstallClick, so a
+ * hover→click funnel can be built on one shared property. It previously
+ * emitted only `cta`, which meant the two ends of the funnel had different
+ * property names and could not be joined without hand-mapping values. `cta` is
+ * still emitted, unchanged, so existing saved insights keep working — treat it
+ * as deprecated and filter on `location` for anything new.
+ *
+ * Only ever fires on devices with a real pointer, so any hover→click rate
+ * derived from it is a DESKTOP rate. Mobile/tablet cannot hover and cannot
+ * install a Chrome extension (see useInstallCta), so they are absent from both
+ * ends of the funnel by design.
+ *
+ * Deliberately NOT fired by:
+ *   - the Chrome Web Store trust badge — people hover it to read the rating,
+ *     not to install, so it logged reading-hovers that could never convert;
+ *   - the mobile nav button — a tap there opens the copy-link fallback, which
+ *     does not fire install_click, so those hovers were structurally
+ *     unconvertible.
  */
-export const trackCtaHover = (ctaName: string) => {
-  capturePosthog("cta_hover", { cta: ctaName });
+export const trackCtaHover = (location: InstallLocation) => {
+  capturePosthog("cta_hover", {
+    location,
+    /** @deprecated use `location` */
+    cta: location,
+    pathname: typeof window !== "undefined" ? window.location.pathname : null,
+    device_type: getDeviceType(),
+  });
 };
 
 /**

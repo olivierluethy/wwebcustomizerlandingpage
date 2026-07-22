@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Chrome, Star } from "lucide-react";
-import { trackButtonClick, trackCtaHover, trackInstallClick } from "@/lib/analytics";
+import {
+  getDeviceType,
+  trackButtonClick,
+  trackInstallClick,
+} from "@/lib/analytics";
 
 /**
  * Chrome Web Store trust block.
@@ -23,10 +27,24 @@ export function CwsBadge() {
       href={CWS_URL}
       target="_blank"
       rel="noopener noreferrer"
-      onMouseEnter={() => trackCtaHover("cws_badge")}
+      /* No cta_hover: this is a trust badge, not a CTA. Visitors hover it to
+         READ the rating, so it logged reading-hovers that were never install
+         intent — they sat in the hover→click numerator and dragged the measured
+         rate down. It still fires install_click, because a click here really
+         does reach the store listing. */
       onClick={() => {
         trackButtonClick("cws_badge");
-        trackInstallClick("cws_badge");
+        // Navigation is NOT blocked on mobile: unlike the install buttons, this
+        // badge's job is "go read the listing and its reviews", which works
+        // fine on a phone. It is not a dead end, so it gets no modal.
+        //
+        // install_click is desktop-only though — it means "reached the store
+        // with the ability to install", and a phone visitor arriving at the
+        // listing can't. Counting them would inflate the conversion metric with
+        // people who were only reading.
+        if (getDeviceType() === "desktop") {
+          trackInstallClick("cws_badge");
+        }
       }}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}

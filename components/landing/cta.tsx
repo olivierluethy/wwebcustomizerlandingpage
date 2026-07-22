@@ -5,9 +5,13 @@ import { Chrome, Github, MessageCircle, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
 import { useInstallCta } from "@/components/use-install-cta";
+import { InstallReassurance } from "@/components/install-reassurance";
+import { useCtaImpression } from "@/components/use-cta-impression";
+import { INSTALL_BUTTON_LABEL } from "@/lib/install-cta-copy";
 
 export function CTA() {
   const install = useInstallCta("install_cta_section");
+  const ctaRef = useCtaImpression("install_cta_section");
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
@@ -27,16 +31,19 @@ export function CTA() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              size="lg"
-              className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
-              onMouseEnter={() => trackCtaHover("install_cta_section")}
-              onClick={install.onClick}
-            >
-              <Chrome className="mr-2 h-5 w-5" />
-              Install Extension
-            </Button>
-            {install.fallback}
+            <div ref={ctaRef} className="group flex flex-col items-center">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium"
+                onMouseEnter={() => trackCtaHover("install_cta_section")}
+                onClick={install.onClick}
+              >
+                <Chrome className="mr-2 h-5 w-5" />
+                {INSTALL_BUTTON_LABEL}
+              </Button>
+              <InstallReassurance location="install_cta_section" />
+              {install.fallback}
+            </div>
 
             <Button
   size="lg"

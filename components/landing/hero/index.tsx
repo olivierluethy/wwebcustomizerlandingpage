@@ -19,7 +19,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { trackButtonClick, trackCtaHover } from "@/lib/analytics";
 import { useInstallCta } from "@/components/use-install-cta";
-import { ActivityLayer } from "./activity-layer";
+import { InstallReassurance } from "@/components/install-reassurance";
+import { useCtaImpression } from "@/components/use-cta-impression";
+import { ThemePreview } from "@/components/landing/hero/theme-preview";
+import type { PreviewTheme } from "@/lib/themes";
+import { INSTALL_BUTTON_LABEL } from "@/lib/install-cta-copy";
 
 /**
  * Feature benefit row shown above the primary CTA so visitors can answer
@@ -50,10 +54,11 @@ const FEATURE_CARDS = [
   { Icon: ImageIcon, title: "Backgrounds", desc: "Upload your own image" },
 ];
 
-export function Hero() {
+export function Hero({ theme }: { theme: PreviewTheme | null }) {
   const install = useInstallCta("install_hero");
+  const heroCtaRef = useCtaImpression("install_hero");
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative flex flex-col overflow-hidden">
       {/* Ambient background ----------------------------------------------- */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -86,8 +91,6 @@ export function Hero() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <ActivityLayer />
-
         {/* Subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -102,43 +105,23 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,oklch(0.07_0_0/0.55)_100%)]" />
       </div>
 
-      {/* Foreground content ------------------------------------------------ */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          className="max-w-4xl mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Featured Badge (preserved) */}
-          <motion.div
-            className="flex flex-col items-center gap-3 mb-6"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25, duration: 0.6 }}
-          >
-            <div className="relative inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-bold uppercase tracking-widest overflow-hidden">
-              <motion.span
-                className="absolute inset-0 -translate-x-full"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent, oklch(0.72 0.19 142 / 0.18), transparent)",
-                }}
-                animate={{ x: ["-100%", "200%"] }}
-                transition={{
-                  duration: 3.6,
-                  repeat: Infinity,
-                  repeatDelay: 1.4,
-                  ease: "easeInOut",
-                }}
-              />
-              <span className="relative inline-flex items-center gap-2">
-                <span aria-hidden="true">🚀</span>
-                Fastest growing WhatsApp Web extension
-              </span>
-            </div>
-          </motion.div>
+      {/* ================================================================
+          ABOVE THE FOLD — median scroll is ~12%, so everything needed to
+          decide lives here: what it is, one action, why it's safe, and proof.
+          Nothing else. Anything that isn't one of those four moved below.
 
+          min-h-[100svh] not min-h-screen: on mobile, 100vh counts the browser
+          chrome that's actually covering the page, so vh would push the CTA
+          under the address bar on exactly the devices this matters for.
+          ================================================================ */}
+      <div className="relative flex min-h-[100svh] items-center justify-center">
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
           {/* 1. Headline — value-forward, two lines */}
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance"
@@ -169,6 +152,78 @@ export function Hero() {
             images — all without sharing your data or needing an account.
           </motion.p>
 
+            {/* The one obvious action. Secondary buttons (Discord, GitHub,
+                Support) moved below the fold — up here they competed with the
+                install for the same click. */}
+            <div className="flex justify-center">
+            <div
+              ref={heroCtaRef}
+              className="group relative flex flex-col items-center"
+            >
+              <motion.span
+                className="absolute -inset-1 rounded-xl opacity-40 blur-md"
+                style={{
+                  background:
+                    "linear-gradient(120deg, oklch(0.72 0.19 142 / 0.55), transparent 60%)",
+                }}
+                animate={{ opacity: [0.25, 0.5, 0.25] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                aria-hidden="true"
+              />
+              {/* 4. Primary CTA copy */}
+              <Button
+                size="lg"
+                className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
+                onMouseEnter={() => trackCtaHover("install_hero")}
+                onClick={install.onClick}
+              >
+                <Chrome className="mr-2 h-5 w-5" />
+                {INSTALL_BUTTON_LABEL}
+              </Button>
+              <InstallReassurance location="install_hero" />
+              {install.fallback}
+            </div>
+            </div>
+
+          {/* Theme preview — the acquisition hook. Placed under the CTA row so
+              it never delays the headline paint (the LCP element). Deliberately
+              not animated in: the mock is the proof, and having it fade up
+              after the fold settles reads as decoration. */}
+          {theme && (
+            <div className="mt-10 flex justify-center">
+              <ThemePreview theme={theme} />
+            </div>
+          )}
+          </motion.div>
+        </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4 }}
+      >
+        <motion.div
+          className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <motion.div
+            className="w-1 h-2 bg-muted-foreground/50 rounded-full mt-2"
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+        </motion.div>
+      </motion.div>
+      </div>
+
+      {/* ================================================================
+          BELOW THE FOLD — supporting detail for people who scrolled, which
+          the data says is a minority. Nothing here is load-bearing.
+          ================================================================ */}
+      <div className="container mx-auto px-4 relative z-10 pb-24">
+        <div className="max-w-4xl mx-auto text-center">
           {/* 3. Feature benefit row */}
           <motion.div
             className="flex flex-wrap justify-center mb-7"
@@ -193,37 +248,7 @@ export function Hero() {
             ))}
           </motion.div>
 
-          {/* CTAs */}
-          <motion.div
-            className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-          >
-            <div className="relative">
-              <motion.span
-                className="absolute -inset-1 rounded-xl opacity-40 blur-md"
-                style={{
-                  background:
-                    "linear-gradient(120deg, oklch(0.72 0.19 142 / 0.55), transparent 60%)",
-                }}
-                animate={{ opacity: [0.25, 0.5, 0.25] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                aria-hidden="true"
-              />
-              {/* 4. Primary CTA copy */}
-              <Button
-                size="lg"
-                className="relative cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-medium shadow-lg shadow-primary/10"
-                onMouseEnter={() => trackCtaHover("install_hero")}
-                onClick={install.onClick}
-              >
-                <Chrome className="mr-2 h-5 w-5" />
-                Add to Chrome — it&apos;s free
-              </Button>
-              {install.fallback}
-            </div>
-
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center">
             <Button
               size="lg"
               variant="outline"
@@ -273,7 +298,7 @@ export function Hero() {
               <Coffee className="mr-2 h-5 w-5" />
               Support the Project
             </Button>
-          </motion.div>
+          </div>
 
           {/* 5. Social proof — directly under the CTA row */}
           <motion.div
@@ -387,28 +412,9 @@ export function Hero() {
               ))}
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-      >
-        <motion.div
-          className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
-          animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <motion.div
-            className="w-1 h-2 bg-muted-foreground/50 rounded-full mt-2"
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

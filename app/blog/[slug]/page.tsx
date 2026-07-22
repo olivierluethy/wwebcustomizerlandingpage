@@ -9,6 +9,18 @@ import { ThemeDownloadButton } from "@/components/theme-download-button";
 import { PostInstallBanner } from "@/components/post-install-banner";
 import { BlogContent } from "@/components/blog-content";
 import { InstallCtaButton } from "@/components/install-cta-button";
+import { BlogInstallCTA } from "@/components/blog-install-cta";
+import { BlogStickyBar } from "@/components/blog-sticky-bar";
+import { RelatedPosts } from "@/components/related-posts";
+import { ExtensionFeatureCard } from "@/components/extension-feature-card";
+import { ThemePreview } from "@/components/landing/hero/theme-preview";
+import { getThemeForPost, type PreviewTheme } from "@/lib/themes";
+import { INSTALL_BUTTON_LABEL } from "@/lib/install-cta-copy";
+import {
+  getRelatedPosts,
+  getRelatedHeading,
+  getTopicForSlug,
+} from "@/lib/blog-topics";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -48,9 +60,41 @@ export async function generateMetadata({
 
 // 🔥 ERSETZE DEINEN GESAMTEN renderMarkdown() BLOCK MIT DIESEM
 
-function renderMarkdown(content: string, postSlug: string) {
+function renderMarkdown(
+  content: string,
+  postSlug: string,
+  previewTheme: PreviewTheme | null
+) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
+
+  // The "what our extension does" card + the sticky-bar sentinel are injected
+  // once, immediately before the post's first H2 — i.e. at the end of the
+  // intro. Doing it here rather than in the page body means placement follows
+  // each post's actual structure instead of a guessed character offset.
+  const postTopic = getTopicForSlug(postSlug);
+  let introBreakRendered = false;
+  const renderIntroBreak = () => {
+    if (introBreakRendered) return;
+    introBreakRendered = true;
+    elements.push(
+      // On posts that publish a theme, the live preview replaces the feature
+      // card: it makes the same point — here is what this does — but with the
+      // reader's actual theme instead of a list, and it earns its place because
+      // downloads are what correlate with engaged sessions. Stacking both would
+      // put two blocks between the intro and the first real section.
+      previewTheme ? (
+        <div key="theme-preview" className="my-8">
+          <ThemePreview theme={previewTheme} postSlug={postSlug} />
+        </div>
+      ) : (
+        <ExtensionFeatureCard key="feature-card" topic={postTopic} />
+      ),
+      // Watched by BlogStickyBar: the bar stays hidden until this scrolls out
+      // of view above the viewport, so a reader who bounces never sees it.
+      <div key="sticky-sentinel" data-sticky-sentinel aria-hidden="true" />
+    );
+  };
 
   // On posts that offer theme downloads, the install CTA must appear (and
   // dominate) ABOVE the first download button — a theme JSON is useless without
@@ -258,6 +302,33 @@ function renderMarkdown(content: string, postSlug: string) {
     }
 
     // ========================================
+    // INLINE INSTALL CTA
+    // Marker: [[install-cta topic="fonts"]]   (topic optional)
+    //
+    // Placed after the inCodeBlock guard above, so the syntax can be written
+    // inside a fenced block when documenting it without rendering a CTA.
+    // ========================================
+
+    const installCtaMatch = trimmed.match(
+      /^\[\[install-cta(?:\s+topic="([A-Za-z0-9_-]+)")?\]\]$/
+    );
+
+    if (installCtaMatch) {
+      flushList();
+      flushTable();
+
+      elements.push(
+        <BlogInstallCTA
+          key={`install-cta-${i}`}
+          topic={installCtaMatch[1]}
+          postSlug={postSlug}
+        />
+      );
+
+      return;
+    }
+
+    // ========================================
     // THEME DOWNLOAD BUTTON
     // Marker: **[⬇ Download <Name>.json]**  (replaces the old download slots)
     // ========================================
@@ -346,6 +417,10 @@ function renderMarkdown(content: string, postSlug: string) {
 
   const level = headingMatch[1].length;
   const text = headingMatch[2];
+
+  // End of the intro: everything before the first H2 is the intro by
+  // convention in these posts. H1 is the title, so it doesn't count.
+  if (level === 2) renderIntroBreak();
 
   const classes = {
     1: "mt-10 mb-8 text-4xl md:text-5xl font-black tracking-tight leading-tight max-md:text-[28px] max-md:leading-[1.25] max-md:tracking-[-0.2px] max-[480px]:text-[24px]",
@@ -520,6 +595,10 @@ function renderMarkdown(content: string, postSlug: string) {
   flushCodeBlock();
   flushTable();
 
+  // Posts with no H2 at all (a few short changelog entries) still need the card
+  // and sentinel, or the sticky bar would never appear on them.
+  renderIntroBreak();
+
   return elements;
 }
 
@@ -530,6 +609,15 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     notFound();
   }
+
+  // Computed on the server at build time. Only {slug, title, readTime} crosses
+  // into the client component below — importing the post corpus from a client
+  // component would ship ~756K of markdown to every reader.
+  // Read from disk at build time; only this post's theme vars cross to the
+  // client, not all 45 theme files.
+  const previewTheme = getThemeForPost(post.slug);
+  const relatedPosts = getRelatedPosts(post.slug, 3);
+  const relatedHeading = getRelatedHeading(post.slug);
 
   return (
     <>
@@ -569,7 +657,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Der Titel (H1) und die Beschreibung kommen jetzt 
                 direkt aus dem Markdown-Renderer unten */}
             <BlogContent postSlug={post.slug}>
-              {renderMarkdown(post.content, post.slug)}
+              {renderMarkdown(post.content, post.slug, previewTheme)}
             </BlogContent>
 
             {/* Blog-post CTA block */}
@@ -616,9 +704,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                 }}
               >
                 <Chrome className="h-4 w-4" />
-                Add to Chrome — it&apos;s free
+                {INSTALL_BUTTON_LABEL}
               </InstallCtaButton>
             </div>
+
+            <RelatedPosts heading={relatedHeading} posts={relatedPosts} />
 
             <footer className="mt-16 pt-8 border-t border-border">
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between text-sm">
@@ -639,6 +729,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </article>
       </main>
+
+      <BlogStickyBar postSlug={post.slug} />
+
       <Footer />
     </>
   );
