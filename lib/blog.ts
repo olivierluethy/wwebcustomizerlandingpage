@@ -10,6 +10,186 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  title: "WhatsApp Web Dark Mode Isn't Really Dark. Here's the Fix",
+  slug: "how-to-get-dark-mode-on-whatsapp-web-beyond-the-default",
+  seoIndex: true,
+  description: "WhatsApp Web's built-in dark mode stops at #111B21. Here's how to get a true black OLED dark mode, with full hex palettes you can copy in under a minute.",
+  date: "2026-07-26",
+  readTime: "9 min",
+  content: `# WhatsApp Web Dark Mode Isn't Really Dark. Here's the Fix
+
+**Quick answer:** WhatsApp Web has a built-in dark mode at Settings → Theme → Dark. It uses a dark blue-grey background (#111B21), not black. If you want true black — the kind that switches OLED pixels off completely — you need to override the palette with a browser extension or a custom stylesheet. Full copy-paste palettes are below.
+
+You turned on dark mode. It looked better than the searing white default, so you left it on. But sitting next to a properly dark app — your code editor, your terminal, a true-black YouTube tab — WhatsApp Web looks washed out. Slightly blue. Slightly grey. Not dark.
+
+That's not your monitor. That's a design decision. WhatsApp's dark theme was built to be gentle and consistent across phones and desktops, and gentle means "dark grey," not "black."
+
+This post covers what WhatsApp actually gives you, why the built-in toggle can't go further, and three ways to push past it — including two complete palettes you can copy.
+
+## What WhatsApp Web's dark mode actually gives you
+
+The built-in dark theme is one toggle with a fixed palette. These are the values it's built around:
+
+| Element | Hex |
+|---|---|
+| App background | #111B21 |
+| Sidebar, headers, chat list | #202C33 |
+| Received bubbles, composer | #2A3942 |
+| Sent bubbles | #005C4B |
+| Primary text | #E9EDEF |
+| Secondary text | #8696A0 |
+| Brand green (accents) | #25D366 |
+| Links, read receipts | #53BDEB |
+
+Two things worth noticing.
+
+First, #111B21 is not a neutral grey. It has a blue cast, which is why WhatsApp Web looks slightly cold next to warmer dark apps.
+
+Second — and this is the part most articles on this topic get wrong — the default is not a readability problem. #E9EDEF text on #111B21 gives a contrast ratio of roughly **14.8:1**, comfortably past the 4.5:1 that WCAG AA asks for. The built-in dark mode is legible. It's just not dark.
+
+So if you're chasing true black, be honest with yourself about why. It's an aesthetic preference and, on the right hardware, a power one. It is not an accessibility fix.
+
+## Why "dark" and "true black" are different things
+
+On an LCD monitor, every pixel is lit from behind. A black pixel is a lit pixel with a shutter closed in front of it, so #000000 and #111B21 draw almost identical power. Visually, #000000 on an LCD often looks slightly washed anyway, because the backlight leaks.
+
+On an OLED panel, each pixel makes its own light. Pure black means the pixel is switched **off**. That's where the two real benefits come from:
+
+- **Contrast.** An off pixel has no light at all, so blacks are genuinely black rather than very dark grey. Moving from #111B21 to #000000 takes text contrast from roughly 14.8:1 to about **17.8:1**.
+- **Power.** Displaying white at full brightness has been measured drawing many times the power of pure black on OLED hardware.
+
+Here's the honest caveat: **most people reading this are on a desktop or laptop LCD, where the battery argument doesn't apply.** If you're on an OLED laptop panel or an OLED external monitor, true black genuinely saves power. If you're on a standard IPS panel, you're doing this because it looks better — which is a perfectly good reason, just a different one.
+
+## Method 1: The built-in toggle (30 seconds)
+
+Start here, because everything else builds on top of it.
+
+1. Open WhatsApp Web and click the three-dot menu in the left panel.
+2. Go to **Settings**.
+3. Click **Theme**.
+4. Choose **Dark**, then confirm.
+
+If **Theme** isn't there, the usual causes are an outdated browser, a stale session, or a cached older build. Refresh the page, then update your browser, then relink the session if it's still missing.
+
+Note that WhatsApp Web's theme setting is independent of your phone. Setting your phone to dark doesn't darken the web client, and vice versa.
+
+## Method 2: Chrome's forced dark mode (don't)
+
+You'll find this suggested a lot: go to chrome://flags, enable "Force Dark Mode for Web Contents," restart.
+
+It works, in the sense that the page turns dark. It also applies a blunt inversion to every site you visit, which produces muddy images, inverted logos, unreadable low-contrast text on some pages, and occasional broken layouts. On WhatsApp Web specifically it tends to flatten the distinction between sent and received bubbles, which is the one visual cue the interface actually needs.
+
+It's a global setting solving a single-site problem. Skip it.
+
+## Method 3: Override the palette (the actual fix)
+
+The built-in toggle is one value per element, chosen by Meta. To go darker, you replace those values. Two palettes below — both designed so every text-on-background pair clears WCAG AA.
+
+### True Black (OLED)
+
+For OLED panels and for anyone who wants maximum contrast.
+
+| Element | Hex |
+|---|---|
+| App background | #000000 |
+| Sidebar, headers, chat list | #0A0A0A |
+| Received bubbles, composer | #141414 |
+| Sent bubbles | #003D33 |
+| Primary text | #E9EDEF |
+| Secondary text | #8696A0 |
+| Accent | #25D366 |
+| Links | #53BDEB |
+
+Primary text on the background lands at about **17.8:1**. The sent bubble at #003D33 holds roughly **10.4:1** against the same text — noticeably deeper than WhatsApp's stock #005C4B, which sits around 6.8:1.
+
+The reason the panels are #0A0A0A and the bubbles #141414 rather than all black: with everything at #000000, the sidebar, the chat area and the bubbles fuse into one undifferentiated void and you lose all sense of structure. Those two small steps up are what keep the layout readable while still reading as black.
+
+### Warm Dark (low blue, for evenings)
+
+If the blue cast is what actually bothers you, the answer isn't more black — it's less blue.
+
+| Element | Hex |
+|---|---|
+| App background | #14100D |
+| Sidebar, headers, chat list | #1C1714 |
+| Received bubbles, composer | #241D18 |
+| Sent bubbles | #3D3325 |
+| Primary text | #EDE6DC |
+| Secondary text | #A2968A |
+| Accent | #E0A458 |
+| Links | #7FB5C4 |
+
+This is the one to try if you use WhatsApp Web late at night. It's dark without being stark, and the amber accent is far easier on tired eyes than #25D366 at 2am.
+
+## Four rules for building your own dark palette
+
+If you'd rather design your own than copy one:
+
+1. **Keep at least three steps of depth.** Background, panel, bubble. Collapse them and the interface loses its structure. Two or three percent of lightness between each step is enough.
+2. **Check text contrast, don't eyeball it.** Anything below 4.5:1 for body text will feel fine for ten minutes and awful for an hour. Any free contrast checker will tell you in seconds.
+3. **Desaturate your accent.** A colour that pops on white is usually too loud on black. Drop the saturation 10–20% before you commit.
+4. **Test with a real conversation open,** not an empty chat. Long threads, images, quoted replies and voice notes all reveal problems an empty screen hides.
+
+## Common mistakes
+
+- **Setting everything to #000000.** Covered above — you lose the layout.
+- **Keeping stock #25D366 on a true black background.** At full saturation against pure black it glows. Dim it or use it only on small accents.
+- **Forgetting the background image.** WhatsApp's default chat wallpaper is a light-leaning pattern. A true black theme with a pale doodle background behind it defeats the whole exercise — set the background too.
+- **Ignoring secondary text.** Timestamps and status lines are where dark themes usually fail first, because they're already low-contrast by design.
+
+## Frequently asked questions
+
+**Does WhatsApp Web have a built-in dark mode?**
+Yes. Settings → Theme → Dark. It's a single fixed palette built on a #111B21 background, with no options to adjust it.
+
+**Why is WhatsApp Web's dark mode grey instead of black?**
+It's deliberate. The palette was designed for consistency across phone and desktop and for gentle contrast rather than maximum contrast. Pure black wasn't the design target.
+
+**Does true black dark mode save battery on WhatsApp Web?**
+Only on OLED displays, where black pixels switch off entirely. On a standard LCD monitor or laptop screen the power difference is negligible — the backlight is on regardless.
+
+**Does WhatsApp Web dark mode follow my phone's setting?**
+No. The web client's theme is set independently in WhatsApp Web's own settings.
+
+**Will a custom dark theme break when WhatsApp updates?**
+It can. WhatsApp changes its interface regularly, and any tool that restyles it — extension or stylesheet — occasionally needs to catch up after a big update. It's usually a matter of days, not weeks, but it's worth knowing before you invest an evening in a custom palette.
+
+**Is it safe to use an extension on WhatsApp Web?**
+It depends entirely on the extension. Anything touching WhatsApp Web can read what's on the page, so check what permissions it requests and strongly prefer open-source tools whose code you or anyone else can actually inspect.
+
+## The tools that can do this
+
+WhatsApp Web doesn't expose these values, so you need something that restyles the page.
+
+**Stylus** is the free, general-purpose option: an open-source browser extension that applies custom CSS to any site. If you're comfortable writing stylesheets, it will do everything on this page and it's a genuinely good tool. The catch is that you're maintaining CSS against a class structure Meta changes without warning.
+
+**WhatsApp Web Customizer** is the one we make — free, open source, and featured by MakeUseOf, TechPP, and other tech publications in 2025–2026. It's built specifically for WhatsApp Web, so the palettes above go in as colour values rather than selectors, and the theme reapplies automatically after reloads, restarts and re-links. It also handles the background image, fonts, and a privacy blur in the same place, which matters because a true black theme with the default wallpaper behind it only gets you halfway.
+
+Themes export and import as JSON, so once you've built a palette you like you can back it up or send it to someone.
+
+⬇ [Get WhatsApp Web Customizer for Chrome](https://chromewebstore.google.com/detail/whatsapp-web-customizer-%E2%80%93/pnelkhckhbbgaeilofckgeajggipnmkf)
+
+If you'd rather write the CSS yourself with Stylus, the palettes above work exactly the same. The values are the point, not the tool.
+
+## Bottom line
+
+WhatsApp Web's built-in dark mode isn't broken — it's just fixed. #111B21 is a deliberate, readable, slightly blue grey, and there's no setting that takes it further.
+
+If you want true black, you override the palette. Copy the True Black table for OLED and maximum contrast, or the Warm Dark table if the blue cast is the real problem. Keep three steps of depth, check your contrast, and set the chat background while you're in there.
+
+Ten minutes of setup for something you look at every day is a reasonable trade.
+
+---
+
+**Related reading**
+
+- [How to Change Your WhatsApp Web Background or Wallpaper](/blog/how-to-change-whatsapp-web-background-wallpaper-2026) — the other half of a proper dark setup
+- [How to Change the Font on WhatsApp Web](/blog/how-to-change-the-font-on-whatsapp-web) — typography that suits a dark palette
+- [How to Blur Messages and Hide Contact Names on WhatsApp Web](/blog/how-to-blur-messages-hide-contact-names-whatsapp-web-2026) — for shared screens and open offices
+- [WhatsApp Web in 2026: Every Feature, Update and Change](/blog/whatsapp-web-in-2026-every-feature-update-and-change-you-should-know) — what else has moved this year
+`,
+},
+  {
   title: "How to Make WhatsApp Web Look Like Instagram DMs (2026)",
   slug: "how-to-make-whatsapp-web-look-like-instagram-dms-2026",
   seoIndex: true,
